@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="Generator" content="KIC">
     <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
     <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
@@ -32,10 +31,14 @@
         <header class="header">
             <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
             <div class="h_util">
-                
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_branch">
+                    <a href="" class="h_branch_current"><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 서울본사</a> 
+                </div>
                 <div class="h_util_sec h_btns">
                     <!--[D] 알림(종) 활성화  'on' class 추가-->
-                    <a href="" class="h_btn"><i class="fa-solid fa-user"></i></a>
                     <button type="button" class="h_btn ty_notice on" onclick="f_alert_open();">
                         <i class="fa-solid fa-bell"></i>
                     </button>
@@ -300,33 +303,35 @@
             <div class="footer_logo">
                 <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
             </div>
-            <div class="footer_right_btns">
-                <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
-                <span class="bar"></span>
-                <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
-            </div>
             <div class="footer_info">
                 <ul class="footer_info_list">
-                    <li>회사명 : 코리아인스트루먼트(주)</li>
-                    <li>사업자등록번호 : 101-81-45861</li>
-                    <li class="ml10"><span class="bar"></span>대표이사 : 정재호</li>
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
                 </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
                 <div class="contact">
                     <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
                     <span class="bar"></span>
                     <span>1600 - 4245</span>
                 </div>
             </div>
-            <div class="footer_right_branch">
-                <button class="btn_trigger" onclick="branch_toggle()">코리아인스트루먼트(주) 지점안내</button>
-                <ul class="branch_list">
-                    <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
-                    <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
-                    <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
-                    <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
-                </ul>
-            </div>   
-            <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>         
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
         <!--//footer-->
     </div>  

@@ -4,24 +4,32 @@
     
     &_tit {
 
-        padding: 10px 0;
+        padding: 15px 20px;
         border-bottom: 1px solid $c_line;
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
+        align-items: center;
+
+        .f_tag {
+            padding: 0 8px;
+            &:last-of-type {
+                margin-right: 5px;
+            }
+        }
         .tag_box {
             margin-bottom: 10px;
         }
         .tit {
-            font-size: 14px;
-            width: 100%;
+            font-size: 18px;
+            //width: 100%;
         }
     }
     &_info {
         display: flex;
         justify-content: flex-end;
         color: $c_lightGrey;
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 10px;
         
         
@@ -81,8 +89,8 @@
     }
     &_cont {
         border-bottom: 1px solid $c_line;
-        padding: 10px 0 20px;
-        font-size: 13px;
+        padding: 20px 20px 30px;
+        font-size: 16px;
         line-height: 1.7;
         img {
             width: auto;
@@ -93,30 +101,36 @@
         
     }
     &_file {
-        
+        display: flex;
         border-bottom: 1px solid $c_line;
-        padding: 10px 0;
-        .tit {
-            display: block;
-            font-size: 14px;
-            font-weight: bold;
         
+        .tit {
+            width: 140px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $c_bg_grey;
+            flex-shrink: 0;
+            font-size: 16px;
         }
         .file_list {
-            margin-top: 6px;
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            min-width: 0;
+            gap: 10px 20px;
             li {
                 
                
-                & + li {
-                    margin-top: 4px;
-                }
+                max-width: 100%;
                 
             }
             .btn_down3 {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 color: darken($c_blue, 10%);
-                font-size: 12px;
+                font-size: 14px;
                 line-height: 22px;
                 
                 &:hover {
@@ -134,49 +148,51 @@
                     content:'\f56d';
                     font-family: "Font Awesome 6 Free";
                     font-weight: bold;
-                    width: 20px;
-                    height: 20px;
-                    font-size: 14px;
+                    width: 22px;
+                    height: 22px;
+                    font-size: 16px;
                     text-align: center;
                     flex-shrink: 0;
-                    
+                    margin-right: 2px;
+                    background-size: 16px;
                 }
             }
         }
     }
 
     &_nav {
-        margin-top: 30px;
-       
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
         background-color: rgba($c_key, .08);
-        border-radius: 6px;
+        border-radius: 10px;
         &_item {
             display: flex;
             align-items: center;
-            font-size: 12px;
+            font-size: 13px;
             min-width: 0;
-            
-            padding: 0 10px;
+            max-width: 45%;
 
-            
+            &.ty_next {
+                flex-direction: row-reverse;
+            }
 
             .tit {
                 display: flex;
                 align-items: center;
-                gap: 4px;
-                padding-right: 6px;
+                gap: 5px;
+                padding: 0 20px;
                 color: $c_key;
                 font-weight: 500;
-                font-size: 11px;
-                letter-spacing: -0.5px;
+                font-size: 16px;
             }
 
             
             .link {
                 flex: 1;
                 min-width: 0;
-                line-height: 40px;
-                font-size: 12px;
+                line-height: 60px;
+                font-size: 16px;
                 @include text-hidden-single;
                 &:hover {
                     text-decoration: underline;

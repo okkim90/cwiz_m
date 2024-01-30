@@ -1,30 +1,18 @@
 .btn_add {
-    width: $el_mid;
-    height: $el_mid;
-    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
     border: 1px solid $c_line;
     box-sizing: border-box;
     background: url(../images/common/btn_add.svg) no-repeat center center;
-    flex-shrink: 0;
-    &.ty_small {
-        width: $el_small;
-        height: $el_small;
-        background-size: 12px;
-    }
 }
 .btn_del {
-    width: $el_mid;
-    height: $el_mid;
-    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
     border: 1px solid $c_line;
     box-sizing: border-box;
     background: url(../images/common/btn_minus.svg) no-repeat center center;
-    flex-shrink: 0;
-    &.ty_small {
-        width: $el_small;
-        height: $el_small;
-        background-size: 12px;
-    }
 }
 
 .btn_del4 {
@@ -33,14 +21,14 @@
     background: url(../images/common/ico_del4.svg) no-repeat center center;
 }
 .btn_back {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: $c_key;
-    border-radius: 15px;
+    border-radius: 20px;
     position: absolute;
-    right: -6px;
-    top: -6px;
-    font-size: 15px;
+    right: -10px;
+    top: -10px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +50,21 @@
     font-weight: 500;
     text-decoration: underline;
     color: $c_blue;
-    font-size: 11px;
+    font-size: 12px;
+    @at-root .v_tbl & {
+        font-size: inherit;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @at-root .h_tbl & {
+        font-size: inherit;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 .btn_pdf {
     display: inline-block;
@@ -76,33 +78,76 @@
     //font-size: 16px;
     line-height: 1;
     display: inline-flex;
-    color: #222;
+    //color: #222;
     align-items: center;
+    position: relative;
     &:hover {
         .txt {
             text-decoration: underline;
         }
-        &::after {
-            //transform: scale(1.1);
-            color: $c_key;
-        }
+        // &::after {
+        //     //transform: scale(1.1);
+        //     color: $c_key;
+        // }
     }
     &::after {
         font-size: 16px;
         content: '\f56d';
         font-family: "Font Awesome 6 Free";
         font-weight: bold;
-        color: #393939;
-        
+        //color: #393939;
     }
+
+    &:hover {
+        .btn_tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    
+    
 }
 .btn_down2 {
+    
     &::after {
         //font-size: 16px;
         content: '\f56d';
         font-family: "Font Awesome 6 Free";
         font-weight: bold;
         margin-left: 4px;
+    }
+}
+.btn_down4 {
+    line-height: 1.2;
+    display: inline-flex;
+    //color: #222;
+    align-items: center;
+    max-width: 100%;
+    //font-size: 12px;
+    
+    .file_name {
+        min-width: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-left: 4px;
+    }
+    &::before {
+        font-size: 16px;
+        content: '\f56d';
+        font-family: "Font Awesome 6 Free";
+        font-weight: bold;
+        //color: #393939;
+        line-height: 1;
+    }
+    &:hover {
+        .file_name {
+            text-decoration: underline;
+        }
+        // &::after {
+        //     //transform: scale(1.1);
+        //     color: $c_key;
+        // }
     }
 }
 .btn_del_item {
@@ -119,20 +164,20 @@
 .btn_detail {
     &::after {
         //font-size: 16px;
-        content: '\f00e';
+        content: '\f078';
         font-family: "Font Awesome 6 Free";
         font-weight: bold;
         margin-left: 4px;
     }
     &.on {
         &::after {
-            content: '\f010'
+            content: '\f077'
         }
     }
 }
 .btn_view_more {
-    width: 27px;
-    height: 27px;
+    width: 30px;
+    height: 30px;
     background: url(../images/common/ico_plus.svg) no-repeat center center;
     background-size: 19px;
     border-radius: 5px;
@@ -164,7 +209,7 @@
 .btn_set {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
     &.ty_nowrap {
         flex-wrap: nowrap;
     }
@@ -216,10 +261,10 @@
     
     &.ty_xsmall {
         min-width: 40px;
-        height: $el_xsmall;
+        height: 22px;
         padding: 0 6px;
         font-size: 12px;
-        line-height: $el_xsmall - 2;
+        line-height: 20px;
         border-radius: 4px;
         &._round {
             border-radius: 22px;
@@ -227,10 +272,10 @@
     }
     &.ty_small {
         min-width: 40px;
-        height: $el_small;
+        height: 28px;
         padding: 0 6px;
         font-size: 12px;
-        line-height: $el_small - 2;
+        line-height: 26px;
         border-radius: 4px;
         &._round {
             border-radius: 28px;
@@ -248,35 +293,35 @@
         }
     }
     &.ty_s_mid {
-        height: 30px;
+        height: 32px;
         padding: 0 10px;
         font-size: 14px;
-        line-height: 28px;
+        line-height: 30px;
         border-radius: 4px;
         &._round {
             border-radius: 34px;
         }
     }
     &.ty_mid {
-        height: $el_mid;
+        height: 36px;
         padding: 0 10px;
-        font-size: 13px;
-        line-height: $el_mid - 2;
+        font-size: 14px;
+        line-height: 34px;
         border-radius: 4px;
         &._round {
-            border-radius: 36px;
+            border-radius: 40px;
         }
     }
     &.ty_big {
-        height: $el_large;
+        height: 50px;
         padding: 0 10px;
-        font-size: 14px;
-        font-weight: bold;
-        line-height: $el_large - 2;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 48px;
         border-radius: 6px;
         width: 200px;
         &._round {
-            border-radius: 40px;
+            border-radius: 50px;
         }
     }
     &.disable {
@@ -286,6 +331,42 @@
     }
     &.w100 {
         width: 100%;
+    }
+    &.ty_pay {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 20px;
+        font-weight: bold;
+        
+    }
+
+    &.btn_search {
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        //color: #666;
+    }
+    &.ty_ico {
+        min-width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &.pd10 {
+        padding: 0 10px;
+    }
+    &.ty_arrow {
+        &::after {
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            margin-left: 5px;
+            font-weight: bold;
+        }
     }
 }
 
@@ -314,19 +395,86 @@
 
 .f_tag {
     display: inline-block;
-    min-width: 30px;
-    padding: 0 4px;
+    min-width: 40px;
+    padding: 0 5px;
     box-sizing: border-box;
-    border-radius: 9px;
-    height: 18px;
-    font-size: 10px;
+    border-radius: 22px;
+    height: 22px;
+    font-size: 12px;
     text-align: center;
-    line-height: 16px;
+    line-height: 20px;
     border: 1px solid transparent;
+    font-weight: 500;
+    &.pd10 {
+        padding: 0 10px;
+    }
+    &.ty_small {
+        min-width: 30px;
+        padding: 0 4px;
+        font-size: 10px;
+        height: 18px;
+        line-height: 16px;
+        border-radius: 20px;
+    }
 }
 
 .tag_box {
     display: flex;
-    gap: 4px;
+    gap: 5px;
     flex-wrap: wrap;
+}
+
+.btn_chk {
+    display: inline-flex;
+    vertical-align: top;
+    //align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+    input[type='checkbox'] {
+        flex-shrink: 0;
+        margin-top: 0.1em;
+        width: 1.3em;
+        height: 1.3em;
+        font-size: 1em;
+        line-height: 1;
+    }
+}
+
+
+.btn_tooltip {
+    transition: all .1s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    font-size: 11px;
+    line-height: 22px;
+    white-space: nowrap;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid $c_line;
+    color: #333;
+    z-index: 10;
+    left: 50%;
+    top: 100%;
+    padding: 0 6px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(#000, .3);
+}
+
+.btn_ico {
+    &:hover {
+        color: $c_key;
+    }
+    &.ty_small {
+        font-size: 15px;
+        line-height: 20px;
+        height: 20px;
+        width: 20px;
+    }
+    &.ty_mid {
+        font-size: 16px;
+        line-height: 22px;
+        height: 22px;
+        width: 22px;
+    }
 }

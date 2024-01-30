@@ -2,11 +2,6 @@
     &_list {
         display: flex;
         flex-wrap: wrap;
-        @at-root &_wrap & {
-            flex-wrap: nowrap;
-            overflow-x: auto;
-        
-        }
     }
     &_item {
         .img_box {
@@ -24,40 +19,46 @@
             }
             .tag_box {
                 display: flex;
-                gap: 4px;
+                gap: 5px;
                 position: absolute;
                 z-index: 10;
-                left: 6px;
-                top: 6px;
+                left: 10px;
+                top: 10px;
             }
             
         }
         background-color: #fff;
         border-radius: 10px;
         overflow: hidden;
-        //box-shadow: 0 4px 6px rgba(#000, .1);
+        box-shadow: 0 4px 12px rgba(#000, .2);
         transition: all .2s ease;
-        border: 1px solid #ddd;
+        &:hover {
+            box-shadow: 0 14px 22px rgba(#000, .2);
+            transform: translateY(-4px);
+        }
+        &:active {
+            box-shadow: 0 4px 12px rgba(#000, .2);
+        }
         &_info {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 11px;
+            font-size: 13px;
             margin-bottom: 10px;
             color: #666;
             flex-wrap: wrap;
             i {
-                margin-right: 2px;
+                margin-right: 4px;
                 color: #222;
-                font-size: 11px;
+                font-size: 12px;
             }
         }
         .txt_box {
-            padding: 12px 10px 12px;
+            padding: 15px 18px 20px;
             background-color: #fff;
             .tit {
                 display: block;
-                font-size: 12px;
+                font-size: 14px;
             }
             .desc {
                 
@@ -71,3 +72,108 @@
         }
     }
 }
+
+
+.card2 {
+    &_wrap {
+        background-color: $c_bg_grey2;
+        padding: 10px 0;
+        border-radius: 10px;
+        border: 1px solid $c_line;
+        &_top {
+            padding: 0 20px;
+            
+            display: flex;
+           
+            align-items: flex-end;
+            margin-bottom: 6px;
+        }
+    }
+   
+    &_list {
+        padding: 0 10px;
+    
+        border-radius: 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        overflow-y: auto;
+    }
+    &_item {
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 4px 4px rgba(#000, .02);
+        padding: 10px;
+        & + & {
+            margin-top: 10px;
+        }
+        &.chk_row {
+            cursor: pointer;
+        }
+        &:hover {
+            background-color: rgb(255, 255, 246);
+        }
+        &.on {
+            background-color: rgb(254, 254, 233);
+        }
+    }
+    &_inner {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+    &_row {
+        &.ty_flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px 8px;
+            align-items: center;
+        }
+        .list_sepBar {
+            .list_item {
+                padding-right: 9px;
+                margin-right: 8px;
+                &:last-child {
+                    padding-right: 0;
+                    margin-right: 0;
+                }
+                &::after {
+                    background-color: $c_lightGrey;
+                    height: 12px;
+                    margin-top: -5px;
+                }
+            }
+        }
+        &.bdT {
+            border-top: 1px dashed $c_line;
+            padding-top: 4px;
+            margin-top: 2px;
+        }
+        .btn_t_link {
+            text-decoration: none;
+
+            font-weight: bold;
+            &.fwM {
+                font-weight: 500;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.chk_wrap {
+    
+    .chk_all_btn {
+        display: inline-flex;
+        
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+}
+

@@ -21,40 +21,34 @@ $colors: (
     _key5: #aaa, 
     _key6: #EFEFEF,
     _line: #DDDDDD,
-    _bg: #F7F7F7,
+    _bg: #F9F9F9,
     _bg_grey: #EFEFEF,
+    _bg_grey2: #f4f4f4,
     _blue: #0085FF,
     _navy: #005AAD,
-    _sky: #acbdee,
+    _sky: #a1b9ff,
     _red: #FF5C5C,
     _lblue: #63c1fc,
     _orange: #FF7A00,
-    _green: #227447,
+    _green: #3b855d,
+    _green2: #48a171,
     _yellow: #ffc107,
-    _purple: #7636FF,
+    _purple: #8856f3,
     _lightGrey: #aaa,
-    _solidGrey: #393939
+    _midGrey: #777,
+    _solidGrey: #393939,
+    _grey:#999
+    //_tp : transparent
 );
 
 
 $fz: (
-    _normal: 12px, 
-    _big: 16px, 
-    _mid: 13px, 
+    _normal: 13px, 
+    _big: 20px, 
+    _mid: 16px, 
+    _mid2: 14px,
     _small: 12px, 
 );
-
-$el_size: (
-    _xsmall: 22px,
-    _small: 26px,
-    _mid: 32px,
-    _large: 42px
-);
-
-$el_xsmall : map-get($el_size , _xsmall);
-$el_small : map-get($el_size , _small);
-$el_mid : map-get($el_size , _mid);
-$el_large : map-get($el_size , _large);
 
 
 @mixin btn($bg, $bd){
@@ -63,13 +57,13 @@ $el_large : map-get($el_size , _large);
     border-color: $bd;
     color: #fff;
     &:hover {
-        background-color: darken( $bg, 8%);
-        border-color: darken($bd, 8%);
-        box-shadow: 0 2px 3px rgba(#000, 0.3);
+        background-color: darken( $bg, 3%);
+        border-color: darken($bd, 3%);
+        box-shadow: 0 2px 3px rgba(#000, 0.2);
     }
     &:active {
-        box-shadow: inset 0 0 4px rgba(#000, 0.3);
-        transform: scale(0.97);
+        box-shadow: inset 0 0 4px rgba(#000, 0.2);
+        transform: scale(0.98);
     }
 }
 
@@ -79,12 +73,12 @@ $el_large : map-get($el_size , _large);
     border-color: $bd;
     color: $color;
     &:hover {
-        background-color: rgba($color, .3); 
+        background-color: rgba($color, .2); 
         //color: #fff;
     }
     &:active {
-        box-shadow: inset 0 0 4px rgba(#000, 0.3);
-        transform: scale(0.97);
+        box-shadow: inset 0 0 4px rgba(#000, 0.2);
+        transform: scale(0.98);
     }
 }
 
@@ -97,9 +91,13 @@ $el_large : map-get($el_size , _large);
         background-color: $color;
         color: #fff;
     }
+    &.on {
+        background-color: $color;
+        color: #fff;
+    }
     &:active {
-        box-shadow: inset 0 0 4px rgba(#000, 0.3);
-        transform: scale(0.97);
+        box-shadow: inset 0 0 4px rgba(#000, 0.2);
+        transform: scale(0.98);
     }
 }
 
@@ -113,7 +111,7 @@ $el_large : map-get($el_size , _large);
 
 @mixin tag_op($bd ,$color){
     
-    background-color: lighten($color, 43%);
+    background-color: lighten($color, 40%);
     border-color: $bd;
     color: $color;
 }
@@ -179,11 +177,16 @@ $c_key : map-get($colors, _key);
 $c_line : map-get($colors, _line);
 $c_bg : map-get($colors, _bg);
 $c_bg_grey : map-get($colors, _bg_grey);
+$c_bg_grey2 : map-get($colors, _bg_grey2);
 $c_blue : map-get($colors, _blue);
 $c_red : map-get($colors, _red);
 $c_sky : map-get($colors, _sky);
+$c_green : map-get($colors, _green);
+$c_yellow : map-get($colors, _yellow);
+$c_purple : map-get($colors, _purple);
 $c_lightGrey : map-get($colors, _lightGrey);
 $c_solidGrey : map-get($colors, _solidGrey);
+$c_midGrey : map-get($colors, _midGrey);
 
 //Font
 $font: 'Noto Sans KR', sans-serif;
@@ -202,6 +205,18 @@ $inner: 1280px;
 
 @for $i from 1 through 100 {
     $w : 10*$i;
+    .w_#{$w} {
+        width: #{$w}px;
+        max-width: 100%;
+    }
+    .mw_#{$w} {
+        width: #{$w}px;
+        max-width: 100%;
+    }
+}
+
+@for $i from 1 through 5 {
+    $w : 5*$i;
     .w_#{$w} {
         width: #{$w}px
     }
@@ -243,6 +258,12 @@ $inner: 1280px;
     .pb#{$i} {
         padding-bottom: #{$i}px
     }
+    .pa#{$i} {
+        padding: #{$i}px
+    }
+    .bd_radius#{$i} {
+        border-radius: #{$i}px
+    }
     
     .mt#{$z} {
         margin-top: #{$z}px;
@@ -269,8 +290,14 @@ $inner: 1280px;
     .pb#{$z} {
         padding-bottom: #{$z}px
     }
+    .pa#{$z} {
+        padding: #{$z}px
+    }
+    .bd_radius#{$z} {
+        border-radius: #{$z}px
+    }
 }
-@mixin list_col($col ,$gapX:10px, $gapY:20px){
+@mixin list_col($col ,$gapX:20px, $gapY:30px){
     .col_#{$col} {
         gap: $gapY $gapX;
         .col_item {
@@ -279,7 +306,7 @@ $inner: 1280px;
     }
 }
 @for $i from 1 through 10 {
-    @include list_col($i ,10px, 20px);
+    @include list_col($i ,20px, 30px);
 } 
 
 
@@ -321,11 +348,68 @@ $inner: 1280px;
     &.jc_r {
         justify-content: flex-end;
     }
+    .flex1 {
+        flex: 1;
+    }
+    .shrink0 {
+        flex-shrink: 0;
+    }
+    .self_top {
+        align-self: flex-start;
+    }
+    .self_c {
+        align-self: center;
+    }
+    .self_bot {
+        align-self: flex-end;
+    }
+    &.ty_col {
+        flex-direction: column;
+    }
 }
 
+.d_block {
+    display: block;
+}
 .ml_auto {
     margin-left: auto;
 }
 .mr_auto {
     margin-right: auto;
+}
+.taL {
+    text-align: left;
+}
+.taC {
+    text-align: center;
+}
+
+.fwB {
+    font-weight: bold;
+}
+.fwM {
+    font-weight: 500;
+}
+.no_select {
+    user-select: none;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+    filter: alpha(opacity=7);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.disabled2 {
+    pointer-events: none;
+    cursor:not-allowed;
+    // opacity: 0.7;
+    // filter: alpha(opacity=7);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.w100 {
+    width: 100%;
 }

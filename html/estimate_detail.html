@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="Generator" content="KIC">
     <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
     <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
@@ -32,10 +31,14 @@
         <header class="header">
             <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
             <div class="h_util">
-                
+                <div class="h_util_sec h_user">
+                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
+                </div>
+                <div class="h_util_sec h_branch">
+                    <a href="" class="h_branch_current"><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 서울본사</a> 
+                </div>
                 <div class="h_util_sec h_btns">
                     <!--[D] 알림(종) 활성화  'on' class 추가-->
-                    <a href="" class="h_btn"><i class="fa-solid fa-user"></i></a>
                     <button type="button" class="h_btn ty_notice on" onclick="f_alert_open();">
                         <i class="fa-solid fa-bell"></i>
                     </button>
@@ -215,37 +218,43 @@
             
             <ul class="nav">
                 <li class="nav_item on">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>교정이력</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu1"></i>견적 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2 on">교정 접수 내역</a></li>
-                            <li><a href="" class="btn_dep2">교정 결과 조회</a></li>
+                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                            <li><a href="" class="btn_dep2 on">견적 확인</a></li>
+                            <li><a href="" class="btn_dep2">교정 수수료 조회</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>교정 단가 조회</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">교정 단가 조회</a></li>
-                        </ul>
-                    </div>       
-                </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>견적 요청</button>
-                    <div class="nav_dep2_box">
-                        <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">견적 요청 조회</a></li>
-                            <li><a href="" class="btn_dep2">견적 요청</a></li>
+                            <li><a href="" class="btn_dep2">예약 접수</a></li>
+                            <li><a href="" class="btn_dep2">예약 접수 목록</a></li>
+                            <li><a href="" class="btn_dep2">접수 확인</a></li>
                         </ul>
                     </div>                   
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>마이 페이지</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu3"></i>교정 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">내 정보</a></li>
-                            <li><a href="" class="btn_dep2">우리 장비</a></li>
+                            <li><a href="" class="btn_dep2">교정 진행 현황</a></li>
+                            <li><a href="" class="btn_dep2">교정 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">불량 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">수리 이력 조회</a></li>
+                            <li><a href="" class="btn_dep2">우리 장비 목록</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu4"></i>정산/출고 관리</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">정산 관리</a></li>
+                            <li><a href="" class="btn_dep2">출고 관리</a></li>
                         </ul>
                     </div>                   
                 </li>
@@ -255,16 +264,30 @@
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">공지사항</a></li>
                             <li><a href="" class="btn_dep2">자료실</a></li>
+                            <li><a href="" class="btn_dep2">자주하는 질문</a></li>
                         </ul>
                     </div>                   
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>관리자</button>
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>마이페이지</button>
+                    <div class="nav_dep2_box">
+                        <ul class="nav_dep2">
+                            <li><a href="" class="btn_dep2">내 정보</a></li>
+                            <li><a href="" class="btn_dep2">내 문의 관리</a></li>
+                            <li><a href="" class="btn_dep2">성적서 업체 관리</a></li>
+                            <li><a href="" class="btn_dep2">포인트 관리</a></li>
+                        </ul>
+                    </div>                   
+                </li>
+                <li class="nav_item">
+                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">회원 관리</a></li>
+                            <li><a href="" class="btn_dep2">문의 관리</a></li>
                             <li><a href="" class="btn_dep2">공지사항 관리</a></li>
                             <li><a href="" class="btn_dep2">자료실 관리</a></li>
+                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
                         </ul>
                     </div>                 
                 </li>
@@ -286,21 +309,24 @@
                             </a>
                         </li>
                         <li class="breadcrumb_item" >
-                            <a href="#">견적 요청</a>
+                            <a href="#">견적 관리</a>
                         </li>
                         <li class="breadcrumb_item">
-                            견적 요청 상세보기
+                            견적 확인
+                        </li>
+                        <li class="breadcrumb_item">
+                            견적 상세 보기
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">견적 요청 상세보기 </h1>
+                    <h1 class="tit1">견적 상세보기 </h1>
                 </div>
                 
                 <section class="sec mt0">
                     <div class="sub_tit2 mb10 d_flex al_b">
-                        <h2 class="tit4">1. 성적서 기본 사항</h2> 
+                        <h2 class="tit4">1. 기본 정보</h2> 
                     </div>
                     <div class="v_tbl_wrap">
                         <table class="v_tbl">
@@ -309,78 +335,27 @@
                                     <col style="width: 160px;">
                                     <col>
                                     <col style="width: 160px;">
-                                    <col>
+                                    <col style="width: 45%;">
                                 </colgroup>
                                 <tr>
-                                    <th>차기교정일 표기</th>
-                                    <td>    
-                                        <div class="chk_list">
-                                            <!-- [D] 상세보기 수정불가
-                                                체크박스 활성화 :  <input type="radio" onClick="return false;" checked>
-                                                체크박스 비활성화 : <input type="radio" disabled>
-                                            -->
-                                            <label class="chk_item">
-                                                <input type="radio" name="c1" onClick="return false;" checked> 표기 
-                                            </label>
-                                            <label class="chk_item">
-                                                <input type="radio" name="c1" disabled> 미표기
-                                            </label>
-                                            <label class="chk_item">
-                                                <input type="radio" name="c1" disabled> 자체교정주기
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <th>접수방법</th>
-                                    <td>    
-                                        <div class="chk_list">
-                                            <label class="chk_item">
-                                                <input type="radio" name="c2" onClick="return false;" checked> 방문 
-                                            </label>
-                                            <label class="chk_item">
-                                                <input type="radio" name="c2" disabled> 택배
-                                            </label>
-                                            <label class="chk_item">
-                                                <input type="radio" name="c2" disabled> 픽업
-                                            </label>
-                                            <label class="chk_item">
-                                                <input type="radio" name="c2" disabled> 기타 
-                                                <input type="text" class="f_input ty_small w_120 ty_toggle ml10 " placeholder="기타 접수 방법" value="" readonly>
-                                            </label>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>적합성 진실 여부</th>
-                                    <td>
-                                        <div class="chk_list">
-                                            <label class="chk_item">
-                                                <input type="radio" name="c3" onClick="return false;" checked> 표기 
-                                            </label>
-                                            <label class="chk_item">
-                                                <input type="radio" name="c3" disabled> 미표기
-                                            </label>
-                                        </div>
-                                    </td>
                                     <th>교정 기관</th>
-                                    <td>
+                                    <td>    
                                         코리아인스트루먼트(주) 서울본사
+                                    </td>
+                                    <th>견적 정보</th>
+                                    <td>    
+                                        <ul class="list_sepBar">
+                                            <li class="list_item">EST231111-12</li>
+                                            <li class="list_item">접수구분 : 반출</li>
+                                            <li class="list_item">담당자 : 장원영</li>
+                                            <li class="list_item">견적일자 : 2024-12-12</li>
+                                        </ul>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>요구사항</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_small w100" value="빠르고 정확한 교정 부탁드립니다." readonly>
-                                    </td>
-                                    <th>견적상태</th>
-                                    <td>
-                                        <!--[D] 승인대기 상태-->
-                                        <div>승인 대기</div>
-                                        
-                                        <!--[D] 승인완료 상태-->
-                                        <div>
-                                            승인 완료 (견적금액:150,000원)
-                                            <button type="button" class="btn_down ml10"><b class="txt mr4">견적서</b></button>
-                                        </div>
+                                    <td colspan="3">
+                                        <textarea name="" id="" class="f_ta ty_small resize_y" placeholder="요구사항을 입력해주세요." style="height:60px; min-height: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium pariatur non ipsam iusto accusantium ea beatae est soluta. Recusandae quidem quia deserunt. Quas eos eius, tempore exercitationem at libero temporibus quaerat. Ducimus beatae, fuga sit laborum quaerat numquam iste, accusamus veritatis consequatur recusandae voluptatum illo esse nisi doloribus cupiditate nam fugit quos illum ea id velit mollitia! Beatae similique, quas nostrum eaque dolorem libero dolores vero suscipit unde ullam. Eum quod ratione doloremque, eos adipisci, ex aperiam dolor doloribus, expedita placeat accusamus delectus minima et similique dignissimos est rerum ut iste reiciendis? Voluptates explicabo expedita ab ullam quae veniam!</textarea>  
                                     </td>
                                 </tr>
                             </tbody>
@@ -389,148 +364,430 @@
                 </section>
                 <section class="sec">
                     <div class="sub_tit2">
-                        <h2 class="tit4">2. 계측기 정보</h2>
-                        <div class="tit4 count_info d_flex _gap6 ai_c ml15">
-                            <span>( <b>등록 :</b> 3건</span> 
-                            <span class="bar ty_small"></span> 
-                            <span><b>수량 :</b> 6개 )</span>
-                        </div>
+                        <h2 class="tit4">2. 견적 내역 (최종견적: <b>231,000</b> 원)</h2>
                         <div class="btn_set ml_auto">
-                            <!-- [D] 비활성화 : 'disable' 클래스 추가 -->
-                            <a href="" class="f_btn ty_small _solidGrey disable">계측기 등록 +</a>
-                            <button type="button" class="f_btn ty_small _green disable">엑셀 등록 <i class="fa-solid fa-file-excel"></i></button>
-                            <button type="button" class="f_btn ty_small _red disable">선택 삭제 <i class="fa-solid fa-trash-can"></i></button>
+                            <button type="button" class="f_btn ty_mid _key_ol w_100">견적서 <i class="fa-solid fa-file-arrow-down"></i></button>
+                            <button type="button" class="f_btn ty_mid _key_ol ">신청서 작성 + </button>
                         </div>
                     </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                        <table class="h_tbl">
+                    <div class="h_tbl_wrap">
+                        <table class="h_tbl ty_big">
                             <thead>
                                 <tr>
-                                    <th class="th_fixed">견적 구분</th>
-                                    <th class="th_fixed">공인 여부</th>
-                                    <th class="th_fixed">성적서 언어</th>
+                                    <th colspan="2">구분</th>
+                                    <th>수량</th>
+                                    <th>정상가(원)</th>
+                                    <th>최종 견적가(원)</th> 
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="2">공급가액</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td>999,000,000</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">부가세</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td>999,000,000</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">최종견적</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td>999,000,000</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2">사내</td>
+                                    <td>출장</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>반출</td>
+                                    <td>3</td>
+                                    <td>999,000</td>
+                                    <td>999,000</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">사외</td>
+                                    <td>출장</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>반출</td>
+                                    <td>4</td>
+                                    <td>999,999,000</td>
+                                    <td>999,999,000</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">표준소급료</td>
+                                    <td>-</td>
+                                    <td>90,000</td>
+                                    <td>90,000</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">기타금액</td>
+                                    <td>-</td>
+                                    <td>90,000</td>
+                                    <td>90,000</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">출장료</td>
+                                    <td>-</td>
+                                    <td>90,000</td>
+                                    <td>90,000</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">합계</td>
+                                    <td>7</td>
+                                    <td>234,230,000</td>
+                                    <td>234,230,000</td>
+                                </tr>
+                            </tbody>  
+                        </table>
+                    </div>
+                </section>
+                <section class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit4">3. 견적 상세 내역</h2>
+                    </div>
+                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
+                        <table class="h_tbl tl_fixed">
+                            <colgroup>
+                                <col style="width: 50px;">
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width: 80px;">
+                                <col style="width: 80px;">
+                                <col style="width: 80px;">
+                                <col style="width: 80px;">
+                                <col style="width: 80px;">
+                                <col style="width: 80px;">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="th_fixed">No</th>
                                     <th class="th_fixed">계측기명</th>
                                     <th class="th_fixed">제조사</th>
                                     <th class="th_fixed">형식</th>
-                                    <th class="th_fixed">수랑</th>
+                                    <th class="th_fixed">구분</th>
+                                    <th class="th_fixed">접수 방식</th>
+                                    <th class="th_fixed">기타 단가</th>
+                                    <th class="th_fixed">교정 단가</th>
+                                    <th class="th_fixed">수량</th>
+                                    <th class="th_fixed">최종견적</th>
+                                    <th class="th_fixed">비고</th>
                                 </tr>
                             </thead>
                             <tbody> 
                                 <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
+                                    <td>99</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구</td>
+                                    <td>비공인</td>
+                                    <td>반출</td>
+                                    <td>999,000</td>
+                                    <td>999,000</td>
+                                    <td>9,999</td>
+                                    <td>999,000</td>
+                                    <td class="taL">비고내용비고내용비고내용비고내용비고내용비고내용</td>
                                 </tr>
                                 <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
+                                    <td>99</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구</td>
+                                    <td>비공인</td>
+                                    <td>반출</td>
+                                    <td>999,000</td>
+                                    <td>999,000</td>
+                                    <td>9,999</td>
+                                    <td>999,000</td>
+                                    <td class="taL">비고내용비고내용비고내용비고내용비고내용비고내용</td>
                                 </tr>
                                 <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
+                                    <td>99</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구</td>
+                                    <td>비공인</td>
+                                    <td>반출</td>
+                                    <td>999,000</td>
+                                    <td>999,000</td>
+                                    <td>9,999</td>
+                                    <td>999,000</td>
+                                    <td class="taL">비고내용비고내용비고내용비고내용비고내용비고내용</td>
                                 </tr>
                                 <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
+                                    <td>99</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구</td>
+                                    <td>비공인</td>
+                                    <td>반출</td>
+                                    <td>999,000</td>
+                                    <td>999,000</td>
+                                    <td>9,999</td>
+                                    <td>999,000</td>
+                                    <td class="taL">비고내용비고내용비고내용비고내용비고내용비고내용</td>
                                 </tr>
                                 <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
+                                    <td>99</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구</td>
+                                    <td>비공인</td>
+                                    <td>반출</td>
+                                    <td>999,000</td>
+                                    <td>999,000</td>
+                                    <td>9,999</td>
+                                    <td>999,000</td>
+                                    <td class="taL">비고내용비고내용비고내용비고내용비고내용비고내용</td>
                                 </tr>
                                 <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>교정</td>
-                                    <td>공인</td>
-                                    <td>국문, 영문</td>
-                                    <td>내·외측 캘리퍼</td>
-                                    <td>MITUTOYO</td>
-                                    <td>200 (0.01) mm</td>
-                                    <td>3</td>
+                                    <td>99</td>
+                                    <td class="ellipsisTooltip">계측기명계측기명계측기명계측기명계측기명</td>
+                                    <td class="ellipsisTooltip">제조사명제조제조사명제조사명제조사명제조사명제조사명</td>
+                                    <td class="ellipsisTooltip">형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구형식어쩌구저쩌구</td>
+                                    <td>비공인</td>
+                                    <td>반출</td>
+                                    <td>999,000</td>
+                                    <td>999,000</td>
+                                    <td>9,999</td>
+                                    <td>999,000</td>
+                                    <td class="taL">비고내용비고내용비고내용비고내용비고내용비고내용비고내용비고내용비고내용비고내용비고내용비고내용</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    
+                </section>
+                <section class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit4">4. 견적 문의</h2>
+                    </div>
+                    <div class="reply_wrap">
+                        <ul class="reply_list">
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_view">
+                                        <!-- 로고 이미지 없을때 (그냥 비워둠) -->
+                                        <div class="reply_thumb"></div>
+                                        <!--// 로고 이미지 없을때 -->
+                                        <div class="reply_cont">
+                                            <div class="reply_name">하니(뉴진스)</div>
+                                            <div class="reply_comment">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply_set ty_re">
+                                    <div class="reply_view ">
+                                        <!-- 로고 이미지 있을때 -->
+                                        <div class="reply_thumb has_thumb">
+                                            <img src="../assets/images/common/Tesla_logo.png" alt="">
+                                        </div>
+                                         <!--// 로고 이미지 있을때 -->
+                                        <div class="reply_cont">
+                                            <div class="reply_name">민지(뉴진스)</div>
+                                            <div class="reply_comment">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply_set ty_re">
+                                    <div class="reply_write">
+                                        <div class="reply_thumb has_thumb">
+                                            <img src="../assets/images/common/vw-logo-2x.png" alt="">
+                                        </div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">답글을 입력하는 다니엘</div>
+                                            <textarea name="" id="" class="f_ta"></textarea>
+                                            <div class="reply_btns">
+                                                <button class="f_btn ty_small _line">취소</button>
+                                                <button class="f_btn ty_small _key">등록</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li> 
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_view">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">크리스티아누 호날두</div>
+                                            <div class="reply_comment">
+                                                진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강 진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강 진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li> 
+                            <!-- 댓글 수정시 -->
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_write">
+                                        <div class="reply_thumb has_thumb">
+                                            <img src="../assets/images/common/test.jpg" alt="">
+                                        </div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <textarea name="" id="" class="f_ta">댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면 댓글 수정할때 화면  </textarea>
+                                            <div class="reply_btns">
+                                                <button class="f_btn ty_small _line">취소</button>
+                                                <button class="f_btn ty_small _key">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li> 
+                            <!--// 댓글 수정시 -->
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_view">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <div class="reply_comment">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply_set ty_re">
+                                    <div class="reply_view ">
+                                        <!-- 로고 이미지 있을때 -->
+                                        <div class="reply_thumb has_thumb">
+                                            <img src="../assets/images/common/Tesla_logo.png" alt="">
+                                        </div>
+                                         <!--// 로고 이미지 있을때 -->
+                                        <div class="reply_cont">
+                                            <div class="reply_name">민지(뉴진스)</div>
+                                            <div class="reply_comment">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora odit sequi deserunt quaerat blanditiis! Enim obcaecati commodi ea nemo voluptas facere accusamus at quam iure a praesentium molestiae, accusantium eos? Eius saepe optio distinctio eos aspernatur corrupti, repellat voluptatibus suscipit!
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                                <button type="button" class="f_btn">답글쓰기</button>
+                                                <div class="edit_btns">
+                                                    <button type="button" class="f_btn ty_xsmall _line">수정</button>
+                                                    <button type="button" class="f_btn ty_xsmall _line">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 대댓글 수정시 -->
+                                <div class="reply_set ty_re">
+                                    <div class="reply_write">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <textarea name="" id="" class="f_ta">대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 대댓글 (2depth 댓글) 수정할때 화면 </textarea>
+                                            <div class="reply_btns">
+                                                <button class="f_btn ty_small _line">취소</button>
+                                                <button class="f_btn ty_small _key">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// 대댓글 수정시 -->
+                            </li> 
+                            <!-- 삭제된 댓글 -->
+                            <li class="reply_item">
+                                <div class="reply_set">
+                                    <div class="reply_view">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <div class="reply_comment">
+                                                삭제된 댓글입니다.
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 삭제된 대댓글 -->
+                                <div class="reply_set ty_re">
+                                    <div class="reply_view ">
+                                        <div class="reply_thumb"></div>
+                                        <div class="reply_cont">
+                                            <div class="reply_name">코리아인스트루먼트</div>
+                                            <div class="reply_comment">
+                                                삭제된 댓글입니다.
+                                            </div>
+                                            <div class="reply_view_bot">
+                                                <div class="reply_view_date">2023-12-23 16:35</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!--// 삭제된 대댓글 -->
+                            </li> 
+                            <!--// 삭제된 댓글 -->
+                        </ul>
+                        <div class="reply_write mt20">
+                            <div class="reply_thumb"></div>
+                            <div class="reply_cont">
+                                <div class="reply_name">코리아인스트루먼트</div>
+                                <textarea name="" id="" class="f_ta"></textarea>
+                                <div class="reply_btns">
+                                    <button class="f_btn ty_small _key">등록</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
                 </section>
                 <div class="btn_set taC mt30">
-                    <a href="estimate_list.html" class="f_btn ty_mid _key w_100">확인</a>
+                    <a href="estimate_list.html" class="f_btn ty_mid _blue w_100">목록</a>
                 </div>
                 
             </div>
@@ -549,33 +806,35 @@
             <div class="footer_logo">
                 <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
             </div>
-            <div class="footer_right_btns">
-                <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
-                <span class="bar"></span>
-                <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
-            </div>
             <div class="footer_info">
                 <ul class="footer_info_list">
-                    <li>회사명 : 코리아인스트루먼트(주)</li>
-                    <li>사업자등록번호 : 101-81-45861</li>
-                    <li class="ml10"><span class="bar"></span>대표이사 : 정재호</li>
+                    <li>코리아인스트루먼트(주)</li>
+                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
+                    <li><span class="bar"></span>대표이사 : 정재호</li>
                 </ul>
+                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
                 <div class="contact">
                     <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
                     <span class="bar"></span>
                     <span>1600 - 4245</span>
                 </div>
             </div>
-            <div class="footer_right_branch">
-                <button class="btn_trigger" onclick="branch_toggle()">코리아인스트루먼트(주) 지점안내</button>
-                <ul class="branch_list">
-                    <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
-                    <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
-                    <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
-                    <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
-                </ul>
-            </div>   
-            <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>         
+            <div class="footer_right">
+                <div class="footer_right_btns">
+                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
+                    <span class="bar"></span>
+                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
+                </div>
+                <div class="footer_right_branch">
+                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
+                    <ul class="branch_list">
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
+                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
         <!--//footer-->
     </div>
