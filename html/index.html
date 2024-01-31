@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="Generator" content="KIC">
     <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
     <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
@@ -24,23 +25,20 @@
         <a href="#container"></a>
     </div>
     
-    <div id="wrap" class="grid-container">
+    <div id="wrap">
         <!-- header -->
         <header class="header">
             <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
             <div class="h_util">
-                <div class="h_util_sec h_user">
-                    <i class="fa-solid fa-user"></i><a href="" class="user_name">홍길동</a> 님 
-                </div>
-                <div class="h_util_sec h_branch">
-                    <a href="" class="h_branch_current"><i class="fa-solid fa-building"></i>코리아인스트먼트(주) 서울본사</a> 
-                </div>
+                
                 <div class="h_util_sec h_btns">
+                    <button type="button" class="h_btn">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </button>
                     <!--[D] 알림(종) 활성화  'on' class 추가-->
                     <button type="button" class="h_btn ty_notice on" onclick="f_alert_open();">
                         <i class="fa-solid fa-bell"></i>
                     </button>
-                    <a href="" class="h_btn ty_logout"><i class="fa-solid fa-right-from-bracket"></i></a>
                 </div>
                 <div class="f_alert_box">
                     <div class="f_alert_top">
@@ -149,7 +147,7 @@
         <!--// header -->
         <!-- nav -->
         <aside class="sidenav">
-            <button type="button" class="btn_nav_toggle"><i class="fa-solid fa-chevron-left"></i></button>
+            
            
             <!--[D] 회사로고 없을경우-->
             <div class="sidenav_top">

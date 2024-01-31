@@ -13,18 +13,25 @@
 ::after {
     box-sizing: border-box;
 }
-
+html {
+    height: 100%;
+    overflow: hidden;
+}
 body {
-    min-width: 1490px;
-
     line-height: 1.5;
     font-weight: 400;
     font-size: 13px;
     font-family: $font;
-    background-color: $c_bg;
+    background-color: #fff;
     color: #222;
-    letter-spacing: -0.4px;
-    overflow-x: auto;
+    letter-spacing: -0.01em;
+    height: 100%;
+    overflow: hidden;
+}
+#wrap {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 article,

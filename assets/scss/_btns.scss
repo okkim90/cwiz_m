@@ -20,30 +20,7 @@
     height: 18px;
     background: url(../images/common/ico_del4.svg) no-repeat center center;
 }
-.btn_back {
-    width: 40px;
-    height: 40px;
-    background-color: $c_key;
-    border-radius: 20px;
-    position: absolute;
-    right: -10px;
-    top: -10px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:hover {
-        background-color: darken( $c_key, 7%);
-        box-shadow: 0 4px 6px rgba(#000, 0.2);
-    }
-    &::before {
-        content: '\f060';
-        //content:'\f053';
-        font-family: "Font Awesome 6 Free";
-        font-weight: bold;
-        color: #fff;
-    }
-}
+
 
 
 .btn_t_link {
@@ -261,13 +238,13 @@
     
     &.ty_xsmall {
         min-width: 40px;
-        height: 22px;
-        padding: 0 6px;
-        font-size: 12px;
-        line-height: 20px;
-        border-radius: 4px;
+        height: 18px;
+        padding: 0 4px;
+        font-size: 10px;
+        line-height: 16px;
+        border-radius: 2px;
         &._round {
-            border-radius: 22px;
+            border-radius: 18px;
         }
     }
     &.ty_small {
@@ -313,15 +290,15 @@
         }
     }
     &.ty_big {
-        height: 50px;
-        padding: 0 10px;
+        height: 44px;
+        padding: 0 15px;
         font-size: 16px;
         font-weight: 500;
-        line-height: 48px;
+        line-height: 42px;
         border-radius: 6px;
-        width: 200px;
+        //min-width: 200px;
         &._round {
-            border-radius: 50px;
+            border-radius: 44px;
         }
     }
     &.disable {

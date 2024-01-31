@@ -1,14 +1,14 @@
 
 
 
-let grid_container = document.querySelector('.grid-container');
-let btn_nav_toggle = document.querySelector('.btn_nav_toggle');
+const sidenave = document.querySelector('.sidenav');
+const btn_nav_toggle = document.querySelector('.btn_nav_toggle');
 if(btn_nav_toggle){
     btn_nav_toggle.addEventListener('click',()=>{
-        if(grid_container.classList.contains('nav_off')){
-            grid_container.classList.remove('nav_off');
+        if(sidenave.classList.contains('on')){
+            sidenave.classList.remove('on');
         }else{
-            grid_container.classList.add('nav_off');
+            sidenave.classList.add('on');
         }
     })
 }
@@ -304,10 +304,6 @@ function reset(target){
    this_form.reset();
 }
 
-let btn_back = document.querySelector('.btn_back');
-if (btn_back && !document.referrer ) { 
-    btn_back.style.display = 'none';
-}
 
 
 let btn_disable = document.querySelectorAll('.f_btn.disable');
