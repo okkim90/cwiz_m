@@ -297,7 +297,7 @@ $inner: 1280px;
         border-radius: #{$z}px
     }
 }
-@mixin list_col($col ,$gapX:20px, $gapY:30px){
+@mixin list_col($col ,$gapX:12px, $gapY:20px){
     .col_#{$col} {
         gap: $gapY $gapX;
         .col_item {
@@ -306,7 +306,7 @@ $inner: 1280px;
     }
 }
 @for $i from 1 through 10 {
-    @include list_col($i ,20px, 30px);
+    @include list_col($i ,12px, 20px);
 } 
 
 

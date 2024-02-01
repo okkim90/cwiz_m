@@ -30,21 +30,15 @@
         background-color: #fff;
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 4px 12px rgba(#000, .2);
+        box-shadow: 0 2px 8px rgba(#000, .15);
         transition: all .2s ease;
-        &:hover {
-            box-shadow: 0 14px 22px rgba(#000, .2);
-            transform: translateY(-4px);
-        }
-        &:active {
-            box-shadow: 0 4px 12px rgba(#000, .2);
-        }
+        
         &_info {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 13px;
-            margin-bottom: 10px;
+            font-size: 11px;
+            margin-bottom: 8px;
             color: #666;
             flex-wrap: wrap;
             i {
@@ -54,20 +48,22 @@
             }
         }
         .txt_box {
-            padding: 15px 18px 20px;
+            padding:10px 12px 12px;
             background-color: #fff;
             .tit {
                 display: block;
-                font-size: 14px;
+                font-size: 12px;
+                font-weight: 500;
             }
             .desc {
                 
                 display: block;
                 font-size: 12px;
-                padding-top: 10px;
-                margin-top: 10px;
+                padding-top: 5px;
+                margin-top: 5px;
                 box-sizing: content-box;
                 border-top: 1px dotted $c_line;
+                color: #666;
             }
         }
     }

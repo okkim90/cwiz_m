@@ -3,16 +3,12 @@
     $maxwidth : 1200px;
 
     &_wrap {
-        padding: 20px;
-        padding-bottom: 30px;
-    
-        border-radius: 10px;
+       
         
         margin-left: auto;
         margin-right: auto;
-        background-color: rgba(#000, .014);
-        border: 1px solid $c_line;
-        //border-top: 1px solid #000;
+       
+        
         &_tit {
             max-width: $maxwidth;
             margin: 0 auto;
@@ -32,8 +28,8 @@
         
     }
     &_thumb {
-        width: 40px;
-        height: 40px;
+        width: 26px;
+        height: 26px;
         border-radius: 50%;
         background-color: #fff;
         border: 1px solid $c_line;
@@ -43,7 +39,6 @@
         background-repeat: no-repeat;
         background-size: 70%;
         background-position: center bottom;
-
         overflow: hidden;
         &.has_thumb {
             background-image: none;
@@ -57,11 +52,14 @@
    
         
         
-    &_name {
-        font-size: 14px;
+    &_user {
+        display: flex;
+        font-size: 12px;
         color: #000;
         font-weight: bold;
         margin-bottom: 6px;
+        align-items: center;
+        gap: 6px;
     }
     
     &_cont {
@@ -70,7 +68,7 @@
     &_write {
         border: 2px solid $c_line;
         background-color: #fff;
-        padding: 20px;
+        padding: 12px;
         border-radius: 10px;
         display: flex;
         max-width: $maxwidth;
@@ -81,19 +79,20 @@
             height: 60px;
             padding: 10px;
             resize: vertical; 
+            font-size: 12px;
         }
     }
     
     &_item {
-        padding: 20px;
+        padding: 16px 12px;
         //margin-bottom: 20px;
         border-bottom: 1px solid $c_line;
         &:last-of-type {
             border-bottom: none;
         }
-        &:hover {
-            background-color: rgba(yellow, .045);
-        }
+        // &:hover {
+        //     background-color: rgba(yellow, .045);
+        // }
     }
 
     &_view {
@@ -107,10 +106,15 @@
             gap: 10px;
             margin-top: 10px;
             color: #949494;
-            font-size: 13px;
+            font-size: 12px;
             .f_btn {
-                font-weight: bold;
+                font-weight: 500;
                 color: #333;
+                font-size: 12px;
+                &._solidGrey {
+                    color: #fff;
+                    padding: 0 6px;
+                }
             }
             .edit_btns {
                 display: flex;
@@ -119,30 +123,34 @@
                 margin-left: auto;
             }
         }
+        &_date {
+            font-size: 11px;
+            letter-spacing: -0.2px
+        }
     }
 
     &_set {
         &.ty_re {
-            padding-left: 40px;
-            padding-top: 20px;
-            margin-top: 20px;
+            padding-left: 22px;
+            padding-top: 12px;
+            margin-top: 12px;
             border-top: 1px solid $c_line;
             position: relative;
             &::before {
                 content:'';
-                width: 16px;
-                height: 16px;
+                width: 12px;
+                height: 14px;
                 box-sizing: border-box;
-                border-left: 1px solid #999;
-                border-bottom: 1px solid #999;
+                border-left: 1px solid #666;
+                border-bottom: 1px solid #666;
                 position: absolute;
-                left: 10px;
-                top: 24px;
+                left: 0;
+                top: 12px;
             }
         }
     }
     &_comment {
-        font-size: 14px;
+        font-size: 12px;
     }
     &_btns {
         margin-top: 10px;
@@ -150,7 +158,7 @@
         justify-content: flex-end;
         gap: 6px;
         .f_btn {
-            min-width: 60px;
+            min-width: 50px;
             
             &._line {
                 color: #333;
