@@ -52,9 +52,7 @@
             }
             .user_name {
                 font-weight: 500;
-                &:hover {
-                    text-decoration: underline;
-                }
+                
             }
         }
         .h_branch {
@@ -120,9 +118,7 @@
                     display: block;
                     padding: 0 18px;
                 }
-                &:hover {
-                    background-color: rgba($c_key, .1);
-                }
+                
             }
             
             &::before {
@@ -256,9 +252,7 @@
             right: 24px;
             top: 24px;
             opacity: 0.6;
-            &:hover {
-                opacity: 1;
-            }
+            
         }
         &_list {
             max-height: calc(100% - 50px);
@@ -278,10 +272,7 @@
             box-shadow: 0 0 10px rgba(#000, .1);
             transition: all .2s ease-in-out;
             position: relative;
-            &:hover {
-                box-shadow: 0 0 16px rgba(#000, .3);
-                background-color: rgb(255, 250, 234);
-            }
+            
         }
         &_item {
             font-size: 12px;
@@ -478,7 +469,7 @@
         align-items: center;
         //justify-content: center;
         position: relative;
-        padding: 0 10px;
+        padding: 0 5px;
         height: 70px;
 
         .thumb_user {
@@ -487,7 +478,7 @@
             border-radius: 50%;
             border: 1px solid $c_line;
             flex-shrink: 0;
-            margin-right: 12px;
+            margin-right: 8px;
             background-image: url(../images/common/ico_user.svg);
             background-size: auto 80%;
             background-repeat: no-repeat;
@@ -516,6 +507,15 @@
             line-height: 1;
             margin-top: 8px;
         }
+        .btn_nav_close {
+            margin-left: auto;
+            width: 40px;
+            height: 40px;
+            background-image: url(../images/common/ico_close.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80%;
+        }
     }
 
    
@@ -525,7 +525,7 @@
         max-height: calc(100% - 70px);
         overflow-y: auto;
         &_dep2 {
-            //visibility: hidden;
+            
             &_box {
                display: none;
             }
@@ -540,7 +540,7 @@
         &_item {
             &.on {
                 .nav_dep2 {
-                    //visibility: visible;
+                    
                     &_box {
                         display: block;
                     }
@@ -585,7 +585,7 @@
                 width: 4px;
                 
                 background-color: $c_key;
-                transition: all .25s ease;
+                //transition: all .25s ease;
             }
             .ico_dep1 {
                 font-style: normal;
@@ -595,7 +595,7 @@
                 height: 20px;
                 background-repeat: no-repeat;
                 background-position: center center;
-                transition: all .25s ease;
+                //transition: all .25s ease;
                 &::before{
                     position: absolute;
                     width: 0;
@@ -613,7 +613,7 @@
                 }
             }
             &::after {
-                transition: all .25s ease;
+                //transition: all .25s ease;
                 content: '\f078';
                 @include fa;
                 margin-left: auto;
@@ -636,10 +636,7 @@
             &::after {
                 content:''
             }
-            &:hover {
-                background-color: rgba($c_key, .06);
-                font-weight: 500;
-            }
+            
             &.on {
                 color: $c_key;
                 font-weight: 500;
@@ -740,13 +737,7 @@
         }
         &.on { 
             background-color: rgba($c_solidGrey, 1);
-            &:hover {
-                background-color: rgba($c_solidGrey, 1);
-            }
-        }
-        
-        &:hover {
-            background-color: rgba($c_solidGrey, .7);
+            
         }
     }
     &_link {
@@ -917,9 +908,7 @@
         display: block;
         color: darken($c_blue, 15%) ;
         font-weight: 500;
-        &:hover {
-            text-decoration: underline;
-        }
+        
     }
 }
 
@@ -1062,11 +1051,7 @@
             .bar {
                 margin: 0 10px;
             }
-            a {
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
+           
         }
         &_branch {
             
@@ -1128,9 +1113,7 @@
                     padding: 0 10px;
                     white-space: nowrap;
                     line-height: 30px;
-                    &:hover {
-                        background-color: rgba($c_key, .1);
-                    }
+                    
                 }
             }
         }
@@ -1225,9 +1208,7 @@
             padding: 0 20px;
             width: 100%;
             text-align: left;
-            &:hover {
-                background-color: rgba($c_key, .07);
-            }
+            
             &.on {
                 font-weight: 500;
                 color: $c_key;
@@ -1351,9 +1332,7 @@
                 width: 100%;
                 position: relative;
                 padding: 6px 15px;
-                &:hover {
-                    background-color: lighten($c_blue, 46%);
-                }
+                
             }
             input[type="radio"] {
                 position: absolute;
@@ -2400,11 +2379,7 @@
             background-color: #fff;
             overflow: hidden;
             font-size: 13px;
-            &:hover {
-                border-color: $c_key;
-                transform: translateY(-4px);
-                box-shadow: 0 4px 6px rgba(#000, .07);
-            }
+            
         }
         &_top {
             display: flex;
@@ -2464,6 +2439,136 @@
                         color: $c_key;
                     }
                 }
+            }
+        }
+    }
+}
+
+.srch {
+    &_wrap {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+    &_form {
+        position: relative;
+        flex: 1;
+        .f_input {
+            width: 100%;
+            &.ty_mid {
+                padding: 0 10px;
+                padding-right: 42px;
+            }
+            
+        }
+        .btn_submit {
+            width: 42px;
+            height: 36px;
+            border-radius: 0 50% 50% 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 16px;
+            &::before {
+                content: "\f002";
+                font-family: "Font Awesome 6 Free";
+                font-weight: bold;
+                color: #333;
+                
+            }
+        }
+    }
+    &_detail {
+        &_btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: $c_key;
+            // &::before {
+            //     content: "\f00e";
+            //     font-family: "Font Awesome 6 Free";
+            //     font-weight: bold;
+            //     color: #fff;
+            //     font-size: 18px;
+            // }
+            background-image: url(../images/common/ico_filter2.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 20px;
+            transform: rotate(90deg);
+        }
+        &_wrap {
+            background-color: rgba(#000,.4);
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .2s  ease-in-out;
+            &.on {
+                opacity: 1;
+                visibility: visible;
+                .srch_detail_inner {
+                    bottom: 0;
+                    transition: bottom .4s ease-in-out; 
+                }
+            }
+        }
+        &_inner {
+            position: absolute;
+            left: 0;
+            bottom: -100%;
+            width: 100%;
+            max-height: 90%;
+            background-color: #fff;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            flex-direction: column;
+            padding: 16px 16px 20px;
+            transition: bottom .2s ease-in-out; 
+        }
+        &_top {
+            margin-bottom: 15px;
+            position: relative;
+            .tit2 {
+                text-align: center;
+                line-height: 30px;
+            }
+        }
+        &_cont {
+            flex: 1;
+            overflow-y: auto;
+        }
+        &_bot {
+            display: flex;
+            margin-top: 30px;
+            gap: 10px;
+            .f_btn {
+                flex: 1;
+            }
+        }
+        &_close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/common/ico_close.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &_sec {
+            & + & {
+                margin-top: 10px;
+            }
+            .tit {
+                display: block;
+                font-size: 13px;
+                font-weight: 500;
+                margin-bottom: 4px;
             }
         }
     }

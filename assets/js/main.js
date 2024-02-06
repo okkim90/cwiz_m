@@ -3,6 +3,7 @@
 
 const sidenave = document.querySelector('.sidenav');
 const btn_nav_toggle = document.querySelector('.btn_nav_toggle');
+const btn_nav_close = document.querySelector('.btn_nav_close');
 if(btn_nav_toggle){
     btn_nav_toggle.addEventListener('click',()=>{
         if(sidenave.classList.contains('on')){
@@ -12,20 +13,22 @@ if(btn_nav_toggle){
         }
     })
 }
-
+if(btn_nav_close){
+    btn_nav_close.addEventListener('click',()=>{
+        sidenave.classList.remove('on');
+    })
+}
 
 
 
 
 let nav_item = document.querySelectorAll('.nav_item');
 let nav_btn = document.querySelectorAll('.nav .btn_dep1');
-let nav_dep2 = document.querySelectorAll('.nav .btn_dep1');
 nav_btn.forEach(e=>{
     e.addEventListener('click',e=>{
-        let parent_li = e.target.closest('.nav_item');
         
+        let parent_li = e.target.closest('.nav_item');
         if(parent_li.classList.contains('on')){
-            
             parent_li.classList.remove('on');
         }else {
             nav_item.forEach(e=>{
@@ -290,14 +293,23 @@ layer_popup_cont.forEach(e=>{
 
 
 
+
+
 function open_popup(target){
     let layer_popup = document.querySelector(`.layer_popup.${target}`);
-    // if (target == 'popup_preview'){
-       
-    // }
     layer_popup.classList.add('on');
-    
 }
+
+function open_srch(target){
+    let srch_detail = target.closest('.srch_wrap').querySelector('.srch_detail_wrap');
+    srch_detail.classList.add('on');
+}
+
+function close_srch(target){
+    let srch_detail = target.closest('.srch_detail_wrap');
+    srch_detail.classList.remove('on');
+}
+
 
 function reset(target){
    let this_form  = target.closest('form');

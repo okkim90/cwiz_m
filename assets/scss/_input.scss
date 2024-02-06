@@ -26,21 +26,27 @@
         height: 28px;
         padding: 0 5px;
         border-radius: 4px;
-        font-size: 13px;
+        font-size: 12px;
         &.inp_date {
             width: 110px;
             padding-right: 24px;
             background-position: calc(100% - 4px) center;
+        }
+        &.ty_round {
+            border-radius: 14px;
         }
     }
     &.ty_mid {
         height: 36px;
         padding: 0 10px;
         border-radius: 4px;
-        font-size: 14px;
+        font-size: 13px;
         &.inp_date {
             padding-right: 30px;
             background-position: calc(100% - 8px) center;
+        }
+        &.ty_round {
+            border-radius: 18px;
         }
     }
     &.ty_big {
@@ -268,6 +274,8 @@
     
     line-height: 1.5;
     border-radius: 4px;
+    font-size: 12px;
+    padding: 0.6em 1em;
     &.ty_small {
         font-size: 13px;
         padding: 5px;
@@ -309,7 +317,7 @@
         padding: 0 5px;
         padding-right: 15px;
         border-radius: 4px;
-        font-size: 13px;
+        font-size: 12px;
         background-position: calc(100% - 5px) center;
         background-size: 10px 10px;
     }
@@ -318,7 +326,7 @@
         padding: 0 10px;
         padding-right: 20px;
         border-radius: 4px;
-        font-size: 14px;
+        font-size: 13px;
         background-position: calc(100% - 10px) center;
         background-size: 10px 10px;
     }
@@ -327,7 +335,7 @@
         padding: 0 15px;
         padding-right: 30px;
         border-radius: 6px;
-        font-size: 16px;
+        font-size: 15px;
         background-position: calc(100% - 10px) center;
         background-size: 12px 12px;
     }

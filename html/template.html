@@ -153,7 +153,6 @@
             <div class="sidenav_top">
                 <!--[D] 썸네일 X -->
                 <div class="thumb_user"></div>
-
                 <!--[D] 썸네일 O -->
                 <div class="thumb_user has_thumb">
                     <img src="../assets/images/common/pepper2.jpg" alt="">
@@ -161,46 +160,11 @@
                 <div>
                     <div class="user_name"><b>김영술</b>님 안녕하세요.</div>
                     <div class="co_name">코리아인스트루먼트(주) 서울본사</div>
+                    <!--[D] 회사정보 미등록시 -->
+                    <div class="co_name"><a href="" class="btn_t_link">회사정보 등록하기 &gt;</a></div>
+                    <!--// [D] 회사정보 미등록시 -->
                 </div>
-            </div>
-            <div class="layer_popup pop_logo" onclick="close_popup(this)">
-                <div class="layer_popup_inner">
-                    <div class="layer_popup_cont ty_small">
-                        <button type="button" class="close_popup" onclick="close_popup(this)">
-                            <span class="blind">팝업 닫기</span>
-                        </button>
-                        <div class="sub_tit">
-                            <h1 class="tit1">로고 이미지 등록</h1>
-                        </div>
-                        <form action="">
-                            <!--[D] 이미지 첨부 전 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <label for="upload_eq_img" class="btn_img_upluad">
-                                    <i class="fa-solid fa-image"></i>
-                                    <p>이미지 첨부하기 (260 x 90)</p>
-                                </label>
-                            </div>
-                            <!--// [D] 이미지 첨부 전 -->
-                            
-                            <br><!--[D] 개발시 삭제-->
-
-                             <!--[D] 이미지 첨부 후 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <div class="img_box_edit">
-                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
-                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
-                                </div>
-                                <img src="../assets/images/common/Tesla_logo.png" alt="">
-                            </div>  
-                            <!--[D] 이미지 첨부 후 -->                
-                            <div class="btn_set mt20 taC">
-                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <button type="button" class="btn_nav_close" aria-label="close navigation"></button>
             </div>
             
             <ul class="nav">
@@ -214,13 +178,13 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav_item on">
+                <li class="nav_item">
                     <button type="button" class="btn_dep1 "><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">예약 접수</a></li>
                             <li><a href="" class="btn_dep2">예약 접수 목록</a></li>
-                            <li><a href="" class="btn_dep2 on">접수 확인</a></li>
+                            <li><a href="" class="btn_dep2">접수 확인</a></li>
                         </ul>
                     </div>                   
                 </li>
@@ -265,18 +229,6 @@
                             <li><a href="" class="btn_dep2">포인트 관리</a></li>
                         </ul>
                     </div>                   
-                </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
-                    <div class="nav_dep2_box">
-                        <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">회원 관리</a></li>
-                            <li><a href="" class="btn_dep2">문의 관리</a></li>
-                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
-                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
-                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
-                        </ul>
-                    </div>                 
                 </li>
             </ul>
         </aside>
@@ -333,12 +285,123 @@
                             우리장비
                         </li>
                     </ol>
-                  </nav>
+                </nav>
                 <h1 class="tit1 mb20">TITLE1 대타이틀 대타이틀 대타이틀 (22px)</h1>
                 <h2 class="tit2 mb15">TITKE2 중타이틀 중타이틀 중타이틀 (18px)</h2>
                 <h3 class="tit3 mb10">TITKE3 소타이틀 소타이틀 소타이틀 (16px)</h3>
 
+                <section class="sec">
+                    <h3 class="tit2 mb15">일반 리스트</h3>
 
+                    <div class="srch_wrap">
+                        <form class="srch_form">
+                            <input type="text" class="f_input ty_mid ty_round">
+                            <button type="submit" class="btn_submit" aria-label="검색하기"></button>
+                        </form>
+                        <button class="srch_detail_btn" aria-label="상세검색" onclick="open_srch(this)"></button>
+                        <div class="srch_detail_wrap">
+                            <div class="srch_detail_inner">
+                                <div class="srch_detail_top">
+                                    <h3 class="tit2">상세검색</h3>
+                                    <button class="srch_detail_close" onclick="close_srch(this)" aria-label="상세검색 닫기"></button>
+                                </div>
+                                <div class="srch_detail_cont">
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">접수일 조회</label>
+                                        <div class="date_set"> 
+                                            <input type="text" class="f_input ty_small inp_date date_start" readonly="" id=""> ~
+                                            <input type="text" class="f_input ty_small inp_date date_end" readonly="" id="">
+                                        </div>
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">접수 번호</label>
+                                        <input type="text" class="f_input ty_small w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">성적서 업체</label>
+                                        <input type="text" class="f_input ty_small w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">계측기명</label>
+                                        <input type="text" class="f_input ty_small w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">제조사</label>
+                                        <input type="text" class="f_input ty_small w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">형식</label>
+                                        <input type="text" class="f_input ty_small w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">기기번호</label>
+                                        <input type="text" class="f_input ty_small w100">
+                                    </div>
+                                </div>
+                                <div class="srch_detail_bot">
+                                    <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
+                                    <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <ul class="mList">
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num">202410000</span>
+                                    <span class="date">2024-03-24</span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER 외 980</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                                <div class="mList_sec mList_count">총 수량 981대</div>
+                            </a>
+                        </li>
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num">202410000</span>
+                                    <span class="date">2024-03-24</span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER 외 980</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                                <div class="mList_sec mList_count">총 수량 981대</div>
+                            </a>
+                        </li>
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num">202410000</span>
+                                    <span class="date">2024-03-24</span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER 외 980</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                                <div class="mList_sec mList_count">총 수량 981대</div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
                 <div class="sec">
                     <h3 class="tit2 mb15">로딩 레이어 띄우기 </h3>
                     <p class="fz_mid mb20">전체 화면 공통, 항상 전체화면으로 띄움</p>
@@ -372,6 +435,49 @@
                 <section class="sec">
                     <h3 class="tit2 mb15">팝업 모음</h3>
                     <div class="d_flex _gap10 fw_w">
+                        <button type="button" class="f_btn ty_mid _key" onclick="open_popup('pop_logo')">회사 로고 팝업</button>
+                        <div class="layer_popup pop_logo" onclick="close_popup(this)">
+                            <div class="layer_popup_inner">
+                                <div class="layer_popup_cont ty_small">
+                                    <button type="button" class="close_popup" onclick="close_popup(this)">
+                                        <span class="blind">팝업 닫기</span>
+                                    </button>
+                                    <div class="sub_tit">
+                                        <h1 class="tit1">로고 이미지 등록</h1>
+                                    </div>
+                                    <form action="">
+                                        <!--[D] 이미지 첨부 전 -->
+                                        <div class="img_box ty_upload ty_logo">
+                                            <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                            <label for="upload_eq_img" class="btn_img_upluad">
+                                                <i class="fa-solid fa-image"></i>
+                                                <p>이미지 첨부하기 (260 x 90)</p>
+                                            </label>
+                                        </div>
+                                        <!--// [D] 이미지 첨부 전 -->
+                                        
+                                        <br><!--[D] 개발시 삭제-->
+            
+                                         <!--[D] 이미지 첨부 후 -->
+                                        <div class="img_box ty_upload ty_logo">
+                                            <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
+                                            <div class="img_box_edit">
+                                                <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
+                                                <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
+                                            </div>
+                                            <img src="../assets/images/common/Tesla_logo.png" alt="">
+                                        </div>  
+                                        <!--[D] 이미지 첨부 후 -->                
+                                        <div class="btn_set mt20 taC">
+                                            <input type="submit" class="f_btn ty_small _key w_80" value="등록">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                         <button type="button" class="f_btn ty_mid _key" onclick="open_popup('popup_company1')">성적서 업체 검색</button>
                         <!-- [팝업] 성적서 업체 검색 -->
                         <div class="layer_popup popup_company1" onclick="close_popup(this)">
@@ -1159,16 +1265,7 @@
                         <!--//[팝업] 배송지 수정하기-->
                     </div>
                 </section>
-                <section class="sec">
-                    <h3 class="tit2 mb15">리스트</h3>
-                    <ul class="mList">
-                        <li class="mList_item">
-                            <div class="mList_item_top"></div>
-
-                        </li>
-
-                    </ul>
-                </section>
+                
                 <section class="sec">
                     <h3 class="tit2 mb15">문의하기</h3>
                     <div class="reply_wrap">
