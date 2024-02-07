@@ -5618,6 +5618,10 @@ input::-webkit-search-results-decoration {
 .header .logo a img {
   height: 24px;
 }
+.header_tit {
+  font-size: 20px;
+  font-weight: 500;
+}
 .header .btn_back {
   position: absolute;
   left: 6px;
@@ -7752,13 +7756,13 @@ tr:last-child .status_box_date {
   background-position: center center;
 }
 .srch_detail_sec + .srch_detail_sec {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 .srch_detail_sec .tit {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .botNav {
@@ -7769,7 +7773,7 @@ tr:last-child .status_box_date {
   right: 0;
   margin-left: -1px;
   margin-right: -1px;
-  height: 56px;
+  height: 66px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7779,6 +7783,7 @@ tr:last-child .status_box_date {
   box-sizing: border-box;
   border-radius: 10px 10px 0 0;
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.08);
+  padding-bottom: 8px;
 }
 .botNav_item {
   flex: 1;

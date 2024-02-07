@@ -300,49 +300,49 @@
                         </form>
                         <button class="srch_detail_btn" aria-label="상세검색" onclick="open_srch(this)"></button>
                         <div class="srch_detail_wrap">
-                            <div class="srch_detail_inner">
+                            <form class="srch_detail_inner">
                                 <div class="srch_detail_top">
                                     <h3 class="tit2">상세검색</h3>
-                                    <button class="srch_detail_close" onclick="close_srch(this)" aria-label="상세검색 닫기"></button>
+                                    <button type="button" class="srch_detail_close" onclick="close_srch(this)" aria-label="상세검색 닫기"></button>
                                 </div>
                                 <div class="srch_detail_cont">
                                     <div class="srch_detail_sec">
                                         <label for="" class="tit">접수일 조회</label>
                                         <div class="date_set"> 
-                                            <input type="text" class="f_input ty_small inp_date date_start" readonly="" id=""> ~
-                                            <input type="text" class="f_input ty_small inp_date date_end" readonly="" id="">
+                                            <input type="text" class="f_input ty_mid inp_date date_start" readonly="" id=""> ~
+                                            <input type="text" class="f_input ty_mid inp_date date_end" readonly="" id="">
                                         </div>
                                     </div>
                                     <div class="srch_detail_sec">
                                         <label for="" class="tit">접수 번호</label>
-                                        <input type="text" class="f_input ty_small w100">
+                                        <input type="text" class="f_input ty_mid w100">
                                     </div>
                                     <div class="srch_detail_sec">
                                         <label for="" class="tit">성적서 업체</label>
-                                        <input type="text" class="f_input ty_small w100">
+                                        <input type="text" class="f_input ty_mid w100">
                                     </div>
                                     <div class="srch_detail_sec">
                                         <label for="" class="tit">계측기명</label>
-                                        <input type="text" class="f_input ty_small w100">
+                                        <input type="text" class="f_input ty_mid w100">
                                     </div>
                                     <div class="srch_detail_sec">
                                         <label for="" class="tit">제조사</label>
-                                        <input type="text" class="f_input ty_small w100">
+                                        <input type="text" class="f_input ty_mid w100">
                                     </div>
                                     <div class="srch_detail_sec">
                                         <label for="" class="tit">형식</label>
-                                        <input type="text" class="f_input ty_small w100">
+                                        <input type="text" class="f_input ty_mid w100">
                                     </div>
                                     <div class="srch_detail_sec">
                                         <label for="" class="tit">기기번호</label>
-                                        <input type="text" class="f_input ty_small w100">
+                                        <input type="text" class="f_input ty_mid w100">
                                     </div>
                                 </div>
                                 <div class="srch_detail_bot">
                                     <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
                                     <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     

@@ -25,6 +25,10 @@
             }
         }
     }
+    &_tit {
+        font-size: 20px;
+        font-weight: 500;
+    }
 
     .btn_back {
         position: absolute;
@@ -2438,13 +2442,13 @@
         }
         &_sec {
             & + & {
-                margin-top: 10px;
+                margin-top: 12px;
             }
             .tit {
                 display: block;
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: 500;
-                margin-bottom: 4px;
+                margin-bottom: 5px;
             }
         }
     }

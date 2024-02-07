@@ -30,7 +30,7 @@
     <div id="wrap">
         <!-- header -->
         <header class="header">
-            <h1 class="logo"><a href=""><img src="../assets/images/common/logo_micro.svg" alt=""></a></h1>
+            <h1 class="header_tit">접수관리</h1>
             <button type="button" class="btn_back" aria-label="뒤로가기"></button>
             <h2 class="current_page"></h2>
             <div class="h_util">
@@ -280,200 +280,19 @@
                             </a>
                         </li>
                         <li class="breadcrumb_item" >
-                            <a href="#">접수 관리</a>
+                            DEPTH1
                         </li>
                         <li class="breadcrumb_item">
-                            접수 확인
+                            DEPTH2
                         </li>
                     </ol>
                 </nav>
                 <!--// [D] breadcrumb -->
                 <div class="sub_tit">
-                    <h1 class="tit1">접수 확인</h1>
+                    <h1 class="tit1">타이틀</h1>
                 </div>
-                <form action="">
-                    <div class="v_tbl_wrap">
-                        <table class="v_tbl">
-                            <tbody>
-                                <colgroup>
-                                    <col style="width: 120px;">
-                                    <col style="width: 20%">
-                                    <col style="width: 120px;">
-                                    <col>
-                                    <col style="width: 120px;">
-                                    <col>
-                                    <col style="width: 120px;">
-                                    <col>
-                                </colgroup>
-                                <tr>
-                                    <th>신청일</th>
-                                    <td>
-                                        <div class="date_set">
-                                            <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
-                                            <input type="text" class="f_input ty_small inp_date date_end" readonly>
-                                        </div>
-                                    </td>
-                                    <th>예비번호</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_small w_200">
-                                    </td>
-                                    <th>성적서 업체</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_small w_200">
-                                    </td>
-                                    <th>입고 상태</th>
-                                    <td>
-                                        <select name="" id="" class="f_select ty_small w_200">
-                                            <option value="" selected disabled>전체</option>
-                                            <option value="">입고 완료</option>
-                                            <option value="">입고 대기</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>계측기명</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>       
-                                    <th>제조사</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>  
-                                    <th>형식</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>   
-                                    <th>기기번호</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>   
-                                </tr>
-                            </tbody>
-                        </table> 
-                    </div>
-                    <div class="btn_set taC mt30">
-                        <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
-                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
-                    </div>
-                </form>
                 <section class="sec">
-                    <div class="sub_tit2 mb10 d_flex al_b">
-                        <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2> 
-                        <select name="" id="" class="f_select ty_small w_80 ml20">
-                            <option value="">30개</option>
-                            <option value="">50개</option>
-                            <option value="">100개</option>
-                            <option value="">200개</option>
-                            <option value="">전체</option>
-                        </select>
-                        <div class="sub_tit_btns btn_set">
-                            <button type="button" class="f_btn ty_small _green w_110">
-                                엑셀 다운받기 <i class="fa-solid fa-file-arrow-down"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                        <table class="h_tbl tl_fixed">
-                            <colgroup>
-                                <col style="width: 50px;">
-                                <col style="width: 100px;">
-                                <col style="width: 80px;">
-                                <col>
-                                <col style="width: 80px;">
-                                <col>
-                                <col style="width: 80px;">
-                                <col style="width: 80px;">
-                                <col style="width: 80px;">
-                                <col style="width: 120px;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th class="th_fixed">No</th>
-                                    <th class="th_fixed">접수 번호</th>
-                                    <th class="th_fixed">접수일</th>
-                                    <th class="th_fixed">성적서 업체</th>
-                                    <th class="th_fixed">접수자</th>
-                                    <th class="th_fixed">교정 기관</th>
-                                    <th class="th_fixed">총 수량</th>
-                                    <th class="th_fixed">입고 수량</th>
-                                    <th class="th_fixed">접수증</th>
-                                    <th class="th_fixed">상세 내역</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>9999</td>
-                                    <td>24000123</td>
-                                    <td>2023-12-13</td>
-                                    <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td>김장훈</td>
-                                    <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>9,999</td>
-                                    <td>9,999</td>
-                                    <td>
-                                        <a href="" class="btn_down"><span class="blind">접수증 다운로드</span></a>
-                                    </td>
-                                    <td>
-                                        <div class="d_flex fw_w _gap4 jc_c">
-                                            <a href="" class="f_btn ty_xsmall _round _key"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <button type="button" class="f_btn ty_xsmall _round _solidGrey"><i class="fa-regular fa-copy"></i> 복사</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td>24000123</td>
-                                    <td>2023-12-13</td>
-                                    <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td>김장훈</td>
-                                    <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>9,999</td>
-                                    <td>0</td>
-                                    <td>
-                                        -
-                                    </td>
-                                    <td>
-                                        <div class="d_flex fw_w _gap4 jc_c">
-                                            <a href="" class="f_btn ty_xsmall _round _key"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <button type="button" class="f_btn ty_xsmall _round _solidGrey"><i class="fa-regular fa-copy"></i> 복사</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td>24000123</td>
-                                    <td>2023-12-13</td>
-                                    <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td>김장훈</td>
-                                    <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>9,999</td>
-                                    <td>9,999</td>
-                                    <td>
-                                        <a href="" class="btn_down"><span class="blind">접수증 다운로드</span></a>
-                                    </td>
-                                    <td>
-                                        <div class="d_flex fw_w _gap4 jc_c">
-                                            <a href="" class="f_btn ty_xsmall _round _key"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <button type="button" class="f_btn ty_xsmall _round _solidGrey"><i class="fa-regular fa-copy"></i> 복사</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>          
-                                    <td colspan="10">
-                                        <div class="no_result_box">
-                                            <i class="fa-solid fa-file-circle-xmark"></i>
-                                            <p class="mt10">검색 결과가 없습니다.</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="paging_wrap">
-                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
-                        <ul class="paging_list">
-                            <li><span class="paging_btn current">1</span></li>
-                            <li><a href="" class="paging_btn">2</a></li>
-                            <li><a href="" class="paging_btn">3</a></li>
-                            <li><a href="" class="paging_btn">4</a></li>
-                            <li><a href="" class="paging_btn">5</a></li>
-                        </ul>
-                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
-                    </div>
+                   
                 </section>
             </div>
         </main>
