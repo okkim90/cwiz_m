@@ -227,14 +227,20 @@
 }
 
 .f_btn {
-    display: inline-block;
+    display: inline-flex;
     max-width: 100%;
     text-align: center;
     border: 1px solid transparent;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-weight: 500;
-    
+    @for $i from 1 through 20 {
+        &._gap#{$i} {
+            gap : #{$i}px
+        } 
+    } 
     
     &.ty_xsmall {
         min-width: 40px;

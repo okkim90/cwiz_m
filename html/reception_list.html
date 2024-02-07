@@ -266,33 +266,139 @@
             </li>
         </ul>
 
+       
         <!--container-->
         <main id="container" class="container">
+            <ul class="mDep2">
+                <li class="mDep2_item on"><a href="">접수 확인</a></li>
+                <li class="mDep2_item"><a href="">예약 접수 목록</a></li>
+            </ul> 
+            <nav class="breadcrumb_area">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb_item">
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="blind">home</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb_item" >
+                        접수 관리
+                    </li>
+                    <li class="breadcrumb_item">
+                        접수 확인
+                    </li>
+                </ol>
+            </nav>
             <div id="contents" class="contents">
                 
-                <!-- [D] breadcrumb -->
-                <nav class="breadcrumb_area">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb_item">
-                            <a href="/">
-                                <i class="fa-solid fa-house"></i>
-                                <span class="blind">home</span>
+                <section class="sec mt0">
+                    <div class="srch_wrap">
+                        <form class="srch_form">
+                            <input type="text" class="f_input ty_mid ty_round">
+                            <button type="submit" class="btn_submit" aria-label="검색하기"></button>
+                        </form>
+                        <button class="srch_detail_btn" aria-label="상세검색" onclick="open_srch(this)"></button>
+                        <div class="srch_detail_wrap">
+                            <form class="srch_detail_inner">
+                                <div class="srch_detail_top">
+                                    <h3 class="tit2">상세검색</h3>
+                                    <button type="button" class="srch_detail_close" onclick="close_srch(this)" aria-label="상세검색 닫기"></button>
+                                </div>
+                                <div class="srch_detail_cont">
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">접수일 조회</label>
+                                        <div class="date_set"> 
+                                            <input type="text" class="f_input ty_mid inp_date date_start" readonly="" id=""> ~
+                                            <input type="text" class="f_input ty_mid inp_date date_end" readonly="" id="">
+                                        </div>
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">접수 번호</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">성적서 업체</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">계측기명</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">제조사</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">형식</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">기기번호</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                </div>
+                                <div class="srch_detail_bot">
+                                    <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
+                                    <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="sec">
+                    <ul class="mList">
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num">202410000</span>
+                                    <span class="date">2024-03-24</span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER 외 980</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                                <div class="mList_sec mList_count">총 수량 981대</div>
                             </a>
                         </li>
-                        <li class="breadcrumb_item" >
-                            DEPTH1
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num">202410000</span>
+                                    <span class="date">2024-03-24</span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER 외 980</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                                <div class="mList_sec mList_count">총 수량 981대</div>
+                            </a>
                         </li>
-                        <li class="breadcrumb_item">
-                            DEPTH2
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num">202410000</span>
+                                    <span class="date">2024-03-24</span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER 외 980</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                                <div class="mList_sec mList_count">총 수량 981대</div>
+                            </a>
                         </li>
-                    </ol>
-                </nav>
-                <!--// [D] breadcrumb -->
-                <div class="sub_tit">
-                    <h1 class="tit1">타이틀</h1>
-                </div>
-                <section class="sec">
-                   
+                    </ul>
                 </section>
             </div>
         </main>
