@@ -30,10 +30,15 @@
         justify-content: space-between;
         
     }
+    .btn_link {
+        color: $c_blue;
+        font-weight: 500;
+        text-decoration: underline;
+    }
     &_prod {
         display: flex;
         flex-wrap: wrap;
-        
+        gap: 0 4px;
         .prod_desc {
             display: flex;
             flex-wrap: wrap;

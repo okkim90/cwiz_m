@@ -57,11 +57,11 @@ $fz: (
     background-color: $bg;
     border-color: $bd;
     color: #fff;
-    &:hover {
-        background-color: darken( $bg, 3%);
-        border-color: darken($bd, 3%);
-        box-shadow: 0 2px 3px rgba(#000, 0.2);
-    }
+    // &:hover {
+    //     background-color: darken( $bg, 3%);
+    //     border-color: darken($bd, 3%);
+    //     box-shadow: 0 2px 3px rgba(#000, 0.2);
+    // }
     &:active {
         box-shadow: inset 0 0 4px rgba(#000, 0.2);
         transform: scale(0.98);
@@ -73,10 +73,10 @@ $fz: (
     background-color: rgba($color, .15);
     border-color: $bd;
     color: $color;
-    &:hover {
-        background-color: rgba($color, .2); 
-        //color: #fff;
-    }
+    // &:hover {
+    //     background-color: rgba($color, .2); 
+    //     //color: #fff;
+    // }
     &:active {
         box-shadow: inset 0 0 4px rgba(#000, 0.2);
         transform: scale(0.98);
@@ -88,10 +88,10 @@ $fz: (
     background-color: transparent;
     border-color: $bd;
     color: $color;
-    &:hover {
-        background-color: $color;
-        color: #fff;
-    }
+    // &:hover {
+    //     background-color: $color;
+    //     color: #fff;
+    // }
     &.on {
         background-color: $color;
         color: #fff;

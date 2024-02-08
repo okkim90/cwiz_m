@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="Generator" content="KIC">
     <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
     <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
@@ -30,9 +30,10 @@
     <div id="wrap">
         <!-- header -->
         <header class="header">
-            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <h1 class="header_tit">접수관리</h1>
+            <button type="button" class="btn_back" aria-label="뒤로가기"></button>
+            <h2 class="current_page"></h2>
             <div class="h_util">
-                
                 <div class="h_util_sec h_btns">
                     <button type="button" class="h_btn">
                         <i class="fa-solid fa-qrcode"></i>
@@ -149,69 +150,21 @@
         <!--// header -->
         <!-- nav -->
         <aside class="sidenav">
-
-            
-            <!--[D] 회사로고 없을경우-->
             <div class="sidenav_top">
-                <div class="msg_box">
-                    안녕하세요. <br>
-                    <b>(주)피엔케이피부임상연구센터</b> <br> 
-                    <b>김영술</b>님
+                <!--[D] 썸네일 X -->
+                <div class="thumb_user"></div>
+                <!--[D] 썸네일 O -->
+                <div class="thumb_user has_thumb">
+                    <img src="../assets/images/common/pepper2.jpg" alt="">
                 </div>
-                <button type="button" class="btn_add_logo"  onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
-            </div>
-            
-
-            <!--[D] 회사로고 있는 경우-->
-            <div class="sidenav_top">
-                <div class="img_box">
-                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                <div>
+                    <div class="user_name"><b>김영술</b>님 안녕하세요.</div>
+                    <div class="co_name">코리아인스트루먼트(주) 서울본사</div>
+                    <!--[D] 회사정보 미등록시 -->
+                    <div class="co_name"><a href="" class="btn_t_link">회사정보 등록하기 &gt;</a></div>
+                    <!--// [D] 회사정보 미등록시 -->
                 </div>
-                <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
-            </div>
-
-            <div class="layer_popup pop_logo" onclick="close_popup(this)">
-                <div class="layer_popup_inner">
-                    <div class="layer_popup_cont ty_small">
-                        <button type="button" class="close_popup" onclick="close_popup(this)">
-                            <span class="blind">팝업 닫기</span>
-                        </button>
-                        <div class="sub_tit">
-                            <h1 class="tit1">로고 이미지 등록</h1>
-                        </div>
-                        <form action="">
-                            <!--[D] 이미지 첨부 전 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <label for="upload_eq_img" class="btn_img_upluad">
-                                    <i class="fa-solid fa-image"></i>
-                                    <p>이미지 첨부하기 (260 x 90)</p>
-                                </label>
-                            </div>
-                            <!--// [D] 이미지 첨부 전 -->
-                            
-                            <br><!--[D] 개발시 삭제-->
-
-                             <!--[D] 이미지 첨부 후 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <div class="img_box_edit">
-                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
-                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
-                                </div>
-                                <img src="../assets/images/common/Tesla_logo.png" alt="">
-                            </div>  
-                            <!--[D] 이미지 첨부 후 -->                
-                            <div class="btn_set mt20 taC">
-                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <button type="button" class="btn_nav_close" aria-label="close navigation"></button>
             </div>
             
             <ul class="nav">
@@ -225,12 +178,12 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav_item on">
+                <li class="nav_item">
                     <button type="button" class="btn_dep1 "><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">예약 접수</a></li>
-                            <li><a href="" class="btn_dep2 on">예약 접수 목록</a></li>
+                            <li><a href="" class="btn_dep2">예약 접수 목록</a></li>
                             <li><a href="" class="btn_dep2">접수 확인</a></li>
                         </ul>
                     </div>                   
@@ -277,266 +230,186 @@
                         </ul>
                     </div>                   
                 </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
-                    <div class="nav_dep2_box">
-                        <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">회원 관리</a></li>
-                            <li><a href="" class="btn_dep2">문의 관리</a></li>
-                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
-                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
-                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
-                        </ul>
-                    </div>                 
-                </li>
             </ul>
         </aside>
         <!-- // nav -->
+        <ul class="botNav">
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico1"></span>
+                    <span class="tit">교정현황</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico2"></span>
+                    <span class="tit">정산관리</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico_home"></span>
+                    <span class="tit">홈</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico3"></span>
+                    <span class="tit">마이페이지</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <button type="button" class="botNav_btn btn_nav_toggle">
+                    <span class="ico_box ico4"></span>
+                    <span class="tit">메뉴</span>
+                </button>
+            </li>
+        </ul>
 
+       
         <!--container-->
         <main id="container" class="container">
+            <ul class="mDep2">
+                <li class="mDep2_item "><a href="">접수 확인</a></li>
+                <li class="mDep2_item on"><a href="">예약 접수 목록</a></li>
+            </ul> 
+            <nav class="breadcrumb_area">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb_item">
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="blind">home</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb_item" >
+                        접수 관리
+                    </li>
+                    <li class="breadcrumb_item">
+                        예약 접수 목록
+                    </li>
+                </ol>
+            </nav>
             <div id="contents" class="contents">
-                
-                <!-- [D] breadcrumb -->
-                <nav class="breadcrumb_area">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb_item">
-                            <a href="/">
-                                <i class="fa-solid fa-house"></i>
-                                <span class="blind">home</span>
+                <section class="sec mt0">
+                    <div class="srch_wrap">
+                        <form class="srch_form">
+                            <input type="text" class="f_input ty_mid ty_round">
+                            <button type="submit" class="btn_submit" aria-label="검색하기"></button>
+                        </form>
+                        <button class="srch_detail_btn" aria-label="상세검색" onclick="open_srch(this)"></button>
+                        <div class="srch_detail_wrap">
+                            <form class="srch_detail_inner">
+                                <div class="srch_detail_top">
+                                    <h3 class="tit2">상세검색</h3>
+                                    <button type="button" class="srch_detail_close" onclick="close_srch(this)" aria-label="상세검색 닫기"></button>
+                                </div>
+                                <div class="srch_detail_cont">
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">접수일 조회</label>
+                                        <div class="date_set"> 
+                                            <input type="text" class="f_input ty_mid inp_date date_start" readonly="" id=""> ~
+                                            <input type="text" class="f_input ty_mid inp_date date_end" readonly="" id="">
+                                        </div>
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">접수 번호</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">성적서 업체</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">계측기명</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">제조사</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">형식</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">기기번호</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                </div>
+                                <div class="srch_detail_bot">
+                                    <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
+                                    <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="sec mt20">
+                    <p class="f_tip mb10">
+                        <i class="fa-solid fa-circle-info f_tip_ico fc_key"></i>
+                        <span>예약 접수건 중 접수 대기 건만 노출됩니다. <br>접수 완료건은 <a href="./reception_list.html" class="fc_solidGrey fwB">[접수 확인]</a> 메뉴에서 확인해 주세요. </span>
+                    </span>
+                    
+                    <ul class="mList">
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num">CW240204-123</span>
+                                    <span class="date">2024-03-24</span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[APPLE]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER 외 980</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                                <div class="mList_sec mList_count">총 수량 981대</div>
                             </a>
                         </li>
-                        <li class="breadcrumb_item" >
-                            <a href="#">접수 관리</a>
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num">CW240204-123</span>
+                                    <span class="date">2024-03-24</span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[TESLA]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER 외 980</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                                <div class="mList_sec mList_count">총 수량 981대</div>
+                            </a>
                         </li>
-                        <li class="breadcrumb_item">
-                            에약 접수 목록
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num">CW240204-123</span>
+                                    <span class="date">2024-03-24</span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER 외 980</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                                <div class="mList_sec mList_count">총 수량 981대</div>
+                            </a>
                         </li>
-                    </ol>
-                </nav>
-                <!--// [D] breadcrumb -->
-                <div class="sub_tit">
-                    <h1 class="tit1">예약 접수 목록</h1>
-                </div>
-                <form action="">
-                    <div class="v_tbl_wrap">
-                        <table class="v_tbl">
-                            <tbody>
-                                <colgroup>
-                                    <col style="width: 120px;">
-                                    <col style="width: 20%">
-                                    <col style="width: 120px;">
-                                    <col>
-                                    <col style="width: 120px;">
-                                    <col>
-                                    <col style="width: 120px;">
-                                    <col>
-                                </colgroup>
-                                <tr>
-                                    <th>신청일</th>
-                                    <td>
-                                        <div class="date_set">
-                                            <input type="text" class="f_input ty_small inp_date date_start" readonly> ~
-                                            <input type="text" class="f_input ty_small inp_date date_end" readonly>
-                                        </div>
-                                    </td>
-                                    <th>예비번호</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_small w_200">
-                                    </td>
-                                    <th>성적서 업체</th>
-                                    <td>
-                                        <input type="text" class="f_input ty_small w_200">
-                                    </td>
-                                    <th>접수 상태</th>
-                                    <td>
-                                        <select name="" id="" class="f_select ty_small w_200">
-                                            <option value="" selected disabled>전체</option>
-                                            <option value="">작성중</option>
-                                            <option value="">접수 대기</option>
-                                            <option value="">접수 완료</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>계측기명</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>       
-                                    <th>제조사</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>  
-                                    <th>형식</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>   
-                                    <th>기기번호</th>
-                                    <td><input type="text" class="f_input ty_small w_200"></td>   
-                                </tr>
-                            </tbody>
-                        </table> 
-                    </div>
-                    <div class="btn_set taC mt30">
-                        <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
-                        <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate"></i></button>
-                    </div>
-                </form>
-                <section class="sec">
-                    <div class="sub_tit2 mb10 d_flex al_b">
-                        <h2 class="tit4"><b>검색 결과 :</b> 1,000건</h2> 
-                        <select name="" id="" class="f_select ty_small w_80 ml20">
-                            <option value="">30개</option>
-                            <option value="">50개</option>
-                            <option value="">100개</option>
-                            <option value="">200개</option>
-                            <option value="">전체</option>
-                        </select>
-                    </div>
-                    <div class="h_tbl_wrap y_scroll_area" style="max-height: 400px;">
-                        <table class="h_tbl tl_fixed">
-                            <colgroup>
-                                <col style="width: 50px;">
-                                <col style="width: 100px;">
-                                <col style="width: 80px;">
-                                <col>
-                                <col style="width: 80px;">
-                                <col>
-                                <col style="width: 80px;">
-                                <col style="width: 80px;">
-                                <col style="width: 100px;">
-                                <col style="width: 120px;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th class="th_fixed">No</th>
-                                    <th class="th_fixed">예비 번호</th>
-                                    <th class="th_fixed">신청일</th>
-                                    <th class="th_fixed">성적서 업체</th>
-                                    <th class="th_fixed">접수자</th>
-                                    <th class="th_fixed">교정 기관</th>
-                                    <th class="th_fixed">총 수량</th>
-                                    <th class="th_fixed">접수 상태</th>
-                                    <th class="th_fixed">접수 번호</th>
-                                    <th class="th_fixed">상세 내역</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>9999</td>
-                                    <td>cw240202-9999</td>
-                                    <td>2023-12-13</td>
-                                    <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td>김장훈</td>
-                                    <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>9,999</td>
-                                    <td>접수 완료</td>
-                                    <td>24000123</td>
-                                    <td>
-                                        <div class="d_flex fw_w _gap4 jc_c">
-                                            <a href="" class="f_btn ty_xsmall _round _key"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <button type="button" class="f_btn ty_xsmall _round _solidGrey"><i class="fa-regular fa-copy"></i> 복사</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td>cw240202-9999</td>
-                                    <td>2023-12-13</td>
-                                    <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td>김장훈</td>
-                                    <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>9,999</td>
-                                    <td>접수 대기</td>
-                                    <td>-</td>
-                                    <td>
-                                        <div class="d_flex fw_w _gap4 jc_c">
-                                            <a href="" class="f_btn ty_xsmall _round _key"><i class="fa-solid fa-pen"></i> 수정</a>
-                                            <button type="button" class="f_btn ty_xsmall _round _solidGrey"><i class="fa-regular fa-copy"></i> 복사</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>9999</td>
-                                    <td>cw240202-9999</td>
-                                    <td>2023-12-13</td>
-                                    <td class="ellipsisTooltip">성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명성적서업체명</td>
-                                    <td>김장훈</td>
-                                    <td class="ellipsisTooltip">교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명교정기관명</td>
-                                    <td>9,999</td>
-                                    <td>접수 완료</td>
-                                    <td>24000123</td>
-                                    <td>
-                                        <div class="d_flex fw_w _gap4 jc_c">
-                                            <a href="" class="f_btn ty_xsmall _round _key"><i class="fa-solid fa-magnifying-glass"></i> 보기</a>
-                                            <button type="button" class="f_btn ty_xsmall _round _solidGrey"><i class="fa-regular fa-copy"></i> 복사</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>          
-                                    <td colspan="10">
-                                        <div class="no_result_box">
-                                            <i class="fa-solid fa-file-circle-xmark"></i>
-                                            <p class="mt10">검색 결과가 없습니다.</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="paging_wrap">
-                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
-                        <ul class="paging_list">
-                            <li><span class="paging_btn current">1</span></li>
-                            <li><a href="" class="paging_btn">2</a></li>
-                            <li><a href="" class="paging_btn">3</a></li>
-                            <li><a href="" class="paging_btn">4</a></li>
-                            <li><a href="" class="paging_btn">5</a></li>
-                        </ul>
-                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
-                    </div>
+                    </ul>
                 </section>
             </div>
         </main>
         <!--//container-->
         <!--footer-->
         <footer class="footer">
-            <!-- <div class="footer_top">
-                <div class="inner">
-                    <ul class="footer_top_nav ">
-                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
-                    </ul>
-                </div>
-            </div> -->
-            <div class="footer_logo">
-                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
-            </div>
-            <div class="footer_info">
-                <ul class="footer_info_list">
-                    <li>코리아인스트루먼트(주)</li>
-                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
-                    <li><span class="bar"></span>대표이사 : 정재호</li>
-                </ul>
-                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
-                <div class="contact">
-                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
-                    <span class="bar"></span>
-                    <span>1600 - 4245</span>
-                </div>
-            </div>
-            <div class="footer_right">
-                <div class="footer_right_btns">
-                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
-                    <span class="bar"></span>
-                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
-                </div>
-                <div class="footer_right_branch">
-                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
-                    <ul class="branch_list">
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
-                    </ul>
-                </div>
-            </div>
+            
         </footer>
         <!--//footer-->
     </div>
