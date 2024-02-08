@@ -42,6 +42,7 @@
         border-radius: 4px;
         font-size: 13px;
         &.inp_date {
+            padding-left: 8px;
             padding-right: 30px;
             background-position: calc(100% - 8px) center;
         }
@@ -327,7 +328,7 @@
         padding-right: 20px;
         border-radius: 4px;
         font-size: 13px;
-        background-position: calc(100% - 10px) center;
+        background-position: calc(100% - 8px) center;
         background-size: 10px 10px;
     }
     &.ty_big {

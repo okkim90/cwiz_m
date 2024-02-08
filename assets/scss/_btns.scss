@@ -411,7 +411,7 @@
     display: inline-flex;
     vertical-align: top;
     //align-items: center;
-    gap: 0.5em;
+    gap: 0.4em;
     cursor: pointer;
     input[type='checkbox'] {
         flex-shrink: 0;
@@ -420,6 +420,34 @@
         height: 1.3em;
         font-size: 1em;
         line-height: 1;
+    }
+}
+
+.btn_cal_detail {
+    width: 100px;
+    
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    //border: 1px solid $c_midGrey;
+    background-color: #ddd;
+    height: 26px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 10px;
+    &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 2px solid $c_midGrey;
+        box-sizing: border-box;
+        border-left: none;
+        border-top: none;
+        transform: rotate(45deg);
+        margin-top: -4px;
+
     }
 }
 

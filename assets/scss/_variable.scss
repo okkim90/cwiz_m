@@ -214,6 +214,10 @@ $inner: 1280px;
         width: #{$w}px;
         max-width: 100%;
     }
+    .h_#{$w} {
+        height: #{$w}px;
+    
+    }
 }
 
 @for $i from 1 through 5 {

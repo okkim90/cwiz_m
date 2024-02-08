@@ -955,9 +955,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    .f_select {
-        margin-right: 4px;
-    }
+    
     .date_end {
         & + .f_btn {
             margin-left: 4px;
@@ -2515,4 +2513,21 @@
     font-size: 11px;
     color: $c_midGrey;
     
+}
+
+.cal_progress {
+    height: 14px;
+    border-radius: 7px;
+    position: relative;
+    background-color: $c_bg_grey;
+    display: flex;
+    overflow: hidden;
+    
+    &_bar {
+        text-align: center;
+        overflow: hidden;
+        color: #fff;
+        height: 100%;
+        background-color: $c_key;
+    }
 }
