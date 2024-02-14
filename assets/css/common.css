@@ -7967,7 +7967,6 @@ tr:last-child .status_box_date {
 .srch_wrap {
   display: flex;
   gap: 6px;
-  margin-bottom: 15px;
 }
 .srch_form {
   position: relative;
@@ -9194,6 +9193,9 @@ tr:last-child .status_box_date {
 }
 .btn_set.ty_top {
   height: 0;
+}
+.btn_set .flex1 {
+  flex: 1;
 }
 
 .f_btn {
