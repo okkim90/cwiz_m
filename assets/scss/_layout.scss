@@ -2409,12 +2409,15 @@
             border-radius: 10px 10px 0 0;
             display: flex;
             flex-direction: column;
-            padding: 16px 16px 20px;
+            //padding: 16px 16px 20px;
             transition: bottom .2s ease-in-out; 
         }
         &_top {
-            margin-bottom: 15px;
+            //margin-bottom: 15px;
             position: relative;
+            padding: 10px 16px;
+            //border-bottom: 1px solid $c_line;
+            box-shadow: 0 6px 6px rgba(#000, .07); 
             .tit2 {
                 text-align: center;
                 line-height: 30px;
@@ -2423,19 +2426,23 @@
         &_cont {
             flex: 1;
             overflow-y: auto;
+            padding: 20px 16px 30px;
         }
         &_bot {
             display: flex;
-            margin-top: 30px;
+            //margin-top: 30px;
+            //border-top: 1px solid $c_line;
             gap: 10px;
+            padding: 20px 16px 20px;
+            box-shadow: 0 -6px 6px rgba(#000, .07); 
             .f_btn {
                 flex: 1;
             }
         }
         &_close {
             position: absolute;
-            right: 0;
-            top: 0;
+            right: 10px;
+            top: 10px;
             width: 30px;
             height: 30px;
             background-image: url(../images/common/ico_close.svg);
@@ -2522,12 +2529,79 @@
     background-color: $c_bg_grey;
     display: flex;
     overflow: hidden;
-    
+    &_wrap {
+        flex-wrap: wrap;
+        .cal_output {
+            //width: 54px;
+            text-align: right;
+        }
+    }
     &_bar {
         text-align: center;
         overflow: hidden;
         color: #fff;
         height: 100%;
         background-color: $c_key;
+        &.cal_progress_normal {
+            background-color: $c_blue;
+        }
+        &.cal_progress_abnormal {
+            background-color: $c_red;
+        }
+    }
+}
+
+.cal_detail {
+    &_wrap {
+        .cal_detail {
+            border-radius: 0 0 6px 6px;
+            display: none;
+        }
+        .btn_cal_detail {
+            width: 100%;
+            
+        }
+        &.on {
+            .cal_detail {
+                display: block;
+            }
+            .btn_cal_detail {
+                border-radius: 6px 6px 0 0;
+                background-color: $c_lightGrey;
+                color: #fff;
+                &::after {
+                    transform: rotate(-135deg);
+                    margin-top: 4px;
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+    
+    padding: 15px 10px;
+    border-radius: 6px;
+    background-color: $c_bg_grey2;
+    &.on {
+        display: block;
+    }
+}
+
+.cal_detail_list {
+    .list_item {
+        & + .list_item {
+            margin-top: 6px;
+        }
+    }
+    .list_link {
+        padding: 6px 10px;
+        background-color: $c_bg_grey2;
+        border-radius: 6px;  
+        background-color: #fff;
+        .num {
+            font-weight: bold;
+        }
+        .f_tag {
+            background-color: #fff;
+        }     
     }
 }

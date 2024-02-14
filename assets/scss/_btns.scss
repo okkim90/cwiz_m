@@ -424,15 +424,15 @@
 }
 
 .btn_cal_detail {
-    width: 100px;
-    
+    //width: 100px  
+    padding: 0 10px;
     text-align: center;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     //border: 1px solid $c_midGrey;
-    background-color: #ddd;
+    background-color: $c_bg_grey;
     height: 26px;
     border-radius: 6px;
     font-size: 12px;
@@ -449,6 +449,7 @@
         margin-top: -4px;
 
     }
+    
 }
 
 

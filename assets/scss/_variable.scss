@@ -331,6 +331,12 @@ $inner: 1280px;
         &._gap#{$i} {
             gap : #{$i}px
         } 
+        &._gapX#{$i} {
+            column-gap : #{$i}px;
+        } 
+        &._gapY#{$i} {
+            row-gap : #{$i}px
+        } 
     } 
     &.fw_w {
         flex-wrap: wrap;
@@ -349,6 +355,12 @@ $inner: 1280px;
     }
     &.jc_c {
         justify-content: center;
+    }
+    &.jc_sa {
+        justify-content: space-around;
+    }
+    &.jc_sb {
+        justify-content: space-between;
     }
     &.jc_r {
         justify-content: flex-end;
