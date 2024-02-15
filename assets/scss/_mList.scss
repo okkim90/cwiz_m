@@ -23,13 +23,28 @@
             padding-top: 5px;
             border-top: 1px dashed $c_line;
         }
-        
-    }
-    &_top {
         display: flex;
-        justify-content: space-between;
-        
+        align-items: center;
+        flex-wrap: wrap;
+        &.jc_sb {
+            justify-content: space-between;
+        }
+        &.jc_sa {
+            justify-content: space-around;
+        }
+        @for $i from 1 through 10 {
+            &._gap#{$i} {
+                gap : #{$i}px
+            } 
+            &._gapX#{$i} {
+                column-gap : #{$i}px;
+            } 
+            &._gapY#{$i} {
+                row-gap : #{$i}px
+            } 
+        } 
     }
+    
     .btn_link {
         color: $c_blue;
         font-weight: 500;
@@ -39,42 +54,6 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0 4px;
-        .prod_desc {
-            display: flex;
-            flex-wrap: wrap;
-            
-            &::before {
-                content:'(';
-                margin-right: 2px;
-            }
-            &::after {
-                content:')';
-                margin-left: 2px;
-            }
-            &_item {
-                padding-right: 6px;
-                margin-right: 5px;
-                position: relative;
-                word-break: break-all;
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 1px;
-                    height: 12px;
-                    right: 0;
-                    top: 50%;
-                    margin-top: -6px;
-                    background-color: $c_lightGrey;
-                }
-                &:last-child {
-                    padding-right: 0;
-                    margin-right: 0;
-                    &::after {
-                        display: none;
-                    }
-                }
-                
-            }
-        }
+        
     }
 }

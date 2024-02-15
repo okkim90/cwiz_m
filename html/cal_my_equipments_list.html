@@ -31,7 +31,7 @@
     <div id="wrap">
         <!-- header -->
         <header class="header">
-            <h1 class="header_tit">접수관리</h1>
+            <h1 class="header_tit">교정관리</h1>
             <button type="button" class="btn_back" aria-label="뒤로가기"></button>
             <h2 class="current_page"></h2>
             <div class="h_util">
@@ -271,8 +271,8 @@
         <!--container-->
         <main id="container" class="container">
             <ul class="mDep2">
-                <li class="mDep2_item on"><a href="">접수 확인</a></li>
-                <li class="mDep2_item"><a href="">예약 접수 목록</a></li>
+                <li class="mDep2_item "><a href="">교정 이력 조회</a></li>
+                <li class="mDep2_item on"><a href="">우리 장비 목록</a></li>
             </ul> 
             <nav class="breadcrumb_area">
                 <ol class="breadcrumb">
@@ -283,128 +283,165 @@
                         </a>
                     </li>
                     <li class="breadcrumb_item" >
-                        접수 관리
+                        교정 관리
                     </li>
                     <li class="breadcrumb_item">
-                        접수 확인
+                        우리 장비 목록
                     </li>
                 </ol>
             </nav>
             <div id="contents" class="contents">
-                
                 <section class="sec mt0">
-                    <div class="sub_tit2">
-                        <h3 class="tit3">기본 정보</h3>
-                        <button class="f_btn ty_small btn_down _key _gap6 ml_auto">접수증 다운받기</button>
+                    <div class="srch_wrap">
+                        <form class="srch_form">
+                            <input type="text" class="f_input ty_mid ty_round" placeholder="CMI ID를 입력해주세요.">
+                            <button type="submit" class="btn_submit" aria-label="검색하기"></button>
+                        </form>
+                        <button class="srch_detail_btn" aria-label="상세검색" onclick="open_srch(this)"></button>
+                        <div class="srch_detail_wrap">
+                            <form class="srch_detail_inner">
+                                <div class="srch_detail_top">
+                                    <h3 class="tit2">상세검색</h3>
+                                    <button type="button" class="srch_detail_close" onclick="close_srch(this)" aria-label="상세검색 닫기"></button>
+                                </div>
+                                <div class="srch_detail_cont">
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">접수일 조회</label>
+                                        <div class="date_set"> 
+                                            <select name="" id="" class="f_select ty_mid w_80">
+                                                <option value="">접수일</option>
+                                                <option value="">접수일</option>
+                                                <option value="">교정일</option>
+                                            </select>
+                                            <input type="text" class="f_input ty_mid inp_date date_start" readonly="" id=""> ~
+                                            <input type="text" class="f_input ty_mid inp_date date_end" readonly="" id="">
+                                        </div>
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">접수 번호</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">성적서 업체</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">교정 결과</label>
+                                        <select name="" id="" class="f_select ty_mid w100">
+                                            <option value="">전체</option>
+                                            <option value="">정상</option>
+                                            <option value="">불량</option>
+                                            <option value="">제한교정</option>
+                                            <option value="">교정 불가</option>
+                                            <option value="">교정 취소</option>
+                                            <option value="">점검</option>
+                                        </select>
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">계측기명</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">제조사</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">형식</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">기기번호</label>
+                                        <input type="text" class="f_input ty_mid w100">
+                                    </div>
+                                </div>
+                                <div class="srch_detail_bot">
+                                    <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
+                                    <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <table class="v_tbl">
-                        <colgroup>
-                            <col style="width: 90px;">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>접수 번호</th>
-                                <td>20240001234</td>
-                            </tr>
-                            <tr>
-                                <th>교정 기관</th>
-                                <td>코리아인스트루먼트(주) 서울본사</td>
-                            </tr>
-                            <tr>
-                                <th>성적서 업체</th>
-                                <td>
-                                    코리아인스트루먼트(주)서울본사
-                                    <p class="fc_midGrey mt4 fz_small">(서울특별시 구로구 디지털로 112311 그랜드 정션 빌딩 1045-123)</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>접수 방식</th>
-                                <td>방문 접수</td>
-                            </tr>
-                            <tr>
-                                <th>요구사항</th>
-                                <td>이렇게저렇게 해주세요. 이렇게저렇게 해주세요. 이렇게저렇게 해주세요. 이렇게저렇게 해주세요. 이렇게저렇게 해주세요. </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p class="f_tip mt5">
+                        <i class="fa-solid fa-circle-info f_tip_ico fc_key" aria-hidden="true"></i>
+                        <span>CMI ID는 우리 장비의 고유 식별 ID 입니다.</span>
+                    </p>
                 </section>
-                <section class="sec">
-                    <div class="sub_tit2">
-                        <h3 class="tit3">계측기 정보 </h3>
-                        <span class="fc_midGrey fz_mid2 ml_auto fwM">[총 <span class="fc_key">60</span>개]</span> 
-                    </div>
+                <section class="sec mt20">
                     <ul class="mList">
                         <li class="mList_item">
-                            <div class="mList_inner">
-                                <div class="mList_sec mList_top jc_sb">
-                                    <a href="" class="num btn_link">202410000-1</a>
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num fwB">CMI1234123</span>
+                                    <span class="d_flex ai_c _gap5 ml_auto">
+                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _key_ol">교정 진행중</span>
+                                    </span>
                                 </div>
                                 <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[삼성전자]</span>
+                                    <span class="mList_prod_item prod_co">[APPLE]</span>
                                     <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
                                     <div class="mList_prod_item prod_desc">
                                         <span class="prod_desc_item">S5350XL284 1005</span>
                                         <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
                                     </div> 
                                 </div>
-                                <div class="mList_sec">
-                                    <ul class="list_sepBar">
-                                        <li class="list_item"><span class="fwB">교정</span></li>
-                                        <li class="list_item"><i class="fa-solid fa-file-lines"></i> 국문,영문</li>
-                                        <li class="list_item">차기교정일 : 2024-12-12</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            </a>
                         </li>
                         <li class="mList_item">
-                            <div class="mList_inner">
-                                <div class="mList_sec mList_top jc_sb">
-                                    <a href="" class="num btn_link">202410000-2</a>
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num fwB">CMI1234123</span>
+                                    <span class="d_flex ai_c _gap5 ml_auto">
+                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _red_ol">불량</span>
+                                    </span>
                                 </div>
                                 <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[애플]</span>
+                                    <span class="mList_prod_item prod_co">[APPLE]</span>
                                     <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
                                     <div class="mList_prod_item prod_desc">
                                         <span class="prod_desc_item">S5350XL284 1005</span>
                                         <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
                                     </div> 
                                 </div>
-                                <div class="mList_sec">
-                                    <ul class="list_sepBar">
-                                        <li class="list_item"><span class="fwB">수리</span></li>
-                                        <li class="list_item"><i class="fa-solid fa-file-lines"></i> 영문</li>
-                                        <li class="list_item">차기교정일 : 2024-12-12</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            </a>
                         </li>
                         <li class="mList_item">
-                            <div class="mList_inner">
-                                <div class="mList_sec mList_top jc_sb">
-                                    <a href="" class="num btn_link">202410000-3</a>
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num fwB">CMI1234123</span>
+                                    <span class="d_flex ai_c _gap5 ml_auto">
+                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _red_ol">교정 취소</span>
+                                    </span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[TESLA]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num fwB">CMI1234123</span>
+                                    <span class="d_flex ai_c _gap5 ml_auto">
+                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _blue_ol">정상</span>
+                                    </span>
                                 </div>
                                 <div class="mList_sec mList_prod">
                                     <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
-                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETENCE OHMMETER</span>
                                     <div class="mList_prod_item prod_desc">
                                         <span class="prod_desc_item">S5350XL284 1005</span>
                                         <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
                                     </div> 
                                 </div>
-                                <div class="mList_sec">
-                                    <ul class="list_sepBar">
-                                        <li class="list_item"><span class="fwB">교정</span></li>
-                                        <li class="list_item"><i class="fa-solid fa-file-lines"></i> 국문</li>
-                                        <li class="list_item">차기교정일 : 2024-12-12</li>
-                                    </ul>
-                                </div>
-                            </div>
+                                
+                            </a>
                         </li>
                     </ul>
-                    <div class="btn_set taC mt30">
-                        <a href="./reception_list.html" class="f_btn ty_mid _key w_100">목록</a>
-                    </div>
                 </section>
             </div>
         </main>

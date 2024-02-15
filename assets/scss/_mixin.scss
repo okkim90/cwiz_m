@@ -77,3 +77,11 @@ $breakpoint-pcrm: 1700px;
         border: 2px solid transparent;
     }
 }
+
+@mixin m-sizing {
+    width: 100%;
+    max-width: $m-width;
+    min-width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+}

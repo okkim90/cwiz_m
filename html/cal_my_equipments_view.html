@@ -31,7 +31,7 @@
     <div id="wrap">
         <!-- header -->
         <header class="header">
-            <h1 class="header_tit">접수관리</h1>
+            <h1 class="header_tit">교정관리</h1>
             <button type="button" class="btn_back" aria-label="뒤로가기"></button>
             <h2 class="current_page"></h2>
             <div class="h_util">
@@ -271,8 +271,8 @@
         <!--container-->
         <main id="container" class="container">
             <ul class="mDep2">
-                <li class="mDep2_item on"><a href="">접수 확인</a></li>
-                <li class="mDep2_item"><a href="">예약 접수 목록</a></li>
+                <li class="mDep2_item "><a href="">교정 이력 조회</a></li>
+                <li class="mDep2_item on"><a href="">우리 장비 목록</a></li>
             </ul> 
             <nav class="breadcrumb_area">
                 <ol class="breadcrumb">
@@ -283,137 +283,119 @@
                         </a>
                     </li>
                     <li class="breadcrumb_item" >
-                        접수 관리
+                        교정 관리
                     </li>
                     <li class="breadcrumb_item">
-                        접수 확인
+                        우리 장비 목록
                     </li>
                 </ol>
             </nav>
             <div id="contents" class="contents">
-                
-                <section class="sec mt0">
-                    <div class="sub_tit2">
-                        <h3 class="tit3">기본 정보</h3>
-                        <button class="f_btn ty_small btn_down _key _gap6 ml_auto">접수증 다운받기</button>
+                <section class="sec ">
+                    <div class="prod_card">
+                        <div class="prod_card_img">
+                            <div class="img_upload">
+                                <input type="file" id="upload_eq_img" class="input_file" accept="image/*">
+                                <div class="img_upload_edit">
+                                    <label for="upload_eq_img" class="img_upload_edit_btn"><i class="fa-solid fa-rotate" aria-hidden="true"></i><span class="blind">수정</span></label>
+                                    <button type="button" class="img_upload_edit_btn"><i class="fa-solid fa-trash-can" aria-hidden="true"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <img src="https://picsum.photos/300/200" alt="">
+                            </div>
+                        </div>
+                        <div class="prod_card_desc">
+                            <strong class="prod_id w100">CMI123566</strong>
+                            <span class="prod_co">[한화에어로스페이스]</span>
+                            <span class="prod_name">DIGITAL LOW RESISTANCE OHMMETER</span>
+                            <ul class="prod_desc list_sepBar">
+                                <li class="prod_desc_item">S5350XL284 1005</li>
+                                <li class="prod_desc_item prod_num fwM">qwfsad1234123</li>
+                            </ul>
+                        </div>
                     </div>
-                    <table class="v_tbl">
-                        <colgroup>
-                            <col style="width: 90px;">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>접수 번호</th>
-                                <td>20240001234</td>
-                            </tr>
-                            <tr>
-                                <th>교정 기관</th>
-                                <td>코리아인스트루먼트(주) 서울본사</td>
-                            </tr>
-                            <tr>
-                                <th>성적서 업체</th>
-                                <td>
-                                    코리아인스트루먼트(주)서울본사
-                                    <p class="fc_midGrey mt4 fz_small">(서울특별시 구로구 디지털로 112311 그랜드 정션 빌딩 1045-123)</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>접수 방식</th>
-                                <td>방문 접수</td>
-                            </tr>
-                            <tr>
-                                <th>요구사항</th>
-                                <td>이렇게저렇게 해주세요. 이렇게저렇게 해주세요. 이렇게저렇게 해주세요. 이렇게저렇게 해주세요. 이렇게저렇게 해주세요. </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    
+                    
                 </section>
-                <section class="sec">
-                    <div class="sub_tit2">
-                        <h3 class="tit3">계측기 정보 </h3>
-                        <span class="fc_midGrey fz_mid2 ml_auto fwM">[총 <span class="fc_key">60</span>개]</span> 
-                    </div>
+                <section class="sec mt20">
                     <ul class="mList">
                         <li class="mList_item">
-                            <div class="mList_inner">
-                                <div class="mList_sec mList_top jc_sb">
-                                    <a href="" class="num btn_link">202410000-1</a>
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num fwB">CMI1234123</span>
+                                    <span class="d_flex ai_c _gap5 ml_auto">
+                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _key_ol">교정 진행중</span>
+                                    </span>
                                 </div>
                                 <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[삼성전자]</span>
+                                    <span class="mList_prod_item prod_co">[APPLE]</span>
                                     <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
                                     <div class="mList_prod_item prod_desc">
                                         <span class="prod_desc_item">S5350XL284 1005</span>
                                         <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
                                     </div> 
                                 </div>
-                                <div class="mList_sec">
-                                    <ul class="list_sepBar">
-                                        <li class="list_item"><span class="fwB">교정</span></li>
-                                        <li class="list_item"><i class="fa-solid fa-file-lines"></i> 국문,영문</li>
-                                        <li class="list_item">차기교정일 : 2024-12-12</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            </a>
                         </li>
                         <li class="mList_item">
-                            <div class="mList_inner">
-                                <div class="mList_sec mList_top jc_sb">
-                                    <a href="" class="num btn_link">202410000-2</a>
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num fwB">CMI1234123</span>
+                                    <span class="d_flex ai_c _gap5 ml_auto">
+                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _red_ol">불량</span>
+                                    </span>
                                 </div>
                                 <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[애플]</span>
+                                    <span class="mList_prod_item prod_co">[APPLE]</span>
                                     <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
                                     <div class="mList_prod_item prod_desc">
                                         <span class="prod_desc_item">S5350XL284 1005</span>
                                         <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
                                     </div> 
                                 </div>
-                                <div class="mList_sec">
-                                    <ul class="list_sepBar">
-                                        <li class="list_item"><span class="fwB">수리</span></li>
-                                        <li class="list_item"><i class="fa-solid fa-file-lines"></i> 영문</li>
-                                        <li class="list_item">차기교정일 : 2024-12-12</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            </a>
                         </li>
                         <li class="mList_item">
-                            <div class="mList_inner">
-                                <div class="mList_sec mList_top jc_sb">
-                                    <a href="" class="num btn_link">202410000-3</a>
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num fwB">CMI1234123</span>
+                                    <span class="d_flex ai_c _gap5 ml_auto">
+                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _red_ol">교정 취소</span>
+                                    </span>
+                                </div>
+                                <div class="mList_sec mList_prod">
+                                    <span class="mList_prod_item prod_co">[TESLA]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
+                                    <div class="mList_prod_item prod_desc">
+                                        <span class="prod_desc_item">S5350XL284 1005</span>
+                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
+                                    </div> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mList_item">
+                            <a href="" class="mList_inner">
+                                <div class="mList_sec mList_top">
+                                    <span class="num fwB">CMI1234123</span>
+                                    <span class="d_flex ai_c _gap5 ml_auto">
+                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _blue_ol">정상</span>
+                                    </span>
                                 </div>
                                 <div class="mList_sec mList_prod">
                                     <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
-                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETENCE OHMMETER</span>
                                     <div class="mList_prod_item prod_desc">
                                         <span class="prod_desc_item">S5350XL284 1005</span>
                                         <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
                                     </div> 
                                 </div>
-                                <div class="mList_sec">
-                                    <ul class="list_sepBar">
-                                        <li class="list_item"><span class="fwB">교정</span></li>
-                                        <li class="list_item"><i class="fa-solid fa-file-lines"></i> 국문</li>
-                                        <li class="list_item">차기교정일 : 2024-12-12</li>
-                                    </ul>
-                                </div>
-                            </div>
+                                
+                            </a>
                         </li>
                     </ul>
-                    <div class="btn_set taC mt30">
-                        <a href="./reception_list.html" class="f_btn ty_mid _key w_100">목록</a>
-                    </div>
                 </section>
             </div>
         </main>
         <!--//container-->
-        <!--footer-->
-        <footer class="footer">
-            
-        </footer>
-        <!--//footer-->
     </div>
     
 </body>
