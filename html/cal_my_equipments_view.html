@@ -291,16 +291,17 @@
                 </ol>
             </nav>
             <div id="contents" class="contents">
+                
+                <!--[D] 이미지 첨부 전-->
                 <section class="sec ">
                     <div class="prod_card">
                         <div class="prod_card_img">
                             <div class="img_upload">
-                                <input type="file" id="upload_eq_img" class="input_file" accept="image/*">
-                                <div class="img_upload_edit">
-                                    <label for="upload_eq_img" class="img_upload_edit_btn"><i class="fa-solid fa-rotate" aria-hidden="true"></i><span class="blind">수정</span></label>
-                                    <button type="button" class="img_upload_edit_btn"><i class="fa-solid fa-trash-can" aria-hidden="true"></i><span class="blind">삭제</span></button>
-                                </div>
-                                <img src="https://picsum.photos/300/200" alt="">
+                                <input type="file" id="upload_eq_img" class="input_img_upload" accept="image/*">
+                                <label for="upload_eq_img" class="btn_img_upload">
+                                    <i class="fa-solid fa-image" aria-hidden="true"></i>
+                                    <p>사진 첨부하기 (260 x 160)</p>
+                                </label>
                             </div>
                         </div>
                         <div class="prod_card_desc">
@@ -313,82 +314,191 @@
                             </ul>
                         </div>
                     </div>
-                    
-                    
                 </section>
-                <section class="sec mt20">
+                <!--// [D] 이미지 첨부 전-->
+
+                <!--[D] 이미지 첨부 후-->
+                <section class="sec ">
+                    <div class="prod_card">
+                        <div class="prod_card_img">
+                            <div class="img_upload">
+                                <input type="file" id="upload_eq_img" class="input_file" accept="image/*">
+                                <div class="img_upload_edit">
+                                    <label for="upload_eq_img" class="img_upload_edit_btn"><i class="fa-solid fa-rotate" aria-hidden="true"></i><span class="blind">수정</span></label>
+                                    <button type="button" class="img_upload_edit_btn"><i class="fa-solid fa-trash-can" aria-hidden="true"></i><span class="blind">삭제</span></button>
+                                </div>
+                                <img src="https://picsum.photos/600/400" alt="">
+                            </div>
+                        </div>
+                        <div class="prod_card_desc">
+                            <strong class="prod_id w100">CMI123566</strong>
+                            <span class="prod_co">[한화에어로스페이스]</span>
+                            <span class="prod_name">DIGITAL LOW RESISTANCE OHMMETER</span>
+                            <ul class="prod_desc list_sepBar">
+                                <li class="prod_desc_item">S5350XL284 1005</li>
+                                <li class="prod_desc_item prod_num fwM">qwfsad1234123</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!--// [D] 이미지 첨부 후-->
+                <section class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit3">장비 정보</h2>
+                    </div>
+                    <table class="v_tbl">
+                        <colgroup>
+                            <col style="width: 90px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>계측기명</th>
+                                <td>아이폰아이패드애플워치아이티비비전프로</td>
+                            </tr>
+                            <tr>
+                                <th>제조사</th>
+                                <td>애플테슬라마이크로소프트구글엔비디아</td>
+                            </tr>
+                            <tr>
+                                <th>형식</th>
+                                <td>S5350XL284 1234567812345678</td>
+                            </tr>
+                            <tr>
+                                <th>기기번호</th>
+                                <td>sam-5721234567812345678</td>
+                            </tr>
+                            <tr>
+                                <th>관리번호</th>
+                                <td>
+                                    <a href="./cal_my_equipments_edit_num.html" class="f_btn ty_arrow fc_midGrey">관리번호를 입력해주세요</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>관리번호</th>
+                                <td>
+                                    <div class="d_flex _gapX5 jc_sb">
+                                        <div>asdf1234123123123</div>
+                                        <a href="./cal_my_equipments_edit_num.html" class="f_btn ty_arrow fc_midGrey">수정</a>
+                                    </div>      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>교정주기</th>
+                                <td>
+                                    <a href="./cal_my_equipments_edit_term.html" class="f_btn ty_arrow fc_midGrey">교정주기를 입력해주세요</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>교정주기</th>
+                                <td>
+                                    <div class="d_flex _gapX5 jc_sb">
+                                        <div>12개월</div>
+                                        <a href="./cal_my_equipments_edit_term.html" class="f_btn ty_arrow fc_midGrey">수정</a>
+                                    </div>      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>구매일자</th>
+                                <td>
+                                    <a href="./cal_my_equipments_edit_date.html" class="f_btn ty_arrow fc_midGrey">구매일자를 입력해주세요.</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>구매일자</th>
+                                <td>
+                                    <div class="d_flex _gapX5 jc_sb">
+                                        <div>2023-12-12</div>
+                                        <a href="./cal_my_equipments_edit_date.html" class="f_btn ty_arrow fc_midGrey">수정</a>
+                                    </div>      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>구매금액</th>
+                                <td>
+                                    <a href="./cal_my_equipments_edit_price.html" class="f_btn ty_arrow fc_midGrey">구매금액을 입력해주세요</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>구매금액</th>
+                                <td>
+                                    <div class="d_flex _gapX5 jc_sb">
+                                        999,999,000원
+                                        <a href="./cal_my_equipments_edit_price.html" class="f_btn ty_arrow fc_midGrey">수정</a>
+                                    </div>
+                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>메모</th>
+                                <td>
+                                    <a href="./cal_my_equipments_edit_memo.html" class="f_btn ty_arrow fc_midGrey">메모를 입력해주세요.</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>메모</th>
+                                <td>      
+                                    <div class="d_flex _gapX5 jc_sb">
+                                        <div>div Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, voluptatum.</div>
+                                        <a href="./cal_my_equipments_edit_memo.html" class="f_btn ty_arrow fc_midGrey">수정</a>
+                                    </div>      
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>교정 기관</th>
+                                <td>코리아인스트루먼트(주) 본사</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="sec">
+                    <div class="sub_tit2">
+                        <h2 class="tit3">교정 정보</h2>
+                    </div>
                     <ul class="mList">
                         <li class="mList_item">
                             <a href="" class="mList_inner">
-                                <div class="mList_sec mList_top">
-                                    <span class="num fwB">CMI1234123</span>
-                                    <span class="d_flex ai_c _gap5 ml_auto">
-                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _key_ol">교정 진행중</span>
-                                    </span>
+                                <div class="mList_sec mList_top _gap5">
+                                    <span class="num fwB">2024001213-3</span>
+                                    <span class="f_tag ty_mid _key_ol">교정 진행중</span>
+                                    <span class="f_btn ty_arrow ml_auto">상세 보기</span>
                                 </div>
-                                <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[APPLE]</span>
-                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
-                                    <div class="mList_prod_item prod_desc">
-                                        <span class="prod_desc_item">S5350XL284 1005</span>
-                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
-                                    </div> 
+                                <div class="mList_sec">
+                                    <ul>
+                                        <li>교정일자 : 2023-02-03 </li>
+                                        <li>교정기관 : 코리아인스트루먼트(주) 서울본사</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
                         <li class="mList_item">
                             <a href="" class="mList_inner">
-                                <div class="mList_sec mList_top">
-                                    <span class="num fwB">CMI1234123</span>
-                                    <span class="d_flex ai_c _gap5 ml_auto">
-                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _red_ol">불량</span>
-                                    </span>
+                                <div class="mList_sec mList_top _gap5">
+                                    <span class="num fwB">2024001213-3</span>
+                                    <span class="f_tag ty_mid _blue_ol">정상</span>
+                                    <span class="f_btn ty_arrow ml_auto">상세 보기</span>
                                 </div>
-                                <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[APPLE]</span>
-                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
-                                    <div class="mList_prod_item prod_desc">
-                                        <span class="prod_desc_item">S5350XL284 1005</span>
-                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
-                                    </div> 
+                                <div class="mList_sec">
+                                    <ul>
+                                        <li>교정일자 : 2023-02-03 </li>
+                                        <li>교정기관 : 코리아인스트루먼트(주) 서울본사</li>
+                                    </ul>
                                 </div>
                             </a>
                         </li>
                         <li class="mList_item">
                             <a href="" class="mList_inner">
-                                <div class="mList_sec mList_top">
-                                    <span class="num fwB">CMI1234123</span>
-                                    <span class="d_flex ai_c _gap5 ml_auto">
-                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _red_ol">교정 취소</span>
-                                    </span>
+                                <div class="mList_sec mList_top _gap5">
+                                    <span class="num fwB">2024001213-3</span>
+                                    <span class="f_tag ty_mid _red_ol">불량</span>
+                                    <span class="f_btn ty_arrow ml_auto">상세 보기</span>
                                 </div>
-                                <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[TESLA]</span>
-                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
-                                    <div class="mList_prod_item prod_desc">
-                                        <span class="prod_desc_item">S5350XL284 1005</span>
-                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
-                                    </div> 
+                                <div class="mList_sec">
+                                    <ul>
+                                        <li>교정일자 : 2023-02-03 </li>
+                                        <li>교정기관 : 코리아인스트루먼트(주) 서울본사</li>
+                                    </ul>
                                 </div>
-                            </a>
-                        </li>
-                        <li class="mList_item">
-                            <a href="" class="mList_inner">
-                                <div class="mList_sec mList_top">
-                                    <span class="num fwB">CMI1234123</span>
-                                    <span class="d_flex ai_c _gap5 ml_auto">
-                                        최근 교정일 : 2024-03-24 <span class="f_tag ty_small _blue_ol">정상</span>
-                                    </span>
-                                </div>
-                                <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
-                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETENCE OHMMETER</span>
-                                    <div class="mList_prod_item prod_desc">
-                                        <span class="prod_desc_item">S5350XL284 1005</span>
-                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
-                                    </div> 
-                                </div>
-                                
                             </a>
                         </li>
                     </ul>

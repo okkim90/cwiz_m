@@ -5396,6 +5396,10 @@
   text-align: center;
 }
 
+.taR {
+  text-align: right;
+}
+
 .fwB {
   font-weight: bold;
 }
@@ -7175,7 +7179,7 @@ input::-webkit-search-results-decoration {
   opacity: 0;
   z-index: -9999;
 }
-.img_box.ty_upload .btn_img_upluad {
+.img_box.ty_upload .btn_img_upload {
   cursor: pointer;
   position: absolute;
   left: 0;
@@ -7189,11 +7193,11 @@ input::-webkit-search-results-decoration {
   text-align: center;
   flex-direction: column;
 }
-.img_box.ty_upload .btn_img_upluad i {
+.img_box.ty_upload .btn_img_upload i {
   color: #aaa;
   font-size: 40px;
 }
-.img_box.ty_upload .btn_img_upluad p {
+.img_box.ty_upload .btn_img_upload p {
   color: #aaa;
   margin-top: 5px;
   font-size: 12px;
@@ -7261,7 +7265,7 @@ input::-webkit-search-results-decoration {
   align-items: center;
   justify-content: center;
 }
-.img_upload .btn_img_upluad {
+.img_upload .btn_img_upload {
   cursor: pointer;
   position: absolute;
   left: 0;
@@ -7275,11 +7279,11 @@ input::-webkit-search-results-decoration {
   text-align: center;
   flex-direction: column;
 }
-.img_upload .btn_img_upluad i {
+.img_upload .btn_img_upload i {
   color: #aaa;
   font-size: 50px;
 }
-.img_upload .btn_img_upluad p {
+.img_upload .btn_img_upload p {
   color: #aaa;
   margin-top: 5px;
 }
@@ -8131,8 +8135,11 @@ tr:last-child .status_box_date {
 .f_tip_ico {
   color: #FF7A00;
   font-size: 1.3em;
-  margin-right: 0.2em;
+  margin-right: 0.3em;
   margin-top: 0.12em;
+}
+.f_tip.ty_mid {
+  font-size: 12px;
 }
 
 .cal_progress {
@@ -8246,27 +8253,29 @@ tr:last-child .status_box_date {
 }
 
 .prod_card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  border: 1px solid #DDDDDD;
 }
-.prod_card_img {
-  width: 260px;
+.prod_card_img .img_upload {
+  border: none;
+  border-radius: 0;
 }
 .prod_card_desc {
-  flex: 1;
-  min-width: 280px;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 5px;
+  gap: 0 4px;
+  padding: 10px 10px 15px;
+  border-top: 1px solid #DDDDDD;
+  background-color: #fff;
 }
 .prod_card_desc .prod_id {
   width: 100%;
   font-size: 14px;
   font-weight: bold;
   color: #FF7A00;
+  margin-bottom: 4px;
 }
 
 .botNav {
@@ -9448,6 +9457,11 @@ tr:last-child .status_box_date {
 .f_btn.pd10 {
   padding: 0 10px;
 }
+.f_btn.ty_arrow {
+  font-weight: normal;
+  justify-content: flex-start;
+  text-align: left;
+}
 .f_btn.ty_arrow::after {
   content: "\f054";
   font-family: "Font Awesome 6 Free";
@@ -10271,7 +10285,7 @@ tr:last-child .status_box_date {
   display: flex;
   gap: 6px 0;
   flex-direction: column;
-  padding: 8px 10px;
+  padding: 10px;
   border-radius: 6px;
   border: 1px solid #DDDDDD;
   background-color: #fff;
@@ -10390,6 +10404,9 @@ tr:last-child .status_box_date {
 }
 .mList_sec._gapY10 {
   row-gap: 10px;
+}
+.mList_top .num {
+  font-weight: bold;
 }
 .mList .btn_link {
   color: #0085FF;

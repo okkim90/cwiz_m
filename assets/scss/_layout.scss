@@ -1400,7 +1400,7 @@
             opacity: 0;
             z-index: -9999;
         }
-        .btn_img_upluad {
+        .btn_img_upload {
             cursor: pointer;
             position: absolute;
             left: 0;
@@ -1488,7 +1488,7 @@
         }
     }
 
-    .btn_img_upluad {
+    .btn_img_upload {
         cursor: pointer;
         position: absolute;
         left: 0;
@@ -2521,11 +2521,15 @@
     &_ico {
         color: $c_key;
         font-size: 1.3em;
-        margin-right: 0.2em;
+        margin-right: 0.3em;
         margin-top: 0.12em;
     }
     font-size: 11px;
     color: $c_midGrey;
+
+    &.ty_mid {
+        font-size: 12px;
+    }
     
 }
 
@@ -2654,25 +2658,31 @@
 }
 
 .prod_card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: $c_bg_grey2;
+    border: 1px solid $c_line;
     &_img {
-        width: 260px;
+        
+        .img_upload {
+            border: none;
+            border-radius: 0;
+        }
     }
     &_desc {
-        flex: 1;
-        min-width: 280px;
         display: flex;
-        flex-wrap: wrap;
-        gap: 4px 5px;
+        flex-wrap: wrap;      
+        gap: 0 4px;  
+        padding: 10px 10px 15px;
+        border-top: 1px solid $c_line;
+        background-color: #fff;
+        
         .prod_id {
             width: 100%;
             font-size: 14px;
             font-weight: bold;
             color: $c_key;
+            margin-bottom: 4px;
         }
     }
 }

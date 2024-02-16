@@ -13,7 +13,7 @@
         display: flex;
         gap: 6px 0;
         flex-direction: column;
-        padding: 8px 10px;
+        padding: 10px;
         border-radius: 6px;
         border: 1px solid $c_line;
         background-color: #fff;
@@ -43,8 +43,13 @@
                 row-gap : #{$i}px
             } 
         } 
+        
     }
-    
+    &_top {
+        .num {
+            font-weight: bold;
+        }
+    }
     .btn_link {
         color: $c_blue;
         font-weight: 500;

@@ -347,6 +347,10 @@
         padding: 0 10px;
     }
     &.ty_arrow {
+        font-weight: normal;
+        justify-content: flex-start;
+        text-align: left;
+        //align-items: center;
         &::after {
             content: "\f054";
             font-family: "Font Awesome 6 Free";
