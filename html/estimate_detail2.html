@@ -31,7 +31,7 @@
     <div id="wrap">
         <!-- header -->
         <header class="header">
-            <h1 class="header_tit">접수관리</h1>
+            <h1 class="header_tit">견적 관리</h1>
             <button type="button" class="btn_back" aria-label="뒤로가기"></button>
             <div class="h_util">
                 <div class="h_util_sec h_btns">
@@ -236,8 +236,8 @@
         <!--container-->
         <main id="container" class="container">
             <ul class="mDep2">
-                <li class="mDep2_item on"><a href="">접수 확인</a></li>
-                <li class="mDep2_item"><a href="">예약 접수 목록</a></li>
+                <li class="mDep2_item on"><a href="">견적 확인</a></li>
+                <li class="mDep2_item "><a href="">교정 수수료 조회</a></li>
             </ul> 
             <nav class="breadcrumb_area">
                 <ol class="breadcrumb">
@@ -248,19 +248,17 @@
                         </a>
                     </li>
                     <li class="breadcrumb_item" >
-                        접수 관리
+                        견적 관리
                     </li>
                     <li class="breadcrumb_item">
-                        접수 확인
+                        견적 확인
                     </li>
                 </ol>
             </nav>
             <div id="contents" class="contents">
-                
-                <section class="sec mt0">
+                <section class="sec">
                     <div class="sub_tit2">
-                        <h3 class="tit3">기본 정보</h3>
-                        <button class="f_btn ty_small btn_down _key _gap6 ml_auto">접수증 다운받기</button>
+                        <h2 class="tit3">기본 정보</h2>
                     </div>
                     <table class="v_tbl">
                         <colgroup>
@@ -269,42 +267,32 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th>접수 번호</th>
-                                <td>20240001234</td>
-                            </tr>
-                            <tr>
                                 <th>교정 기관</th>
-                                <td>코리아인스트루먼트(주) 서울본사</td>
+                                <td>코리아인스루먼트(주) 서울본사</td>
                             </tr>
                             <tr>
-                                <th>성적서 업체</th>
-                                <td>
-                                    코리아인스트루먼트(주)서울본사
-                                    <p class="fc_midGrey mt4 fz_small">(서울특별시 구로구 디지털로 112311 그랜드 정션 빌딩 1045-123)</p>
-                                </td>
+                                <th>접수 구분</th>
+                                <td>교정</td>
                             </tr>
                             <tr>
-                                <th>접수 방식</th>
-                                <td>방문 접수</td>
+                                <th>요청 일자</th>
+                                <td>2024-12-12</td>
                             </tr>
                             <tr>
                                 <th>요구사항</th>
-                                <td>이렇게저렇게 해주세요. 이렇게저렇게 해주세요. 이렇게저렇게 해주세요. 이렇게저렇게 해주세요. 이렇게저렇게 해주세요. </td>
+                                <td>이렇게 저렇게 해주세요. 이렇게 저렇게 해주세요. 이렇게 저렇게 해주세요. 이렇게 저렇게 해주세요. 이렇게 저렇게 해주세요. </td>
                             </tr>
                         </tbody>
                     </table>
                 </section>
                 <section class="sec">
                     <div class="sub_tit2">
-                        <h3 class="tit3">계측기 정보 </h3>
-                        <span class="fc_midGrey fz_mid2 ml_auto fwM">[총 <span class="fc_key">60</span>개]</span> 
+                        <h2 class="tit3">견적 상세</h2>
                     </div>
+                    <!--[D] 견적 상세-->
                     <ul class="mList">
                         <li class="mList_item">
                             <div class="mList_inner">
-                                <div class="mList_sec mList_top jc_sb">
-                                    <a href="" class="num btn_link">202410000-1</a>
-                                </div>
                                 <div class="mList_sec mList_prod">
                                     <span class="mList_prod_item prod_co">[삼성전자]</span>
                                     <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
@@ -316,17 +304,14 @@
                                 <div class="mList_sec">
                                     <ul class="list_sepBar">
                                         <li class="list_item"><span class="fwB">교정</span></li>
-                                        <li class="list_item"><i class="fa-solid fa-file-lines"></i> 국문,영문</li>
-                                        <li class="list_item">차기교정일 : 2024-12-12</li>
+                                        <li class="list_item"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> 국문,영문</li>
+                                        <li class="list_item">20대</li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
                         <li class="mList_item">
                             <div class="mList_inner">
-                                <div class="mList_sec mList_top jc_sb">
-                                    <a href="" class="num btn_link">202410000-2</a>
-                                </div>
                                 <div class="mList_sec mList_prod">
                                     <span class="mList_prod_item prod_co">[애플]</span>
                                     <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
@@ -338,17 +323,14 @@
                                 <div class="mList_sec">
                                     <ul class="list_sepBar">
                                         <li class="list_item"><span class="fwB">수리</span></li>
-                                        <li class="list_item"><i class="fa-solid fa-file-lines"></i> 영문</li>
-                                        <li class="list_item">차기교정일 : 2024-12-12</li>
+                                        <li class="list_item"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> 영문</li>
+                                        <li class="list_item">10대</li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
                         <li class="mList_item">
                             <div class="mList_inner">
-                                <div class="mList_sec mList_top jc_sb">
-                                    <a href="" class="num btn_link">202410000-3</a>
-                                </div>
                                 <div class="mList_sec mList_prod">
                                     <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
                                     <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
@@ -360,17 +342,18 @@
                                 <div class="mList_sec">
                                     <ul class="list_sepBar">
                                         <li class="list_item"><span class="fwB">교정</span></li>
-                                        <li class="list_item"><i class="fa-solid fa-file-lines"></i> 국문</li>
-                                        <li class="list_item">차기교정일 : 2024-12-12</li>
+                                        <li class="list_item"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> 국문</li>
+                                        <li class="list_item">120대</li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <div class="btn_set taC mt30">
-                        <a href="./reception_list.html" class="f_btn ty_mid _key w_100">목록</a>
-                    </div>
+                    <!--// [D] 견적 상세-->
                 </section>
+                <div class="btn_set taC mt30">
+                    <a href="./estimate_list.html" class="f_btn ty_mid _solidGrey flex1 ">목록</a>
+                </div>
             </div>
         </main>
         <!--//container-->

@@ -831,8 +831,8 @@
 }
 
 .container {
-    padding-bottom: 80px;
-    min-height : calc(100vh - 50px);
+    padding-bottom: 20px;
+    min-height : calc(100vh - 118px);
     background-color: #fff;
     .contents {
         padding: 25px 16px 30px;
@@ -2515,6 +2515,39 @@
         }
     }
 }
+.mDep3 {
+    display: flex;
+    //margin-bottom: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    &_item {
+        
+        flex: 1;
+        //border-top: 2px solid $c_line;
+        background-color: $c_bg_grey;
+        
+        &.on {
+            //border-top-color: $c_key;
+            background-color: $c_key;
+            color: #fff;
+            .mDep3_btn {
+                font-weight: bold;
+            }
+        }
+    }
+    &_btn {
+        height: 32px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+
+
+    }
+}
 
 .f_tip {
     display: flex;
@@ -2683,6 +2716,32 @@
             font-weight: bold;
             color: $c_key;
             margin-bottom: 4px;
+        }
+    }
+}
+
+.price_card {
+    border: 2px solid #000;
+    padding: 12px;
+    border-radius: 6px;
+    dl {
+        & + dl {
+            border-top: 1px dashed #000;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+       
+       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        dt, dd {
+            flex: 1 0 50%;
+            line-height: 2;
+        }
+        dd {
+            text-align: right;
         }
     }
 }
