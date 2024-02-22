@@ -31,7 +31,7 @@
     <div id="wrap">
         <!-- header -->
         <header class="header">
-            <h1 class="header_tit">접수관리</h1>
+            <h1 class="header_tit">견적 관리</h1>
             <button type="button" class="btn_back" aria-label="뒤로가기"></button>
             <div class="h_util">
                 <div class="h_util_sec h_btns">
@@ -236,8 +236,8 @@
         <!--container-->
         <main id="container" class="container">
             <ul class="mDep2">
-                <li class="mDep2_item "><a href="">접수 확인</a></li>
-                <li class="mDep2_item on"><a href="">예약 접수 목록</a></li>
+                <li class="mDep2_item "><a href="">견적 확인</a></li>
+                <li class="mDep2_item on"><a href="">교정 수수료 조회</a></li>
             </ul> 
             <nav class="breadcrumb_area">
                 <ol class="breadcrumb">
@@ -248,18 +248,18 @@
                         </a>
                     </li>
                     <li class="breadcrumb_item" >
-                        접수 관리
+                        견적 관리
                     </li>
                     <li class="breadcrumb_item">
-                        예약 접수 목록
+                        교정 수수료 조회
                     </li>
                 </ol>
             </nav>
             <div id="contents" class="contents">
-                <section class="sec mt0">
+                <section class="sec">
                     <div class="srch_wrap">
                         <form class="srch_form">
-                            <input type="text" class="f_input ty_mid ty_round" placeholder="예약번호를 입력해 주세요.">
+                            <input type="text" class="f_input ty_mid ty_round" placeholder="계측기명, 제조사, 형식을 입력해 주세요.">
                             <button type="submit" class="btn_submit" aria-label="검색하기"></button>
                         </form>
                         <button class="srch_detail_btn" aria-label="상세검색" onclick="open_srch(this)"></button>
@@ -270,21 +270,6 @@
                                     <button type="button" class="srch_detail_close" onclick="close_srch(this)" aria-label="상세검색 닫기"></button>
                                 </div>
                                 <div class="srch_detail_cont">
-                                    <div class="srch_detail_sec">
-                                        <label for="" class="tit">접수일 조회</label>
-                                        <div class="date_set"> 
-                                            <input type="text" class="f_input ty_mid inp_date date_start" readonly="" id=""> ~
-                                            <input type="text" class="f_input ty_mid inp_date date_end" readonly="" id="">
-                                        </div>
-                                    </div>
-                                    <div class="srch_detail_sec">
-                                        <label for="" class="tit">접수 번호</label>
-                                        <input type="text" class="f_input ty_mid w100">
-                                    </div>
-                                    <div class="srch_detail_sec">
-                                        <label for="" class="tit">성적서 업체</label>
-                                        <input type="text" class="f_input ty_mid w100">
-                                    </div>
                                     <div class="srch_detail_sec">
                                         <label for="" class="tit">계측기명</label>
                                         <input type="text" class="f_input ty_mid w100">
@@ -298,7 +283,7 @@
                                         <input type="text" class="f_input ty_mid w100">
                                     </div>
                                     <div class="srch_detail_sec">
-                                        <label for="" class="tit">기기번호</label>
+                                        <label for="" class="tit">분류코드</label>
                                         <input type="text" class="f_input ty_mid w100">
                                     </div>
                                 </div>
@@ -309,66 +294,77 @@
                             </form>
                         </div>
                     </div>
+                    <p class="f_tip mt10">
+                        <i class="fa-solid fa-circle-info f_tip_ico fc_key"></i>
+                        <span>표준 수수료는 시점, 장비 특성에 따라 다소 차이가 있을 수 있습니다. <br> (표준소급료 및 부가세 제외)</span>
+                    </p>
                 </section>
                 <section class="sec mt20">
-                    <p class="f_tip mb10">
-                        <i class="fa-solid fa-circle-info f_tip_ico fc_key"></i>
-                        <span>예약 접수건 중 접수 대기 건만 노출됩니다. <br>접수 완료건은 <a href="./reception_list.html" class="fc_solidGrey fwB">[접수 확인]</a> 메뉴에서 확인해 주세요. </span>
-                    </p>
-                    
+                    <div class="no_result_box ty_bg">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p class="mt10">계측기를 검색해주세요.</p>
+                    </div>
+                </section>
+                <section class="sec mt20">
+                    <div class="no_result_box ty_bg">
+                        <i class="fa-solid fa-file-circle-xmark"></i>
+                        <p class="mt10">검색 결과가 없습니다.</p>
+                    </div>
+                </section>
+                <section class="sec mt20">
                     <ul class="mList">
                         <li class="mList_item">
                             <a href="" class="mList_inner">
                                 <div class="mList_sec mList_top jc_sb">
-                                    <span class="num">CW240204-123</span>
-                                    <span class="date">2024-03-24</span>
+                                    <span>[전기자기/전자파]</span>
+                                    <span>분류코드 : 123456</span>
                                 </div>
                                 <div class="mList_sec mList_prod">
                                     <span class="mList_prod_item prod_co">[APPLE]</span>
-                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTETER</span>
                                     <div class="mList_prod_item prod_desc">
                                         <span class="prod_desc_item">S5350XL284 1005</span>
-                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
                                     </div> 
-                                    외 980
                                 </div>
-                                <div class="mList_sec mList_count">총 수량 981대</div>
+                                <div class="mList_sec">
+                                    <b class="fz_mid2 ml_auto">999,000원</b>                   
+                                </div>
                             </a>
                         </li>
                         <li class="mList_item">
                             <a href="" class="mList_inner">
                                 <div class="mList_sec mList_top jc_sb">
-                                    <span class="num">CW240204-123</span>
-                                    <span class="date">2024-03-24</span>
+                                    <span>[전기자기/전자파]</span>
+                                    <span>분류코드 : 123456</span>
                                 </div>
                                 <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[TESLA]</span>
-                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
+                                    <span class="mList_prod_item prod_co">[APPLE]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTETER</span>
                                     <div class="mList_prod_item prod_desc">
                                         <span class="prod_desc_item">S5350XL284 1005</span>
-                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
                                     </div> 
-                                    외 980
                                 </div>
-                                <div class="mList_sec mList_count">총 수량 981대</div>
+                                <div class="mList_sec">
+                                    <b class="fz_mid2 ml_auto">999,000원</b>                   
+                                </div>
                             </a>
                         </li>
                         <li class="mList_item">
                             <a href="" class="mList_inner">
                                 <div class="mList_sec mList_top jc_sb">
-                                    <span class="num">CW240204-123</span>
-                                    <span class="date">2024-03-24</span>
+                                    <span>[전기자기/전자파]</span>
+                                    <span>분류코드 : 123456</span>
                                 </div>
                                 <div class="mList_sec mList_prod">
-                                    <span class="mList_prod_item prod_co">[재단법인 한국의료기기검사원]</span>
-                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTANCE OHMMETER</span>
+                                    <span class="mList_prod_item prod_co">[APPLE]</span>
+                                    <span class="mList_prod_item prod_name fwM">DIGITAL LOW RESISTETER</span>
                                     <div class="mList_prod_item prod_desc">
                                         <span class="prod_desc_item">S5350XL284 1005</span>
-                                        <span class="prod_desc_item prod_num fwM">qwfsad1234123</span>
                                     </div> 
-                                    외 980
                                 </div>
-                                <div class="mList_sec mList_count">총 수량 981대</div>
+                                <div class="mList_sec">
+                                    <b class="fz_mid2 ml_auto">999,000원</b>                   
+                                </div>
                             </a>
                         </li>
                     </ul>

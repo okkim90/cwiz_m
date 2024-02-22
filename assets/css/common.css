@@ -7042,9 +7042,12 @@ input::-webkit-search-results-decoration {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
   color: #222;
-  height: 351px;
+  padding: 50px 0;
+}
+.no_result_box p {
+  margin-top: 15px;
 }
 .no_result_box.ty_bg {
   background-color: #f4f4f4;
@@ -8244,7 +8247,7 @@ tr:last-child .status_box_date {
 }
 
 .prod_desc {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
 }
 .prod_desc::before {
@@ -10463,9 +10466,7 @@ tr:last-child .status_box_date {
   text-decoration: underline;
 }
 .mList_prod {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 4px;
+  display: block;
 }
 
 /* pages */

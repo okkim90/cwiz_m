@@ -1253,9 +1253,13 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     color: #222;
-    height: 351px;
+    //height: 351px;
+    padding: 50px 0;
+    p {
+        margin-top: 15px;
+    }
     &.ty_bg {
         background-color: $c_bg_grey2;
         border-radius: 10px;
@@ -2653,7 +2657,7 @@
 }
 
 .prod_desc {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     
     &::before {
