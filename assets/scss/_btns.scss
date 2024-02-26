@@ -409,6 +409,13 @@
         line-height: 16px;
         border-radius: 20px;
     }
+    &.ty_big {
+        padding: 0 1em;
+        font-size: 14px;
+        height: 26px;
+        line-height: 24px;
+        border-radius: 26px;
+    }
 }
 
 .tag_box {
@@ -423,13 +430,46 @@
     //align-items: center;
     gap: 0.4em;
     cursor: pointer;
+    user-select: none;
+    font-size: 13px;
     input[type='checkbox'] {
+        border: 0; 
+        clip: rect(0 0 0 0); 
+        clip-path: inset(50%); 
+        width: 1px; 
+        height: 1px; 
+        margin: -1px; 
+        overflow: hidden; 
+        padding: 0; 
+        position: absolute; 
+        white-space: nowrap; 
+        &:checked ~ .btn_chk_box {
+            border-color: $c_key;
+            background-color: $c_key;
+            color: #fff;
+        }
+    }
+    &_box {
         flex-shrink: 0;
+        width: 1.4em;
+        height: 1.4em;
         margin-top: 0.1em;
-        width: 1.3em;
-        height: 1.3em;
-        font-size: 1em;
-        line-height: 1;
+        border: 2px solid $c_line;
+        border-radius: 2px;
+        color: $c_line;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        background-color: #fff;
+        &::after {
+            content: '\f00c';
+            font-family: "Font Awesome 6 Free";
+            font-weight: bold;
+            font-size: 1em;
+            margin-top: 0.1em;
+            line-height: 1;
+        }
     }
 }
 

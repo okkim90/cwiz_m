@@ -831,7 +831,7 @@
 }
 
 .container {
-    padding-bottom: 20px;
+    //padding-bottom: 20px;
     min-height : calc(100vh - 118px);
     background-color: #fff;
     .contents {
@@ -2137,66 +2137,36 @@
 }
 
 .payment {
-    &_wrap {
-        position: relative;
-        display: flex;
-        margin-top: 40px;
-        
-        &_left {
-            flex: 1;
-            padding: 25px 20px 40px;
-            border-radius: 12px;
-            border: 1px solid #333;
-        }
-        &_right {
-            flex-shrink: 0;
-            width: 340px;
-            
-            margin-left: 30px;
-            //align-self: flex-end;
-            //height: 100%;
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-        }
-        .payment_box {
-            position: sticky;
-            width: 100%;
-            bottom: 10px;
-            padding: 20px 20px 25px;
-            border: 3px solid #333;
-            border-radius: 12px;
-            
-            .tit {
-                font-size: 18px;
-                text-align: center;
-                margin-bottom: 20px;
-                font-weight: bold;
-            }
-            &_list {
-                li {
+    &_box {
+        &_list {
+            li {
+                //font-size: 12px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & + li {
+                    margin-top: 2px;
+                }
+                &.total {
+                    margin-top: 8px;
+                    padding-top: 6px;
+                    border-top: 1px dashed #000;
                     font-size: 16px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    & + li {
-                        margin-top: 10px;
+                    .item_cont {
+                        font-size: 16px;
                     }
-                    &.total {
-                        .item_cont {
-                            font-size: 18px;
-                        }
-                        padding-top: 10px;
-                        border-top: 1px dashed #000;
-                    }
+                    
                 }
             }
         }
     }
     &_agreement {
-        padding: 10px;
-        background-color: #f2f2f2;
+        padding: 6px 10px;
+        background-color: $c_bg_grey;
         border-radius: 6px;
+        .btn_chk {
+            font-size: 11px;
+        }
         li {
             // display: flex;
             // justify-content: space-between;
@@ -2470,6 +2440,20 @@
                 font-weight: 500;
                 margin-bottom: 5px;
             }
+        }
+    }
+}
+
+.mform {
+    &_item {
+        & + & {
+            margin-top: 12px;
+        }
+        .tit {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px;
+            font-weight: 500;
         }
     }
 }
@@ -2748,4 +2732,14 @@
             text-align: right;
         }
     }
+}
+
+
+.sticky_bot {
+    padding: 10px 16px 15px;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid $c_line;
+    background-color: #fff;
 }

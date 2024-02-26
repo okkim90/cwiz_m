@@ -254,213 +254,134 @@
                         정산 관리
                     </li>
                     <li class="breadcrumb_item">
-                        결제하기
+                        거래명세서 보기
                     </li>
                 </ol>
             </nav>
             <div id="contents" class="contents">
                 <section class="sec">
                     <div class="sub_tit2">
-                        <h2 class="tit3">결제 정보</h2>
-
-                        <ul class="list_sepBar ml_auto">
-                            <li class="list_item">거래명세서 : <b class="fc_key">999</b>건</li>
-                            <li class="list_item">계측기 : <b class="fc_key">9999</b>개</li>
-                        </ul>
+                        <h2 class="tit3">기본 정보</h2>
                     </div>
-                    <ul class="mList">
-                        <li class="mList_item">
-                            <div class="deal_box">
-                                <div class="deal_box_inner">
-                                    <div class="deal_box_sec">
-                                        <dl class="deal_box_info">
-                                            <dt class="fz_mid fwB">총 금액</dt>
-                                            <dd class="fz_mid fwB">185,900,000 원</dd>
-                                        </dl>
-                                        <dl class="deal_box_info">
-                                            <dt>발행번호</dt>
-                                            <dd>MC2024-0202</dd>
-                                            <dt>거래명세서 발행일</dt>
-                                            <dd>2024-12-12</dd>
-                                            <dt>교정 기관</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                            <dt>성적서 업체명</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mList_item">
-                            <div class="deal_box">
-                                <div class="deal_box_inner">
-                                    <div class="deal_box_sec">
-                                        <dl class="deal_box_info">
-                                            <dt class="fz_mid fwB">총 금액</dt>
-                                            <dd class="fz_mid fwB">185,900,000 원</dd>
-                                        </dl>
-                                        <dl class="deal_box_info">
-                                            <dt>발행번호</dt>
-                                            <dd>MC2024-0202</dd>
-                                            <dt>거래명세서 발행일</dt>
-                                            <dd>2024-12-12</dd>
-                                            <dt>교정 기관</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                            <dt>성적서 업체명</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mList_item">
-                            <div class="deal_box">
-                                <div class="deal_box_inner">
-                                    <div class="deal_box_sec">
-                                        <dl class="deal_box_info">
-                                            <dt class="fz_mid fwB">총 금액</dt>
-                                            <dd class="fz_mid fwB">185,900,000 원</dd>
-                                        </dl>
-                                        <dl class="deal_box_info">
-                                            <dt>발행번호</dt>
-                                            <dd>MC2024-0202</dd>
-                                            <dt>거래명세서 발행일</dt>
-                                            <dd>2024-12-12</dd>
-                                            <dt>교정 기관</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                            <dt>성적서 업체명</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <table class="v_tbl">
+                        <colgroup>
+                            <col style="width: 120px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>발행 번호</th>
+                                <td>T2024-12345</td>
+                            </tr>
+                            <tr>
+                                <th>성적서 업체</th>
+                                <td>코리아인스트루먼트(주)</td>
+                            </tr>
+                            <tr>
+                                <th>거래명세서 발행일</th>
+                                <td>2024-12-12</td>
+                            </tr>
+                            <tr>
+                                <th>거래명세서 발행자</th>
+                                <td>장원영</td>
+                            </tr>
+                            <tr>
+                                <th>교정기관</th>
+                                <td>코리아인스트루먼트(주)</td>
+                            </tr>
+                            <tr>
+                                <th>합계</th>
+                                <td>999,000,000 원</td>
+                            </tr>
+                            <tr>
+                                <th>결제정보</th>
+                                <td>
+                                    <ul class="list_sepBar">
+                                        <li class="list_item">999,000,000 원</li>
+                                        <li class="list_item">2024-12-12</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
-                <section id="payWith" class="sec">
+                <section class="sec">
                     <div class="sub_tit2">
-                        <h2 class="tit3">결제 수단</h2>
-                    </div>
-                    <div class="d_flex _gapX10">
-                        <label class="chk_btn flex1">
-                            <input type="radio" name="payment" data-address='false'>
-                            <span class="f_btn ty_mid  ty_ico ">
-                                <i class="fa-solid fa-credit-card fz_big"></i>신용카드
-                            </span>
-                        </label>    
-                        <label class="chk_btn flex1">
-                            <input type="radio" name="payment" data-address='true'>
-                            <span class="f_btn ty_mid ty_ico">
-                                <i class="fa-solid fa-file-invoice fz_big"></i>무통장
-                            </span>
-                        </label>
-                        <label class="chk_btn flex1">
-                            <input type="radio" name="payment" data-address='true'>
-                            <span class="f_btn ty_mid  ty_ico">
-                                <i class="fa-solid fa-building-columns fz_big"></i>계좌이체
-                            </span>
-                        </label>   
-                    </div>
-                    <div class="payment_info mt15" style="display: none;">
-                        <div class="sub_tit2">
-                            <h3 class="tit4 fwB">※ 세금계산서 요청 정보 </h3>
-                            <p class="tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
-                        </div>
-                        <div class="mform_wrap">
-                            <div class="mform_item">
-                                <label for="" class="tit">업체명 <i class="ico_required"></i></label>
-                                <input type="text" class="f_input ty_mid w100" placeholder="업체명을 입력해주세요." value="코리아인스트루먼트(주)">
-                            </div>
-                            <div class="mform_item">
-                                <label for="" class="tit">사업자 번호 <i class="ico_required"></i></label>
-                                <input type="text" class="f_input ty_mid w100" placeholder="사업자번호를 입력해주세요." value="123-23-14245">
-                            </div>
-                            <div class="mform_item">
-                                <label for="" class="tit">대표자명 <i class="ico_required"></i></label>
-                                <input type="text" class="f_input ty_mid w100" placeholder="대표자명을 입력해주세요." value="장원영">
-                            </div>
-                            <div class="mform_item">
-                                <label for="" class="tit">연락처 <i class="ico_required"></i></label>
-                                <input type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="10" name="" class="f_input ty_mid w100" placeholder="&quot;-&quot; 제외하고 숫자만 입력해주세요.">
-                            </div>
-                            <div class="mform_item">
-                                <label for="" class="tit">이메일 <i class="ico_required"></i></label>
-                                <input type="email" class="f_input ty_mid w100" placeholder="이메일을 입력해주세요." value="kic@kic21.co.kr">
-                            </div>
-                            <div class="mform_item">
-                                <label for="" class="tit">업태 <i class="ico_required"></i></label>
-                                <input type="email" class="f_input ty_mid w100" placeholder="업태를 입력해주세요." value="제조업">
-                            </div>
-                            <div class="mform_item">
-                                <label for="" class="tit">종목 <i class="ico_required"></i></label>
-                                <input type="email" class="f_input ty_mid w100" placeholder="종목을 입력해주세요." value="계측장비">
-                            </div>
-                            <div class="mform_item">
-                                <label for="" class="tit">주소 <i class="ico_required"></i></label>
-                                <div class="d_flex fw_w _gap5 mw_500">
-                                    <div class="search_set shrink0">
-                                        <input type="text" class="f_input w_100 ty_mid" placeholder="우편번호" readonly="">
-                                        <button type="button" class="f_btn ty_mid _key btn_search">
-                                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="f_input ty_mid w100" readonly="">
-                                    <input type="text" class="f_input ty_mid w100" placeholder="상세 주소를 입력해주세요.">
-                                </div>
-                            </div>
+                        <h2 class="tit3">거래명세서 내역</h2>
+                        <div class="d_flex _gapX4 ml_auto">
+                            <button class="f_btn ty_small btn_down _key _gap6 ml_auto pd10">거래명세서</button>
+                            <button class="f_btn ty_small btn_down _key _gap6 ml_auto pd10">견적서</button>
                         </div>
                     </div>
-                    <!--[D] 세금계산서 요청 정보 토글 : 안쓸거면 스크립트 지워도됩니다 -->
-                    <script>
-                        const payment_info = document.querySelector('.payment_info');
-                        const inp_payment = document.querySelectorAll('input[name="payment"]');
-                        const payWith_sec = document.querySelector('#payWith');
-
-                        inp_payment.forEach((e)=>{
-                            e.addEventListener('change',()=>{
-                                if(e.dataset.address == 'true'){
-                                    payment_info.style.display = 'block';
-                                    window.scrollTo({
-                                        top : payWith_sec.offsetTop - 60,
-                                        //behavior: "smooth",
-                                    })
-                                }else{
-                                    payment_info.style.display = 'none';
-                                }
-                            })
-                        })
-                    </script>
+                    <div class="price_card">
+                        <dl class="fz_mid2">
+                            <dt class="fwB">최종 금액</dt>
+                            <dd class="fwB">110,000 원</dd>
+                        </dl>
+                        <dl class="pl10 pr10">
+                            <dt>회원할인적용금액</dt>
+                            <dd><span class="fc_red">1,000</span> 원</dd>
+                            <dt>표준소급료</dt>
+                            <dd>1,000 원</dd>
+                            <dt>출장비</dt>
+                            <dd>1,000 원</dd>
+                            <dt>운송비</dt>
+                            <dd>1,000 원</dd>
+                            <dt>잔금DC</dt>
+                            <dd><span class="fc_red">1,000</span> 원</dd>
+                        </dl>
+                        <dl class="fz_mid2">
+                            <dt>공급가액</dt>
+                            <dd>100,000 원</dd>
+                            <dt>부가세</dt>
+                            <dd>10,000 원</dd>
+                            <dt class="fwB">최종 금액</dt>
+                            <dd class="fwB">110,000 원</dd>
+                        </dl>
+                    </div>
                 </section>
+                <div class="btn_set taC mt30">
+                    <a href="" class="f_btn ty_mid _solidGrey flex1 ">목록</a>
+                    <button type="button" class="f_btn ty_mid _key flex1">문의하기</button>
+                </div>
             </div>
         </main>
         <!--//container-->
-        <div class="payment_box sticky_bot">
-            <!-- <ul class="payment_box_list">
-                <li class="fz_mid">
-                    <b class="item_tit">최종 결제금액</b> 
-                    <b class="item_cont"></b>
-                </li>
-            </ul> -->
-            
-            <!--[D] 출고/결제수단 미작성시 비활성화-->
-            <!-- <button class="f_btn _key ty_big w100 mt30 disabled">결제하기</button>  -->
-            <!--[D] 활성화 상태 -->
-            <ul class="payment_agreement">
-                <li>
-                    <label class="btn_chk">
-                        <input type="checkbox" class="check_hidden" checked> 
-                        <span class="btn_chk_box"></span>
-                        결제 정보를 확인 하였으며, 개인정보 이용 및 제공에 동의합니다.
-                    </label>
-                </li>
-            </ul>
-            <div class="d_flex ai_c jc_sb mt10">
-                <div class="fz_mid fwB shrink0">
-                    총 <span class="fc_key">989,010,000</span> 원
-                </div>
-                <button class="f_btn _key ty_mid w_100">결제하기</button>
-            </div>
-        </div>
+        <!-- botNav -->
+        <ul class="botNav">
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico1"></span>
+                    <span class="tit">교정현황</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico2"></span>
+                    <span class="tit">정산관리</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico_home"></span>
+                    <span class="tit">홈</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico3"></span>
+                    <span class="tit">마이페이지</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <button type="button" class="botNav_btn btn_nav_toggle">
+                    <span class="ico_box ico4"></span>
+                    <span class="tit">메뉴</span>
+                </button>
+            </li>
+        </ul>
+        <!--// botNav -->
     </div>
+    
 </body>
 </html>

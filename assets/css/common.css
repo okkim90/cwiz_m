@@ -6672,7 +6672,6 @@ input::-webkit-search-results-decoration {
 }
 
 .container {
-  padding-bottom: 20px;
   min-height: calc(100vh - 118px);
   background-color: #fff;
 }
@@ -7826,59 +7825,30 @@ tr:last-child .status_box_date {
   box-sizing: border-box;
 }
 
-.payment_wrap {
-  position: relative;
-  display: flex;
-  margin-top: 40px;
-}
-.payment_wrap_left {
-  flex: 1;
-  padding: 25px 20px 40px;
-  border-radius: 12px;
-  border: 1px solid #333;
-}
-.payment_wrap_right {
-  flex-shrink: 0;
-  width: 340px;
-  margin-left: 30px;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-}
-.payment_wrap .payment_box {
-  position: sticky;
-  width: 100%;
-  bottom: 10px;
-  padding: 20px 20px 25px;
-  border: 3px solid #333;
-  border-radius: 12px;
-}
-.payment_wrap .payment_box .tit {
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-.payment_wrap .payment_box_list li {
-  font-size: 16px;
+.payment_box_list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.payment_wrap .payment_box_list li + li {
-  margin-top: 10px;
+.payment_box_list li + li {
+  margin-top: 2px;
 }
-.payment_wrap .payment_box_list li.total {
-  padding-top: 10px;
+.payment_box_list li.total {
+  margin-top: 8px;
+  padding-top: 6px;
   border-top: 1px dashed #000;
+  font-size: 16px;
 }
-.payment_wrap .payment_box_list li.total .item_cont {
-  font-size: 18px;
+.payment_box_list li.total .item_cont {
+  font-size: 16px;
 }
 .payment_agreement {
-  padding: 10px;
-  background-color: #f2f2f2;
+  padding: 6px 10px;
+  background-color: #EFEFEF;
   border-radius: 6px;
+}
+.payment_agreement .btn_chk {
+  font-size: 11px;
 }
 .payment_agreement li + li {
   margin-top: 10px;
@@ -8109,6 +8079,16 @@ tr:last-child .status_box_date {
   margin-bottom: 5px;
 }
 
+.mform_item + .mform_item {
+  margin-top: 12px;
+}
+.mform_item .tit {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
 .mDep2 {
   display: flex;
   padding: 0 16px;
@@ -8330,6 +8310,15 @@ tr:last-child .status_box_date {
 }
 .price_card dl dd {
   text-align: right;
+}
+
+.sticky_bot {
+  padding: 10px 16px 15px;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #DDDDDD;
+  background-color: #fff;
 }
 
 .botNav {
@@ -9568,6 +9557,13 @@ tr:last-child .status_box_date {
   line-height: 16px;
   border-radius: 20px;
 }
+.f_tag.ty_big {
+  padding: 0 1em;
+  font-size: 14px;
+  height: 26px;
+  line-height: 24px;
+  border-radius: 26px;
+}
 
 .tag_box {
   display: flex;
@@ -9580,13 +9576,49 @@ tr:last-child .status_box_date {
   vertical-align: top;
   gap: 0.4em;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 13px;
 }
 .btn_chk input[type=checkbox] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+}
+.btn_chk input[type=checkbox]:checked ~ .btn_chk_box {
+  border-color: #FF7A00;
+  background-color: #FF7A00;
+  color: #fff;
+}
+.btn_chk_box {
   flex-shrink: 0;
+  width: 1.4em;
+  height: 1.4em;
   margin-top: 0.1em;
-  width: 1.3em;
-  height: 1.3em;
+  border: 2px solid #DDDDDD;
+  border-radius: 2px;
+  color: #DDDDDD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.btn_chk_box::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
   font-size: 1em;
+  margin-top: 0.1em;
   line-height: 1;
 }
 
@@ -10467,6 +10499,84 @@ tr:last-child .status_box_date {
 }
 .mList_prod {
   display: block;
+}
+.mList_chk_wrap {
+  display: flex;
+  position: relative;
+}
+.mList_chk_wrap .chk_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -999;
+}
+.mList_chk_wrap .chk_hidden:checked ~ .mList_chk_box {
+  border-color: #FF7A00;
+}
+.mList_chk_wrap .chk_hidden:checked ~ .mList_chk_box .mList_chk {
+  border-color: #FF7A00;
+  background-color: #FF7A00;
+  color: #fff;
+}
+.mList_chk {
+  flex-shrink: 0;
+  width: 1.4em;
+  height: 1.4em;
+  border: 2px solid #DDDDDD;
+  border-radius: 2px;
+  color: #DDDDDD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mList_chk::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.deal_box {
+  display: flex;
+  position: relative;
+}
+.deal_box_inner {
+  border: 2px solid #DDDDDD;
+  border-radius: 6px;
+  padding: 10px;
+}
+.deal_box_sec {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.deal_box_sec + .deal_box_sec {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #DDDDDD;
+}
+.deal_box_sec.jc_sb {
+  justify-content: space-between;
+}
+.deal_box_info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  line-height: 1.3;
+  gap: 8px 0;
+}
+.deal_box_info + .deal_box_info {
+  margin-top: 10px;
+}
+.deal_box_info dt {
+  width: 100px;
+}
+.deal_box_info dd {
+  width: calc(100% - 100px);
+  text-align: right;
 }
 
 /* pages */
