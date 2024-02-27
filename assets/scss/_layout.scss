@@ -2749,3 +2749,93 @@
     border-top: 1px solid $c_line;
     background-color: #fff;
 }
+
+.ol {
+    &_item {
+        list-style: decimal;
+        list-style-position: inside;
+        text-indent: -1em;
+        margin-left: 1em;
+        & + & {
+            margin-top: 0.5em;
+        }
+    }
+}
+
+.toast {
+    
+    &_wrap {
+        background-color: rgba(#000,.4);
+        position: fixed;
+        z-index: 1001;
+        
+        top: 0;
+        
+        height: 100%;
+        @include m-sizing;
+        
+       
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s  ease-in-out;
+        &.on {
+            opacity: 1;
+            visibility: visible;
+            .toast_inner {
+                bottom: 0;
+                transition: bottom .3s ease-in-out; 
+            }
+        }
+    }
+    &_inner {
+        position: absolute;
+        left: 0;
+        bottom: -100%;
+        width: 100%;
+        max-height: 90%;
+        background-color: #fff;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        //padding: 16px 16px 20px;
+        transition: bottom .2s ease-in-out; 
+    }
+    &_top {
+        //margin-bottom: 15px;
+        position: relative;
+        padding: 10px 16px;
+        //border-bottom: 1px solid $c_line;
+        box-shadow: 0 6px 6px rgba(#000, .07); 
+        .tit2 {
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+    &_cont {
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px 16px 30px;
+    }
+    &_bot {
+        display: flex;
+        //margin-top: 30px;
+        //border-top: 1px solid $c_line;
+        gap: 10px;
+        padding: 20px 16px 20px;
+        box-shadow: 0 -6px 6px rgba(#000, .07); 
+        .f_btn {
+            flex: 1;
+        }
+    }
+    &_close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/common/ico_close.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+}

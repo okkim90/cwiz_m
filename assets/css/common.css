@@ -883,6 +883,69 @@
   color: #FF5C5C;
 }
 
+.fc_red2 {
+  color: #e51818;
+}
+
+.bg_red2 {
+  background-color: #e51818;
+}
+
+.bd_red2 {
+  border-color: #e51818;
+}
+
+.f_btn._red2 {
+  transition: all 0.1s ease-in-out;
+  background-color: #e51818;
+  border-color: #e51818;
+  color: #fff;
+}
+.f_btn._red2:active {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+.f_btn._red2_ol {
+  transition: all 0.1s ease-in-out;
+  background-color: transparent;
+  border-color: #e51818;
+  color: #e51818;
+}
+.f_btn._red2_ol.on {
+  background-color: #e51818;
+  color: #fff;
+}
+.f_btn._red2_ol:active {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+.f_btn._red2_op {
+  transition: all 0.1s ease-in-out;
+  background-color: rgba(229, 24, 24, 0.15);
+  border-color: #e51818;
+  color: #e51818;
+}
+.f_btn._red2_op:active {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+.f_tag._red2 {
+  background-color: #e51818;
+  border-color: #e51818;
+  color: #fff;
+}
+.f_tag._red2_ol {
+  background-color: transparent;
+  border-color: #e51818;
+  color: #e51818;
+}
+.f_tag._red2_op {
+  background-color: #facfcf;
+  border-color: #e51818;
+  color: #e51818;
+}
+
 .fc_lblue {
   color: #63c1fc;
 }
@@ -8334,6 +8397,85 @@ tr:last-child .status_box_date {
   background-color: #fff;
 }
 
+.ol_item {
+  list-style: decimal;
+  list-style-position: inside;
+  text-indent: -1em;
+  margin-left: 1em;
+}
+.ol_item + .ol_item {
+  margin-top: 0.5em;
+}
+
+.toast_wrap {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.toast_wrap.on {
+  opacity: 1;
+  visibility: visible;
+}
+.toast_wrap.on .toast_inner {
+  bottom: 0;
+  transition: bottom 0.3s ease-in-out;
+}
+.toast_inner {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  max-height: 90%;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  transition: bottom 0.2s ease-in-out;
+}
+.toast_top {
+  position: relative;
+  padding: 10px 16px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.07);
+}
+.toast_top .tit2 {
+  text-align: center;
+  line-height: 30px;
+}
+.toast_cont {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 16px 30px;
+}
+.toast_bot {
+  display: flex;
+  gap: 10px;
+  padding: 20px 16px 20px;
+  box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.07);
+}
+.toast_bot .f_btn {
+  flex: 1;
+}
+.toast_close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/common/ico_close.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .botNav {
   position: sticky;
   z-index: 999;
@@ -8867,10 +9009,10 @@ tr:last-child .status_box_date {
 .f_ta {
   width: 100%;
   height: 80px;
-  line-height: 1.5;
+  line-height: 1.4;
   border-radius: 4px;
   font-size: 12px;
-  padding: 0.6em 1em;
+  padding: 0.6em 0.6em;
 }
 .f_ta.ty_small {
   font-size: 13px;
@@ -10555,6 +10697,7 @@ tr:last-child .status_box_date {
   position: relative;
 }
 .deal_box_inner {
+  width: 100%;
   border: 2px solid #DDDDDD;
   border-radius: 6px;
   padding: 10px;
