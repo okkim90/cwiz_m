@@ -5432,6 +5432,14 @@
   width: 100%;
 }
 
+.lh0 {
+  line-height: 0;
+}
+
+.lh1 {
+  line-height: 1;
+}
+
 /*반응형 화면 크기*/
 .t_hidden_2 {
   width: 100%;
@@ -6667,7 +6675,7 @@ input::-webkit-search-results-decoration {
 .sub_tit2 {
   display: flex;
   align-items: flex-end;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
 }
 
@@ -6698,7 +6706,7 @@ input::-webkit-search-results-decoration {
   margin-top: 0;
 }
 .container .sec {
-  margin-top: 30px;
+  margin-top: 32px;
 }
 .container .sec:first-child {
   margin-top: 0;
@@ -7853,6 +7861,11 @@ tr:last-child .status_box_date {
 .payment_agreement li + li {
   margin-top: 10px;
 }
+.payment_info {
+  padding: 14px 12px;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+}
 
 .shipment_info_list {
   margin-top: 10px;
@@ -8313,7 +8326,7 @@ tr:last-child .status_box_date {
 }
 
 .sticky_bot {
-  padding: 10px 16px 15px;
+  padding: 15px 16px;
   position: sticky;
   left: 0;
   bottom: 0;
@@ -8598,16 +8611,16 @@ tr:last-child .status_box_date {
   text-overflow: ellipsis;
 }
 .f_input:-moz-read-only {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: #fff7f0;
 }
 .f_input:read-only {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: #fff7f0;
 }
 .f_input:-moz-read-only:focus {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: #fff7f0;
 }
 .f_input:read-only:focus {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: #fff7f0;
 }
 .f_input.taC {
   text-align: center;

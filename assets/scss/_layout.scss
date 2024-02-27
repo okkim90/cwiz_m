@@ -825,7 +825,7 @@
     &2 {
         display: flex;
         align-items: flex-end;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         flex-wrap: wrap;
     }
 }
@@ -871,7 +871,7 @@
         &:first-child {
             margin-top: 0;
         }
-        margin-top: 30px;
+        margin-top: 32px;
         &.mt0 {
             margin-top: 0;
         }
@@ -2181,6 +2181,12 @@
             }
         }
     }
+    &_info {
+        padding: 14px 12px;
+        border: 1px solid $c_line;
+        //background-color: $c_bg;
+        border-radius: 6px;
+    }
 }
 
 
@@ -2736,7 +2742,7 @@
 
 
 .sticky_bot {
-    padding: 10px 16px 15px;
+    padding: 15px 16px;
     position: sticky;
     left: 0;
     bottom: 0;

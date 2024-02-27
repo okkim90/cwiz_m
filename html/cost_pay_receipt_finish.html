@@ -235,202 +235,70 @@
         <!-- // nav -->
         <!--container-->
         <main id="container" class="container">
-            <ul class="mDep2">
-                <li class="mDep2_item on"><a href="">정산 관리</a></li>
-                <li class="mDep2_item "><a href="">출고 관리</a></li>
-            </ul> 
-            <nav class="breadcrumb_area">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb_item">
-                        <a href="">
-                            <i class="fa-solid fa-house"></i>
-                            <span class="blind">home</span>
-                        </a>
-                    </li>
-                    <li class="breadcrumb_item" >
-                        정산/출고 관리
-                    </li>
-                    <li class="breadcrumb_item">
-                        정산 확인
-                    </li>
-                </ol>
-            </nav>
             <div id="contents" class="contents">
-                <ul class="mDep3 mb20">
-                    <li class="mDep3_item on"><button type="button" class="mDep3_btn">결제 대기</button></li>
-                    <li class="mDep3_item"><button type="button" class="mDep3_btn">결제 완료</button></li>
-                </ul>
-                <section class="sec mt0">
-                    <div class="srch_wrap">
-                        <form class="srch_form">
-                            <input type="text" class="f_input ty_mid ty_round" placeholder="접수번호를 입력해주세요.">
-                            <button type="submit" class="btn_submit" aria-label="검색하기"></button>
-                        </form>
-                        <button class="srch_detail_btn" aria-label="상세검색" onclick="open_srch(this)"></button>
-                        <div class="srch_detail_wrap">
-                            <form class="srch_detail_inner">
-                                <div class="srch_detail_top">
-                                    <h3 class="tit2">상세검색</h3>
-                                    <button type="button" class="srch_detail_close" onclick="close_srch(this)" aria-label="상세검색 닫기"></button>
-                                </div>
-                                <div class="srch_detail_cont">
-                                    <div class="srch_detail_sec">
-                                        <label for="" class="tit">기간 조회</label>
-                                        <div class="date_set"> 
-                                            <select name="" id="" class="f_select ty_mid w_80">
-                                                <option value="">접수일</option>
-                                                <option value="">교정일</option>
-                                            </select>
-                                            <input type="text" class="f_input ty_mid inp_date date_start" readonly="" id=""> ~
-                                            <input type="text" class="f_input ty_mid inp_date date_end" readonly="" id="">
-                                        </div>
-                                    </div>
-                                    <div class="srch_detail_sec">
-                                        <label for="" class="tit">번호 조회</label>
-                                        <div class="d_flex _gapX4">
-                                            <select name="" id="" class="f_select ty_mid w_80 shrink0">
-                                                <option value="">접수번호</option>
-                                                <option value="">발행번호</option>
-                                            </select>
-                                            <input type="text" class="f_input ty_mid flex1">
-                                        </div>
-                                    </div>
-                                    <div class="srch_detail_sec">
-                                        <label for="" class="tit">교정 기관</label>
-                                        <select name="" id="" class="f_select ty_mid w100">
-                                            <option value="">전체</option>
-                                            <option value="">코리아인스루먼트(주) 서울본사</option>
-                                            <option value="">코리아인스루먼트(주) 부산지사</option>
-                                            <option value="">코리아인스루먼트(주) 대전지사</option>
-                                        </select>
-                                    </div>
-                                    <div class="srch_detail_sec">
-                                        <label for="" class="tit">성적서 업체</label>
-                                        <input type="text" class="f_input ty_mid w100" placeholder="성적서 업체를 입력해 주세요.">
-                                    </div>
-                                </div>
-                                <div class="srch_detail_bot">
-                                    <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="reset(this)">초기화 <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></button>
-                                    <input type="submit" value="검색" class="f_btn ty_mid _key w_100">
-                                </div>
-                            </form>
+                <section class="sec">
+                    <div class="result_box  taC pt40 pb40">
+                        <i class="fa-solid fa-circle-check fc_key" style="font-size: 80px;" aria-hidden="true"></i>
+                        <div class="result_box_tit fz_big fwB mt10">세금 계산서 발행 신청 완료</div>
+                        <div class="result_box_desc mt30">
+                            <div class="h_tbl_wrap mw_600" style="margin: 0 auto;">
+                                <table class="h_tbl tl_fixed">
+                                    <thead>
+                                        <tr>
+                                            <th>거래명세서 건수</th>
+                                            <th>계측기 갯수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>6건</td>
+                                            <td>3건</td>
+                                        </tr>
+                                    </tbody>
+                                </table> 
+                            </div>
                         </div>
+                        <a href="" class="f_btn ty_mid _key w_120 mt30">확인</a>
                     </div>
-                </section>
-                <section class="sec mt20">
-                    <div class="d_flex ai_b mb10">
-                        <label class="btn_chk">
-                            <input type="checkbox" class="check_hidden "> 
-                            <span class="btn_chk_box"></span>
-                            전체 선택
-                        </label>
-                        <span class="fz_mid ml_auto">결제대기 : <b class="fc_key">999,999,000</b> 원</span>
-                    </div>
-                    
-                    <ul class="mList">
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr10"></span>
-                                        <span class="f_tag ty_mid _key_ol">결제대기</span>
-                                        <div class="btns d_flex _gapX4  ml_auto">
-                                            <a href="" class="f_btn ty_small _blue pd10">거래명세서</a>
-                                            <a href="" class="f_btn ty_small _red pd10">세금계산서</a>
-                                        </div>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <dl class="deal_box_info">
-                                            <dt class="fz_mid fwB">총 금액</dt>
-                                            <dd class="fz_mid fwB">185,900,000 원</dd>
-                                        </dl>
-                                        <dl class="deal_box_info">
-                                            <dt>접수번호</dt>
-                                            <dd>24000649 외 4</dd>
-                                            <dt>발행번호</dt>
-                                            <dd>MC2024-0202</dd>
-                                            <dt>교정 기관</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr10"></span>
-                                        <span class="f_tag ty_mid _key_ol">결제대기</span>
-                                        <div class="btns d_flex _gapX4  ml_auto">
-                                            <a href="" class="f_btn ty_small _blue pd10">거래명세서</a>
-                                            <a href="" class="f_btn ty_small _red pd10">세금계산서</a>
-                                        </div>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <dl class="deal_box_info">
-                                            <dt class="fz_mid fwB">총 금액</dt>
-                                            <dd class="fz_mid fwB">185,900,000 원</dd>
-                                        </dl>
-                                        <dl class="deal_box_info">
-                                            <dt>접수번호</dt>
-                                            <dd>24000649 외 4</dd>
-                                            <dt>발행번호</dt>
-                                            <dd>MC2024-0202</dd>
-                                            <dt>교정 기관</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr10"></span>
-                                        <span class="f_tag ty_mid _key_ol">결제대기</span>
-                                        <div class="btns d_flex _gapX4  ml_auto">
-                                            <a href="" class="f_btn ty_small _blue pd10">거래명세서</a>
-                                            <a href="" class="f_btn ty_small _red pd10">세금계산서</a>
-                                        </div>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <dl class="deal_box_info">
-                                            <dt class="fz_mid fwB">총 금액</dt>
-                                            <dd class="fz_mid fwB">185,900,000 원</dd>
-                                        </dl>
-                                        <dl class="deal_box_info">
-                                            <dt>접수번호</dt>
-                                            <dd>24000649 외 4</dd>
-                                            <dt>발행번호</dt>
-                                            <dd>MC2024-0202</dd>
-                                            <dt>교정 기관</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                    </ul>
+                   
                 </section>
             </div>
         </main>
         <!--//container-->
-        <div class="cost_list_bot sticky_bot">
-            <div class="d_flex fz_mid ai_b jc_sb lh1">
-                <span>합계 금액</span>
-                <span><b class="fc_key fz_mid">999,000,000</b> 원</span>
-            </div>
-            <div class="btn_set mt15">
-                <button class="f_btn ty_mid _key flex1">세금계산서 신청 <i class="fa-solid fa-receipt"></i></button>
-                <button class="f_btn ty_mid _key flex1">결제하기 <i class="fa-solid fa-credit-card"></i></button>
-            </div>
-        </div>
+        <!-- botNav -->
+        <ul class="botNav">
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico1"></span>
+                    <span class="tit">교정현황</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico2"></span>
+                    <span class="tit">정산관리</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico_home"></span>
+                    <span class="tit">홈</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico3"></span>
+                    <span class="tit">마이페이지</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <button type="button" class="botNav_btn btn_nav_toggle">
+                    <span class="ico_box ico4"></span>
+                    <span class="tit">메뉴</span>
+                </button>
+            </li>
+        </ul>
+        <!--// botNav -->
     </div>
-    
 </body>
 </html>
