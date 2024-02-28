@@ -1665,6 +1665,12 @@
 .list_sepBar {
     display: flex;
     flex-wrap: wrap;
+    &.ty2 {
+        .list_item {
+            padding-right: 10px;
+            margin-right: 9px;
+        }
+    }
     .list_item {
         padding-right: 7px;
         margin-right: 6px;
@@ -1685,6 +1691,49 @@
             margin-right: 0;
             &::after {
                 display: none;
+            }
+        }
+        &.ty_date {
+            display: flex;
+            align-items: center;
+            
+            &::before {
+                content: '\f073';
+                @include fa;
+                color: #222;
+                margin-right: 4px;
+                font-size: 1.2em;
+                line-height: 1;
+                
+            }
+        }
+        &.ty_re {
+            display: flex;
+            align-items: center;
+            
+            &::before {
+                content: '\f4ad';
+                @include fa;
+                color: #222;
+                margin-right: 4px;
+                font-size: 1.2em;
+                line-height: 1;
+                transform: translateY(0.1em);
+            }
+        }
+        &.ty_view {
+            display: flex;
+            align-items: center;
+            
+            &::before {
+                content: '\f06e';
+                @include fa;
+                color: #222;
+                margin-right: 4px;
+                font-size: 1.2em;
+                line-height: 1;
+                transform: translateY(0.05em);
+                
             }
         }
     }

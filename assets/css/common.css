@@ -5603,6 +5603,105 @@
   height: 15em;
 }
 
+.t_hidden_a_2 {
+  width: 100%;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 3em;
+}
+
+.t_hidden_a_3 {
+  width: 100%;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 4.5em;
+}
+
+.t_hidden_a_4 {
+  width: 100%;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 6em;
+}
+
+.t_hidden_a_5 {
+  width: 100%;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 7.5em;
+}
+
+.t_hidden_a_6 {
+  width: 100%;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 9em;
+}
+
+.t_hidden_a_7 {
+  width: 100%;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 10.5em;
+}
+
+.t_hidden_a_8 {
+  width: 100%;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 12em;
+}
+
+.t_hidden_a_9 {
+  width: 100%;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 13.5em;
+}
+
+.t_hidden_a_10 {
+  width: 100%;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  max-height: 15em;
+}
+
 /* noto-sans-kr-100 - korean_latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -7489,6 +7588,10 @@ tr:last-child .status_box_date {
   display: flex;
   flex-wrap: wrap;
 }
+.list_sepBar.ty2 .list_item {
+  padding-right: 10px;
+  margin-right: 9px;
+}
 .list_sepBar .list_item {
   padding-right: 7px;
   margin-right: 6px;
@@ -7510,6 +7613,47 @@ tr:last-child .status_box_date {
 }
 .list_sepBar .list_item:last-child::after {
   display: none;
+}
+.list_sepBar .list_item.ty_date {
+  display: flex;
+  align-items: center;
+}
+.list_sepBar .list_item.ty_date::before {
+  content: "\f073";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  color: #222;
+  margin-right: 4px;
+  font-size: 1.2em;
+  line-height: 1;
+}
+.list_sepBar .list_item.ty_re {
+  display: flex;
+  align-items: center;
+}
+.list_sepBar .list_item.ty_re::before {
+  content: "\f4ad";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  color: #222;
+  margin-right: 4px;
+  font-size: 1.2em;
+  line-height: 1;
+  transform: translateY(0.1em);
+}
+.list_sepBar .list_item.ty_view {
+  display: flex;
+  align-items: center;
+}
+.list_sepBar .list_item.ty_view::before {
+  content: "\f06e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  color: #222;
+  margin-right: 4px;
+  font-size: 1.2em;
+  line-height: 1;
+  transform: translateY(0.05em);
 }
 
 .list_dot .list_item {
@@ -9410,18 +9554,12 @@ tr:last-child .status_box_date {
 }
 
 .btn_view_more {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   background: url(../images/common/ico_plus.svg) no-repeat center center;
   background-size: 19px;
   border-radius: 5px;
   transition: all 0.1s ease;
-}
-.btn_view_more:hover {
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-}
-.btn_view_more:active {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .btn_refresh {
@@ -10175,8 +10313,8 @@ tr:last-child .status_box_date {
   gap: 5px;
   position: absolute;
   z-index: 10;
-  left: 10px;
-  top: 10px;
+  left: 5px;
+  top: 5px;
 }
 .card_item_info {
   display: flex;
@@ -10193,13 +10331,12 @@ tr:last-child .status_box_date {
   font-size: 12px;
 }
 .card_item .txt_box {
-  padding: 10px 12px 12px;
+  padding: 10px 10px 12px;
   background-color: #fff;
 }
 .card_item .txt_box .tit {
   display: block;
   font-size: 12px;
-  font-weight: 500;
 }
 .card_item .txt_box .desc {
   display: block;
@@ -10735,32 +10872,38 @@ tr:last-child .status_box_date {
   text-align: right;
 }
 
-/* pages */
-.main_wrap {
+.mBorad_box {
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  padding: 10px;
+}
+.mBorad_bot {
+  width: 100%;
+  margin-top: 12px;
+  line-height: 1.2;
+  font-size: 11px;
+}
+
+/* pages */
+.main_wrap {
+  background-color: #EFEFEF;
 }
 .main_wrap .main_sec {
-  padding: 30px;
+  padding: 16px 16px 24px;
   background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   position: relative;
-  min-height: 200px;
-  width: calc(50% - 10px);
 }
-.main_wrap .main_sec.w100 {
-  width: 100%;
+.main_wrap .main_sec + .main_sec {
+  margin-top: 8px;
 }
-.main_wrap .main_sec .col_3 {
-  gap: 40px 16px;
+.main_wrap .main_sec:last-child {
+  padding-bottom: 36px;
 }
-.main_wrap .main_sec .col_3 .col_item {
-  width: calc(33.3333333333% - 10.6666666667px);
-}
-.main_wrap .main_sec .card_item .txt_box {
-  padding: 15px 15px 20px;
+.main_wrap .main_sec_tit {
+  margin-bottom: 10px;
+  display: flex;
 }
 .main_wrap .main_sec .h_tbl_wrap {
   max-height: 260px;
@@ -10822,26 +10965,25 @@ tr:last-child .status_box_date {
 .main_count_list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 .main_count_item {
   flex: 1;
-  display: flex;
-  align-items: center;
+  text-align: center;
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
   border-radius: 10px;
-  padding: 20px 4%;
+  padding: 10px 5%;
 }
 .main_count_item .ico_box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 66px;
-  height: 66px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: rgba(255, 122, 0, 0.1);
-  margin-right: 15px;
+  margin: 0 auto;
   flex-shrink: 0;
 }
 .main_count_item .ico_box img {
@@ -10851,15 +10993,16 @@ tr:last-child .status_box_date {
   filter: grayscale(1);
 }
 .main_count_item .tit {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: bold;
+  margin-top: 6px;
 }
 .main_count_item .txt_box {
   margin-top: 6px;
 }
 .main_count_item .txt_box .count {
   display: block;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.01em;
   font-weight: bold;

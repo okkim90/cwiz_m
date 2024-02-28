@@ -22,8 +22,8 @@
                 gap: 5px;
                 position: absolute;
                 z-index: 10;
-                left: 10px;
-                top: 10px;
+                left: 5px;
+                top: 5px;
             }
             
         }
@@ -48,12 +48,12 @@
             }
         }
         .txt_box {
-            padding:10px 12px 12px;
+            padding:10px 10px 12px;
             background-color: #fff;
             .tit {
                 display: block;
                 font-size: 12px;
-                font-weight: 500;
+                //font-weight: 500;
             }
             .desc {
                 

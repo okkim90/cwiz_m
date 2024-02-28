@@ -1,30 +1,30 @@
 
 .main_wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 20px;
+    background-color: $c_bg_grey;
+   
     .main_sec {
         //flex: 1;
-        padding: 30px;
+        padding: 16px 16px 24px;
         background-color: #fff;
-        border-radius: 20px;
-        box-shadow: 0 4px 10px rgba(#000, .08);
+        
+        
         position: relative;
-        min-height: 200px;
+        
        
-        
-        width: calc(50% - 10px);
-        
-        &.w100 {
-            width: 100%;
+        & + .main_sec {
+            margin-top: 8px;
         }
-
-        @include list_col(3 ,16px, 40px);
-        .card_item {
-            .txt_box {
-                padding: 15px 15px 20px;
-            }
-        } 
+        &:last-child {
+            padding-bottom: 36px;
+        }
+        &_tit {
+            margin-bottom: 10px;
+            display: flex;
+        }
+        
         .h_tbl {
             &_wrap {
                 max-height: 260px;
@@ -99,21 +99,23 @@
     &_list {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         
     }
     &_item {
         //width: calc((100%/3) - (((3/2)*20px)/2));
         flex: 1;
-        display: flex;
+        //display: flex;
         //flex-direction: column;
         //justify-content: center;
-        align-items: center;
+        //align-items: center;
         //text-align: center;
+        text-align: center;
         border: 1px solid $c_line;
         box-sizing: border-box;
         border-radius: 10px;
-        padding: 20px 4%;
+        padding: 10px 5%;
+        //min-width: 240px;
         
         //gap: 15px;
         //border-right: 1px solid $c_line;
@@ -128,11 +130,11 @@
             align-items: center;
             justify-content: center;
             //margin: 0 auto;
-            width: 66px;
-            height: 66px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background-color: rgba($c_key, .1);
-            margin-right: 15px;
+            margin: 0 auto;
             flex-shrink: 0;
             img {
                 height: 46%;
@@ -142,8 +144,9 @@
             }
         }
         .tit {
-            font-size: 15px;
+            font-size: 12px;
             font-weight: bold;
+            margin-top: 6px;
             //color: #666;
             //margin-top: 10px;
         }
@@ -153,7 +156,7 @@
            
             .count {
                 display: block;
-                font-size: 26px;
+                font-size: 20px;
                 line-height: 1.2;
                 letter-spacing: -0.01em;
                 font-weight: bold;

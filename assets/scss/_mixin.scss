@@ -58,6 +58,13 @@ $breakpoint-pcrm: 1700px;
     }
 } 
 
+@for $i from 2 through 10 {
+    .t_hidden_a_#{$i} {
+        $lh : 1.5em;
+        @include text-hidden($i, $lh, auto)
+    }
+} 
+
 
 @mixin scrollY {
     &::-webkit-scrollbar {
