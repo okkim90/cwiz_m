@@ -6845,6 +6845,11 @@ input::-webkit-search-results-decoration {
   min-height: calc(100vh - 118px);
   background-color: #fff;
 }
+.container_login {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
 .container .contents {
   padding: 25px 16px 30px;
 }
@@ -11016,47 +11021,12 @@ tr:last-child .status_box_date {
 }
 
 .login_wrap {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: #666;
+  width: 100%;
   box-sizing: border-box;
-  padding: 50px;
-}
-.login_wrap::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  opacity: 0.8;
-}
-.login_wrap .vid_bg {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-image: url(../images/common/login_bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 0.6;
-  filter: blur(3px);
+  padding: 10vh 20px 50px;
 }
 .login_box {
-  position: relative;
-  z-index: 10;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   text-align: center;
-  padding: 50px 50px;
-  width: 500px;
-  box-sizing: border-box;
 }
 .login_box.ty_intro {
   width: 1000px;
@@ -11074,7 +11044,7 @@ tr:last-child .status_box_date {
   margin-bottom: 40px;
 }
 .login_box_top .img_box img {
-  height: 58px;
+  height: 40px;
 }
 .login_box_top .tit {
   font-size: 18px;
@@ -11114,10 +11084,10 @@ tr:last-child .status_box_date {
 }
 .login_form_label {
   display: block;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   margin-bottom: 6px;
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: left;
 }
 .login_form .f_input {
@@ -11127,16 +11097,16 @@ tr:last-child .status_box_date {
   border: 1px solid #ddd;
   padding: 0 10px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .login_form .f_btn {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .login_btns {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .login_btns li::before {
   content: "";
@@ -11182,8 +11152,8 @@ tr:last-child .status_box_date {
 .login_info_msg::before {
   content: "";
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: url(../images/common/ico_info2.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -11199,13 +11169,13 @@ tr:last-child .status_box_date {
 .login_tab_item {
   text-align: center;
   flex: 1;
-  height: 50px;
+  height: 40px;
   color: #FF7A00;
   border: 1px solid #FF7A00;
-  line-height: 48px;
+  line-height: 38px;
   box-sizing: border-box;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
 }
 .login_tab_item.on {
   background-color: #FF7A00;
@@ -11220,55 +11190,27 @@ tr:last-child .status_box_date {
 }
 
 .join_info {
-  color: #222;
-  background-color: #666;
-  padding: 80px 0;
-}
-.join_info .vid_bg {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-image: url(../images/common/login_bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 0.6;
-  filter: blur(3px);
-}
-.join_info_inner {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 50px 0 0;
-  box-sizing: border-box;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  padding: 50px 20px 50px;
   text-align: center;
-  overflow: hidden;
-  position: relative;
-  z-index: 99;
 }
 .join_info_tit {
   margin-bottom: 40px;
 }
 .join_info_tit .tit {
-  font-size: 34px;
+  font-size: 24px;
   font-weight: bold;
 }
 .join_info_tit .tit img {
-  height: 50px;
+  height: 24px;
   vertical-align: middle;
 }
 .join_info_tit .desc {
-  font-size: 18px;
-  margin-top: 20px;
+  font-size: 14px;
+  margin-top: 15px;
   font-weight: 500;
 }
 .join_info_step {
   display: flex;
-  max-width: 600px;
   margin: 0 auto;
   text-align: center;
 }
@@ -11279,44 +11221,50 @@ tr:last-child .status_box_date {
   position: relative;
 }
 .join_info_step_item i {
-  font-size: 70px;
+  font-size: 40px;
 }
 .join_info_step_item i.i-arrow {
-  font-size: 50px;
+  font-size: 24px;
   position: absolute;
-  right: -20px;
+  right: -12px;
   top: 50%;
-  margin-top: -25px;
-  width: 50px;
+  margin-top: -12px;
+  width: 24px;
   opacity: 0.4;
 }
 .join_info_step_item .txt_box {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.5;
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: 500;
 }
 .join_info_txt {
-  background-color: #fff;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px 0;
   text-align: left;
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.join_info_txt p {
+  display: flex;
+  align-items: flex-start;
+}
+.join_info_txt p i {
+  margin-top: 0.26em;
+  margin-right: 4px;
 }
 .join_info_bot {
-  margin-top: 60px;
-  padding: 30px 0;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 20px;
   color: #fff;
   background-color: #393939;
 }
 .join_info_btn {
-  max-width: 500px;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 .join_info_btn .f_btn {
   flex: 1;
@@ -11325,12 +11273,25 @@ tr:last-child .status_box_date {
   max-width: 500px;
   margin: 0 auto;
   text-align: left;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.5;
   display: flex;
 }
 .join_info_cs .tit {
-  margin-right: 30px;
+  margin-right: 20px;
+}
+.join_info_cs .txt_box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px 0;
+}
+.join_info_cs .txt_box p {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.join_info_cs .txt_box p i {
+  margin-top: 0.26em;
 }
 .join_form {
   display: block;
@@ -11342,26 +11303,26 @@ tr:last-child .status_box_date {
   align-items: flex-end;
 }
 .join_form_tit .tit {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 .join_form_tit .tip {
-  font-size: 14px;
+  font-size: 12px;
 }
 .join_form_sec {
   margin-top: 20px;
 }
 .join_form .msg_required {
   text-align: right;
-  font-size: 14px;
+  font-size: 12px;
   height: 1px;
   transform: translateY(50px);
 }
 .join_form_item .tit {
   display: block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .join_form_item + .join_form_item {
   margin-top: 20px;
@@ -11378,19 +11339,19 @@ tr:last-child .status_box_date {
   font-size: 16px;
 }
 .join_form .b_num_wrap .b_num1 {
-  width: 94px;
+  width: 60px;
 }
 .join_form .b_num_wrap .b_num2 {
-  width: 84px;
+  width: 50px;
 }
 .join_form .b_num_wrap .b_num3 {
-  width: 110px;
+  width: 80px;
 }
 .join_form .b_num_wrap .f_btn {
   margin-left: 10px;
 }
 .join_form .b_num_result {
-  height: 120px;
+  height: 140px;
   overflow-y: auto;
   border: 1px solid #DDDDDD;
   border-radius: 6px;
@@ -11402,9 +11363,13 @@ tr:last-child .status_box_date {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-size: 13px;
+  font-size: 12px;
   text-align: center;
   color: #666;
+  padding: 10px;
+}
+.join_form .b_num_result .no_result_box p {
+  margin-top: 10px;
 }
 .join_form .b_num_result .no_result_box i {
   font-size: 36px;
@@ -11441,26 +11406,27 @@ tr:last-child .status_box_date {
   display: flex;
 }
 .join_form .address_set .f_btn {
-  margin-left: 10px;
+  margin-left: 6px;
 }
 .join_form .address_set + .address_set {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 .join_form .address_set .f_input.ty_address_num {
   width: 120px;
 }
 .join_form_agree {
   margin-top: 30px;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #f2f2f4;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  border: 1px solid #DDDDDD;
 }
 .join_form_agree_item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
-  line-height: 30px;
+  font-size: 12px;
+  line-height: 22px;
 }
 .join_form_agree_item label {
   -webkit-user-select: none;
@@ -11483,7 +11449,7 @@ tr:last-child .status_box_date {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 30px;
   gap: 10px;
 }
 .join_form_btns .f_btn {
@@ -11497,8 +11463,8 @@ tr:last-child .status_box_date {
   margin-left: 10px;
 }
 .join_form .msg_feedback {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.5;
   margin-top: 6px;
 }
 .join_form .msg_feedback.ty_true {
@@ -11508,65 +11474,26 @@ tr:last-child .status_box_date {
   color: #f00;
 }
 .join_wrap {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: #666;
-  box-sizing: border-box;
-  padding: 50px;
-}
-.join_wrap::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  opacity: 0.8;
-}
-.join_wrap .vid_bg {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-image: url(../images/common/login_bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 0.6;
-  filter: blur(3px);
-}
-.join_box {
-  position: relative;
-  z-index: 10;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   text-align: center;
-  padding: 40px 50px;
-  width: 500px;
-  box-sizing: border-box;
+  padding: 50px 16px 50px;
 }
 .join_box_top {
   margin-bottom: 30px;
 }
 .join_box_top .img_box img {
-  height: 56px;
+  height: 30px;
 }
 .join_box_top .tit {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  margin-top: 2px;
+  margin-top: 10px;
   color: #FF7A00;
 }
 .join_box_result .ico_box {
-  width: 300px;
+  width: 240px;
+  height: 240px;
   margin: 0 auto;
-  margin-top: -20px;
 }
 .join_btns {
   display: flex;
@@ -11915,17 +11842,8 @@ tr:last-child .status_box_date {
   flex-shrink: 0;
 }
 
-.container.ty_terms {
-  padding: 30px 0;
-}
-
 .terms_outer {
-  padding: 40px 50px 60px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 40px 16px 50px;
 }
 
 .term_select_area {
@@ -11934,7 +11852,7 @@ tr:last-child .status_box_date {
   margin-bottom: 30px;
 }
 .term_select_area .f_select {
-  width: 250px;
+  width: 180px;
 }
 
 .terms_logo {
@@ -11942,23 +11860,24 @@ tr:last-child .status_box_date {
   margin-bottom: 40px;
 }
 .terms_logo img {
-  width: 200px;
+  width: 160px;
 }
 
 .terms_wrap {
   line-height: 1.65;
-  font-size: 16px;
+  font-size: 12px;
 }
 .terms_wrap .term_tit1 {
-  font-size: 30px;
+  font-size: 18px;
   margin-top: 3em;
   font-weight: bold;
+  text-align: center;
 }
 .terms_wrap .term_tit1.mt0 {
   margin-top: 0;
 }
 .terms_wrap .term_tit2 {
-  font-size: 20px;
+  font-size: 14px;
   margin-top: 1.9em;
   font-weight: bold;
 }
@@ -11978,7 +11897,7 @@ tr:last-child .status_box_date {
 }
 
 .terms_tab {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .terms_tab_list {
   display: flex;
@@ -11990,7 +11909,7 @@ tr:last-child .status_box_date {
   border: 1px solid #bababa;
   border-left: none;
   box-sizing: border-box;
-  min-height: 60px;
+  min-height: 40px;
   position: relative;
 }
 .terms_tab_item:first-child {
@@ -12023,15 +11942,15 @@ tr:last-child .status_box_date {
   box-sizing: border-box;
   height: 100%;
   color: #222;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .terms_tit {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
 }
 .terms_tit .tit {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 

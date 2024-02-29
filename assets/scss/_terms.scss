@@ -1,16 +1,9 @@
 
-.container.ty_terms {
-    padding: 30px 0;
-    
-}
+
 
 .terms_outer {
-    padding: 40px 50px 60px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(#000, .05);
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 40px 16px 50px;
+   
 }
 .term_select_area {
     display: flex;
@@ -18,7 +11,7 @@
     margin-bottom: 30px;
    
     .f_select {
-        width: 250px;
+        width: 180px;
         
     }
 }
@@ -28,26 +21,26 @@
     //margin: 0 auto 40px;
     margin-bottom: 40px;
     img {
-        width: 200px;
+        width: 160px;
     }
     
 }
 
 .terms_wrap {
     line-height: 1.65;
-    font-size: 16px;
+    font-size: 12px;
    
     .term_tit1 {
-        font-size: 30px;  
+        font-size: 18px;  
         margin-top: 3em; 
         font-weight: bold;
-        
+        text-align: center;
         &.mt0 {
             margin-top: 0;
         }
     }
     .term_tit2 {
-        font-size: 20px;   
+        font-size: 14px;   
         margin-top: 1.9em;
         font-weight: bold;
         
@@ -71,7 +64,7 @@
 }
 
 .terms_tab {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     
     &_list {
         display: flex;
@@ -83,7 +76,7 @@
         border: 1px solid #bababa;
         border-left: none;
         box-sizing: border-box;
-        min-height: 60px;
+        min-height: 40px;
         position: relative;
         &:first-child {
             border-left: 1px solid #bababa;
@@ -119,15 +112,15 @@
         box-sizing: border-box;
         height: 100%;
         color: #222;
-        font-size: 20px;
+        font-size: 14px;
     }
 }
 
 .terms_tit {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
     .tit {
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
     }
 }

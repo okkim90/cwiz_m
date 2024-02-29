@@ -834,6 +834,12 @@
     //padding-bottom: 20px;
     min-height : calc(100vh - 118px);
     background-color: #fff;
+
+    &_login {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+    }
     .contents {
         padding: 25px 16px 30px;
     }
