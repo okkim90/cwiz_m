@@ -2894,3 +2894,75 @@
     }
     
 }
+
+.user_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+    &_thumb {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid $c_line;
+        background-image: url(../images/common/ico_user.svg);
+        background-repeat: no-repeat;
+        background-size: auto 70%;
+        background-position: center bottom;
+        position: relative;
+
+        
+        .thumb_box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #fff;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &.on {
+            .thumb_btns {
+                display: block;
+            }
+        }
+        
+        
+        .thumb_btns {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            left: 50%;
+            top: 70%;
+            z-index: 10;
+            white-space: nowrap;
+            
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(#000, .05);
+            border: 1px solid $c_line;
+            
+            li {
+                & + li {
+                    border-top: 1px solid $c_line;
+                    
+                }
+            }
+            .thumb_btn {
+                display: block;
+                width: 100%;
+                height: 30px;
+                padding: 0 10px;
+                font-size: 12px;
+                &.disabled {
+                    background-color: $c_line;
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+    
+}
