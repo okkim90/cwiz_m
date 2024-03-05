@@ -327,9 +327,11 @@
                                 let input_hidden = user_box_thumb.querySelector('.input_hidden');
                                 
                                 if(thumb_box){
-                                    user_box_thumb.classList.remove('on');
-                                    thumb_box.remove();
-                                    input_hidden.value = '';     
+                                    if(confirm("이미지를 삭제 하시겠습니까?")){
+                                        user_box_thumb.classList.remove('on');
+                                        thumb_box.remove();
+                                        input_hidden.value = ''; 
+                                    }    
                                 }
                             });
                         })
