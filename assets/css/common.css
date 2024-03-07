@@ -8305,13 +8305,47 @@ tr:last-child .status_box_date {
 }
 
 .mform_item + .mform_item {
-  margin-top: 12px;
+  margin-top: 14px;
 }
 .mform_item .tit {
   display: block;
   font-size: 13px;
   margin-bottom: 5px;
   font-weight: 500;
+}
+.mform_item.ty_push {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  border: 1px solid #DDDDDD;
+}
+.mform_item.ty_push + .mform_item.ty_push {
+  margin-top: 10px;
+}
+.mform_item.ty_push .tit {
+  margin-bottom: 0;
+}
+.mform_item.ty_push.dep1 {
+  border-color: #FF7A00;
+  background-color: #fff2e6;
+}
+.mform_item.ty_push.dep2::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-top: none;
+  border-right: none;
+  margin-bottom: 0.5em;
+  margin-right: 5px;
+}
+.mform_msg {
+  font-size: 11px;
+  margin-top: 4px;
+  line-height: 1.4;
 }
 
 .mDep2 {
@@ -8629,11 +8663,14 @@ tr:last-child .status_box_date {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0 10px;
+  gap: 0 15px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: 1px solid #DDDDDD;
 }
 .user_box_thumb {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 1px solid #DDDDDD;
   background-image: url(../images/common/ico_user.svg);
@@ -8641,6 +8678,8 @@ tr:last-child .status_box_date {
   background-size: auto 70%;
   background-position: center bottom;
   position: relative;
+  background-color: #fff;
+  flex-shrink: 0;
 }
 .user_box_thumb .thumb_box {
   width: 100%;
@@ -8676,9 +8715,10 @@ tr:last-child .status_box_date {
 .user_box_thumb .thumb_btns .thumb_btn {
   display: block;
   width: 100%;
-  height: 30px;
-  padding: 0 10px;
-  font-size: 12px;
+  height: 36px;
+  padding: 0 20px;
+  font-size: 13px;
+  font-weight: 500;
 }
 .user_box_thumb .thumb_btns .thumb_btn.disabled {
   background-color: #DDDDDD;
@@ -9866,6 +9906,12 @@ tr:last-child .status_box_date {
   font-family: "Font Awesome 6 Free";
   margin-left: 5px;
   font-weight: bold;
+}
+.f_btn.ty_arrow.taR {
+  text-align: right;
+}
+.f_btn.ty_arrow.taR::after {
+  margin-left: 8px;
 }
 
 .btn_delete {

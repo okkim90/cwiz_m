@@ -31,7 +31,7 @@
     <div id="wrap">
         <!-- header -->
         <header class="header">
-            <h1 class="header_tit">마이페이지</h1>
+            <h1 class="header_tit">휴대폰 번호 변경</h1>
             <button type="button" class="btn_back" aria-label="뒤로가기"></button>
             <div class="h_util">
                 <div class="h_util_sec h_btns">
@@ -235,175 +235,13 @@
         <!-- // nav -->
         <!--container-->
         <main id="container" class="container">
-            <ul class="mDep2">
-                <li class="mDep2_item on"><a href="">내 정보</a></li>
-                <li class="mDep2_item"><a href="">문의 관리</a></li>
-                <li class="mDep2_item"><a href="">포인트 관리</a></li>
-            </ul> 
-            <nav class="breadcrumb_area">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb_item">
-                        <a href="">
-                            <i class="fa-solid fa-house"></i>
-                            <span class="blind">home</span>
-                        </a>
-                    </li>
-                    <li class="breadcrumb_item" >
-                        마이페이지
-                    </li>
-                    <li class="breadcrumb_item">
-                        내 정보
-                    </li>
-                </ol>
-            </nav>
             <div id="contents" class="contents">
                 <section class="sec">
-                    <div class="user_box">
-                        <div class="user_box_thumb">
-                            <input type="file" accept="image/*" class="input_hidden blind" onchange="set_thumb(this)">
-                            <ul class="thumb_btns">
-                                <li><button type="button" class="thumb_btn thumb_btn_add" onclick="user_thumb(this)">이미지 등록</button></li>
-                                <li><button type="button" class="thumb_btn thumb_btn_del">이미지 삭제</button></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="user_box_id fz_mid">
-                            <b>김찬호</b> 님 <span class="fc_midGrey">(ralo2400)</span>
-                        </div>
-                    </div>
-                </section>
-                <section class="sec">
-                    <div class="user_box">
-                        <div class="user_box_thumb">
-                            <input type="file" accept="image/*" class="input_hidden blind" onchange="set_thumb(this)">
-                            <ul class="thumb_btns">
-                                <li><button type="button" class="thumb_btn thumb_btn_add" onclick="user_thumb(this)">이미지 등록</button></li>
-                                <li><button type="button" class="thumb_btn thumb_btn_del">이미지 삭제</button></li>
-                            </ul>
-                            <div class="thumb_box">
-                                <img src="../assets/images/common/user_thumb.png" alt="">
-                            </div>
-                        </div>
-                        
-                        <div class="user_box_id fz_mid">
-                            <b>김찬호</b> 님 <span class="fc_midGrey">(ralo2400)</span>
-                        </div>
-                    </div>
-                </section>
-                <section class="sec">
-                    <div class="sub_tit2">
-                        <h2 class="tit3">담당자 정보</h2>
-                    </div>
-                    <table class="v_tbl">
-                        <colgroup>
-                            <col style="width: 90px;">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>비밀번호 변경</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow fc_midGrey">비밀번호 변경</a></td>
-                            </tr>
-                            <tr>
-                                <th>휴대폰 번호</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow">010-1111-2222</a></td>
-                            </tr>
-                            <tr>
-                                <th>이메일</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow">ralo2400@gmail.com</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <!--[D] 회사 정보 미등록 시-->
-                <section class="sec">
-                    <div class="sub_tit2">
-                        <h2 class="tit3">우리 회사 정보</h2>
-                    </div>
-                    <div class="no_result_box ty_bd">
-                        <i class="fa-solid fa-building-circle-xmark"></i>
-                        <p class="mt10">등록된 회사정보가 없습니다.</p>
-                        <a href="" class="f_btn _key ty_mid mt20">회사 정보 등록</a>
-                    </div>
-                </section>
-                <!--// [D] 회사 정보 미등록 시-->
-                <section class="sec">
-                    <div class="sub_tit2">
-                        <h2 class="tit3">우리 회사 정보</h2>
-                    </div>
-                    <table class="v_tbl">
-                        <colgroup>
-                            <col style="width: 90px;">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>사업자번호</th>
-                                <td class="taR">111-55-55555</td>
-                            </tr>
-                            <tr>
-                                <th>회사명(국문)</th>
-                                <td class="taR">코리아인스트루먼트(주)</td>
-                            </tr>
-                            <tr>
-                                <th>회사명(영문)</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow taR fc_midGrey">회사명(영문)을 입력해주세요.</a></td>
-                            </tr>
-                            <tr>
-                                <th>대표자</th>
-                                <td class="taR">장원영</td>
-                            </tr>
-                            <tr>
-                                <th>업태</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow taR fc_midGrey">업태를 입력해주세요.</a></td>
-                            </tr>
-                            <tr>
-                                <th>종목</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow taR fc_midGrey">종목을 입력해주세요.</a></td>
-                            </tr>
-                            <tr>
-                                <th>주소(국문)</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow taR">[08395] 서울특별시 구로구 남부순환로 1303 KIC빌딩</a></td>
-                            </tr>
-                            <tr>
-                                <th>주소(영문)</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow taR fc_midGrey">주소(영문)을 입력해주세요.</a></td>
-                            </tr>
-                            <tr>
-                                <th>대표번호</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow taR">02-123-1234</a></td>
-                            </tr>
-                            <tr>
-                                <th>팩스번호</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow taR fc_midGrey">팩스번호를 입력해주세요.</a></td>
-                            </tr>
-                            <tr>
-                                <th>대표 이메일</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow taR">kic21@kic21.co.kr</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="btn_set taC mt15">
-                        <button class="f_btn _red2 ty_small pd10">회원정보 삭제</button>
-                    </div>
-                </section>
-                <section class="sec">
-                    <table class="v_tbl">
-                        <colgroup>
-                            <col style="width: 90px;">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>알림 설정</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow">알림 설정</a></td>
-                            </tr>
-                            <tr>
-                                <th>회원 탈퇴</th>
-                                <td class="taR"><a href="" class="f_btn ty_arrow fc_red2">회원 탈퇴</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p class="fz_mid2 fc_midGrey taC pt40">휴대폰 번호 변경을 위해 본인인증이 필요합니다.</p>
+                    <div class="btn_set taC mt30">
+                        <a href="./mypage_info.html" class="f_btn ty_mid _solidGrey flex1 ">취소</a>
+                        <button type="submit" class="f_btn ty_mid _key flex1">인증 요청</button>
+                    </div> 
                 </section>
             </div>
         </main>
@@ -441,85 +279,8 @@
                 </button>
             </li>
         </ul>
-        <!--// botNav -->
+        <!--// botNav --> 
     </div>
-    <script>
-                        
-        const userBoxThumb = document.querySelectorAll('.user_box_thumb');
-        function thumb_disabled(target){
-           
-            let thumb_box = target.querySelector('.thumb_box');
-            let thumb_btn_del = target.querySelector('.thumb_btn_del');
-            let thumb_btn_add = target.querySelector('.thumb_btn_add');
-            if(!thumb_box){
-                thumb_btn_del.classList.add('disabled');
-                thumb_btn_add.textContent = '이미지 등록';
-            }else{
-                thumb_btn_del.classList.remove('disabled');
-                thumb_btn_add.textContent = '이미지 변경';
-            }
-         
-        }
-       
-
-        document.body.addEventListener('click', (e)=> {
-            let user_box_thumb = e.target.closest('.user_box_thumb');
-            let thumb_btns = e.target.closest('.thumb_btns');
-            userBoxThumb.forEach(el=>{
-                el.classList.remove('on');
-            });
-            if (user_box_thumb && !e.target.classList.contains('thumb_btn_del')) {
-                thumb_disabled(user_box_thumb);
-                user_box_thumb.classList.add('on');
-                
-            }
-        });
-
-        const thumb_btn_del = document.querySelectorAll('.thumb_btn_del');
-        thumb_btn_del.forEach(e=>{
-            e.addEventListener('click',()=>{
-                let user_box_thumb = e.closest('.user_box_thumb');
-                let thumb_box = user_box_thumb.querySelector('.thumb_box');
-                let input_hidden = user_box_thumb.querySelector('.input_hidden');
-                
-                if(thumb_box){
-                    if(confirm("이미지를 삭제 하시겠습니까?")){
-                        user_box_thumb.classList.remove('on');
-                        thumb_box.remove();
-                        input_hidden.value = ''; 
-                    }    
-                }
-            });
-        })
-
-
-        function user_thumb(target){
-            let user_box_thumb = target.closest('.user_box_thumb');
-            let input_hidden = user_box_thumb.querySelector('.input_hidden');
-            input_hidden.click();
-        }
-        function set_thumb(target){
-            let user_box_thumb = target.closest('.user_box_thumb');
-            let thumb_box = user_box_thumb.querySelector('.thumb_box');
-            let thumb_val = target.value;
-            let thumb_box_new = document.createElement('div');
-            let thumb_img = document.createElement('img');
-            thumb_box_new.classList.add('thumb_box');
-
-            if(thumb_val){
-                thumb_img.setAttribute('src', thumb_val);
-                thumb_img.setAttribute('alt', thumb_val);
-
-                if(thumb_box){
-                    thumb_box.remove();
-                }
-                thumb_box_new.appendChild(thumb_img);
-                user_box_thumb.appendChild(thumb_box_new);
-                user_box_thumb.classList.remove('on');
-            }
-        }
-    </script>
+    
 </body>
 </html>
-
-

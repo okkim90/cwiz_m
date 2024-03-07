@@ -360,6 +360,12 @@
             margin-left: 5px;
             font-weight: bold;
         }
+        &.taR {
+            text-align: right;
+            &::after {
+                margin-left: 8px;
+            }
+        }
     }
 }
 

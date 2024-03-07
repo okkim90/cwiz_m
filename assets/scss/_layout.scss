@@ -2508,7 +2508,7 @@
 .mform {
     &_item {
         & + & {
-            margin-top: 12px;
+            margin-top: 14px;
         }
         .tit {
             display: block;
@@ -2516,6 +2516,47 @@
             margin-bottom: 5px;
             font-weight: 500;
         }
+        &.ty_push {
+            display: flex;
+            align-items: center;
+            padding: 8px 10px;
+            border-radius: 6px;
+            background-color: $c_bg_grey2;
+            border: 1px solid $c_line;
+            //box-shadow: 0 0 2px rgba(#000, 0.1);
+            & + & {
+                margin-top: 10px;
+            }
+            .tit {
+                margin-bottom: 0;
+            }
+            &.dep1 {
+                border-color: $c_key;
+                background-color: lighten($c_key, 45%);
+            }
+            &.dep2 {
+                //padding: 0 10px;
+                //background-color: $c_bg_grey2;
+                &::before {
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid #000;
+                    box-sizing: border-box;
+                    border-top: none;
+                    border-right: none;
+                    margin-bottom: 0.5em;
+                    margin-right: 5px;
+                }
+            }
+        }
+        
+    }
+    
+    &_msg {
+        font-size: 11px;
+        margin-top: 4px;
+        line-height: 1.4;
     }
 }
 
@@ -2899,10 +2940,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0 10px;
+    gap: 0 15px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 1px solid $c_line;
     &_thumb {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         border: 1px solid $c_line;
         background-image: url(../images/common/ico_user.svg);
@@ -2910,6 +2954,8 @@
         background-size: auto 70%;
         background-position: center bottom;
         position: relative;
+        background-color: #fff;
+        flex-shrink: 0;
 
         
         .thumb_box {
@@ -2954,9 +3000,10 @@
             .thumb_btn {
                 display: block;
                 width: 100%;
-                height: 30px;
-                padding: 0 10px;
-                font-size: 12px;
+                height: 36px;
+                padding: 0 20px;
+                font-size: 13px;
+                font-weight: 500;
                 &.disabled {
                     background-color: $c_line;
                     opacity: 0.3;
