@@ -8316,7 +8316,7 @@ tr:last-child .status_box_date {
 .mform_item.ty_push {
   display: flex;
   align-items: center;
-  padding: 8px 10px;
+  padding: 8px 12px;
   border-radius: 6px;
   background-color: #f4f4f4;
   border: 1px solid #DDDDDD;
@@ -8326,6 +8326,7 @@ tr:last-child .status_box_date {
 }
 .mform_item.ty_push .tit {
   margin-bottom: 0;
+  font-size: 14px;
 }
 .mform_item.ty_push.dep1 {
   border-color: #FF7A00;

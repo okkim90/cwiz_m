@@ -2519,7 +2519,7 @@
         &.ty_push {
             display: flex;
             align-items: center;
-            padding: 8px 10px;
+            padding: 8px 12px;
             border-radius: 6px;
             background-color: $c_bg_grey2;
             border: 1px solid $c_line;
@@ -2529,6 +2529,7 @@
             }
             .tit {
                 margin-bottom: 0;
+                font-size: 14px;
             }
             &.dep1 {
                 border-color: $c_key;
