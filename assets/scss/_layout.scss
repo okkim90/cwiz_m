@@ -2522,7 +2522,7 @@
             padding: 8px 12px;
             border-radius: 6px;
             background-color: $c_bg_grey2;
-            border: 1px solid $c_line;
+            //border: 1px solid $c_line;
             //box-shadow: 0 0 2px rgba(#000, 0.1);
             & + & {
                 margin-top: 10px;
@@ -2532,7 +2532,7 @@
                 font-size: 14px;
             }
             &.dep1 {
-                border-color: $c_key;
+                //border-color: $c_key;
                 background-color: lighten($c_key, 45%);
             }
             &.dep2 {

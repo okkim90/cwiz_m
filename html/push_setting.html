@@ -241,7 +241,7 @@
                         <div class="mform_item ty_push dep1">
                             <div class="tit">전체 푸시 알림</div>
                             <label class="f_toggle ml_auto ty_big">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" class="push_chk_all">
                                 <span class="slider">
                                     <div class="slider_txt false">OFF</div>
                                     <div class="slider_txt true">ON</div>
@@ -251,7 +251,7 @@
                         <div class="mform_item ty_push dep2">
                             <div class="tit">댓글 알림</div>
                             <label class="f_toggle ml_auto ty_big">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" class="push_chk" checked>
                                 <span class="slider">
                                     <div class="slider_txt false">OFF</div>
                                     <div class="slider_txt true">ON</div>
@@ -261,7 +261,7 @@
                         <div class="mform_item ty_push dep2">
                             <div class="tit">차기교정일 알림</div>
                             <label class="f_toggle ml_auto ty_big">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" class="push_chk" checked>
                                 <span class="slider">
                                     <div class="slider_txt false">OFF</div>
                                     <div class="slider_txt true">ON</div>
@@ -271,7 +271,7 @@
                         <div class="mform_item ty_push dep2">
                             <div class="tit">교정완료 알림</div>
                             <label class="f_toggle ml_auto ty_big">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" class="push_chk" checked>
                                 <span class="slider">
                                     <div class="slider_txt false">OFF</div>
                                     <div class="slider_txt true">ON</div>
@@ -281,7 +281,7 @@
                         <div class="mform_item ty_push dep2">
                             <div class="tit">결제대기 알림</div>
                             <label class="f_toggle ml_auto ty_big">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" class="push_chk" checked>
                                 <span class="slider">
                                     <div class="slider_txt false">OFF</div>
                                     <div class="slider_txt true">ON</div>
@@ -291,7 +291,7 @@
                         <div class="mform_item ty_push dep2">
                             <div class="tit">결제완료 알림</div>
                             <label class="f_toggle ml_auto ty_big">
-                                <input type="checkbox">
+                                <input type="checkbox" class="push_chk">
                                 <span class="slider">
                                     <div class="slider_txt false">OFF</div>
                                     <div class="slider_txt true">ON</div>
@@ -301,7 +301,7 @@
                         <div class="mform_item ty_push dep2">
                             <div class="tit">출고완료 알림</div>
                             <label class="f_toggle ml_auto ty_big ">
-                                <input type="checkbox" >
+                                <input type="checkbox" class="push_chk" >
                                 <span class="slider">
                                     <div class="slider_txt false">OFF</div>
                                     <div class="slider_txt true">ON</div>
@@ -313,6 +313,44 @@
                             <button type="submit" class="f_btn ty_mid _key flex1">설정 저장</button>
                         </div>
                     </form>
+
+                    <script>
+                        const push_chk_all = document.querySelector('.push_chk_all');
+                        const push_chk = document.querySelectorAll('.push_chk');
+                        
+                        push_chk_all.addEventListener("change", e => {
+                            if(e.target.checked){
+                                push_chk.forEach(e => {
+                                    e.checked = true
+                                });
+                            }else{
+                                push_chk.forEach(e => {
+                                    e.checked = false
+                                });
+                            }
+                        });
+                        
+                        function chked_ln(){
+                            let chk_ln = push_chk.length;
+                            let chked_ln = 0;
+                            push_chk.forEach(e=>{
+                                if(e.checked){
+                                    chked_ln += 1;
+                                } 
+                            });
+                            if(chked_ln == chk_ln ){
+                                push_chk_all.checked = true 
+                            }else{
+                                push_chk_all.checked = false 
+                            }
+
+                        }
+                        push_chk.forEach(e=>{
+                            e.addEventListener("change", () => {    
+                                chked_ln()
+                            });
+                        });    
+                    </script>
                 </section>
             </div>
         </main>
