@@ -6542,7 +6542,7 @@ input::-webkit-search-results-decoration {
 }
 
 .container {
-  min-height: calc(100vh - 118px);
+  min-height: calc(100vh - 100px);
   background-color: #fff;
 }
 .container_login {
@@ -9840,6 +9840,8 @@ tr:last-child .status_box_date {
 }
 .btn_qna.ty_big {
   border-radius: 0;
+  height: 50px;
+  line-height: 48px;
 }
 
 .tabs {
