@@ -66,10 +66,10 @@ $fz: (
     //     border-color: darken($bd, 3%);
     //     box-shadow: 0 2px 3px rgba(#000, 0.2);
     // }
-    &:active {
-        box-shadow: inset 0 0 4px rgba(#000, 0.2);
-        transform: scale(0.98);
-    }
+    // &:active {
+    //     box-shadow: inset 0 0 4px rgba(#000, 0.2);
+    //     transform: scale(0.98);
+    // }
 }
 
 @mixin btn_op($bd ,$color){
@@ -81,10 +81,10 @@ $fz: (
     //     background-color: rgba($color, .2); 
     //     //color: #fff;
     // }
-    &:active {
-        box-shadow: inset 0 0 4px rgba(#000, 0.2);
-        transform: scale(0.98);
-    }
+    // &:active {
+    //     box-shadow: inset 0 0 4px rgba(#000, 0.2);
+    //     transform: scale(0.98);
+    // }
 }
 
 @mixin btn_ol($bd ,$color){
@@ -100,10 +100,10 @@ $fz: (
         background-color: $color;
         color: #fff;
     }
-    &:active {
-        box-shadow: inset 0 0 4px rgba(#000, 0.2);
-        transform: scale(0.98);
-    }
+    // &:active {
+    //     box-shadow: inset 0 0 4px rgba(#000, 0.2);
+    //     transform: scale(0.98);
+    // }
 }
 
 
@@ -366,7 +366,7 @@ $inner: 1280px;
     &.jc_sb {
         justify-content: space-between;
     }
-    &.jc_r {
+    &.jc_fe {
         justify-content: flex-end;
     }
     .flex1 {

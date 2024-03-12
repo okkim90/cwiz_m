@@ -1677,6 +1677,9 @@
             margin-right: 9px;
         }
     }
+    &.jc_fe {
+        justify-content: flex-end;
+    }
     .list_item {
         padding-right: 7px;
         margin-right: 6px;
@@ -2616,11 +2619,16 @@
         flex: 1;
         //border-top: 2px solid $c_line;
         background-color: $c_bg_grey;
-        
+        & + & {
+            border-left: 1px solid $c_line;
+        }
         &.on {
             //border-top-color: $c_key;
             background-color: $c_key;
             color: #fff;
+            & + .mDep3_item {
+                border-left: none;
+            }
             .mDep3_btn {
                 font-weight: bold;
             }
@@ -2845,6 +2853,7 @@
     bottom: 0;
     border-top: 1px solid $c_line;
     background-color: #fff;
+    z-index: 10;
 }
 
 .ol {
