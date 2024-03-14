@@ -181,4 +181,16 @@
         line-height: 1.2;
         font-size: 11px;
     }
+    &_point {
+        padding: 10px 0;
+        
+    }
+}
+
+
+.mList2 {
+    border-top: 1px solid #000;
+    &_item {
+        border-bottom: 1px solid $c_line;
+    }
 }

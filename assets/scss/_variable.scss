@@ -224,6 +224,12 @@ $inner: 1280px;
     }
 }
 
+@for $i from 10 through 30 {
+    .fz_#{$i} {
+        font-size: #{$i}px;
+    }
+}
+
 @for $i from 1 through 5 {
     $w : 5*$i;
     .w_#{$w} {

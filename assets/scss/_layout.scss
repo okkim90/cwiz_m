@@ -973,6 +973,10 @@
         &.ty_mid {
             max-width: 130px;
         }
+        &.no_max {
+            max-width: none;
+            width: 100%;
+        }
     }
 }
 
@@ -2055,85 +2059,102 @@
     }
 }
 
-.point {
-    &_top {
-       
-       display: flex;
-        .f_btn {
-            height: 100%;
+.my_point {
+    text-align: center;
+    &_tit {
+        
+        .tit {
+            font-size: 16px;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .btn_point_info {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $c_key;
+            color: #fff;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 1;
+            vertical-align: top;
+            transform: translateY(-6px);
         }
     }
-    &_status {
+    
+    &_cont {
         display: flex;
-        padding: 20px 0;
-        border: 1px solid $c_line;
-        border-radius: 10px;
-        &_item {
+        align-items: center;
+        justify-content: center;
+    }
+    .points {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.2;
+        //color: ;
+        i {
+            color: $c_key;
+            background-color: lighten($c_key, 38%);
+            font-weight: bold;
+            font-style: normal;
+            margin-left: 0.15em;
+            
             display: flex;
             align-items: center;
-            & + & {
-                border-left: 1px solid $c_line;
+            justify-content: center;
+            
+            width: 0.9em;
+            height: 0.9em;
+            border-radius: 50%;
+            //font-size: 1em;
+            &::after {
+                content: 'P';
+                font-size: 0.7em;
+                line-height: 0.8;
             }
-            padding: 0 40px;
-            .ico_box {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 66px;
-                height: 66px;
-                border-radius: 50%;
-                background-color: rgba($c_key, .1);
-                margin-right: 15px;
-                flex-shrink: 0;
-                img {
-                    height: 46%;
-                }
-                &.ty_greyscale {
-                    filter: grayscale(1);
-                }
-            }
-            .txt_box {
-                .tit {
-                    font-size: 14px;
-                    font-weight: 500;
-                    font-weight: bold;
-                }
-                .points {
-                    display: flex;
-                    align-items: center;
-                    font-size: 18px;
-                    font-weight: bold;
-                    margin-top: 4px;
-                    i {
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 50%;
-                        background-color: rgba($c_key, .2);
-                        color: $c_key;
-                        font-weight: bold;
-                        font-size: 12px;
-                        text-align: center;
-                        line-height: 20px;
-                        font-style: normal;
-                        margin-left: 4px;
-                    }
-                }
-            }
+
         }
     }
+    .point_status {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: $c_bg_grey2;
+        &_item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & + .point_status_item {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px dashed $c_line;
+            }
+        }
+        .tit {
+            font-size: 13px;
+        }
+        .points {
+            font-size: 16px;
+           
+        }
+    }
+}
+.point {
+   
     &_policy {
-        display: flex;
+        
         border-top: 1px solid #666;
         border-left: 1px solid #666;
-        border-radius: 20px 0 0 0;
+        border-radius: 16px 0 0 0;
         &_item {
             flex: 1;
             border-right: 1px solid #666;
             border-bottom: 1px solid #666;
-            padding: 30px;
+            padding: 1em;
             //padding-top: 26px;
             &:last-of-type {
-                border-radius: 0 0 20px 0;
+                border-radius: 0 0 16px 0;
             }
             
             &.ai_c {
@@ -2142,31 +2163,34 @@
                 justify-content: center;
             }
             .num {
-                font-size: 36px;
-                font-weight: 200;
+                font-size: 20px;
+                font-weight: 300;
                 line-height: 1;
-                margin-bottom: 16px;
+                margin-bottom: 8px;
             }
             .desc {
-                font-size: 15px;
+                font-size: 12px;
                 line-height: 1.6;
                 
             }
             .img_box {
+                img {
+                    width: 50px;
+                }
                 &.greyscale {
                     filter: grayscale(1);
                 }
             }
         }
         &2 {
-            padding: 20px 30px;
+            padding: 15px;
             background-color: rgba($c_blue, .08);
-            box-shadow: 6px 6px 4px rgba(#000, .1);
-            border-radius: 20px 0 20px 0;
+            box-shadow: 4px 4px 3px rgba(#000, .1);
+            border-radius: 16px 0 16px 0;
             li {
                 list-style-type:decimal;
                 //list-style-position: inside;
-                font-size: 15px;
+                font-size: 12px;
                 margin-left: 1em;
                 & + li {
                     margin-top: 0.5em;
@@ -3022,4 +3046,54 @@
         }
     }
     
+}
+
+.mSort {
+    display: flex;
+    align-items: center;
+    
+    &_item {
+        font-size: 13px;
+        line-height: 24px;
+        padding: 0 12px;
+        position: relative;
+        &.on {
+            font-weight: bold;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 10px;
+            background-color: $c_line;
+            right: 0;
+            top: 50%;
+            margin-top: -5px;
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+
+.mSortB {
+    display: flex;
+    align-items: center;
+    gap: 4px 8px;
+    &_item {
+        font-size: 13px;
+        height: 28px;
+        padding: 0 10px;
+        position: relative;
+        border: 1px solid #333;
+        border-radius: 4px;
+        &.flex1 {
+            flex: 1;
+        }
+        &.on {
+            color: #fff;
+            background-color: #333;
+        }
+        
+    }
 }

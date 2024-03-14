@@ -2700,6 +2700,90 @@
   height: 1000px;
 }
 
+.fz_10 {
+  font-size: 10px;
+}
+
+.fz_11 {
+  font-size: 11px;
+}
+
+.fz_12 {
+  font-size: 12px;
+}
+
+.fz_13 {
+  font-size: 13px;
+}
+
+.fz_14 {
+  font-size: 14px;
+}
+
+.fz_15 {
+  font-size: 15px;
+}
+
+.fz_16 {
+  font-size: 16px;
+}
+
+.fz_17 {
+  font-size: 17px;
+}
+
+.fz_18 {
+  font-size: 18px;
+}
+
+.fz_19 {
+  font-size: 19px;
+}
+
+.fz_20 {
+  font-size: 20px;
+}
+
+.fz_21 {
+  font-size: 21px;
+}
+
+.fz_22 {
+  font-size: 22px;
+}
+
+.fz_23 {
+  font-size: 23px;
+}
+
+.fz_24 {
+  font-size: 24px;
+}
+
+.fz_25 {
+  font-size: 25px;
+}
+
+.fz_26 {
+  font-size: 26px;
+}
+
+.fz_27 {
+  font-size: 27px;
+}
+
+.fz_28 {
+  font-size: 28px;
+}
+
+.fz_29 {
+  font-size: 29px;
+}
+
+.fz_30 {
+  font-size: 30px;
+}
+
 .w_5 {
   width: 5px;
 }
@@ -6666,6 +6750,10 @@ input::-webkit-search-results-decoration {
 .date_set .inp_date.ty_mid {
   max-width: 130px;
 }
+.date_set .inp_date.no_max {
+  max-width: none;
+  width: 100%;
+}
 
 .scroll_area {
   overflow: auto;
@@ -7623,82 +7711,91 @@ tr:last-child .status_box_date {
   color: #393939;
 }
 
-.point_top {
-  display: flex;
+.my_point {
+  text-align: center;
 }
-.point_top .f_btn {
-  height: 100%;
-}
-.point_status {
-  display: flex;
-  padding: 20px 0;
-  border: 1px solid #DDDDDD;
-  border-radius: 10px;
-}
-.point_status_item {
-  display: flex;
-  align-items: center;
-  padding: 0 40px;
-}
-.point_status_item + .point_status_item {
-  border-left: 1px solid #DDDDDD;
-}
-.point_status_item .ico_box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  background-color: rgba(255, 122, 0, 0.1);
-  margin-right: 15px;
-  flex-shrink: 0;
-}
-.point_status_item .ico_box img {
-  height: 46%;
-}
-.point_status_item .ico_box.ty_greyscale {
-  filter: grayscale(1);
-}
-.point_status_item .txt_box .tit {
-  font-size: 14px;
+.my_point_tit .tit {
+  font-size: 16px;
   font-weight: 500;
-  font-weight: bold;
+  display: inline-block;
 }
-.point_status_item .txt_box .points {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 4px;
-}
-.point_status_item .txt_box .points i {
+.my_point_tit .btn_point_info {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: rgba(255, 122, 0, 0.2);
-  color: #FF7A00;
+  background-color: #FF7A00;
+  color: #fff;
   font-weight: bold;
   font-size: 12px;
-  text-align: center;
-  line-height: 20px;
-  font-style: normal;
-  margin-left: 4px;
+  line-height: 1;
+  vertical-align: top;
+  transform: translateY(-6px);
 }
-.point_policy {
+.my_point_cont {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my_point .points {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.my_point .points i {
+  color: #FF7A00;
+  background-color: #ffdfc2;
+  font-weight: bold;
+  font-style: normal;
+  margin-left: 0.15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+}
+.my_point .points i::after {
+  content: "P";
+  font-size: 0.7em;
+  line-height: 0.8;
+}
+.my_point .point_status {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+}
+.my_point .point_status_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my_point .point_status_item + .point_status_item {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #DDDDDD;
+}
+.my_point .point_status .tit {
+  font-size: 13px;
+}
+.my_point .point_status .points {
+  font-size: 16px;
+}
+
+.point_policy {
   border-top: 1px solid #666;
   border-left: 1px solid #666;
-  border-radius: 20px 0 0 0;
+  border-radius: 16px 0 0 0;
 }
 .point_policy_item {
   flex: 1;
   border-right: 1px solid #666;
   border-bottom: 1px solid #666;
-  padding: 30px;
+  padding: 1em;
 }
 .point_policy_item:last-of-type {
-  border-radius: 0 0 20px 0;
+  border-radius: 0 0 16px 0;
 }
 .point_policy_item.ai_c {
   display: flex;
@@ -7706,27 +7803,30 @@ tr:last-child .status_box_date {
   justify-content: center;
 }
 .point_policy_item .num {
-  font-size: 36px;
-  font-weight: 200;
+  font-size: 20px;
+  font-weight: 300;
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .point_policy_item .desc {
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.6;
+}
+.point_policy_item .img_box img {
+  width: 50px;
 }
 .point_policy_item .img_box.greyscale {
   filter: grayscale(1);
 }
 .point_policy2 {
-  padding: 20px 30px;
+  padding: 15px;
   background-color: rgba(0, 133, 255, 0.08);
-  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 20px 0 20px 0;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 16px 0 16px 0;
 }
 .point_policy2 li {
   list-style-type: decimal;
-  font-size: 15px;
+  font-size: 12px;
   margin-left: 1em;
 }
 .point_policy2 li + li {
@@ -8434,6 +8534,54 @@ tr:last-child .status_box_date {
   opacity: 0.3;
 }
 
+.mSort {
+  display: flex;
+  align-items: center;
+}
+.mSort_item {
+  font-size: 13px;
+  line-height: 24px;
+  padding: 0 12px;
+  position: relative;
+}
+.mSort_item.on {
+  font-weight: bold;
+}
+.mSort_item::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  background-color: #DDDDDD;
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+}
+.mSort_item:last-child::after {
+  display: none;
+}
+
+.mSortB {
+  display: flex;
+  align-items: center;
+  gap: 4px 8px;
+}
+.mSortB_item {
+  font-size: 13px;
+  height: 28px;
+  padding: 0 10px;
+  position: relative;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+.mSortB_item.flex1 {
+  flex: 1;
+}
+.mSortB_item.on {
+  color: #fff;
+  background-color: #333;
+}
+
 .botNav {
   position: sticky;
   z-index: 999;
@@ -8757,8 +8905,8 @@ tr:last-child .status_box_date {
 }
 .f_input.ty_mid.inp_date {
   padding-left: 8px;
-  padding-right: 30px;
-  background-position: calc(100% - 8px) center;
+  padding-right: 26px;
+  background-position: calc(100% - 6px) center;
 }
 .f_input.ty_mid.ty_round {
   border-radius: 18px;
@@ -10772,6 +10920,16 @@ tr:last-child .status_box_date {
   margin-top: 12px;
   line-height: 1.2;
   font-size: 11px;
+}
+.mBorad_point {
+  padding: 10px 0;
+}
+
+.mList2 {
+  border-top: 1px solid #000;
+}
+.mList2_item {
+  border-bottom: 1px solid #DDDDDD;
 }
 
 /* pages */
