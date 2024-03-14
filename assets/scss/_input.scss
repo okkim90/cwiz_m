@@ -3,6 +3,13 @@
     border: 1px solid $c_line;
     box-sizing: border-box;
     text-overflow: ellipsis;
+
+    &.ph_left {
+        &::placeholder {
+            text-align: left;
+        }
+    }
+
     &:read-only {
         background-color: lighten($c_key, 47%);
         &:focus {

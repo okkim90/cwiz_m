@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="Generator" content="KIC">
     <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
     <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
@@ -15,9 +15,11 @@
     <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous" ></script>
     <script src="../assets/js/jquery-3.1.1.min.js"></script>
     <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
     <script src="../assets/js/main.js" defer></script>
 
     <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/css/datepicker.css">
     <link rel="stylesheet" href="../assets/css/common.min.css">
 </head>
@@ -27,11 +29,11 @@
     </div>
     
     <div id="wrap">
-         <!-- header -->
-         <header class="header">
-            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+        <!-- header -->
+        <header class="header">
+            <h1 class="header_tit">마이페이지</h1>
+            <button type="button" class="btn_back" aria-label="뒤로가기"></button>
             <div class="h_util">
-                
                 <div class="h_util_sec h_btns">
                     <button type="button" class="h_btn">
                         <i class="fa-solid fa-qrcode"></i>
@@ -148,69 +150,21 @@
         <!--// header -->
         <!-- nav -->
         <aside class="sidenav">
-
-            
-            <!--[D] 회사로고 없을경우-->
             <div class="sidenav_top">
-                <div class="msg_box">
-                    안녕하세요. <br>
-                    <b>(주)피엔케이피부임상연구센터</b> <br> 
-                    <b>김영술</b>님
+                <!--[D] 썸네일 X -->
+                <div class="thumb_user"></div>
+                <!--[D] 썸네일 O -->
+                <div class="thumb_user has_thumb">
+                    <img src="../assets/images/common/pepper2.jpg" alt="">
                 </div>
-                <button type="button" class="btn_add_logo"  onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
-            </div>
-            
-
-            <!--[D] 회사로고 있는 경우-->
-            <div class="sidenav_top">
-                <div class="img_box">
-                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                <div>
+                    <div class="user_name"><b>김영술</b>님 안녕하세요.</div>
+                    <div class="co_name">코리아인스트루먼트(주) 서울본사</div>
+                    <!--[D] 회사정보 미등록시 -->
+                    <div class="co_name"><a href="" class="btn_t_link">회사정보 등록하기 &gt;</a></div>
+                    <!--// [D] 회사정보 미등록시 -->
                 </div>
-                <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
-            </div>
-
-            <div class="layer_popup pop_logo" onclick="close_popup(this)">
-                <div class="layer_popup_inner">
-                    <div class="layer_popup_cont ty_small">
-                        <button type="button" class="close_popup" onclick="close_popup(this)">
-                            <span class="blind">팝업 닫기</span>
-                        </button>
-                        <div class="sub_tit">
-                            <h1 class="tit1">로고 이미지 등록</h1>
-                        </div>
-                        <form action="">
-                            <!--[D] 이미지 첨부 전 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <label for="upload_eq_img" class="btn_img_upluad">
-                                    <i class="fa-solid fa-image"></i>
-                                    <p>이미지 첨부하기 (260 x 90)</p>
-                                </label>
-                            </div>
-                            <!--// [D] 이미지 첨부 전 -->
-                            
-                            <br><!--[D] 개발시 삭제-->
-
-                             <!--[D] 이미지 첨부 후 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <div class="img_box_edit">
-                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
-                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
-                                </div>
-                                <img src="../assets/images/common/Tesla_logo.png" alt="">
-                            </div>  
-                            <!--[D] 이미지 첨부 후 -->                
-                            <div class="btn_set mt20 taC">
-                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <button type="button" class="btn_nav_close" aria-label="close navigation"></button>
             </div>
             
             <ul class="nav">
@@ -225,7 +179,7 @@
                     </div>
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
+                    <button type="button" class="btn_dep1 "><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">예약 접수</a></li>
@@ -265,297 +219,283 @@
                         </ul>
                     </div>                   
                 </li>
-                <li class="nav_item on">
+                <li class="nav_item">
                     <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu6"></i>마이페이지</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">내 정보</a></li>
                             <li><a href="" class="btn_dep2">내 문의 관리</a></li>
                             <li><a href="" class="btn_dep2">성적서 업체 관리</a></li>
-                            <li><a href="" class="btn_dep2 on">포인트 관리</a></li>
+                            <li><a href="" class="btn_dep2">포인트 관리</a></li>
                         </ul>
                     </div>                   
-                </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
-                    <div class="nav_dep2_box">
-                        <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">회원 관리</a></li>
-                            <li><a href="" class="btn_dep2">문의 관리</a></li>
-                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
-                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
-                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
-                        </ul>
-                    </div>                 
                 </li>
             </ul>
         </aside>
         <!-- // nav -->
         <!--container-->
         <main id="container" class="container">
+            <ul class="mDep2">
+                <li class="mDep2_item"><a href="">내 정보</a></li>
+                <li class="mDep2_item"><a href="">문의 관리</a></li>
+                <li class="mDep2_item on"><a href="">포인트 관리</a></li>
+            </ul> 
+            <nav class="breadcrumb_area">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb_item">
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="blind">home</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb_item" >
+                        마이페이지
+                    </li>
+                    <li class="breadcrumb_item">
+                        문의 관리
+                    </li>
+                </ol>
+            </nav>
             <div id="contents" class="contents">
-                
-                <!-- [D] breadcrumb -->
-                <nav class="breadcrumb_area">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb_item">
-                            <a href="/">
-                                <i class="fa-solid fa-house"></i>
-                                <span class="blind">home</span>
-                            </a>
-                        </li>
-                        <li class="breadcrumb_item" >
-                            <a href="#">마이페이지</a>
-                        </li>
-                        <li class="breadcrumb_item">
-                            포인트 관리
-                        </li>
-                        <li class="breadcrumb_item">
-                            포인트 선물하기
-                        </li>
-                    </ol>
-                </nav>
-                <!--// [D] breadcrumb -->
-                <div class="sub_tit">
-                    <h1 class="tit1">포인트 선물하기</h1>
-                </div>
-                <section class="sec">
-                    <div class="point_top">
-                        <ul class="point_status">
-                            <li class="point_status_item">
-                                <div class="ico_box"><img src="../assets/images/main/ico_coin.svg" alt=""></div>
-                                <div class="txt_box">
-                                    <strong class="tit">사용 가능 포인트</strong>
-                                    <div class="points fc_key">99,999,000 <i>P</i></div>   
-                                </div>
-                            </li>
-                            <li class="point_status_item">
-                                <div class="ico_box ty_greyscale"><img src="../assets/images/main/ico_coin.svg" alt=""></div>
-                                <div class="txt_box">
-                                    <strong class="tit">이번달 소멸 포인트</strong>
-                                    <div class="points fc_solidGrey">-99,999,000 <i>P</i></div>    
-                                </div>  
-                            </li>
-                        </ul>
+                <section class="sec ">
+                    <div class="my_point">
+                        <div class="my_point_tit">
+                            <div class="tit">선물 가능 포인트</div> 
+                            <button type="button" class="btn_point_info"  onclick="toast('point')">!</button>
+                        </div>
+                        <div class="my_point_cont mt6">
+                           <div class="points fc_key">99,999,000<i></i></div>
+                        </div>
                     </div>
                 </section>
-                <section class="sec">
-                    <form action="">
-                        <div class="v_tbl_wrap">
-                            <table class="v_tbl ty_big">
-                                <colgroup>
-                                    <col style="width: 160px;">
-                                    <col>
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th>받는 사람</th>
-                                        <td>
-                                            <div class="d_flex _gap10 w_300">
-                                                <input type="text" class="f_input ty_mid flex1" placeholder="받으실 분을 선택해주세요." readonly>
-                                                <button type="button" class="f_btn ty_mid ty_ico _key w_40 shrink0" onclick="open_popup('popup_user')">
-                                                    <i class="fa-solid fa-magnifying-glass fz_mid"></i>
-                                                </button>
+                <section class="sec"> 
+                    <div class="sub_tit2">
+                        <h2 class="tit2">포인트 선물</h2>
+                        <p class="tip ml_auto"><i class="ico_required"></i> 표시는 필수 기재 항목입니다.</p>
+                    </div>
+                    <form action="" class="mform">
+                        <!-- [D] 받는 사람 검색 전-->
+                        <div class="mform_item">
+                            <label for="" class="tit"><i class="ico_required"></i> 받는 사람</label>
+                            <div class="d_flex _gap6">
+                                <input type="text" class="f_input ty_mid flex1" placeholder="이름, 연락처, 회사명을 입력해주세요.">
+                                <button type="button" class="f_btn ty_mid _key btn_search">
+                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>    
+                        <!--// [D] 받는 사람 검색 전-->
+                        <!-- [D] 받는 사람 검색 후-->
+                        <div class="mform_item">
+                            <label for="" class="tit"><i class="ico_required"></i> 받는 사람</label>
+                            <div class="d_flex _gap6">
+                                <input type="text" class="f_input ty_mid flex1" value="박보영">
+                                <button type="button" class="f_btn ty_mid _key btn_search">
+                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <!--[D] 사용자 검색 결과 -->
+                            <div class="user_list_wrap mt10">
+                                <ul class="user_list ">
+                                    <li class="user_list_item">
+                                        <label class="user_list_select">
+                                            <input type="radio" name="user">
+                                            <span class="outline"></span>
+                                            <div class="txt_box">
+                                                <b>박보영</b> 
+                                                <span>(010-1234-2543)</span>  
+                                                <span class="fc_midGrey">그랜드정션(주)</span> 
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>선물할 포인트</th>
-                                        <td><input type="text" class="f_input ty_mid w_300" placeholder="1,000P 이상 입력 (숫자만)"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>메세지</th>
-                                        <td>
-                                            <div class="ta_count_wrap d_flex ai_b">
-                                                <textarea name="" id="" class="f_ta ty_mid resize_y" placeholder="메세지를 입력해주세요." onKeyUp="fnChkByte(this,'300')"></textarea>
-                                                <div class="byteInfo_box shrink0 w_100">
-                                                    <span class="byteInfo">0</span> / 300 byte
-                                                </div>
+                                        </label>
+                                    </li>
+                                    <li class="user_list_item">
+                                        <label class="user_list_select">
+                                            <input type="radio" name="user">
+                                            <span class="outline"></span>
+                                            <div class="txt_box">
+                                                <b>박보영</b> 
+                                                <span>(010-1234-2543)</span>  
+                                                <span class="fc_midGrey">엄청나게너무너무긴회사이름이있다면어떻게될까(주)</span> 
                                             </div>
-                                            <script>
-                                                function fnChkByte(obj, maxByte)
-                                                {
-                                                    let str = obj.value;
-                                                    let str_len = str.length;
-                                                    let rbyte = 0;
-                                                    let rlen = 0;
-                                                    let one_char = "";
-                                                    let str2 = "";
-                                                    let byteInfo = obj.closest('.ta_count_wrap').querySelector('.byteInfo');
-
-                                                    for(let i=0; i<str_len; i++)
-                                                    {
-                                                        one_char = str.charAt(i);
-                                                        if(escape(one_char).length > 4) {
-                                                            rbyte += 2;                                       
-                                                        }else{
-                                                            rbyte++;
-                                                        }
-                                                        if(rbyte <= maxByte){
-                                                            rlen = i+1;
-                                                        }
-                                                    }
-                                                    if(rbyte > maxByte)
-                                                    {
-                                                        //alert("메세지는 최대 " + maxByte + "byte를 초과할 수 없습니다.")
-                                                        str2 = str.substr(0,rlen);   
-                                                        obj.value = str2;
-                                                        fnChkByte(obj, maxByte);
-                                                    }
-                                                    else
-                                                    {
-                                                        byteInfo.innerText = rbyte;
-                                                    }
-                                                }
-                                            </script>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="btn_set taC mt30">
-                            <input type="submit" value="선물하기" class="f_btn ty_mid _key w_100">
-                            <a href="mypage_points.html" class="f_btn ty_mid _solidGrey w_100">취소</a>
-                        </div>
+                                        </label>
+                                    </li>
+                                    <li class="user_list_item">
+                                        <label class="user_list_select">
+                                            <input type="radio" name="user">
+                                            <span class="outline"></span>
+                                            <div class="txt_box">
+                                                <b>박보영</b> 
+                                                <span>(010-1234-2543)</span>  
+                                                <span class="fc_midGrey">삼성전자(주)</span> 
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="user_list_item">
+                                        <label class="user_list_select">
+                                            <input type="radio" name="user">
+                                            <span class="outline"></span>
+                                            <div class="txt_box">
+                                                <b>박보영</b> 
+                                                <span>(010-1234-2543)</span>  
+                                                <span class="fc_midGrey">엔비디아</span> 
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="user_list_item">
+                                        <label class="user_list_select">
+                                            <input type="radio" name="user">
+                                            <span class="outline"></span>
+                                            <div class="txt_box">
+                                                <b>박보영</b> 
+                                                <span>(010-1234-2543)</span>  
+                                                <span class="fc_midGrey">애플</span> 
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="user_list_item">
+                                        <label class="user_list_select">
+                                            <input type="radio" name="user">
+                                            <span class="outline"></span>
+                                            <div class="txt_box">
+                                                <b>박보영</b> 
+                                                <span>(010-1234-2543)</span>  
+                                                <span class="fc_midGrey">구글</span> 
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--// [D] 사용자 검색 결과 -->
+                        </div>    
+                        <!--// [D] 받는 사람 검색 후-->
+                        <div class="mform_item">
+                            <label for="" class="tit"><i class="ico_required"></i> 선물할 포인트</label>
+                            <div class="d_flex ai_c">
+                                <input type="number" class="f_input ty_mid taR ph_left flex1" placeholder="1,000원 이상 입력 (숫자만)">
+                                <span class="point_ico ml8 shrink0"></span>
+                            </div>
+                            
+                        </div>   
+                        <div class="mform_item">
+                            <label for="" class="tit">메세지</label>
+                            <textarea name="" id="" class="f_ta ty_mid" style="height: 120px;" placeholder="메세지를 입력해주세요."></textarea>
+                        </div>          
                     </form>
                 </section>
             </div>
-            <div class="layer_popup popup_user" onclick="close_popup(this)">
-                <div class="layer_popup_inner">
-                    <div class="layer_popup_cont ty_mid">
-                        <button type="button" class="close_popup" onclick="close_popup(this)">
-                            <span class="blind">팝업 닫기</span>
-                        </button>
-                        <div class="sub_tit">
-                            <h1 class="tit1">CWIZ 친구찾기</h1>
-                        </div>
-                        <section class="sec">
-                            <form action="" class="search_form">
-                                <div class="d_flex jc_c _gap6">
-                                    <select name="" id="" class="f_select ty_mid">
-                                        <option value="">이름</option>
-                                        <option value="">회사명</option>
-                                        <option value="">휴대폰 번호</option>
-                                    </select>
-                                    <input type="text" class="f_input ty_mid w_200"> 
-                                    <button type="submit" class="f_btn ty_mid ty_ico _key w_40 ml4">
-                                        <i class="fa-solid fa-magnifying-glass fz_mid"></i>
-                                    </button>
-                                    <button type="button" class="f_btn ty_mid ty_ico _solidGrey w_40" onclick="reset(this)">
-                                        <i class="fa-solid fa-arrows-rotate fz_mid"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </section>
-                        <section class="sec mt20">
-                            <div class="h_tbl_wrap y_scroll_area" style="max-height: 300px;">
-                                <table class="h_tbl tl_fixed">
-                                    <colgroup>
-                                        <col style="width: 80px;">
-                                        <col>
-                                        <col style="width: 120px;">
-                                        <col style="width: 100px;">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th class="th_fixed">이름</th>
-                                            <th class="th_fixed">회사명</th>
-                                            <th class="th_fixed">휴대폰 번호</th>
-                                            <th class="th_fixed">선택</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>장원영</td>
-                                            <td class="ellipsisTooltip">코리아인스투르먼트(주) 서울본사</td>
-                                            <td>010-1234-1234</td>
-                                            <td>
-                                                <button class="f_btn ty_xsmall _key w_60">선택</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>장원영</td>
-                                            <td class="ellipsisTooltip">코리아인스투르먼트(주) 서울본사</td>
-                                            <td>010-1234-1234</td>
-                                            <td>
-                                                <button class="f_btn ty_xsmall _key w_60">선택</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>장원영</td>
-                                            <td class="ellipsisTooltip">코리아인스투르먼트(주) 서울본사</td>
-                                            <td>010-1234-1234</td>
-                                            <td>
-                                                <button class="f_btn ty_xsmall _key w_60">선택</button>
-                                            </td>
-                                        </tr>
-                                        <tr>          
-                                            <td colspan="4">
-                                                <div class="no_result_box ty_small" >
-                                                    <i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
-                                                    <p class="mt10">검색 결과가 없습니다.</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </section>
-                        <div class="btn_set taC mt30">
-                            <button type="button" class="f_btn ty_mid _solidGrey w_100" onclick="close_popup(this)">닫기</button>
-                        </div> 
+            <!--[팝업] 포인트 정책 -->
+            <div class="toast_wrap" data-toast="point">
+                <form class="toast_inner">
+                    <div class="toast_top">
+                        <h3 class="tit2">포인트 정책 안내</h3>
+                        <button type="button" class="toast_close" onclick="close_toast(this)" aria-label="상세검색 닫기"></button>
                     </div>
-                </div>
+                    <div class="toast_cont">
+                        <section class="sec">
+                            <h2 class="tit3 mb10 fwB">적립</h2>
+                            <ol class="point_policy">
+                                <li class="point_policy_item">
+                                    <div class="num">01</div>
+                                    <div class="desc">
+                                        <b>신규 회원 가입</b> 시 10,000 포인트가 적립됩니다. <br> (최초 회원가입 시에만 제공됩니다.)
+                                    </div>
+                                </li>
+                                <li class="point_policy_item">
+                                    <div class="num">02</div>
+                                    <div class="desc">
+                                        <b>온라인 결제 완료</b> 시 <br> 
+                                        교정금액(표준소급료, 부가세 제외)의 <b>1%</b>가 포인트로 적립됩니다. <br>
+                                        (결제 포인트는 교정 <b>접수한 담당자</b>에게 지급됩니다. 단, <b>결제 취소 시 포인트는 소멸</b>됩니다.)
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                        <section class="sec mt30">
+                            <h2 class="tit3 mb10 fwB">사용</h2>
+                            <ol class="point_policy">
+                                <li class="point_policy_item">
+                                    <div class="num">01</div>
+                                    <div class="desc">
+                                        <b>10,000 포인트 이상</b>일 때 사용 가능합니다.
+                                    </div>
+                                </li>
+                                <li class="point_policy_item">
+                                    <div class="num">02</div>
+                                    <div class="desc">
+                                        <b>1,000 포인트 단위</b>로 사용 가능합니다.
+                                    </div>
+                                </li>
+                                <li class="point_policy_item">
+                                    <div class="num">03</div>
+                                    <div class="desc">
+                                        내용 어쩌구 저쩌구... 
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                        <section class="sec mt30">
+                            <h2 class="tit3 mb10 fwB">소멸</h2>
+                            <ol class="point_policy">
+                                <li class="point_policy_item">
+                                    <div class="num">01</div>
+                                    <div class="desc">
+                                        회원 탈퇴시 보유한 포인트는 모두 <b>소멸</b>됩니다.
+                                    </div>
+                                </li>
+                                <li class="point_policy_item">
+                                    <div class="num">02</div>
+                                    <div class="desc">
+                                        포인트의 유효기간은 적립일로 부터 <b>3년</b>이며, 유효기간이 지난 포인트는 자동적으로 <b>소멸</b>됩니다.
+                                    </div>
+                                </li>
+                                <li class="point_policy_item">
+                                    <div class="num">03</div>
+                                    <div class="desc">
+                                        소멸된 포인트는 <b>복구 되지 않습니다.</b> 
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                        <section class="sec mt30">
+                            <h2 class="tit3 mb10 fwB">포인트 정책</h2>
+                            <ol class="point_policy2">
+                                <li>포인트는 현금으로 전환 및 환급이 불가합니다.</li>
+                                <li>소멸된 포인트는 복구되지 않습니다. </li>
+                                <li>포인트는 양도 및 거래가 불가하며 이를 어길시 사전 통보 없이 포인트는 소멸 될 수 있습니다.</li>
+                                <li>포인트 유효기간은 3년으로, 적립 후 3년간 사용하지 않은 경우 소멸됩니다.</li>
+                                <li>휴면회원 전환 또는 회원 탈퇴시 보유 포인트는 모두 소멸 됩니다.</li>
+                            </ol>
+                        </section>
+                    </div>
+                </form>
             </div>
+            <!--//[팝업] 포인트 정책-->
+            <script>
+                function toast(target){
+                    let toast_wrap = document.querySelectorAll('.toast_wrap');
+                    toast_wrap.forEach(e=>{
+                        e.dataset.toast == target ? e.classList.add('on') : null;
+                    })
+                }
+                function close_toast(target){
+                    let toast_wrap = target.closest('.toast_wrap');
+                    toast_wrap.classList.remove('on')
+                }
+            </script>
         </main>
-
-       
         <!--//container-->
-        <!--footer-->
-        <footer class="footer">
-            <!-- <div class="footer_top">
-                <div class="inner">
-                    <ul class="footer_top_nav ">
-                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
-                    </ul>
-                </div>
-            </div> -->
-            <div class="footer_logo">
-                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
+        <div class="sticky_bot">
+            <div class="btn_set taC">
+                <a href="./mypage_qna_view.html" class="f_btn ty_mid _solidGrey flex1 ">취 소</a>
+                <button type="submit" class="f_btn ty_mid _key flex1">선물 하기</button>
             </div>
-            <div class="footer_info">
-                <ul class="footer_info_list">
-                    <li>코리아인스트루먼트(주)</li>
-                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
-                    <li><span class="bar"></span>대표이사 : 정재호</li>
-                </ul>
-                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
-                <div class="contact">
-                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
-                    <span class="bar"></span>
-                    <span>1600 - 4245</span>
-                </div>
-            </div>
-            <div class="footer_right">
-                <div class="footer_right_btns">
-                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
-                    <span class="bar"></span>
-                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
-                </div>
-                <div class="footer_right_branch">
-                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
-                    <ul class="branch_list">
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <!--//footer-->
+        </div>
     </div>
-    
 </body>
 </html>
+
+
+
+
+
+

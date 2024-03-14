@@ -262,7 +262,7 @@
                     </div>
                     <form action="">
                         <div class="d_flex _gapX5 ai_b">
-                            <input  class="f_input ty_mid w100" onkeyup="inputComma(this)" placeholder="숫자만 입력해주세요." value="">
+                            <input type="number"  class="f_input ty_mid w100" placeholder="숫자만 입력해주세요." value="">
                             <span class="fz_mid">(원)</span> 
                         </div>
                         <p class="f_tip ty_mid mt10">
@@ -275,12 +275,12 @@
                         </div>
                     </form>
                 </section>
-                <script>
+                <!-- <script>
                     function inputComma(target){
                         if (event.which >= 37 && event.which <= 40) return;
                         target.value = target.value.replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                     }
-                </script>
+                </script> -->
             </div>
         </main>
         <!--//container-->
