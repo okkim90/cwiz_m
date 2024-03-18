@@ -7635,11 +7635,11 @@ tr:last-child .status_box_date {
 }
 
 .faq {
-  font-size: 15px;
+  font-size: 12px;
 }
 .faq_item {
-  background-color: rgba(0, 0, 0, 0.045);
-  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
   border: 1px solid #DDDDDD;
   overflow: hidden;
 }
@@ -7647,19 +7647,20 @@ tr:last-child .status_box_date {
   margin-top: 12px;
 }
 .faq_cont {
-  padding: 15px 0;
+  padding: 10px 0;
   position: relative;
   display: flex;
   align-items: center;
 }
 .faq_cont::before {
-  width: 60px;
+  width: 36px;
   text-align: center;
   flex-shrink: 0;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
   font-weight: bold;
   color: #FF7A00;
+  align-self: flex-start;
 }
 .faq_q {
   cursor: pointer;
@@ -7669,15 +7670,14 @@ tr:last-child .status_box_date {
 }
 .faq_q_txt {
   flex: 1;
-  display: flex;
   align-items: center;
 }
 .faq_q_txt .f_tag {
-  margin-right: 15px;
-  flex-shrink: 0;
+  display: block;
+  margin-bottom: 4px;
 }
 .faq_q .faq_arrow {
-  width: 60px;
+  width: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7701,7 +7701,7 @@ tr:last-child .status_box_date {
 }
 .faq_a {
   display: none;
-  padding-right: 60px;
+  padding-right: 36px;
   border-top: 1px dashed #DDDDDD;
   border-radius: 0 0 10px 10px;
   background-color: #fff;
@@ -8217,7 +8217,7 @@ tr:last-child .status_box_date {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -11710,7 +11710,7 @@ tr:last-child .status_box_date {
 }
 .board_view_tit_btn .btn_toggle {
   width: 30px;
-  height: 40px;
+  height: 30px;
   margin-left: auto;
   display: flex;
   align-items: center;

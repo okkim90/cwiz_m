@@ -1972,11 +1972,11 @@
 }
 
 .faq {
-    font-size: 15px;
+    font-size: 12px;
     
     &_item {
-        background-color: rgba(#000, .045);
-        border-radius: 10px;
+        background-color: rgba(#000, .04);
+        border-radius: 6px;
         border: 1px solid $c_line;
         overflow: hidden;
         & + & {
@@ -1984,20 +1984,20 @@
         }
     }
     &_cont {
-        padding: 15px 0;
+        padding: 10px 0;
         //padding-left: 80px;
         position: relative;
         display: flex;
         align-items: center;
         &::before {
-            width: 60px;
+            width: 36px;
             text-align: center;
             flex-shrink: 0;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 1;
             font-weight: bold;
             color: $c_key;
-           
+            align-self: flex-start;
         }
     }
     &_q {
@@ -2008,15 +2008,15 @@
         }
         &_txt {
             flex: 1;
-            display: flex;
+            
             align-items: center;
             .f_tag {
-                margin-right: 15px;
-                flex-shrink: 0;
+                display: block;
+                margin-bottom: 4px;
             }
         }
         .faq_arrow { 
-            width: 60px;
+            width: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2047,7 +2047,7 @@
     }
     &_a {
         display: none;
-        padding-right: 60px;
+        padding-right: 36px;
         border-top: 1px dashed $c_line;
         border-radius: 0 0 10px 10px;
         &::before {
@@ -2690,7 +2690,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 500;
 
 

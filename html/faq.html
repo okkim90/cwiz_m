@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="Generator" content="KIC">
     <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
     <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
@@ -31,9 +31,9 @@
     <div id="wrap">
         <!-- header -->
         <header class="header">
-            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <h1 class="header_tit">고객지원</h1>
+            <button type="button" class="btn_back" aria-label="뒤로가기"></button>
             <div class="h_util">
-                
                 <div class="h_util_sec h_btns">
                     <button type="button" class="h_btn">
                         <i class="fa-solid fa-qrcode"></i>
@@ -150,69 +150,21 @@
         <!--// header -->
         <!-- nav -->
         <aside class="sidenav">
-
-            
-            <!--[D] 회사로고 없을경우-->
             <div class="sidenav_top">
-                <div class="msg_box">
-                    안녕하세요. <br>
-                    <b>(주)피엔케이피부임상연구센터</b> <br> 
-                    <b>김영술</b>님
+                <!--[D] 썸네일 X -->
+                <div class="thumb_user"></div>
+                <!--[D] 썸네일 O -->
+                <div class="thumb_user has_thumb">
+                    <img src="../assets/images/common/pepper2.jpg" alt="">
                 </div>
-                <button type="button" class="btn_add_logo"  onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
-            </div>
-            
-
-            <!--[D] 회사로고 있는 경우-->
-            <div class="sidenav_top">
-                <div class="img_box">
-                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                <div>
+                    <div class="user_name"><b>김영술</b>님 안녕하세요.</div>
+                    <div class="co_name">코리아인스트루먼트(주) 서울본사</div>
+                    <!--[D] 회사정보 미등록시 -->
+                    <div class="co_name"><a href="" class="btn_t_link">회사정보 등록하기 &gt;</a></div>
+                    <!--// [D] 회사정보 미등록시 -->
                 </div>
-                <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
-            </div>
-
-            <div class="layer_popup pop_logo" onclick="close_popup(this)">
-                <div class="layer_popup_inner">
-                    <div class="layer_popup_cont ty_small">
-                        <button type="button" class="close_popup" onclick="close_popup(this)">
-                            <span class="blind">팝업 닫기</span>
-                        </button>
-                        <div class="sub_tit">
-                            <h1 class="tit1">로고 이미지 등록</h1>
-                        </div>
-                        <form action="">
-                            <!--[D] 이미지 첨부 전 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <label for="upload_eq_img" class="btn_img_upluad">
-                                    <i class="fa-solid fa-image"></i>
-                                    <p>이미지 첨부하기 (260 x 90)</p>
-                                </label>
-                            </div>
-                            <!--// [D] 이미지 첨부 전 -->
-                            
-                            <br><!--[D] 개발시 삭제-->
-
-                             <!--[D] 이미지 첨부 후 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <div class="img_box_edit">
-                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
-                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
-                                </div>
-                                <img src="../assets/images/common/Tesla_logo.png" alt="">
-                            </div>  
-                            <!--[D] 이미지 첨부 후 -->                
-                            <div class="btn_set mt20 taC">
-                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <button type="button" class="btn_nav_close" aria-label="close navigation"></button>
             </div>
             
             <ul class="nav">
@@ -227,7 +179,7 @@
                     </div>
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
+                    <button type="button" class="btn_dep1 "><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">예약 접수</a></li>
@@ -257,13 +209,13 @@
                         </ul>
                     </div>                   
                 </li>
-                <li class="nav_item on">
+                <li class="nav_item">
                     <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu5"></i>고객 지원</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">공지사항</a></li>
                             <li><a href="" class="btn_dep2">자료실</a></li>
-                            <li><a href="" class="btn_dep2 on">자주하는 질문</a></li>
+                            <li><a href="" class="btn_dep2">자주하는 질문</a></li>
                         </ul>
                     </div>                   
                 </li>
@@ -278,80 +230,54 @@
                         </ul>
                     </div>                   
                 </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
-                    <div class="nav_dep2_box">
-                        <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">회원 관리</a></li>
-                            <li><a href="" class="btn_dep2">문의 관리</a></li>
-                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
-                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
-                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
-                        </ul>
-                    </div>                 
-                </li>
             </ul>
         </aside>
         <!-- // nav -->
-
         <!--container-->
         <main id="container" class="container">
+            <ul class="mDep2">
+                <li class="mDep2_item"><a href="">공지사항</a></li>
+                <li class="mDep2_item"><a href="">자료실</a></li>
+                <li class="mDep2_item on"><a href="">자주하는 질문</a></li>
+            </ul> 
+            <nav class="breadcrumb_area">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb_item">
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="blind">home</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb_item" >
+                        고객지원
+                    </li>
+                    <li class="breadcrumb_item">
+                        자주하는 질문
+                    </li>
+                </ol>
+            </nav>
             <div id="contents" class="contents">
-                
-                <!-- [D] breadcrumb -->
-                <nav class="breadcrumb_area">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb_item">
-                            <a href="/">
-                                <i class="fa-solid fa-house"></i>
-                                <span class="blind">home</span>
-                            </a>
-                        </li>
-                        <li class="breadcrumb_item" >
-                            고객지원
-                        </li>
-                        <li class="breadcrumb_item" >
-                            자주하는 질문
-                        </li>
-                    </ol>
-                </nav>
-                <!--// [D] breadcrumb -->
-                <div class="sub_tit">
-                    <h1 class="tit1">자주하는 질문</h1>
-                </div>
-                
                 <section class="sec">
-                    <ul class="tabs">
-                        <li class="tabs_item on">
-                            <button class="tabs_btn">전체</button>
-                        </li>
-                        <li class="tabs_item">
-                            <button class="tabs_btn">견적 / 입고</button>
-                        </li>
-                        <li class="tabs_item">
-                            <button class="tabs_btn">교정</button>
-                        </li>
-                        <li class="tabs_item">
-                            <button class="tabs_btn">출고 / 정산</button>
-                        </li>
-                        <li class="tabs_item">
-                            <button class="tabs_btn">가입 / 탈퇴</button>
-                        </li>
+                    <ul class="mDep3 mb20">
+                        <li class="mDep3_item on"><button type="button" class="mDep3_btn">전체</button></li>
+                        <li class="mDep3_item"><button type="button" class="mDep3_btn">견적/입고</button></li>
+                        <li class="mDep3_item"><button type="button" class="mDep3_btn">교정</button></li>
+                        <li class="mDep3_item"><button type="button" class="mDep3_btn">출고/정산</button></li>
+                        <li class="mDep3_item"><button type="button" class="mDep3_btn">가입/탈퇴</button></li>
                     </ul>
-                    <div class="sub_tit2">
-                        <h2 class="tit4"><b>1,000건</b></h2>
-                        <form action="" class="d_flex _gap4 ml_auto">
-                            <input type="text" class="f_input ty_small w_160">
-                            <button type="submit" class="f_btn ty_small _key w_60">
-                                검색 <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
+                    <div class="srch_wrap">
+                        <form class="srch_form">
+                            <input type="text" class="f_input ty_mid ty_round" placeholder="검색어를 입력해 주세요.">
+                            <button type="submit" class="btn_submit" aria-label="검색하기"></button>
                         </form>
                     </div>
+                </section>
+                <section class="sec">
                     <ul class="faq">
                         <li class="faq_item">
                             <div class="faq_cont faq_q">
                                 <div class="faq_q_txt">
-                                    <span class="f_tag _key w_80">출고 / 정산</span> 
+                                    <span class="fc_key fwB">[출고/정산]</span>
                                     이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 
                                 </div>
                                 <span class="faq_arrow"></span>
@@ -363,7 +289,7 @@
                         <li class="faq_item">
                             <div class="faq_cont faq_q">
                                 <div class="faq_q_txt">
-                                    <span class="f_tag _key w_80">출고 / 정산</span> 
+                                    <span class="fc_key fwB">[교정]</span>
                                     이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 
                                 </div>
                                 <span class="faq_arrow"></span>
@@ -375,7 +301,7 @@
                         <li class="faq_item">
                             <div class="faq_cont faq_q">
                                 <div class="faq_q_txt">
-                                    <span class="f_tag _key w_80">교정</span> 
+                                    <span class="fc_key fwB">[견적/입고]</span>
                                     이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 
                                 </div>
                                 <span class="faq_arrow"></span>
@@ -387,7 +313,7 @@
                         <li class="faq_item">
                             <div class="faq_cont faq_q">
                                 <div class="faq_q_txt">
-                                    <span class="f_tag _key w_80">교정</span> 
+                                    <span class="fc_key fwB">[가입/탈퇴]</span>
                                     이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 
                                 </div>
                                 <span class="faq_arrow"></span>
@@ -399,7 +325,7 @@
                         <li class="faq_item">
                             <div class="faq_cont faq_q">
                                 <div class="faq_q_txt">
-                                    <span class="f_tag _key w_80">교정</span> 
+                                    <span class="fc_key fwB">[출고/정산]</span>
                                     이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 
                                 </div>
                                 <span class="faq_arrow"></span>
@@ -411,7 +337,7 @@
                         <li class="faq_item">
                             <div class="faq_cont faq_q">
                                 <div class="faq_q_txt">
-                                    <span class="f_tag _key w_80">교정</span> 
+                                    <span class="fc_key fwB">[교정]</span>
                                     이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 
                                 </div>
                                 <span class="faq_arrow"></span>
@@ -423,7 +349,7 @@
                         <li class="faq_item">
                             <div class="faq_cont faq_q">
                                 <div class="faq_q_txt">
-                                    <span class="f_tag _key w_80">출고 / 정산</span> 
+                                    <span class="fc_key fwB">[출고/정산]</span>
                                     이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요?이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요? 이거는저거는 뭐고 어떻게 하는건가요?  
                                 </div>
                                 <span class="faq_arrow"></span>
@@ -446,68 +372,47 @@
                             });
                         });
                     </script>
-                    <div class="paging_wrap">
-                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
-                        <ul class="paging_list">
-                            <li><span class="paging_btn current">1</span></li>
-                            <li><a href="" class="paging_btn">2</a></li>
-                            <li><a href="" class="paging_btn">3</a></li>
-                            <li><a href="" class="paging_btn">4</a></li>
-                            <li><a href="" class="paging_btn">5</a></li>
-                        </ul>
-                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
-                    </div>
                 </section>
             </div>
+            
         </main>
         <!--//container-->
-        <!--footer-->
-        <footer class="footer">
-            <!-- <div class="footer_top">
-                <div class="inner">
-                    <ul class="footer_top_nav ">
-                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
-                    </ul>
-                </div>
-            </div> -->
-            <div class="footer_logo">
-                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
-            </div>
-            <div class="footer_info">
-                <ul class="footer_info_list">
-                    <li>코리아인스트루먼트(주)</li>
-                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
-                    <li><span class="bar"></span>대표이사 : 정재호</li>
-                </ul>
-                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
-                <div class="contact">
-                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
-                    <span class="bar"></span>
-                    <span>1600 - 4245</span>
-                </div>
-            </div>
-            <div class="footer_right">
-                <div class="footer_right_btns">
-                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
-                    <span class="bar"></span>
-                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
-                </div>
-                <div class="footer_right_branch">
-                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
-                    <ul class="branch_list">
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <!--//footer-->
+        <!-- botNav -->
+        <ul class="botNav">
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico1"></span>
+                    <span class="tit">교정현황</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico2"></span>
+                    <span class="tit">정산관리</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico_home"></span>
+                    <span class="tit">홈</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico3"></span>
+                    <span class="tit">마이페이지</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <button type="button" class="botNav_btn btn_nav_toggle">
+                    <span class="ico_box ico4"></span>
+                    <span class="tit">메뉴</span>
+                </button>
+            </li>
+        </ul>
+        <!--// botNav -->
     </div>
-    
 </body>
 </html>
+
+

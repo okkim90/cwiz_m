@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="Generator" content="KIC">
     <meta name="Author" content="코리아인스트루먼트(주) 교정관리 시스템">
     <meta name="Keywords" content="코리아인스트루먼트(주) 교정관리 시스템">
@@ -31,9 +31,9 @@
     <div id="wrap">
         <!-- header -->
         <header class="header">
-            <h1 class="logo"><a href=""><img src="../assets/images/common/logo.svg" alt=""></a></h1>
+            <h1 class="header_tit">고객지원</h1>
+            <button type="button" class="btn_back" aria-label="뒤로가기"></button>
             <div class="h_util">
-                
                 <div class="h_util_sec h_btns">
                     <button type="button" class="h_btn">
                         <i class="fa-solid fa-qrcode"></i>
@@ -150,69 +150,21 @@
         <!--// header -->
         <!-- nav -->
         <aside class="sidenav">
-
-            
-            <!--[D] 회사로고 없을경우-->
             <div class="sidenav_top">
-                <div class="msg_box">
-                    안녕하세요. <br>
-                    <b>(주)피엔케이피부임상연구센터</b> <br> 
-                    <b>김영술</b>님
+                <!--[D] 썸네일 X -->
+                <div class="thumb_user"></div>
+                <!--[D] 썸네일 O -->
+                <div class="thumb_user has_thumb">
+                    <img src="../assets/images/common/pepper2.jpg" alt="">
                 </div>
-                <button type="button" class="btn_add_logo"  onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
-            </div>
-            
-
-            <!--[D] 회사로고 있는 경우-->
-            <div class="sidenav_top">
-                <div class="img_box">
-                    <img src="../assets/images/common/Tesla_logo.png" alt="">
+                <div>
+                    <div class="user_name"><b>김영술</b>님 안녕하세요.</div>
+                    <div class="co_name">코리아인스트루먼트(주) 서울본사</div>
+                    <!--[D] 회사정보 미등록시 -->
+                    <div class="co_name"><a href="" class="btn_t_link">회사정보 등록하기 &gt;</a></div>
+                    <!--// [D] 회사정보 미등록시 -->
                 </div>
-                <button type="button" class="btn_add_logo" onclick="open_popup('pop_logo')">
-                    <i class="fa-solid fa-image"></i>
-                </button>
-            </div>
-
-            <div class="layer_popup pop_logo" onclick="close_popup(this)">
-                <div class="layer_popup_inner">
-                    <div class="layer_popup_cont ty_small">
-                        <button type="button" class="close_popup" onclick="close_popup(this)">
-                            <span class="blind">팝업 닫기</span>
-                        </button>
-                        <div class="sub_tit">
-                            <h1 class="tit1">로고 이미지 등록</h1>
-                        </div>
-                        <form action="">
-                            <!--[D] 이미지 첨부 전 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <label for="upload_eq_img" class="btn_img_upluad">
-                                    <i class="fa-solid fa-image"></i>
-                                    <p>이미지 첨부하기 (260 x 90)</p>
-                                </label>
-                            </div>
-                            <!--// [D] 이미지 첨부 전 -->
-                            
-                            <br><!--[D] 개발시 삭제-->
-
-                             <!--[D] 이미지 첨부 후 -->
-                            <div class="img_box ty_upload ty_logo">
-                                <input type="file" id="upload_eq_img" class="input_img_upluad" accept="image/*">
-                                <div class="img_box_edit">
-                                    <label for="upload_eq_img" class="img_box_edit_btn"><i class="fa-solid fa-rotate"></i><span class="blind">수정</span></label>
-                                    <button type="button" class="img_box_edit_btn"><i class="fa-solid fa-trash-can"></i><span class="blind">삭제</span></button>
-                                </div>
-                                <img src="../assets/images/common/Tesla_logo.png" alt="">
-                            </div>  
-                            <!--[D] 이미지 첨부 후 -->                
-                            <div class="btn_set mt20 taC">
-                                <input type="submit" class="f_btn ty_small _key w_80" value="등록">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <button type="button" class="btn_nav_close" aria-label="close navigation"></button>
             </div>
             
             <ul class="nav">
@@ -227,7 +179,7 @@
                     </div>
                 </li>
                 <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
+                    <button type="button" class="btn_dep1 "><i class="ico_dep1 ty_menu2"></i>접수 관리</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">예약 접수</a></li>
@@ -257,12 +209,12 @@
                         </ul>
                     </div>                   
                 </li>
-                <li class="nav_item on">
+                <li class="nav_item">
                     <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu5"></i>고객 지원</button>
                     <div class="nav_dep2_box">
                         <ul class="nav_dep2">
                             <li><a href="" class="btn_dep2">공지사항</a></li>
-                            <li><a href="" class="btn_dep2 on">자료실</a></li>
+                            <li><a href="" class="btn_dep2">자료실</a></li>
                             <li><a href="" class="btn_dep2">자주하는 질문</a></li>
                         </ul>
                     </div>                   
@@ -278,278 +230,155 @@
                         </ul>
                     </div>                   
                 </li>
-                <li class="nav_item">
-                    <button type="button" class="btn_dep1"><i class="ico_dep1 ty_menu7"></i>관리자</button>
-                    <div class="nav_dep2_box">
-                        <ul class="nav_dep2">
-                            <li><a href="" class="btn_dep2">회원 관리</a></li>
-                            <li><a href="" class="btn_dep2">문의 관리</a></li>
-                            <li><a href="" class="btn_dep2">공지사항 관리</a></li>
-                            <li><a href="" class="btn_dep2">자료실 관리</a></li>
-                            <li><a href="" class="btn_dep2">FAQ 관리</a></li>
-                        </ul>
-                    </div>                 
-                </li>
             </ul>
         </aside>
         <!-- // nav -->
-
         <!--container-->
         <main id="container" class="container">
+            <ul class="mDep2">
+                <li class="mDep2_item"><a href="">공지사항</a></li>
+                <li class="mDep2_item on"><a href="">자료실</a></li>
+                <li class="mDep2_item"><a href="">자주하는 질문</a></li>
+            </ul> 
+            <nav class="breadcrumb_area">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb_item">
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="blind">home</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb_item" >
+                        고객지원
+                    </li>
+                    <li class="breadcrumb_item">
+                        자료실
+                    </li>
+                </ol>
+            </nav>
             <div id="contents" class="contents">
-                
-                <!-- [D] breadcrumb -->
-                <nav class="breadcrumb_area">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb_item">
-                            <a href="/">
-                                <i class="fa-solid fa-house"></i>
-                                <span class="blind">home</span>
-                            </a>
-                        </li>
-                        <li class="breadcrumb_item" >
-                            고객지원
-                        </li>
-                        <li class="breadcrumb_item" >
-                            자료실
-                        </li>
-                    </ol>
-                </nav>
-                <!--// [D] breadcrumb -->
-                <div class="sub_tit">
-                    <h1 class="tit1">자료실</h1>
-                </div>
                 <section class="sec">
-                    <ul class="tabs">
-                        <li class="tabs_item on">
-                            <button class="tabs_btn">전체</button>
-                        </li>
-                        <li class="tabs_item">
-                            <button class="tabs_btn">서식 자료</button>
-                        </li>
-                        <li class="tabs_item">
-                            <button class="tabs_btn">공문 자료</button>
-                        </li>
-                        <li class="tabs_item">
-                            <button class="tabs_btn">기술 자료</button>
-                        </li>
+                    <ul class="mDep3 mb20">
+                        <li class="mDep3_item on"><button type="button" class="mDep3_btn">전체</button></li>
+                        <li class="mDep3_item"><button type="button" class="mDep3_btn">서식자료</button></li>
+                        <li class="mDep3_item"><button type="button" class="mDep3_btn">공문자료</button></li>
+                        <li class="mDep3_item"><button type="button" class="mDep3_btn">기술자료</button></li>
                     </ul>
-                    <div class="sub_tit2">
-                        <h2 class="tit4">검색결과 : <b>1,000건</b></h2>
-                        <select name="" id="" class="f_select ty_small ml10">
-                            <option value="">30개씩</option>
-                            <option value="">50개씩</option>
-                            <option value="">100개씩</option>
-                            <option value="">전체보기</option>
-                        </select>
-                        <form action="" class="d_flex _gap4 ml_auto">
-                            <input type="text" class="f_input ty_small w_160">
-                            <button type="submit" class="f_btn ty_small _key w_60">
-                                검색 <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
+                    <div class="srch_wrap">
+                        <form class="srch_form">
+                            <input type="text" class="f_input ty_mid ty_round" placeholder="검색어를 입력해 주세요.">
+                            <button type="submit" class="btn_submit" aria-label="검색하기"></button>
                         </form>
                     </div>
-
-                    <div class="h_tbl_wrap auto_h">
-                        <table class="h_tbl tl_fixed ty_big">
-                            <caption>자료실 리스트</caption>
-                            <colgroup>
-                                <col style="width:70px">
-                                <col style="width:90px">
-                                <col>
-                                <col style="width:100px">
-                                <col style="width:100px">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>구분</th>
-                                    <th>제목</th>
-                                    <th>작성일</th>
-                                    <th>조회수</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr onClick="location.href='archive_view.html'">
-                                    <td>
-                                        9,999
-                                    </td>
-                                    <td>
-                                        <span class="f_tag _key w_60">서식 자료</span>
-                                    </td>
-                                    <td>
-                                        <div class="list_link">
-                                            <span class="f_tag _key_op no_shrink">NEW</span>
-                                            <span class="tit ellipsis1">자료 공지</span>
-                                            <span class="ico_file no_shrink"></span>
-                                        </div>   
-                                    </td>
-                                    <td>2023-10-23</td>
-                                    <td>12,425</td>
-                                </tr>
-                                <tr onClick="location.href='archive_view.html'">
-                                    <td>
-                                        9,998
-                                    </td>
-                                    <td>
-                                        <span class="f_tag _key w_60">공문 자료</span>
-                                    </td>
-                                    <td>
-                                        <div class="list_link">
-                                            <span class="f_tag _key_op no_shrink">NEW</span>
-                                            <span class="tit ellipsis1">Lasdfasdfasdfminus, molestiae est perspiciatis.</span>
-                                            <span class="ico_file no_shrink"></span>
-                                        </div>   
-                                    </td>
-                                    <td>2023-10-23</td>
-                                    <td>12,425</td>
-                                </tr>
-                                <tr onClick="location.href='archive_view.html'">
-                                    <td>
-                                        99
-                                    </td>
-                                    <td>
-                                        <span class="f_tag _key w_60">기술 자료</span>
-                                    </td>
-                                    <td>
-                                        <div class="list_link">
-                                            <span class="f_tag _key_op no_shrink">NEW</span>
-                                            <span class="tit ellipsis1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tenetur laborum vero placeat non voluptatem architecto? Reprehenderit veritatis cum sed ratione labore officiis consequatur, blanditiis inventore amet quo fugit, in at maiores omnis deleniti ab molestiae exercitationem facere! Obcaecati eos, repellendus dolor aspernatur neque, corporis atque cupiditate officia autem soluta numquam unde ad. Repellendus porro excepturi eaque praesentium! Sapiente inventore voluptates necessitatibus eos corrupti velit aut similique blanditiis nisi porro distinctio odit fugiat laudantium, numquam autem quidem voluptatibus quasi aliquid repellendus. Cum, soluta officia assumenda cumque quo esse ab delectus eius culpa eveniet? Voluptate tempora similique minus, molestiae est perspiciatis.</span>
-                                            <span class="ico_file no_shrink"></span>
-                                        </div>   
-                                    </td>
-                                    <td>2023-10-23</td>
-                                    <td>12,425</td>
-                                </tr>
-                                <tr onClick="location.href='archive_view.html'">
-                                    <td>
-                                        98
-                                    </td>
-                                    <td>
-                                        <span class="f_tag _key w_60">기술 자료</span>
-                                    </td>
-                                    <td>
-                                        <div class="list_link">
-                                            <span class="tit ellipsis1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tenetur laborum vero placeat non voluptatem architecto? Reprehenderit veritatis cum sed ratione labore officiis consequatur, blanditiis inventore amet quo fugit, in at maiores omnis deleniti ab molestiae exercitationem facere! Obcaecati eos, repellendus dolor aspernatur neque, corporis atque cupiditate officia autem soluta numquam unde ad. Repellendus porro excepturi eaque praesentium! Sapiente inventore voluptates necessitatibus eos corrupti velit aut similique blanditiis nisi porro distinctio odit fugiat laudantium, numquam autem quidem voluptatibus quasi aliquid repellendus. Cum, soluta officia assumenda cumque quo esse ab delectus eius culpa eveniet? Voluptate tempora similique minus, molestiae est perspiciatis.</span>
-                                            <span class="ico_file no_shrink"></span>
-                                        </div>   
-                                    </td>
-                                    <td>2023-10-23</td>
-                                    <td>12,425</td>
-                                </tr>
-                                <tr onClick="location.href='archive_view.html'">
-                                    <td>
-                                        96
-                                    </td>
-                                    <td>
-                                        <span class="f_tag _key w_60">기술 자료</span>
-                                    </td>
-                                    <td>
-                                        <div class="list_link">                                            
-                                            <span class="tit ellipsis1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tenetur laborum vero placeat non voluptatem architecto? Reprehenderit veritatis cum sed ratione labore officiis consequatur, blanditiis inventore amet quo fugit, in at maiores omnis deleniti ab molestiae exercitationem facere! Obcaecati eos, repellendus dolor aspernatur neque, corporis atque cupiditate officia autem soluta numquam unde ad. Repellendus porro excepturi eaque praesentium! Sapiente inventore voluptates necessitatibus eos corrupti velit aut similique blanditiis nisi porro distinctio odit fugiat laudantium, numquam autem quidem voluptatibus quasi aliquid repellendus. Cum, soluta officia assumenda cumque quo esse ab delectus eius culpa eveniet? Voluptate tempora similique minus, molestiae est perspiciatis.</span>
-                                            <span class="ico_file no_shrink"></span>
-                                        </div>   
-                                    </td>
-                                    <td>2023-10-23</td>
-                                    <td>12,425</td>
-                                </tr>
-                                <tr onClick="location.href='archive_view.html'">
-                                    <td>
-                                        96
-                                    </td>
-                                    <td>
-                                        <span class="f_tag _key w_60">서식 자료</span>
-                                    </td>
-                                    <td>
-                                        <div class="list_link">                                            
-                                            <span class="tit ellipsis1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum tenetur laborum vero placeat non voluptatem architecto? Reprehenderit veritatis cum sed ratione labore officiis consequatur, blanditiis inventore amet quo fugit, in at maiores omnis deleniti ab molestiae exercitationem facere! Obcaecati eos, repellendus dolor aspernatur neque, corporis atque cupiditate officia autem soluta numquam unde ad. Repellendus porro excepturi eaque praesentium! Sapiente inventore voluptates necessitatibus eos corrupti velit aut similique blanditiis nisi porro distinctio odit fugiat laudantium, numquam autem quidem voluptatibus quasi aliquid repellendus. Cum, soluta officia assumenda cumque quo esse ab delectus eius culpa eveniet? Voluptate tempora similique minus, molestiae est perspiciatis.</span>
-                                        </div>   
-                                    </td>
-                                    <td>2023-10-23</td>
-                                    <td>12,425</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="paging_wrap">
-                        <a href="" class="paging_btn paging_nav ty_first"><span class="blind">처음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_prev"><span class="blind">이전</span></a>
-                        <ul class="paging_list">
-                            <li><span class="paging_btn current">1</span></li>
-                            <li><a href="" class="paging_btn">2</a></li>
-                            <li><a href="" class="paging_btn">3</a></li>
-                            <li><a href="" class="paging_btn">4</a></li>
-                            <li><a href="" class="paging_btn">5</a></li>
-                        </ul>
-                        <a href="" class="paging_btn paging_nav ty_next"><span class="blind">다음</span></a>
-                        <a href="" class="paging_btn paging_nav ty_last"><span class="blind">마지막</span></a>
-                    </div>
-
-                    <br><br> <!--[D] 개발 시 삭제-->
-
-                    <!--[D] 공지사항 X-->
-                    <div class="no_result_box ty_bg">
-                        <i class="fa-solid fa-file-circle-xmark"></i>
-                        <p class="mt10">등록된 공지사항이 없습니다.</p>
-                    </div>
-
-                    <br><br> <!--[D] 개발 시 삭제-->
-
-                    <!--[D] 검색결과 X-->
-                    <div class="no_result_box ty_bg">
-                        <i class="fa-solid fa-file-circle-xmark"></i>
-                        <p class="mt10">검색 결과가 없습니다.</p>
-                    </div>
+                </section>
+                <section class="sec mt20">
+                    <ul class="mList">
+                        <li class="mList_item">
+                            <a href="" class="mBorad_box">
+                                <div class="mBorad_sec d_flex ai_c mb6">
+                                    <span class="f_tag ty_mid _key">서식자료</span>
+                                    <div class="ml_auto">
+                                        <ul class="fz_11 list_sepBar ty2">
+                                            <li class="list_item ty_date">2024-12-12</li>
+                                            <li class="list_item ty_view">99</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="t_hidden_a_2">
+                                    <i class="ico_new mr4"></i>미안하다 이거 보여주려고 어그로끌었다.. 나루토 사스케 싸움수준 ㄹㅇ실화냐? 진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강 전설적인 영웅이된나루토보면 진짜내가다 감격스럽고 나루토 노래부터 명장면까지 가슴울리는장면들이 뇌리에 스치면서 가슴이 웅장해진다.. 그리고 극장판 에 카카시앞에 운석날라오는 거대한 걸 사스케가 갑자기 순식간에 나타나서 부숴버리곤 개간지나게 나루토가 없다면 마을을 지킬 자는 나밖에 없다 라며 바람처럼 사라진장면은 진짜 나루토처음부
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mList_item">
+                            <a href="" class="mBorad_box">
+                                <div class="mBorad_sec d_flex ai_c mb6">
+                                    <span class="f_tag ty_mid _key">공문자료</span>
+                                    <div class="ml_auto">
+                                        <ul class="fz_11 list_sepBar ty2">
+                                            <li class="list_item ty_date">2024-12-12</li>
+                                            <li class="list_item ty_view">99</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="t_hidden_a_2">
+                                    <i class="ico_new mr4"></i>미안하다 이거 보여주려고 어그로끌었
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mList_item">
+                            <a href="" class="mBorad_box">
+                                <div class="mBorad_sec d_flex ai_c mb6">
+                                    <span class="f_tag ty_mid _key">기술자료</span>
+                                    <div class="ml_auto">
+                                        <ul class="fz_11 list_sepBar ty2">
+                                            <li class="list_item ty_date">2024-12-12</li>
+                                            <li class="list_item ty_view">99</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="t_hidden_a_2">
+                                    미안하다 이거 보여주려고 어그로끌었다.
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mList_item">
+                            <a href="" class="mBorad_box">
+                                <div class="mBorad_sec d_flex ai_c mb6">
+                                    <span class="f_tag ty_mid _key">공문자료</span>
+                                    <div class="ml_auto">
+                                        <ul class="fz_11 list_sepBar ty2">
+                                            <li class="list_item ty_date">2024-12-12</li>
+                                            <li class="list_item ty_view">99</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="t_hidden_a_2">
+                                   미안하다 이거 보여주려고 어그로끌었다.. 나루토 사스케 싸움수준 ㄹㅇ실화냐? 진짜 세계관최강자들의 싸움이다.. 그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강 전설적인 영웅이된나루토보면 진짜내가다 감격스럽고 나루토 노래부터 명장면까지 가슴울리는장면들이 뇌리에 스치면서 가슴이 웅장해진다.. 그리고 극장판 에 카카시앞에 운석날라오는 거대한 걸 사스케가 갑자기 순식간에 나타나서 부숴버리곤 개간지나게 나루토가 없다면 마을을 지킬 자는 나밖에 없다 라며 바람처럼 사라진장면은 진짜 나루토처음부
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </section>
             </div>
+            
         </main>
         <!--//container-->
-        <!--footer-->
-        <footer class="footer">
-            <!-- <div class="footer_top">
-                <div class="inner">
-                    <ul class="footer_top_nav ">
-                        <li><a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a></li>
-                    </ul>
-                </div>
-            </div> -->
-            <div class="footer_logo">
-                <img src="../assets/images/common/logo_footer.svg" alt="KIC 코리아인스트루먼트(주)">
-            </div>
-            <div class="footer_info">
-                <ul class="footer_info_list">
-                    <li>코리아인스트루먼트(주)</li>
-                    <li><span class="bar"></span>사업자등록번호 : 101-81-45861</li>
-                    <li><span class="bar"></span>대표이사 : 정재호</li>
-                </ul>
-                <p class="copy">Copyright@KIC, Korea Instrument All Rights Reserved.</p>
-                <div class="contact">
-                    <b><i class="fa-solid fa-phone"></i> CONTACT US</b> 
-                    <span class="bar"></span>
-                    <span>1600 - 4245</span>
-                </div>
-            </div>
-            <div class="footer_right">
-                <div class="footer_right_btns">
-                    <a href="https://www.kic21.co.kr/about/service" target="_blank">이용약관</a>
-                    <span class="bar"></span>
-                    <a href="https://www.kic21.co.kr/about/person" target="_blank">개인정보 보호정책</a>
-                </div>
-                <div class="footer_right_branch">
-                    <button class="btn_trigger">코리아인스트루먼트(주) 지점안내</button>
-                    <ul class="branch_list">
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=0" target="_blank">코리아인스트루먼트(주) 서울본사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=1" target="_blank">코리아인스트루먼트(주) 부산지사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=2" target="_blank">코리아인스트루먼트(주) 대전지사</a></li>
-                        <li><a href="https://www.kic21.co.kr/about/map?idx=3" target="_blank">코리아인스트루먼트(주) 가평지안</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <!--//footer-->
+        <!-- botNav -->
+        <ul class="botNav">
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico1"></span>
+                    <span class="tit">교정현황</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico2"></span>
+                    <span class="tit">정산관리</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico_home"></span>
+                    <span class="tit">홈</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <a href="" class="botNav_btn">
+                    <span class="ico_box ico3"></span>
+                    <span class="tit">마이페이지</span>
+                </a>
+            </li>
+            <li class="botNav_item">
+                <button type="button" class="botNav_btn btn_nav_toggle">
+                    <span class="ico_box ico4"></span>
+                    <span class="tit">메뉴</span>
+                </button>
+            </li>
+        </ul>
+        <!--// botNav -->
     </div>
-    
 </body>
 </html>
+
+
