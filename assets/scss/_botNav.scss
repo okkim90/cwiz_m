@@ -1,7 +1,7 @@
 .botNav {
     position: sticky;
     z-index: 999;
-    
+    flex-shrink: 0;
     bottom: 0;
     //margin-left: -1px;
     width: 100%;
