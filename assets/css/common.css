@@ -8731,9 +8731,9 @@ tr:last-child .status_box_date {
 
 .layer_popup {
   position: fixed;
-  left: 0;
   top: 0;
   width: 100%;
+  max-width: 600px;
   height: 100%;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.6);
@@ -8755,18 +8755,12 @@ tr:last-child .status_box_date {
   position: relative;
   background-color: #fff;
   border-radius: 10px;
-  width: 1200px;
+  width: 100%;
   padding: 20px;
   padding-bottom: 30px;
   box-sizing: border-box;
   max-height: 100%;
   overflow-y: auto;
-}
-.layer_popup_cont.ty_mid {
-  width: 600px;
-}
-.layer_popup_cont.ty_small {
-  width: 350px;
 }
 .layer_popup_cont.ty_company {
   width: 500px;
