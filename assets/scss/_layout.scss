@@ -3187,3 +3187,22 @@
         }
     }
 }
+
+.bot_btns {
+    position: sticky;
+    bottom: 100px;
+    width: 100%;
+    max-width: 600px;
+    //height: 0;
+    .bot_btn {
+        position: absolute;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 1px solid $c_line;
+        bottom: 0;
+        background-color: rgba(#fff,.8);
+    }
+}
