@@ -707,17 +707,20 @@
             </div>
         </main>
         <!--//container-->
-        <div class="cost_list_bot sticky_bot">
-            <div class="d_flex ai_c mb10">
-                <p class="f_tip ">
-                    <i class="fa-solid fa-circle-info f_tip_ico fc_key" aria-hidden="true"></i>
-                    <span>출고 요청은 결제 완료건만 가능합니다.</span>
-                </p>
-                <button type="button" class="f_btn ty_xsmall ml_auto pd10 _key_ol" onclick="toast('shipmenInfo')">유의사항</button>
-            </div>
-            <div class="btn_set ai_c">
-                <p class="mr10 fz_small fc_midGrey">다음 화면에서 <br> 상세 내용 작성</p>
-                <button type="submit" class="f_btn ty_mid flex1 _key">출고 요청 계속</button>
+        <div class="sticky_bot">
+            <button type="button" aria-label="상단으로 이동" onclick="window.scrollTo(0,0)" class="btn_gotop"></button>
+            <div class="sticky_bot_inner">
+                <div class="d_flex ai_c mb10">
+                    <p class="f_tip ">
+                        <i class="fa-solid fa-circle-info f_tip_ico fc_key" aria-hidden="true"></i>
+                        <span>출고 요청은 결제 완료건만 가능합니다.</span>
+                    </p>
+                    <button type="button" class="f_btn ty_xsmall ml_auto pd10 _key_ol" onclick="toast('shipmenInfo')">유의사항</button>
+                </div>
+                <div class="btn_set ai_c">
+                    <p class="mr10 fz_small fc_midGrey">다음 화면에서 <br> 상세 내용 작성</p>
+                    <button type="submit" class="f_btn ty_mid flex1 _key">출고 요청 계속</button>
+                </div>
             </div>
         </div>
         <div class="toast_wrap" data-toast="shipmenInfo">
