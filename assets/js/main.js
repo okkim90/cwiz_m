@@ -513,20 +513,20 @@ el_tr_chk.forEach((e)=>{
     }
 });
 
-function checkAll(target){
-    let table = target.closest('table');
-    if(target.checked){
-        table.querySelectorAll('.tr_chk').forEach((e)=>{
-            e.checked = true;
-            e.closest('tr').classList.add('on');
-        });
-    }else{
-        table.querySelectorAll('.tr_chk').forEach((e)=>{
-            e.checked = false;
-            e.closest('tr').classList.remove('on');
-        });
-    }
-}
+// function checkAll(target){
+//     let table = target.closest('table');
+//     if(target.checked){
+//         table.querySelectorAll('.tr_chk').forEach((e)=>{
+//             e.checked = true;
+//             e.closest('tr').classList.add('on');
+//         });
+//     }else{
+//         table.querySelectorAll('.tr_chk').forEach((e)=>{
+//             e.checked = false;
+//             e.closest('tr').classList.remove('on');
+//         });
+//     }
+// }
 
 
 
