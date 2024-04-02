@@ -5,8 +5,11 @@
 @import "./reset";
 
 /* layout*/
+@import "./header";
+@import "./breadscrumb";
+@import "./sidenav";
 @import "./layout";
-@import "./botNav";
+@import "./sticky_bot";
 @import "./layer_popup";
 
 
@@ -30,5 +33,7 @@
 @import "./join";
 @import "./board_view";
 @import "./terms";
+
+
 /* 에니매 */
-@import "./aniBox";
+//@import "./aniBox";
