@@ -322,352 +322,353 @@
                     </div>
                 </section>
                 <section class="sec mt20">
-
-                    <div class="d_flex ai_b mb10">
-                        <label class="btn_chk">
-                            <input type="checkbox" class="check_hidden "> 
-                            <span class="btn_chk_box"></span>
-                            전체 선택
-                        </label>
+                    <div class="mList_wrap">
+                        <div class="d_flex ai_b mb10">
+                            <label class="btn_chk">
+                                <input type="checkbox" class="check_hidden mList_chk_all" onchange="mListChkAll(this); countChk();"> 
+                                <span class="btn_chk_box"></span>
+                                전체 선택
+                            </label>
+                        </div>
+                        <ul class="mList">
+                            <li class="mList_item">
+                                <label class="deal_box mList_chk_wrap">
+                                    <input type="checkbox" class="mList_chk_i chk_hidden chk_bot_toggle">
+                                    <div class="deal_box_inner mList_chk_box">
+                                        <div class="deal_box_sec">
+                                            <span class="mList_chk mr6"></span>
+                                            <span class="num">2024000212 (999대)</span>
+                                            <ul class="list_sepBar ml_auto">
+                                                <li class="list_item">2024-12-12</li>
+                                                <li class="list_item">택배</li>
+                                            </ul>
+                                        </div>
+                                        <div class="deal_box_sec">
+                                            <div class="fwB">성적서 업체 :  코리아인스트루먼트(주)</div>
+                                        </div>
+                                        <div class="cal_detail_wrap mt10 cal_data" data-normal="373" data-abnormal="93"> 
+                                            <!--[D] .cal_detail_wrap 'on' class 로 버튼,리스트 활성화 -->
+                                            <!--[D] data 확인 -->
+                                            <div class="taC">
+                                                <button type="button" class="btn_cal_detail" onclick="toggleDetail(this)">상세 현황</button>
+                                            </div>
+                                            <div class="cal_detail">
+                                                <div class="d_flex cal_progress_wrap _gapX10 _gapY6 ai_c">
+                                                    <strong class="shrink0">상세현황</strong>
+                                                    <div class="cal_progress flex1">
+                                                        <span class="cal_progress_bar cal_progress_normal"></span>
+                                                        <span class="cal_progress_bar cal_progress_abnormal"></span>
+                                                    </div>
+                                                    <div class="detail_output w100 d_flex jc_c _gapX10">
+                                                        <div>정상 : <b class="output_normal fc_blue"></b></div>
+                                                        <span>/</span>
+                                                        <div>불량 외 : <b class="output_abnormal fc_red"></b></div>
+                                                    </div>
+                                                </div>
+                                                <ul class="cal_detail_list mt15">
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _key_ol w_80">교정진행중</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _red_ol w_80">불량</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _red_ol w_80">교정취소</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="mList_item">
+                                <label class="deal_box mList_chk_wrap">
+                                    <input type="checkbox" class="mList_chk_i chk_hidden chk_bot_toggle">
+                                    <div class="deal_box_inner mList_chk_box">
+                                        <div class="deal_box_sec">
+                                            <span class="mList_chk mr6"></span>
+                                            <span class="num">2024000212 (999대)</span>
+                                            <ul class="list_sepBar ml_auto">
+                                                <li class="list_item">2024-12-12</li>
+                                                <li class="list_item">택배</li>
+                                            </ul>
+                                        </div>
+                                        <div class="deal_box_sec">
+                                            <div class="fwB">성적서 업체 :  코리아인스트루먼트(주)</div>
+                                        </div>
+                                        <div class="cal_detail_wrap mt10 cal_data" data-normal="373" data-abnormal="93"> 
+                                            <!--[D] .cal_detail_wrap 'on' class 로 버튼,리스트 활성화 -->
+                                            <!--[D] data 확인 -->
+                                            <div class="taC">
+                                                <button type="button" class="btn_cal_detail" onclick="toggleDetail(this)">상세 현황</button>
+                                            </div>
+                                            <div class="cal_detail">
+                                                <div class="d_flex cal_progress_wrap _gapX10 _gapY6 ai_c">
+                                                    <strong class="shrink0">상세현황</strong>
+                                                    <div class="cal_progress flex1">
+                                                        <span class="cal_progress_bar cal_progress_normal"></span>
+                                                        <span class="cal_progress_bar cal_progress_abnormal"></span>
+                                                    </div>
+                                                    <div class="detail_output w100 d_flex jc_c _gapX10">
+                                                        <div>정상 : <b class="output_normal fc_blue"></b></div>
+                                                        <span>/</span>
+                                                        <div>불량 외 : <b class="output_abnormal fc_red"></b></div>
+                                                    </div>
+                                                </div>
+                                                <ul class="cal_detail_list mt15">
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _key_ol w_80">교정진행중</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _red_ol w_80">불량</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _red_ol w_80">교정취소</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="mList_item">
+                                <label class="deal_box mList_chk_wrap">
+                                    <input type="checkbox" class="mList_chk_i chk_hidden chk_bot_toggle">
+                                    <div class="deal_box_inner mList_chk_box">
+                                        <div class="deal_box_sec">
+                                            <span class="mList_chk mr6"></span>
+                                            <span class="num">2024000212 (999대)</span>
+                                            <ul class="list_sepBar ml_auto">
+                                                <li class="list_item">2024-12-12</li>
+                                                <li class="list_item">택배</li>
+                                            </ul>
+                                        </div>
+                                        <div class="deal_box_sec">
+                                            <div class="fwB">성적서 업체 :  코리아인스트루먼트(주)</div>
+                                        </div>
+                                        <div class="cal_detail_wrap mt10 cal_data" data-normal="373" data-abnormal="93"> 
+                                            <!--[D] .cal_detail_wrap 'on' class 로 버튼,리스트 활성화 -->
+                                            <!--[D] data 확인 -->
+                                            <div class="taC">
+                                                <button type="button" class="btn_cal_detail" onclick="toggleDetail(this)">상세 현황</button>
+                                            </div>
+                                            <div class="cal_detail">
+                                                <div class="d_flex cal_progress_wrap _gapX10 _gapY6 ai_c">
+                                                    <strong class="shrink0">상세현황</strong>
+                                                    <div class="cal_progress flex1">
+                                                        <span class="cal_progress_bar cal_progress_normal"></span>
+                                                        <span class="cal_progress_bar cal_progress_abnormal"></span>
+                                                    </div>
+                                                    <div class="detail_output w100 d_flex jc_c _gapX10">
+                                                        <div>정상 : <b class="output_normal fc_blue"></b></div>
+                                                        <span>/</span>
+                                                        <div>불량 외 : <b class="output_abnormal fc_red"></b></div>
+                                                    </div>
+                                                </div>
+                                                <ul class="cal_detail_list mt15">
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _key_ol w_80">교정진행중</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _red_ol w_80">불량</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _red_ol w_80">교정취소</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="mList_item">
+                                <label class="deal_box mList_chk_wrap">
+                                    <input type="checkbox" class="mList_chk_i chk_hidden chk_bot_toggle">
+                                    <div class="deal_box_inner mList_chk_box">
+                                        <div class="deal_box_sec">
+                                            <span class="mList_chk mr6"></span>
+                                            <span class="num">2024000212 (999대)</span>
+                                            <ul class="list_sepBar ml_auto">
+                                                <li class="list_item">2024-12-12</li>
+                                                <li class="list_item">택배</li>
+                                            </ul>
+                                        </div>
+                                        <div class="deal_box_sec">
+                                            <div class="fwB">성적서 업체 :  코리아인스트루먼트(주)</div>
+                                        </div>
+                                        <div class="cal_detail_wrap mt10 cal_data" data-normal="373" data-abnormal="93"> 
+                                            <!--[D] .cal_detail_wrap 'on' class 로 버튼,리스트 활성화 -->
+                                            <!--[D] data 확인 -->
+                                            <div class="taC">
+                                                <button type="button" class="btn_cal_detail" onclick="toggleDetail(this)">상세 현황</button>
+                                            </div>
+                                            <div class="cal_detail">
+                                                <div class="d_flex cal_progress_wrap _gapX10 _gapY6 ai_c">
+                                                    <strong class="shrink0">상세현황</strong>
+                                                    <div class="cal_progress flex1">
+                                                        <span class="cal_progress_bar cal_progress_normal"></span>
+                                                        <span class="cal_progress_bar cal_progress_abnormal"></span>
+                                                    </div>
+                                                    <div class="detail_output w100 d_flex jc_c _gapX10">
+                                                        <div>정상 : <b class="output_normal fc_blue"></b></div>
+                                                        <span>/</span>
+                                                        <div>불량 외 : <b class="output_abnormal fc_red"></b></div>
+                                                    </div>
+                                                </div>
+                                                <ul class="cal_detail_list mt15">
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _key_ol w_80">교정진행중</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _red_ol w_80">불량</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list_item">
+                                                        <a href="" class="list_link">
+                                                            <span class="num mr_auto">202400123-13</span>
+                                                            <span class="f_tag ty_mid _red_ol w_80">교정취소</span> 
+                                                            <span class="f_btn ty_arrow"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="mList">
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr6"></span>
-                                        <span class="num">2024000212 (999대)</span>
-                                        <ul class="list_sepBar ml_auto">
-                                            <li class="list_item">2024-12-12</li>
-                                            <li class="list_item">택배</li>
-                                        </ul>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <div class="fwB">성적서 업체 :  코리아인스트루먼트(주)</div>
-                                    </div>
-                                    <div class="cal_detail_wrap mt10 cal_data" data-normal="373" data-abnormal="93"> 
-                                        <!--[D] .cal_detail_wrap 'on' class 로 버튼,리스트 활성화 -->
-                                        <!--[D] data 확인 -->
-                                        <div class="taC">
-                                            <button type="button" class="btn_cal_detail" onclick="toggleDetail(this)">상세 현황</button>
-                                        </div>
-                                        <div class="cal_detail">
-                                            <div class="d_flex cal_progress_wrap _gapX10 _gapY6 ai_c">
-                                                <strong class="shrink0">상세현황</strong>
-                                                <div class="cal_progress flex1">
-                                                    <span class="cal_progress_bar cal_progress_normal"></span>
-                                                    <span class="cal_progress_bar cal_progress_abnormal"></span>
-                                                </div>
-                                                <div class="detail_output w100 d_flex jc_c _gapX10">
-                                                    <div>정상 : <b class="output_normal fc_blue"></b></div>
-                                                    <span>/</span>
-                                                    <div>불량 외 : <b class="output_abnormal fc_red"></b></div>
-                                                </div>
-                                            </div>
-                                            <ul class="cal_detail_list mt15">
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _key_ol w_80">교정진행중</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _red_ol w_80">불량</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _red_ol w_80">교정취소</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr6"></span>
-                                        <span class="num">2024000212 (999대)</span>
-                                        <ul class="list_sepBar ml_auto">
-                                            <li class="list_item">2024-12-12</li>
-                                            <li class="list_item">택배</li>
-                                        </ul>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <div class="fwB">성적서 업체 :  코리아인스트루먼트(주)</div>
-                                    </div>
-                                    <div class="cal_detail_wrap mt10 cal_data" data-normal="373" data-abnormal="93"> 
-                                        <!--[D] .cal_detail_wrap 'on' class 로 버튼,리스트 활성화 -->
-                                        <!--[D] data 확인 -->
-                                        <div class="taC">
-                                            <button type="button" class="btn_cal_detail" onclick="toggleDetail(this)">상세 현황</button>
-                                        </div>
-                                        <div class="cal_detail">
-                                            <div class="d_flex cal_progress_wrap _gapX10 _gapY6 ai_c">
-                                                <strong class="shrink0">상세현황</strong>
-                                                <div class="cal_progress flex1">
-                                                    <span class="cal_progress_bar cal_progress_normal"></span>
-                                                    <span class="cal_progress_bar cal_progress_abnormal"></span>
-                                                </div>
-                                                <div class="detail_output w100 d_flex jc_c _gapX10">
-                                                    <div>정상 : <b class="output_normal fc_blue"></b></div>
-                                                    <span>/</span>
-                                                    <div>불량 외 : <b class="output_abnormal fc_red"></b></div>
-                                                </div>
-                                            </div>
-                                            <ul class="cal_detail_list mt15">
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _key_ol w_80">교정진행중</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _red_ol w_80">불량</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _red_ol w_80">교정취소</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr6"></span>
-                                        <span class="num">2024000212 (999대)</span>
-                                        <ul class="list_sepBar ml_auto">
-                                            <li class="list_item">2024-12-12</li>
-                                            <li class="list_item">택배</li>
-                                        </ul>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <div class="fwB">성적서 업체 :  코리아인스트루먼트(주)</div>
-                                    </div>
-                                    <div class="cal_detail_wrap mt10 cal_data" data-normal="373" data-abnormal="93"> 
-                                        <!--[D] .cal_detail_wrap 'on' class 로 버튼,리스트 활성화 -->
-                                        <!--[D] data 확인 -->
-                                        <div class="taC">
-                                            <button type="button" class="btn_cal_detail" onclick="toggleDetail(this)">상세 현황</button>
-                                        </div>
-                                        <div class="cal_detail">
-                                            <div class="d_flex cal_progress_wrap _gapX10 _gapY6 ai_c">
-                                                <strong class="shrink0">상세현황</strong>
-                                                <div class="cal_progress flex1">
-                                                    <span class="cal_progress_bar cal_progress_normal"></span>
-                                                    <span class="cal_progress_bar cal_progress_abnormal"></span>
-                                                </div>
-                                                <div class="detail_output w100 d_flex jc_c _gapX10">
-                                                    <div>정상 : <b class="output_normal fc_blue"></b></div>
-                                                    <span>/</span>
-                                                    <div>불량 외 : <b class="output_abnormal fc_red"></b></div>
-                                                </div>
-                                            </div>
-                                            <ul class="cal_detail_list mt15">
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _key_ol w_80">교정진행중</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _red_ol w_80">불량</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _red_ol w_80">교정취소</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr6"></span>
-                                        <span class="num">2024000212 (999대)</span>
-                                        <ul class="list_sepBar ml_auto">
-                                            <li class="list_item">2024-12-12</li>
-                                            <li class="list_item">택배</li>
-                                        </ul>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <div class="fwB">성적서 업체 :  코리아인스트루먼트(주)</div>
-                                    </div>
-                                    <div class="cal_detail_wrap mt10 cal_data" data-normal="373" data-abnormal="93"> 
-                                        <!--[D] .cal_detail_wrap 'on' class 로 버튼,리스트 활성화 -->
-                                        <!--[D] data 확인 -->
-                                        <div class="taC">
-                                            <button type="button" class="btn_cal_detail" onclick="toggleDetail(this)">상세 현황</button>
-                                        </div>
-                                        <div class="cal_detail">
-                                            <div class="d_flex cal_progress_wrap _gapX10 _gapY6 ai_c">
-                                                <strong class="shrink0">상세현황</strong>
-                                                <div class="cal_progress flex1">
-                                                    <span class="cal_progress_bar cal_progress_normal"></span>
-                                                    <span class="cal_progress_bar cal_progress_abnormal"></span>
-                                                </div>
-                                                <div class="detail_output w100 d_flex jc_c _gapX10">
-                                                    <div>정상 : <b class="output_normal fc_blue"></b></div>
-                                                    <span>/</span>
-                                                    <div>불량 외 : <b class="output_abnormal fc_red"></b></div>
-                                                </div>
-                                            </div>
-                                            <ul class="cal_detail_list mt15">
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _key_ol w_80">교정진행중</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _blue_ol w_80">정상</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _red_ol w_80">불량</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="list_item">
-                                                    <a href="" class="list_link">
-                                                        <span class="num mr_auto">202400123-13</span>
-                                                        <span class="f_tag ty_mid _red_ol w_80">교정취소</span> 
-                                                        <span class="f_btn ty_arrow"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                    </ul>
                     <script>
                         const cal_data = document.querySelectorAll('.cal_data');
                         cal_data.forEach(e=>{
@@ -709,13 +710,108 @@
         <!--//container-->
         <div class="sticky_bot">
             <button type="button" aria-label="상단으로 이동" onclick="window.scrollTo(0,0)" class="btn_gotop"></button>
-            <div class="sticky_bot_inner">
-                <div class="btn_set ai_c">
-                    <p class="mr10 fz_small fc_midGrey">다음 화면에서 <br> 선택 항목 수정 / 취소</p>
-                    <button type="submit" class="f_btn ty_mid flex1 _key">수정 / 취소 계속</button>
+            <!-- [D] 항목 선택 전 : nav 노출 -->
+            <div class="toggle_botCont" data-idx="1">
+                <ul class="botNav">
+                    <li class="botNav_item">
+                        <a href="" class="botNav_btn">
+                            <span class="ico_box ico1"></span>
+                            <span class="tit">교정현황</span>
+                        </a>
+                    </li>
+                    <li class="botNav_item">
+                        <a href="" class="botNav_btn">
+                            <span class="ico_box ico2"></span>
+                            <span class="tit">정산관리</span>
+                        </a>
+                    </li>
+                    <li class="botNav_item">
+                        <a href="" class="botNav_btn">
+                            <span class="ico_box ico_home"></span>
+                            <span class="tit">홈</span>
+                        </a>
+                    </li>
+                    <li class="botNav_item">
+                        <a href="" class="botNav_btn">
+                            <span class="ico_box ico3"></span>
+                            <span class="tit">마이페이지</span>
+                        </a>
+                    </li>
+                    <li class="botNav_item">
+                        <button type="button" class="botNav_btn btn_nav_toggle">
+                            <span class="ico_box ico4"></span>
+                            <span class="tit">메뉴</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- [D] 항목 선택 후 : 버튼 세트 노출 -->
+            <div class="toggle_botCont" data-idx="2">
+                <div class="sticky_bot_inner">
+                    <div class="btn_set ai_c">
+                        <p class="mr10 fz_small fc_midGrey">다음 화면에서 <br> 선택 항목 수정 / 취소</p>
+                        <button type="submit" class="f_btn ty_mid flex1 _key">수정 / 취소 계속</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            
+            // [D] UI 확인용 스크립트, 다 지워도됩니다.
+            function mListChkAll(target){
+                let mList_wrap = target.closest('.mList_wrap');
+                if(target.checked){
+                    mList_wrap.querySelectorAll('.mList_chk_i').forEach((e)=>{
+                        e.checked = true;
+                    });
+                }else{
+                    mList_wrap.querySelectorAll('.mList_chk_i').forEach((e)=>{
+                        e.checked = false;
+                    });
+                } 
+            }
+            const mList_wrap = document.querySelectorAll('.mList_wrap');
+            mList_wrap.forEach(e=>{
+                const mList_chk_i = e.querySelectorAll('.mList_chk_i');
+                const mList_chk_all = e.querySelector('.mList_chk_all');
+                mList_chk_i.forEach(()=>{
+                    this.addEventListener('change',()=>{
+                        const mList_chked_i = e.querySelectorAll('.mList_chk_i:checked');
+                        if(mList_chk_i.length == mList_chked_i.length){
+                            mList_chk_all.checked = true;
+                        }else{
+                            mList_chk_all.checked = false;
+                        }
+                    })
+                });
+            });
+            const chk_bot_toggle = document.querySelectorAll('.chk_bot_toggle');
+            chk_bot_toggle.forEach(e=>{
+                e.addEventListener('change',()=>{
+                    countChk()
+                });
+            });
+            countChk(); 
+            function countChk(){
+                let chked_bot_toggle = document.querySelectorAll('.chk_bot_toggle:checked');
+                if(chked_bot_toggle.length > 0){
+                    toggle_botCont(2)
+                }else{
+                    toggle_botCont(1)
+                }
+            }
+            function toggle_botCont(idx){
+                const toggle_botCont = document.querySelectorAll('.toggle_botCont');
+                toggle_botCont.forEach((e)=>{
+                    if(e.dataset.idx == idx){
+                        e.style.display = 'block';
+                    }else{
+                        e.style.display = 'none';
+                    }
+                });
+            }
+        </script>
     </div>
 </body>
 </html>

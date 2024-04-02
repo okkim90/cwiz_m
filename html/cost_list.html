@@ -318,120 +318,215 @@
                     </div>
                 </section>
                 <section class="sec mt20">
-                    <div class="d_flex ai_b mb10">
-                        <label class="btn_chk">
-                            <input type="checkbox" class="check_hidden "> 
-                            <span class="btn_chk_box"></span>
-                            전체 선택
-                        </label>
-                        <span class="fz_mid ml_auto">결제대기 : <b class="fc_key">999,999,000</b> 원</span>
+                    <div class="mList_wrap">
+                        <div class="d_flex ai_b mb10">
+                            <label class="btn_chk">
+                                <input type="checkbox" class="check_hidden mList_chk_all" onchange="mListChkAll(this); countChk();"> 
+                                <span class="btn_chk_box"></span>
+                                전체 선택
+                            </label>
+                            <span class="fz_mid ml_auto">결제대기 : <b class="fc_key">999,999,000</b> 원</span>
+                        </div>
+                        
+                        <ul class="mList">
+                            <li class="mList_item">
+                                <label class="deal_box mList_chk_wrap">
+                                    <input type="checkbox" class="mList_chk_i chk_hidden chk_bot_toggle">
+                                    <div class="deal_box_inner mList_chk_box">
+                                        <div class="deal_box_sec">
+                                            <span class="mList_chk mr10"></span>
+                                            <span class="f_tag ty_mid _key_ol">결제대기</span>
+                                            <div class="btns d_flex _gapX4  ml_auto">
+                                                <a href="" class="f_btn ty_small _blue pd10">거래명세서</a>
+                                                <a href="" class="f_btn ty_small _red pd10">세금계산서</a>
+                                            </div>
+                                        </div>
+                                        <div class="deal_box_sec">
+                                            <dl class="deal_box_info">
+                                                <dt class="fz_mid fwB">총 금액</dt>
+                                                <dd class="fz_mid fwB">185,900,000 원</dd>
+                                            </dl>
+                                            <dl class="deal_box_info">
+                                                <dt>접수번호</dt>
+                                                <dd>24000649 외 4</dd>
+                                                <dt>발행번호</dt>
+                                                <dd>MC2024-0202</dd>
+                                                <dt>교정 기관</dt>
+                                                <dd>코리아인스트루먼트(주) 서울본사</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="mList_item">
+                                <label class="deal_box mList_chk_wrap">
+                                    <input type="checkbox" class="mList_chk_i chk_hidden chk_bot_toggle">
+                                    <div class="deal_box_inner mList_chk_box">
+                                        <div class="deal_box_sec">
+                                            <span class="mList_chk mr10"></span>
+                                            <span class="f_tag ty_mid _key_ol">결제대기</span>
+                                            <div class="btns d_flex _gapX4  ml_auto">
+                                                <a href="" class="f_btn ty_small _blue pd10">거래명세서</a>
+                                                <a href="" class="f_btn ty_small _red pd10">세금계산서</a>
+                                            </div>
+                                        </div>
+                                        <div class="deal_box_sec">
+                                            <dl class="deal_box_info">
+                                                <dt class="fz_mid fwB">총 금액</dt>
+                                                <dd class="fz_mid fwB">185,900,000 원</dd>
+                                            </dl>
+                                            <dl class="deal_box_info">
+                                                <dt>접수번호</dt>
+                                                <dd>24000649 외 4</dd>
+                                                <dt>발행번호</dt>
+                                                <dd>MC2024-0202</dd>
+                                                <dt>교정 기관</dt>
+                                                <dd>코리아인스트루먼트(주) 서울본사</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="mList_item">
+                                <label class="deal_box mList_chk_wrap">
+                                    <input type="checkbox" class="mList_chk_i chk_hidden chk_bot_toggle">
+                                    <div class="deal_box_inner mList_chk_box">
+                                        <div class="deal_box_sec">
+                                            <span class="mList_chk mr10"></span>
+                                            <span class="f_tag ty_mid _key_ol">결제대기</span>
+                                            <div class="btns d_flex _gapX4  ml_auto">
+                                                <a href="" class="f_btn ty_small _blue pd10">거래명세서</a>
+                                                <a href="" class="f_btn ty_small _red pd10">세금계산서</a>
+                                            </div>
+                                        </div>
+                                        <div class="deal_box_sec">
+                                            <dl class="deal_box_info">
+                                                <dt class="fz_mid fwB">총 금액</dt>
+                                                <dd class="fz_mid fwB">185,900,000 원</dd>
+                                            </dl>
+                                            <dl class="deal_box_info">
+                                                <dt>접수번호</dt>
+                                                <dd>24000649 외 4</dd>
+                                                <dt>발행번호</dt>
+                                                <dd>MC2024-0202</dd>
+                                                <dt>교정 기관</dt>
+                                                <dd>코리아인스트루먼트(주) 서울본사</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
                     </div>
                     
-                    <ul class="mList">
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr10"></span>
-                                        <span class="f_tag ty_mid _key_ol">결제대기</span>
-                                        <div class="btns d_flex _gapX4  ml_auto">
-                                            <a href="" class="f_btn ty_small _blue pd10">거래명세서</a>
-                                            <a href="" class="f_btn ty_small _red pd10">세금계산서</a>
-                                        </div>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <dl class="deal_box_info">
-                                            <dt class="fz_mid fwB">총 금액</dt>
-                                            <dd class="fz_mid fwB">185,900,000 원</dd>
-                                        </dl>
-                                        <dl class="deal_box_info">
-                                            <dt>접수번호</dt>
-                                            <dd>24000649 외 4</dd>
-                                            <dt>발행번호</dt>
-                                            <dd>MC2024-0202</dd>
-                                            <dt>교정 기관</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr10"></span>
-                                        <span class="f_tag ty_mid _key_ol">결제대기</span>
-                                        <div class="btns d_flex _gapX4  ml_auto">
-                                            <a href="" class="f_btn ty_small _blue pd10">거래명세서</a>
-                                            <a href="" class="f_btn ty_small _red pd10">세금계산서</a>
-                                        </div>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <dl class="deal_box_info">
-                                            <dt class="fz_mid fwB">총 금액</dt>
-                                            <dd class="fz_mid fwB">185,900,000 원</dd>
-                                        </dl>
-                                        <dl class="deal_box_info">
-                                            <dt>접수번호</dt>
-                                            <dd>24000649 외 4</dd>
-                                            <dt>발행번호</dt>
-                                            <dd>MC2024-0202</dd>
-                                            <dt>교정 기관</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                        <li class="mList_item">
-                            <label class="deal_box mList_chk_wrap">
-                                <input type="checkbox" class="chk_hidden">
-                                <div class="deal_box_inner mList_chk_box">
-                                    <div class="deal_box_sec">
-                                        <span class="mList_chk mr10"></span>
-                                        <span class="f_tag ty_mid _key_ol">결제대기</span>
-                                        <div class="btns d_flex _gapX4  ml_auto">
-                                            <a href="" class="f_btn ty_small _blue pd10">거래명세서</a>
-                                            <a href="" class="f_btn ty_small _red pd10">세금계산서</a>
-                                        </div>
-                                    </div>
-                                    <div class="deal_box_sec">
-                                        <dl class="deal_box_info">
-                                            <dt class="fz_mid fwB">총 금액</dt>
-                                            <dd class="fz_mid fwB">185,900,000 원</dd>
-                                        </dl>
-                                        <dl class="deal_box_info">
-                                            <dt>접수번호</dt>
-                                            <dd>24000649 외 4</dd>
-                                            <dt>발행번호</dt>
-                                            <dd>MC2024-0202</dd>
-                                            <dt>교정 기관</dt>
-                                            <dd>코리아인스트루먼트(주) 서울본사</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </label>
-                        </li>
-                    </ul>
                 </section>
             </div>
         </main>
         <!--//container-->
-        <div class="cost_list_bot sticky_bot">
-            <div class="sticky_bot_inner">
-                <div class="d_flex fz_mid ai_b jc_sb lh1">
-                    <span>합계 금액</span>
-                    <span><b class="fc_key fz_mid">999,000,000</b> 원</span>
-                </div>
-                <div class="btn_set mt15">
-                    <button class="f_btn ty_mid _key flex1">세금계산서 신청 <i class="fa-solid fa-receipt"></i></button>
-                    <!-- <button class="f_btn ty_mid _key flex1">결제하기 <i class="fa-solid fa-credit-card"></i></button> -->
+        <div class="sticky_bot">
+            <div class="toggle_botCont" data-idx="1">
+                <ul class="botNav">
+                    <li class="botNav_item">
+                        <a href="" class="botNav_btn">
+                            <span class="ico_box ico1"></span>
+                            <span class="tit">교정현황</span>
+                        </a>
+                    </li>
+                    <li class="botNav_item">
+                        <a href="" class="botNav_btn">
+                            <span class="ico_box ico2"></span>
+                            <span class="tit">정산관리</span>
+                        </a>
+                    </li>
+                    <li class="botNav_item">
+                        <a href="" class="botNav_btn">
+                            <span class="ico_box ico_home"></span>
+                            <span class="tit">홈</span>
+                        </a>
+                    </li>
+                    <li class="botNav_item">
+                        <a href="" class="botNav_btn">
+                            <span class="ico_box ico3"></span>
+                            <span class="tit">마이페이지</span>
+                        </a>
+                    </li>
+                    <li class="botNav_item">
+                        <button type="button" class="botNav_btn btn_nav_toggle">
+                            <span class="ico_box ico4"></span>
+                            <span class="tit">메뉴</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="toggle_botCont" data-idx="2">
+                <div class="sticky_bot_inner">
+                    <div class="d_flex fz_mid ai_b jc_sb lh1">
+                        <span>합계 금액</span>
+                        <span><b class="fc_key fz_mid">999,000,000</b> 원</span>
+                    </div>
+                    <div class="btn_set mt15">
+                        <button class="f_btn ty_mid _key flex1">세금계산서 신청 <i class="fa-solid fa-receipt"></i></button>
+                        <!-- <button class="f_btn ty_mid _key flex1">결제하기 <i class="fa-solid fa-credit-card"></i></button> -->
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            
+            // [D] UI 확인용 스크립트, 다 지워도됩니다.
+            function mListChkAll(target){
+                let mList_wrap = target.closest('.mList_wrap');
+                if(target.checked){
+                    mList_wrap.querySelectorAll('.mList_chk_i').forEach((e)=>{
+                        e.checked = true;
+                    });
+                }else{
+                    mList_wrap.querySelectorAll('.mList_chk_i').forEach((e)=>{
+                        e.checked = false;
+                    });
+                } 
+            }
+            const mList_wrap = document.querySelectorAll('.mList_wrap');
+            mList_wrap.forEach(e=>{
+                const mList_chk_i = e.querySelectorAll('.mList_chk_i');
+                const mList_chk_all = e.querySelector('.mList_chk_all');
+                mList_chk_i.forEach(()=>{
+                    this.addEventListener('change',()=>{
+                        const mList_chked_i = e.querySelectorAll('.mList_chk_i:checked');
+                        if(mList_chk_i.length == mList_chked_i.length){
+                            mList_chk_all.checked = true;
+                        }else{
+                            mList_chk_all.checked = false;
+                        }
+                    })
+                });
+            });
+            const chk_bot_toggle = document.querySelectorAll('.chk_bot_toggle');
+            chk_bot_toggle.forEach(e=>{
+                e.addEventListener('change',()=>{
+                    countChk()
+                });
+            });
+            countChk(); 
+            function countChk(){
+                let chked_bot_toggle = document.querySelectorAll('.chk_bot_toggle:checked');
+                if(chked_bot_toggle.length > 0){
+                    toggle_botCont(2)
+                }else{
+                    toggle_botCont(1)
+                }
+            }
+            function toggle_botCont(idx){
+                const toggle_botCont = document.querySelectorAll('.toggle_botCont');
+                toggle_botCont.forEach((e)=>{
+                    if(e.dataset.idx == idx){
+                        e.style.display = 'block';
+                    }else{
+                        e.style.display = 'none';
+                    }
+                });
+            }
+        </script>
     </div>
     
 </body>
