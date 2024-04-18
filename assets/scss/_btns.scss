@@ -82,6 +82,23 @@
             visibility: visible;
         }
     }
+
+    &.notAllowed {
+        color: $c_lightGrey;
+        cursor: default;
+        //opacity: 0.6;
+        // &::before {
+        //     content: '?';
+        //     position: absolute;
+        //     font-size: 18px;
+        //     z-index: 10;
+        //     color: #000;
+        //     font-weight: bold;
+        //     line-height: 1;
+        //     text-align: center;
+        //     width: 100%;
+        // }
+    }
     
     
 }
@@ -563,6 +580,11 @@
     padding: 0 6px;
     transform: translateX(-50%);
     box-shadow: 0 0 10px rgba(#000, .3);
+    // &.ty_right {
+    //     right: 0;
+    //     left: auto;
+    //     transform: translateX(0);
+    // }
 }
 
 .btn_ico {

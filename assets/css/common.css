@@ -9475,6 +9475,10 @@ tr:last-child .status_box_date {
   opacity: 1;
   visibility: visible;
 }
+.btn_down.notAllowed {
+  color: #aaa;
+  cursor: default;
+}
 
 .btn_down2::after {
   content: "\f56d";
