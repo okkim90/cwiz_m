@@ -21,7 +21,7 @@
 }
 .f_btn._key_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #FF7A00;
   color: #FF7A00;
 }
@@ -72,7 +72,7 @@
 }
 .f_btn._key2_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #cd7a2c;
   color: #cd7a2c;
 }
@@ -123,7 +123,7 @@
 }
 .f_btn._key3_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #ed994a;
   color: #ed994a;
 }
@@ -174,7 +174,7 @@
 }
 .f_btn._key4_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #393939;
   color: #393939;
 }
@@ -225,7 +225,7 @@
 }
 .f_btn._key5_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #aaa;
   color: #aaa;
 }
@@ -276,7 +276,7 @@
 }
 .f_btn._key6_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #EFEFEF;
   color: #EFEFEF;
 }
@@ -327,7 +327,7 @@
 }
 .f_btn._line_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #DDDDDD;
   color: #DDDDDD;
 }
@@ -378,7 +378,7 @@
 }
 .f_btn._bg_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #F9F9F9;
   color: #F9F9F9;
 }
@@ -429,7 +429,7 @@
 }
 .f_btn._bg_grey_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #EFEFEF;
   color: #EFEFEF;
 }
@@ -480,7 +480,7 @@
 }
 .f_btn._bg_grey2_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #f4f4f4;
   color: #f4f4f4;
 }
@@ -531,7 +531,7 @@
 }
 .f_btn._blue_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #0085FF;
   color: #0085FF;
 }
@@ -582,7 +582,7 @@
 }
 .f_btn._navy_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #005AAD;
   color: #005AAD;
 }
@@ -633,7 +633,7 @@
 }
 .f_btn._sky_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #a1b9ff;
   color: #a1b9ff;
 }
@@ -684,7 +684,7 @@
 }
 .f_btn._red_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #FF5C5C;
   color: #FF5C5C;
 }
@@ -735,7 +735,7 @@
 }
 .f_btn._red2_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #e51818;
   color: #e51818;
 }
@@ -786,7 +786,7 @@
 }
 .f_btn._lblue_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #63c1fc;
   color: #63c1fc;
 }
@@ -837,7 +837,7 @@
 }
 .f_btn._orange_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #FF7A00;
   color: #FF7A00;
 }
@@ -888,7 +888,7 @@
 }
 .f_btn._green_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #3b855d;
   color: #3b855d;
 }
@@ -939,7 +939,7 @@
 }
 .f_btn._green2_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #48a171;
   color: #48a171;
 }
@@ -990,7 +990,7 @@
 }
 .f_btn._yellow_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #ffc107;
   color: #ffc107;
 }
@@ -1041,7 +1041,7 @@
 }
 .f_btn._purple_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #8856f3;
   color: #8856f3;
 }
@@ -1092,7 +1092,7 @@
 }
 .f_btn._lightGrey_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #aaa;
   color: #aaa;
 }
@@ -1143,7 +1143,7 @@
 }
 .f_btn._midGrey_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #777;
   color: #777;
 }
@@ -1194,7 +1194,7 @@
 }
 .f_btn._solidGrey_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #393939;
   color: #393939;
 }
@@ -1245,7 +1245,7 @@
 }
 .f_btn._grey_ol {
   transition: all 0.1s ease-in-out;
-  background-color: transparent;
+  background-color: #fff;
   border-color: #999;
   color: #999;
 }
@@ -8336,6 +8336,24 @@ tr:last-child .status_box_date {
   margin-top: 0.5em;
 }
 
+.ol2_item {
+  margin-left: 1.7em;
+  list-style: decimal;
+  list-style-position: outside;
+}
+.ol2_item + .ol2_item {
+  margin-top: 0.8em;
+}
+
+.list_bar_item {
+  display: flex;
+  align-items: flex-start;
+}
+.list_bar_item::before {
+  content: "-";
+  margin-right: 0.4em;
+}
+
 .toast_wrap {
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -12004,10 +12022,16 @@ tr:last-child .status_box_date {
 .terms_wrap .tbl_rnd {
   border: 1px solid #222;
 }
+.terms_wrap .tbl_rnd th {
+  background-color: #f4f4f4;
+}
 .terms_wrap .tbl_rnd th, .terms_wrap .tbl_rnd td {
   border: 1px solid #222;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.4em 0.6em;
+}
+.terms_wrap .tbl_rnd .taL {
+  text-align: left;
 }
 
 .terms_tab {
@@ -12052,11 +12076,12 @@ tr:last-child .status_box_date {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 10px;
+  padding: 8px;
   box-sizing: border-box;
   height: 100%;
   color: #222;
   font-size: 14px;
+  line-height: 1.3;
 }
 
 .terms_tit {

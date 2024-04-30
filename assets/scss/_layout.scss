@@ -2232,6 +2232,28 @@
     }
 }
 
+.ol2 {
+    &_item {
+        margin-left: 1.7em;
+        list-style:decimal;
+        list-style-position: outside;
+        & + & {
+            margin-top: 0.8em;
+        }
+    }
+}
+
+.list_bar {
+    &_item {
+        display: flex;
+        align-items: flex-start;
+        &::before {
+            content:'-';
+            margin-right: 0.4em;
+        }
+    }
+}
+
 .toast {
     
     &_wrap {

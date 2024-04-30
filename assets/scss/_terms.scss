@@ -55,10 +55,16 @@
 
     .tbl_rnd {
         border: 1px solid #222;
+        th {
+            background-color: $c_bg_grey2;
+        }
         th, td {
             border: 1px solid #222;
             text-align: center;
-            padding: 0.5em;
+            padding: 0.4em 0.6em;
+        }
+        .taL {
+            text-align: left;
         }
     }
 }
@@ -108,11 +114,12 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 10px;
+        padding: 8px;
         box-sizing: border-box;
         height: 100%;
         color: #222;
         font-size: 14px;
+        line-height: 1.3;
     }
 }
 

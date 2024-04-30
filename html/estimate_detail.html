@@ -293,9 +293,64 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="d_flex ai_c mt10 bg_box pa6">
+                        <p class="f_tip ">
+                            <i class="fa-solid fa-circle-info f_tip_ico fc_key" aria-hidden="true"></i>
+                            <span>유의사항을 확인해 주세요.</span>
+                        </p>
+                        <button type="button" class="f_btn ty_xsmall ml_auto pd10 _key_ol" onclick="toast('notiBox')">유의사항<i class="fa-solid fa-caret-up"></i></button>
+                    </div>
+                     <!--[팝업] 유의사항 -->
+                    <div class="toast_wrap" data-toast="notiBox">
+                        <form class="toast_inner">
+                            <div class="toast_top">
+                                <h3 class="tit2">견적 유의사항</h3>
+                                <button type="button" class="toast_close" onclick="close_toast(this)" aria-label="닫기"></button>
+                            </div>
+                            <div class="toast_cont">
+                                <ol class="ol2">
+                                    <li class="ol2_item">
+                                        <strong>공인여부</strong> 
+                                        <ul class="list_bar">
+                                            <li class="list_bar_item">공인 : 2023.07 한국계량츨적협회에서 발행한 국가교정기관용 교정수수료표 기준으로 국가교정기관(KOLAS) 인정 분양의 측정기</li>
+                                            <li class="list_bar_item">비공인 : 국가교정기관(KOLAS) 인증이 불가한 측정기로서 당사 자체적으로 시험을 실시하는 측정기</li>
+                                        </ul>
+                                    </li>
+                                    <li class="ol2_item">
+                                        <strong>사내</strong> 
+                                        <ul class="list_bar">
+                                            <li class="list_bar_item">출장 : 귀사의 현장소재지에서 교정진행</li>
+                                            <li class="list_bar_item">반출 : 현장에서 장비 반출 후 사내에 입고하여 교정진행</li>
+                                        </ul>
+                                    </li>
+                                    <li class="ol2_item">
+                                        <strong>사외 (교정단가에 소급료 포함)</strong> 
+                                        <ul class="list_bar">
+                                            <li class="list_bar_item">출장 : 당사 교정 불가한 품목이며, 사외기관 협력으로 출장(현장교정) 진행</li>
+                                            <li class="list_bar_item">반출 : 당사 교정 불가한 품목이며, 장비 입고 후 타기관으로 위탁(대행)하여 진행</li>
+                                        </ul>
+                                    </li>
+                                    <li class="ol2_item">
+                                        <strong>위 견적은 실제장비 확인 전 금액이며, 측정범위, 채널 수, 정밀도 등에 따라 불가하거나, 금액이 가감될 수 있습니다.</strong> 
+                                    </li>
+                                </ol>
+                            </div>
+                        </form>
+                    </div>
+                    <!--//[팝업] 유의사항-->
+                    <script>
+                        function toast(target){
+                            let toast_wrap = document.querySelectorAll('.toast_wrap');
+                            toast_wrap.forEach(e=>{
+                                e.dataset.toast == target ? e.classList.add('on') : null;
+                            })
+                        }
+                        function close_toast(target){
+                            let toast_wrap = target.closest('.toast_wrap');
+                            toast_wrap.classList.remove('on')
+                        }
+                    </script>
                 </section>
-
-               
                 <section class="sec">
                     <ul class="mDep3 mb20">
                         <li class="mDep3_item on"><button type="button" class="mDep3_btn">견적 내역</button></li>
