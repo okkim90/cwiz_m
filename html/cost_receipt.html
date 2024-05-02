@@ -343,21 +343,71 @@
                         </div>
                     </div>
                 </section>
+                <section class="sec">
+                    <ul class="join_form_agree">
+                        <li class="join_form_agree_item">
+                            <label>
+                                <input type="checkbox" class="f_chk ty_big" required>
+                                이용약관 동의 <span class="fc_red">(필수)</span> 
+                            </label>
+                            <a href="https://www.kic21.co.kr/about/service" target="_blank" class="f_btn ty_small _key">전문보기</a>
+                        </li>
+                        <li class="join_form_agree_item">
+                            <label>
+                                <input type="checkbox" class="f_chk ty_big" required>
+                                개인정보 수집 및 이용 동의 <span class="fc_red">(필수)</span> 
+                            </label>
+                            <a href="https://www.kic21.co.kr/about/person" target="_blank" class="f_btn ty_small _key">전문보기</a>
+                        </li>
+                    </ul> 
+                </section>
             </div>
         </main>
         <!--//container-->
         <div class="sticky_bot">
             <button type="button" aria-label="상단으로 이동" onclick="window.scrollTo(0,0)" class="btn_gotop"></button>
             <div class="sticky_bot_inner">
-                <div class="d_flex ai_c mb10">
+                <div class="tipBox d_flex ai_c mb10">
                     <p class="f_tip ">
                         <i class="fa-solid fa-circle-info f_tip_ico fc_key" aria-hidden="true"></i>
                         <span>유의사항을 확인해 주세요.</span>
                     </p>
-                    <button type="button" class="f_btn ty_xsmall ml_auto pd10 _key_ol" onclick="toast('shipmenInfo')">유의사항<i class="fa-solid fa-caret-up"></i></button>
+                    <button type="button" class="f_btn ty_xsmall ml_auto pd10 _key_ol" onclick="toast('notiBox')">유의사항<i class="fa-solid fa-caret-up"></i></button>
                 </div>
+                <!--[팝업] 유의사항 -->
+                <div class="toast_wrap" data-toast="notiBox">
+                    <form class="toast_inner">
+                        <div class="toast_top">
+                            <h3 class="tit2">세금계산서 신청 시 유의사항</h3>
+                            <button type="button" class="toast_close" onclick="close_toast(this)" aria-label="닫기"></button>
+                        </div>
+                        <div class="toast_cont" style="min-height: 300px;">
+                            <ol class="ol2">
+                                <li class="ol2_item">
+                                    세금계산서 요청 정보를 정확히 기재해 주시길 바랍니다.
+                                </li>
+                                <li class="ol2_item">
+                                    계산서 요청 후 ㅇㅇ 일 이내에 청구 계산서가 발행될 예정입니다.
+                                </li>
+                            </ol>
+                        </div>
+                    </form>
+                </div>
+                <!--//[팝업] 유의사항-->
+                <script>
+                    function toast(target){
+                        let toast_wrap = document.querySelectorAll('.toast_wrap');
+                        toast_wrap.forEach(e=>{
+                            e.dataset.toast == target ? e.classList.add('on') : null;
+                        })
+                    }
+                    function close_toast(target){
+                        let toast_wrap = target.closest('.toast_wrap');
+                        toast_wrap.classList.remove('on')
+                    }
+                </script>
                 <div class="btn_set ai_c">
-                    <button type="submit" class="f_btn ty_mid flex1 _key">출고 요청</button>
+                    <button type="submit" class="f_btn ty_mid flex1 _key">세금계산서 신청</button>
                 </div>
             </div> 
         </div>
