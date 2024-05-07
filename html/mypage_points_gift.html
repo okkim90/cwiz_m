@@ -390,6 +390,24 @@
                         </div>       
                     </form>
                 </section>
+                <section class="sec">
+                    <ul class="join_form_agree">
+                        <li class="join_form_agree_item">
+                            <label>
+                                <input type="checkbox" class="f_chk ty_big" required>
+                                개인정보 수집 및 이용에 동의합니다. <span class="fc_red">(필수)</span> 
+                            </label>
+                            <a href="./privacy_policy.html" target="_blank" class="f_btn ty_small _key">전문보기</a>
+                        </li>
+                        <li class="join_form_agree_item">
+                            <label>
+                                <input type="checkbox" class="f_chk ty_big" required>
+                                개인정보 처리 위탁에 동의합니다. <span class="fc_red">(필수)</span> 
+                            </label>
+                            <a href="./privacy_entrust.html" target="_blank" class="f_btn ty_small _key">전문보기</a>
+                        </li>
+                    </ul> 
+                </section>
             </div>
             <!--[팝업] 포인트 정책 -->
             <div class="toast_wrap" data-toast="point">
@@ -495,8 +513,51 @@
         <div class="sticky_bot">
             <button type="button" aria-label="상단으로 이동" onclick="window.scrollTo(0,0)" class="btn_gotop"></button>
             <div class="sticky_bot_inner">
+                <div class="tipBox d_flex ai_c mb10">
+                    <p class="f_tip ">
+                        <i class="fa-solid fa-circle-info f_tip_ico fc_key" aria-hidden="true"></i>
+                        <span>포인트 선물하기 유의사항을 확인해 주세요.</span>
+                    </p>
+                    <button type="button" class="f_btn ty_xsmall ml_auto pd10 _key_ol" onclick="toast('notiBox')">유의사항<i class="fa-solid fa-caret-up"></i></button>
+                </div>
+                <!--[팝업] 유의사항 -->
+                <div class="toast_wrap" data-toast="notiBox">
+                    <form class="toast_inner">
+                        <div class="toast_top">
+                            <h3 class="tit2">포인트 선물하기 유의사항</h3>
+                            <button type="button" class="toast_close" onclick="close_toast(this)" aria-label="닫기"></button>
+                        </div>
+                        <div class="toast_cont" style="min-height: 300px;">
+                            <ol class="ol2">
+                                <li class="ol2_item">
+                                    CWIZ 회원에게만 포인트를 선물하실 수 있습니다. <br>
+                                    (이름, 회사명, 휴대폰 번호로 조회 할 수 있습니다.)
+                                </li>
+                                <li class="ol2_item">
+                                    포인트 선물은 최소 000 포인트 이상, 000 포인트 단위로 선물 가능합니다.
+                                </li>
+                                <li class="ol2_item">
+                                    포인트 선물 시 보유 포인트에서 차감되며, 선물 받은 포인트는 즉시 사용 가능합니다.
+                                </li>
+                            </ol>
+                        </div>
+                    </form>
+                </div>
+                <!--//[팝업] 유의사항-->
+                <script>
+                    function toast(target){
+                        let toast_wrap = document.querySelectorAll('.toast_wrap');
+                        toast_wrap.forEach(e=>{
+                            e.dataset.toast == target ? e.classList.add('on') : null;
+                        })
+                    }
+                    function close_toast(target){
+                        let toast_wrap = target.closest('.toast_wrap');
+                        toast_wrap.classList.remove('on')
+                    }
+                </script>
                 <div class="btn_set taC">
-                    <a href="./mypage_qna_view.html" class="f_btn ty_mid _solidGrey flex1 ">취 소</a>
+                    <a href="./mypage_points.html" class="f_btn ty_mid _solidGrey flex1 ">취 소</a>
                     <button type="submit" class="f_btn ty_mid _key flex1">선물 하기</button>
                 </div>
             </div>
