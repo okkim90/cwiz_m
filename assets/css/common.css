@@ -8446,8 +8446,8 @@ tr:last-child .status_box_date {
   flex-shrink: 0;
 }
 .user_box_thumb .thumb_box {
-  width: 100%;
-  height: 100%;
+  width: 70px;
+  height: 70px;
   overflow: hidden;
   border-radius: 50%;
   background-color: #fff;
@@ -8455,8 +8455,8 @@ tr:last-child .status_box_date {
 .user_box_thumb .thumb_box img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .user_box_thumb.on .thumb_btns {
   display: block;
@@ -10527,8 +10527,8 @@ tr:last-child .status_box_date {
 .reply_thumb.has_thumb img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .reply_user {
   display: flex;
