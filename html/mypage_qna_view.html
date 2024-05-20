@@ -285,7 +285,12 @@
                                     <li><button type="button">삭제하기</button></li>
                                 </ul>
                             </div>
-                            <div class="w100 mt8 fz_small fc_midGrey">문의 대상 : 코리아인스트루먼트(주) 서울본사</div>
+                            <!-- [D] 원문보기 버튼 추가되면서 구조 변경-->
+                            <div class="w100 d_flex ai_c mt8">
+                                <div class="flex1 fz_small fc_midGrey">문의 대상 : 코리아인스트루먼트(주) 서울본사</div>
+                                <button type="button" class="pd10 f_btn ty_xsmall _solidGrey">원문 보기</button>
+                            </div> 
+                            <!--// [D] 원문보기 버튼 추가되면서 구조 변경-->
                             <script>
                                 const bv_btn_toggle = document.querySelector('.board_view_tit_btn .btn_toggle');
                                 const bv_btn_list = document.querySelector('.board_view_tit_btn .btn_list');
