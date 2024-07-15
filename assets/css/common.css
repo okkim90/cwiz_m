@@ -8066,6 +8066,7 @@ tr:last-child .status_box_date {
 .mform_item.ty_push {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 8px 12px;
   border-radius: 6px;
   background-color: #f4f4f4;
@@ -8077,19 +8078,15 @@ tr:last-child .status_box_date {
   margin-bottom: 0;
   font-size: 14px;
 }
-.mform_item.ty_push.dep1 {
+.mform_item.ty_push .desc {
+  font-size: 12px;
+  color: #aaa;
+}
+.mform_item.ty_push.dep0 {
   background-color: #fff2e6;
 }
-.mform_item.ty_push.dep2::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border: 1px solid #000;
-  box-sizing: border-box;
-  border-top: none;
-  border-right: none;
-  margin-bottom: 0.5em;
-  margin-right: 5px;
+.mform_item.ty_push.dep1 {
+  background-color: #f4f4f4;
 }
 .mform_msg {
   font-size: 11px;
