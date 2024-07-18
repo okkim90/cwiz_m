@@ -427,7 +427,7 @@
                 background-color: rgba($c_key, .14);
                 &::before {
                     content: '\f054';
-                    font-family: "Font Awesome 6 Free";
+                    font-family: "Font Awesome 6 Pro";
                     font-weight: bold;
                     margin-right: 5px;
                     font-size: 11px;
@@ -1767,7 +1767,7 @@
             font-size: 16px;
             &::before {
                 content: "\f002";
-                font-family: "Font Awesome 6 Free";
+                font-family: "Font Awesome 6 Pro";
                 font-weight: bold;
                 color: #333;
                 
@@ -1782,7 +1782,7 @@
             background-color: $c_key;
             // &::before {
             //     content: "\f00e";
-            //     font-family: "Font Awesome 6 Free";
+            //     font-family: "Font Awesome 6 Pro";
             //     font-weight: bold;
             //     color: #fff;
             //     font-size: 18px;

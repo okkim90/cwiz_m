@@ -6245,7 +6245,7 @@ input::-webkit-search-results-decoration {
 }
 .breadcrumb_item + .breadcrumb_item::before {
   content: "\f054";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin: 0 4px;
   transform: translateY(1px);
@@ -6471,7 +6471,7 @@ input::-webkit-search-results-decoration {
 }
 .sidenav .nav .btn_dep1::after {
   content: "\f078";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin-left: auto;
   width: 20px;
@@ -6800,7 +6800,7 @@ input::-webkit-search-results-decoration {
 }
 .search_details .list_wrap .item_option.on::before {
   content: "\f054";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin-right: 5px;
   font-size: 11px;
@@ -7346,7 +7346,7 @@ tr:last-child .status_box_date {
 }
 .list_sepBar .list_item.ty_date::before {
   content: "\f073";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   color: #222;
   margin-right: 4px;
@@ -7359,7 +7359,7 @@ tr:last-child .status_box_date {
 }
 .list_sepBar .list_item.ty_re::before {
   content: "\f4ad";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   color: #222;
   margin-right: 4px;
@@ -7373,7 +7373,7 @@ tr:last-child .status_box_date {
 }
 .list_sepBar .list_item.ty_view::before {
   content: "\f06e";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   color: #222;
   margin-right: 4px;
@@ -7961,7 +7961,7 @@ tr:last-child .status_box_date {
 }
 .srch_form .btn_submit::before {
   content: "\f002";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   color: #333;
 }
@@ -9483,7 +9483,7 @@ tr:last-child .status_box_date {
 .btn_down::after {
   font-size: 16px;
   content: "\f56d";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
 }
 .btn_down:hover .btn_tooltip {
@@ -9497,7 +9497,7 @@ tr:last-child .status_box_date {
 
 .btn_down2::after {
   content: "\f56d";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin-left: 4px;
 }
@@ -9518,7 +9518,7 @@ tr:last-child .status_box_date {
 .btn_down4::before {
   font-size: 16px;
   content: "\f56d";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   line-height: 1;
 }
@@ -9531,7 +9531,7 @@ tr:last-child .status_box_date {
 }
 .btn_del_item::before {
   content: "\f2ed";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   font-size: 15px;
   color: #393939;
@@ -9539,7 +9539,7 @@ tr:last-child .status_box_date {
 
 .btn_detail::after {
   content: "\f078";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   margin-left: 4px;
 }
@@ -9792,7 +9792,7 @@ tr:last-child .status_box_date {
 }
 .f_btn.ty_arrow::after {
   content: "\f054";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   margin-left: 5px;
   font-weight: bold;
 }
@@ -9942,7 +9942,7 @@ tr:last-child .status_box_date {
 }
 .btn_chk_box::after {
   content: "\f00c";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   font-size: 1em;
   margin-top: 0.1em;
@@ -10873,7 +10873,7 @@ tr:last-child .status_box_date {
 }
 .mList_chk::after {
   content: "\f00c";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -11695,7 +11695,7 @@ tr:last-child .status_box_date {
 }
 .board_view_tit_btn .btn_toggle::after {
   content: "\f142";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   font-size: 1.5em;
   line-height: 1;
@@ -11845,7 +11845,7 @@ tr:last-child .status_box_date {
 }
 .board_view_file .file_list .btn_down3::before {
   content: "\f56d";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
   width: 14px;
   height: 20px;
