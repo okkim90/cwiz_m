@@ -449,3 +449,18 @@ $inner: 1280px;
 .lh1 {
     line-height: 1;
 }
+
+.br_set {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    min-width: 0;
+    &_btn {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        &:hover {
+            background-color: $c_bg_grey;
+        }
+    }
+}
