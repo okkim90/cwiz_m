@@ -275,19 +275,31 @@
                                 </div>
                                 <div class="srch_detail_cont">
                                     <div class="srch_detail_sec">
-                                        <label for="" class="tit">접수일 조회</label>
+                                        <label for="" class="tit">기간 조회</label>
                                         <div class="date_set"> 
-                                            <select name="" id="" class="f_select ty_mid w_80">
-                                                <option value="">접수일</option>
-                                                <option value="">접수일</option>
-                                                <option value="">교정일</option>
+                                            <select name="" id="" class="f_select ty_mid w_100">
+                                                <option value="">최근 교정일</option>
+                                                <option value="">차기 교정일</option>
                                             </select>
                                             <input type="text" class="f_input ty_mid inp_date date_start" readonly="" id=""> ~
                                             <input type="text" class="f_input ty_mid inp_date date_end" readonly="" id="">
                                         </div>
                                     </div>
                                     <div class="srch_detail_sec">
-                                        <label for="" class="tit">접수 번호</label>
+                                        <label for="" class="tit">우리장비 사용 여부</label>
+                                        <div class="d_flex _gapX10">
+                                            <label class="chk_btn flex1">
+                                                <input type="radio" name="use" checked>
+                                                <span class="f_btn ty_mid w100 ty_ico"><i class="fa-sharp fa-solid fa-circle-dot"></i> 사용</span>
+                                            </label>    
+                                            <label class="chk_btn flex1">
+                                                <input type="radio" name="use">
+                                                <span class="f_btn ty_mid w100 ty_ico"><i class="fa-sharp fa-solid fa-circle-dot"></i> 미사용</span>
+                                            </label>   
+                                        </div>
+                                    </div>
+                                    <div class="srch_detail_sec">
+                                        <label for="" class="tit">CMI ID</label>
                                         <input type="text" class="f_input ty_mid w100">
                                     </div>
                                     <div class="srch_detail_sec">
