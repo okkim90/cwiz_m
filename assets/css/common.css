@@ -7844,6 +7844,11 @@ tr:last-child .status_box_date {
   border: 1px solid #DDDDDD;
   border-radius: 6px;
 }
+.payment_info_top {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
 
 .shipment_info_list {
   margin-top: 10px;
