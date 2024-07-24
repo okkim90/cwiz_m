@@ -6676,7 +6676,7 @@ input::-webkit-search-results-decoration {
 }
 .ico_required::after {
   content: "\f621";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Pro";
   font-weight: bold;
 }
 
