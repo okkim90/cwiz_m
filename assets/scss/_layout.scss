@@ -200,7 +200,7 @@
     }
 
     .sec {
-        &:first-child {
+        &:first-of-type {
             margin-top: 0;
         }
         margin-top: 32px;

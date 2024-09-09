@@ -6605,7 +6605,7 @@ input::-webkit-search-results-decoration {
 .container .sec {
   margin-top: 32px;
 }
-.container .sec:first-child {
+.container .sec:first-of-type {
   margin-top: 0;
 }
 .container .sec.mt0 {

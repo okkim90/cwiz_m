@@ -242,7 +242,9 @@
             <div id="contents" class="contents">
                 <section class="sec">
                     <div class="mform_item ty_push dep0">
-                        <div class="tit">기기 알림 설정</div>
+                        <div class="tit">
+                            <i class="fa-solid fa-gear fz_mid mr4"></i> 기기 알림 설정
+                        </div>
                         <label class="f_toggle ml_auto ty_big">
                             <input type="checkbox" class="" checked>
                             <span class="slider">
@@ -253,7 +255,7 @@
                     </div> 
                     <form action="" class="mform mt20">
                         <div class="sec">
-                            <div class="tit2 mb10">교정 알림 설정</div>
+                            <div class="tit2 mb10">CWIZ 알림 설정</div>
                             <!-- <div class="mform_item ty_push dep1">
                                 <div class="tit">모든 알림 받기</div>
                                 <label class="f_toggle ml_auto ty_big">
@@ -265,7 +267,7 @@
                                 </label>
                             </div>       -->
                             <div class="mform_item ty_push dep2">
-                                <div class="tit">댓글 알림</div>
+                                <div class="tit">견적 완료 알림</div>
                                 <label class="f_toggle ml_auto ty_big">
                                     <input type="checkbox" class="push_chk" checked>
                                     <span class="slider">
@@ -275,7 +277,7 @@
                                 </label>
                             </div>
                             <div class="mform_item ty_push dep2">
-                                <div class="tit">차기교정일 알림</div>
+                                <div class="tit">접수 완료 알림</div>
                                 <label class="f_toggle ml_auto ty_big">
                                     <input type="checkbox" class="push_chk" checked>
                                     <span class="slider">
@@ -285,7 +287,27 @@
                                 </label>
                             </div>
                             <div class="mform_item ty_push dep2">
-                                <div class="tit">교정완료 알림</div>
+                                <div class="tit">교정 완료 알림</div>
+                                <label class="f_toggle ml_auto ty_big">
+                                    <input type="checkbox" class="push_chk" checked>
+                                    <span class="slider">
+                                        <div class="slider_txt false"></div>
+                                        <div class="slider_txt true"></div>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="mform_item ty_push dep2">
+                                <div class="tit">거래명세서 발행 완료 알림</div>
+                                <label class="f_toggle ml_auto ty_big">
+                                    <input type="checkbox" class="push_chk" checked>
+                                    <span class="slider">
+                                        <div class="slider_txt false"></div>
+                                        <div class="slider_txt true"></div>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="mform_item ty_push dep2">
+                                <div class="tit">출고 완료 알림</div>
                                 <label class="f_toggle ml_auto ty_big">
                                     <input type="checkbox" class="push_chk" checked>
                                     <span class="slider">
@@ -295,7 +317,10 @@
                                 </label>
                             </div>    
                             <div class="mform_item ty_push dep2">
-                                <div class="tit">결제대기 알림</div>
+                                <div class="txt">
+                                    <div class="tit">차기교정일 알림</div>
+                                    <div class="desc">매월 1일부터 말일까지 <br> 차기 교정 계측기 수를 알려드립니다.</div>
+                                </div>
                                 <label class="f_toggle ml_auto ty_big">
                                     <input type="checkbox" class="push_chk" checked>
                                     <span class="slider">
@@ -305,7 +330,7 @@
                                 </label>
                             </div> 
                             <div class="mform_item ty_push dep2">
-                                <div class="tit">결제완료 알림</div>
+                                <div class="tit">포인트 적립 알림</div>
                                 <label class="f_toggle ml_auto ty_big">
                                     <input type="checkbox" class="push_chk" checked>
                                     <span class="slider">
@@ -315,7 +340,7 @@
                                 </label>
                             </div> 
                             <div class="mform_item ty_push dep2">
-                                <div class="tit">출고완료 알림</div>
+                                <div class="tit">내 문의 댓글 알림</div>
                                 <label class="f_toggle ml_auto ty_big">
                                     <input type="checkbox" class="push_chk" checked>
                                     <span class="slider">
@@ -326,7 +351,7 @@
                             </div> 
                         </div>
                         <div class="sec">
-                            <div class="tit2 mb10">혜택/이벤트 설정</div>
+                            <div class="tit2 mb10">추가 설정</div>
                             <div class="mform_item ty_push dep2">
                                 <div class="tit">혜택/이벤트 알림</div>
                                 <label class="f_toggle ml_auto ty_big">
@@ -340,9 +365,8 @@
                             <div class="mform_item ty_push dep2">
                                 <div class="txt">
                                     <div class="tit">방해 금지 시간대 설정</div>
-                                    <div class="desc">소리/진동 알림을 받지 않을 시간을 설정합니다.</div>
+                                    <div class="desc">21:00 ~ 08:00 <br> 설정한 시간동안 알림을 받지 않습니다.</div>
                                 </div>
-                                
                                 <label class="f_toggle ml_auto ty_big">
                                     <input type="checkbox" class="push_chk">
                                     <span class="slider">
@@ -350,15 +374,7 @@
                                         <div class="slider_txt true"></div>
                                     </span>
                                 </label>
-                                <div class="w100 mt10">
-                                    <div class="d_flex ai_c"> 
-                                        <input type="time" class="f_input ty_mid flex1" value="21:00" step="900">
-                                        <span class="pl6 pr6 fz_mid">~</span>
-                                        <input type="time" class="f_input ty_mid flex1" value="09:00" step="900">
-                                    </div>
-                                </div>
-                            </div>
-                            
+                            </div>    
                         </div>
                     </form>
 
