@@ -2536,3 +2536,65 @@
         }
     }
 }
+
+
+.pms {
+    &_cont {
+        flex: 1;
+        padding: 36px 16px;
+       
+    }
+    &_top {
+        position: sticky;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &_tit {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    &_bot {
+        position: sticky;
+        left: 0;
+        bottom: 0;
+        .list_dot {
+            padding: 16px;
+            background-color: $c_bg_grey;
+        }
+    }
+    &_item {
+        display: flex;
+        padding: 16px;
+        border: 2px solid #222;
+        border-radius: 14px;
+        & + & {
+            margin-top: 20px;
+        } 
+
+        i {
+            font-size: 40px;
+            flex-shrink: 0;
+            color: #222;
+        }
+        &_txt {
+            margin-left: 14px;
+            flex: 1;
+            .tit {
+                display: block;
+                font-size: 14px;
+            }
+            .desc {
+                display: block;
+                color: $c_midGrey;
+                font-weight: 500;
+                font-size: 13px;
+            }
+        }
+    }
+}

@@ -328,6 +328,9 @@
         &._round {
             border-radius: 44px;
         }
+        &.no_radius {
+            border-radius: 0;
+        }
     }
     &.disable {
         opacity: 0.4;
