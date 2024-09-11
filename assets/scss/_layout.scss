@@ -2137,7 +2137,13 @@
             }
             .f_tag {
                 background-color: #fff;
-            }     
+            }    
+            flex-wrap: wrap;
+            .prod_info {
+                padding-top: 4px;
+                margin-top: 2px;
+                border-top: 1px dashed $c_line;
+            }
         }
     }
 }

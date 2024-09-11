@@ -8270,12 +8270,18 @@ tr:last-child .status_box_date {
   background-color: #f4f4f4;
   border-radius: 6px;
   background-color: #fff;
+  flex-wrap: wrap;
 }
 .cal_detail_list .list_link .num {
   font-weight: bold;
 }
 .cal_detail_list .list_link .f_tag {
   background-color: #fff;
+}
+.cal_detail_list .list_link .prod_info {
+  padding-top: 4px;
+  margin-top: 2px;
+  border-top: 1px dashed #DDDDDD;
 }
 
 .prod_desc {
