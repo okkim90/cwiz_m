@@ -6036,7 +6036,7 @@ input::-webkit-search-results-decoration {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #393939;
+  color: #222;
   transition: background-color 0.2s ease-in-out;
   font-size: 20px;
 }
@@ -6069,7 +6069,7 @@ input::-webkit-search-results-decoration {
   top: 4px;
 }
 .header .h_util .h_btns .h_btn.ty_qr {
-  background-image: url(../images/common/ico_qr2.svg);
+  background-image: url(../images/common/ico_qr3.svg);
   background-repeat: no-repeat;
   background-size: 24px 24px;
   background-position: center center;
