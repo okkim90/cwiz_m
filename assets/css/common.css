@@ -6068,6 +6068,12 @@ input::-webkit-search-results-decoration {
   right: 4px;
   top: 4px;
 }
+.header .h_util .h_btns .h_btn.ty_qr {
+  background-image: url(../images/common/ico_qr2.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center center;
+}
 .header .f_alert_box {
   display: none;
   width: 100%;
@@ -10925,8 +10931,14 @@ tr:last-child .status_box_date {
 .mList_sec._gapY10 {
   row-gap: 10px;
 }
+.mList_top {
+  flex-wrap: nowrap;
+}
 .mList_top .num {
   font-weight: bold;
+}
+.mList_top .date {
+  flex-shrink: 0;
 }
 .mList .btn_link {
   color: #0085FF;

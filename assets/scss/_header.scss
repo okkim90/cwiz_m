@@ -184,6 +184,12 @@
                         }
                     }
                 }
+                &.ty_qr {
+                    background-image: url(../images/common/ico_qr2.svg);
+                    background-repeat: no-repeat;
+                    background-size: 24px 24px;
+                    background-position: center center;
+                }
             }
         }
     }

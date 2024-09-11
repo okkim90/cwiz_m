@@ -602,9 +602,12 @@ const btn_gotop = document.querySelector('.btn_gotop');
 window.addEventListener('scroll', function(){
     let pos_top = this.scrollY;
     let trigger_posY = window.outerHeight / 10;
-    if(btn_gotop && pos_top > trigger_posY){
-        btn_gotop.classList.add('on')
-    }else{
-        btn_gotop.classList.remove('on')
+    if(btn_gotop) {
+        if(pos_top > trigger_posY){
+            btn_gotop.classList.add('on')
+        }else{
+            btn_gotop.classList.remove('on')
+        }
     }
+    
 });

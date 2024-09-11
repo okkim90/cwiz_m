@@ -46,8 +46,12 @@
         
     }
     &_top {
+        flex-wrap: nowrap;
         .num {
             font-weight: bold;
+        }
+        .date {
+            flex-shrink: 0;
         }
     }
     .btn_link {
