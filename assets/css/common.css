@@ -8263,7 +8263,7 @@ tr:last-child .status_box_date {
   display: block;
 }
 .cal_detail_list .list_item + .list_item {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 .cal_detail_list .list_link {
   padding: 6px 10px;
