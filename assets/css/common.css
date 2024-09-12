@@ -8282,6 +8282,7 @@ tr:last-child .status_box_date {
   padding-top: 4px;
   margin-top: 2px;
   border-top: 1px dashed #DDDDDD;
+  font-size: 11px;
 }
 
 .prod_desc {
