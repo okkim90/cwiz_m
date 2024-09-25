@@ -189,6 +189,10 @@
                     background-repeat: no-repeat;
                     background-size: 24px 24px;
                     background-position: center center;
+                    display: none;
+                    &.m_only {
+                        display: block;
+                    }
                 }
             }
         }

@@ -6073,6 +6073,10 @@ input::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-size: 24px 24px;
   background-position: center center;
+  display: none;
+}
+.header .h_util .h_btns .h_btn.ty_qr.m_only {
+  display: block;
 }
 .header .f_alert_box {
   display: none;
@@ -6541,10 +6545,15 @@ input::-webkit-search-results-decoration {
   display: flex;
   height: 60px;
   align-items: center;
-  justify-content: space-between;
   border-top: 1px solid #DDDDDD;
   box-sizing: border-box;
   padding: 0 16px;
+}
+.sidenav_bot .btn_pushSetting {
+  display: none;
+}
+.sidenav_bot .btn_pushSetting.m_only {
+  display: block;
 }
 
 #wrap {
@@ -8630,9 +8639,26 @@ tr:last-child .status_box_date {
   border-radius: 6px;
 }
 
+.pms_layer {
+  position: fixed;
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  background-color: #fff;
+}
+.pms_inner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
 .pms_cont {
   flex: 1;
   padding: 36px 16px;
+  overflow-y: auto;
 }
 .pms_top {
   position: sticky;
@@ -8644,6 +8670,7 @@ tr:last-child .status_box_date {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 .pms_top_tit {
   font-size: 18px;
@@ -8653,6 +8680,7 @@ tr:last-child .status_box_date {
   position: sticky;
   left: 0;
   bottom: 0;
+  flex-shrink: 0;
 }
 .pms_bot .list_dot {
   padding: 16px;

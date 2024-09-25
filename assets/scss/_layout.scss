@@ -2547,9 +2547,26 @@
 
 
 .pms {
+    &_layer {
+        position: fixed;
+        width: 100%;
+        max-width: 600px;
+        min-width: 320px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        background-color: #fff;
+    }
+    &_inner {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
     &_cont {
         flex: 1;
         padding: 36px 16px;
+        overflow-y: auto;
        
     }
     &_top {
@@ -2562,6 +2579,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
         &_tit {
             font-size: 18px;
             font-weight: 500;
@@ -2571,6 +2589,7 @@
         position: sticky;
         left: 0;
         bottom: 0;
+        flex-shrink: 0;
         .list_dot {
             padding: 16px;
             background-color: $c_bg_grey;

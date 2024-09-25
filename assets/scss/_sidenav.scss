@@ -284,10 +284,15 @@
         display: flex;
         height: 60px;
         align-items: center;
-        justify-content: space-between;
+        //justify-content: space-between;
         border-top: 1px solid $c_line;
         box-sizing: border-box;
         padding: 0 16px;
-        
+        .btn_pushSetting {
+            display: none;
+            &.m_only {
+                display: block;
+            }
+        }
     }
 }
