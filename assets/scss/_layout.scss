@@ -1802,29 +1802,31 @@
             background-color: rgba(#000,.4);
             position: fixed;
             z-index: 1001;
-            
+            overflow: hidden;
             top: 0;
             
             height: 100%;
             @include m-sizing;
             
-           
-            opacity: 0;
-            visibility: hidden;
-            transition: all .2s  ease-in-out;
+            display: none;
+            // opacity: 0;
+            // visibility: hidden;
+            // transition: all .2s  ease-in-out;
             &.on {
-                opacity: 1;
-                visibility: visible;
-                .srch_detail_inner {
-                    bottom: 0;
-                    transition: bottom .3s ease-in-out; 
-                }
+                display: block;
+                // opacity: 1;
+                // visibility: visible;
+                // .srch_detail_inner {
+                //     bottom: 0;
+                //     transition: bottom .3s ease-in-out; 
+                // }
             }
         }
         &_inner {
             position: absolute;
             left: 0;
-            bottom: -100%;
+            //bottom: -100%;
+            bottom: 0;
             width: 100%;
             max-height: 90%;
             background-color: #fff;

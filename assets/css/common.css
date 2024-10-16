@@ -8030,6 +8030,7 @@ tr:last-child .status_box_date {
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   z-index: 1001;
+  overflow: hidden;
   top: 0;
   height: 100%;
   width: 100%;
@@ -8037,22 +8038,15 @@ tr:last-child .status_box_date {
   min-width: 320px;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s ease-in-out;
+  display: none;
 }
 .srch_detail_wrap.on {
-  opacity: 1;
-  visibility: visible;
-}
-.srch_detail_wrap.on .srch_detail_inner {
-  bottom: 0;
-  transition: bottom 0.3s ease-in-out;
+  display: block;
 }
 .srch_detail_inner {
   position: absolute;
   left: 0;
-  bottom: -100%;
+  bottom: 0;
   width: 100%;
   max-height: 90%;
   background-color: #fff;
