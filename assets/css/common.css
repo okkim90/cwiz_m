@@ -8164,10 +8164,24 @@ tr:last-child .status_box_date {
   border-radius: 6px;
   overflow: hidden;
 }
+.mDep3.ty_col3 {
+  flex-wrap: wrap;
+}
 .mDep3_item {
   flex: 1;
   background-color: #EFEFEF;
 }
+.mDep3.ty_col3 .mDep3_item {
+  flex: none;
+  width: 33.3333333333%;
+}
+.mDep3.ty_col3 .mDep3_item:nth-child(3n+1) {
+  border-left: none;
+}
+.mDep3.ty_col3 .mDep3_item:nth-child(n+4) {
+  border-top: 1px solid #DDDDDD;
+}
+
 .mDep3_item + .mDep3_item {
   border-left: 1px solid #DDDDDD;
 }
@@ -8493,6 +8507,7 @@ tr:last-child .status_box_date {
   position: relative;
   background-color: #fff;
   flex-shrink: 0;
+  box-sizing: content-box;
 }
 .user_box_thumb .thumb_box {
   width: 70px;
