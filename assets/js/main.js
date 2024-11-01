@@ -611,3 +611,14 @@ window.addEventListener('scroll', function(){
     }
     
 });
+
+function toast(target){
+    let toast_wrap = document.querySelectorAll('.toast_wrap');
+    toast_wrap.forEach(e=>{
+        e.dataset.toast == target ? e.classList.add('on') : null;
+    })
+}
+function close_toast(target){
+    let toast_wrap = target.closest('.toast_wrap');
+    toast_wrap.classList.remove('on')
+}
