@@ -12243,4 +12243,15 @@ tr:last-child .status_box_date {
   font-weight: bold;
 }
 
+.this_web.w_only {
+  display: none;
+}
+
+.this_mobile {
+  display: none;
+}
+.this_mobile.m_only {
+  display: block;
+}
+
 /* 에니매 */

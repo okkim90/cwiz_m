@@ -1,0 +1,11 @@
+.this_web {
+    &.w_only {
+        display: none;
+    }
+}
+.this_mobile {
+    display: none;
+    &.m_only {
+        display: block;
+    }
+}
