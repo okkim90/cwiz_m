@@ -11204,6 +11204,7 @@ tr:last-child .status_box_date {
   font-family: "Roboto";
   color: #FF7A00;
   font-weight: 500;
+  text-decoration: underline;
 }
 .main_wrap .main_sec .status_list_item .txt_box .unit {
   color: #777;
