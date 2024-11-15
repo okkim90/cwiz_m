@@ -11134,15 +11134,21 @@ tr:last-child .status_box_date {
 
 /* pages */
 .main_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  gap: 8px;
   background-color: #EFEFEF;
 }
 .main_wrap .main_sec {
   padding: 16px 16px 24px;
   background-color: #fff;
   position: relative;
+  width: 100%;
+  border-radius: 4px;
 }
-.main_wrap .main_sec + .main_sec {
-  margin-top: 8px;
+.main_wrap .main_sec.ty_col1 {
+  flex: 1;
 }
 .main_wrap .main_sec:last-child {
   padding-bottom: 36px;
@@ -11150,6 +11156,20 @@ tr:last-child .status_box_date {
 .main_wrap .main_sec_tit {
   margin-bottom: 10px;
   display: flex;
+}
+.main_wrap .main_sec .sub_tit {
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  align-items: flex-start;
+}
+.main_wrap .main_sec .sub_tit .fz_small2 {
+  font-size: 12px;
+  font-weight: normal;
+}
+.main_wrap .main_sec .sub_tit .btn_view_more {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 .main_wrap .main_sec .h_tbl_wrap {
   max-height: 260px;
@@ -11163,49 +11183,104 @@ tr:last-child .status_box_date {
 .main_wrap .main_sec .no_result_box {
   height: 186px;
 }
-.main_wrap .main_sec_cont {
+.main_wrap .main_sec .status_list_item {
   display: flex;
-  gap: 20px;
+  font-size: 12px;
+  justify-content: space-between;
+  line-height: 20px;
+  font-weight: 500;
 }
-.main_wrap .main_sec_cont .main_count_list {
-  flex: 1;
+.main_wrap .main_sec .status_list_item + .status_list_item {
+  margin-top: 8px;
 }
-.main_wrap .main_sec_cont .chart_box_wrap {
-  flex: 1;
-  flex-shrink: 0;
-  border: 1px solid #DDDDDD;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 20px;
-}
-.main_wrap .main_sec_cont .chart_box_wrap .txt_box {
+.main_wrap .main_sec .status_list_item .txt_box {
   display: flex;
-  justify-content: center;
-  font-size: 18px;
-  gap: 10px;
-  margin-bottom: 20px;
-  align-items: flex-end;
+  align-items: center;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
 }
-.main_wrap .main_sec_cont .chart_box_wrap .txt_box .tit {
-  font-weight: bold;
-  line-height: 40px;
-}
-.main_wrap .main_sec_cont .chart_box_wrap .txt_box .count {
+.main_wrap .main_sec .status_list_item .txt_box .count {
+  font-size: 13px;
+  font-family: "Roboto";
   color: #FF7A00;
-  font-size: 30px;
-  letter-spacing: -0.01em;
+  font-weight: 500;
 }
-.main_wrap .main_sec_cont .chart_box_wrap .chart_box {
-  height: 220px;
-  position: relative;
+.main_wrap .main_sec .status_list_item .txt_box .unit {
+  color: #777;
+}
+.main_wrap .main_sec_cont.calChart_wrap {
+  flex-wrap: wrap;
+}
+.main_wrap .main_sec_cont.calChart_wrap .calChart_box {
+  width: 100%;
+  min-width: 200px;
+  height: 100px;
+}
+.main_wrap .main_sec_cont.calChart_wrap .calChart_box #calChart {
   width: 100%;
 }
-.main_wrap .main_sec_cont .chart_box_wrap .chart {
-  position: absolute;
-  left: 0;
-  top: 0;
+.main_wrap .main_sec_cont.calChart_wrap .data_list {
+  flex: 1;
+  display: flex;
+  margin-top: 12px;
+  gap: 10px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  gap: 4px 8px;
+  padding: 8px;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item.ty_total {
+  flex: none;
   width: 100%;
-  height: 100%;
+  border: none;
+  padding: 0;
+  flex-direction: row;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item.ty_completed {
+  border: 2px solid #FF7A00;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item.ty_incomplete {
+  border: 2px solid #ffc998;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item dt {
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item dt .color_chip {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 6px;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item dt .color_chip.ty_total {
+  background-color: #ccc;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item dt .color_chip.ty_blue {
+  background-color: #FF7A00;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item dt .color_chip.ty_red {
+  background-color: #ffc998;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item dd {
+  font-size: 14px;
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item dd * {
+  font-family: "Roboto";
+}
+.main_wrap .main_sec_cont.calChart_wrap .data_list_item dd .fc_midGrey {
+  font-size: 13px;
 }
 
 .main_count_list {
@@ -11248,7 +11323,7 @@ tr:last-child .status_box_date {
 }
 .main_count_item .txt_box .count {
   display: block;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: -0.01em;
   font-weight: bold;
