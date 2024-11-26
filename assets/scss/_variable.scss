@@ -222,6 +222,9 @@ $inner: 1280px;
         height: #{$w}px;
     
     }
+    .fz_#{$w} {
+        font-size: #{$w}px;
+    }
 }
 
 @for $i from 10 through 30 {
@@ -333,6 +336,15 @@ $inner: 1280px;
     gap: $gap;
     flex-wrap: $wrap;
 }
+
+@mixin flex_col($col ,$gapX, $gapY){
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gapY $gapX;
+    .col_item {
+        width: calc((100% / $col) - ((($col - 1)/$col)*$gapX));
+    }
+} 
 
 
 .d_flex {

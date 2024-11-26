@@ -2643,3 +2643,338 @@
         }
     }
 }
+
+
+.deal {
+    &_list {
+        display: flex;
+        @include flex_col(2, 10px, 16px)
+    }
+    &_item {
+        border: 1px solid $c_line;
+        border-radius: 8px;
+        min-width: 0;
+        overflow: hidden;
+        transition: all .1s ease-in-out;
+        cursor: pointer;
+        // &:hover {
+        //     border-color: $c_key;
+        //     box-shadow: 0 0 4px $c_key;
+        //     transform: translateY(-4px);
+        // }
+        &_inner {
+            display: block;
+            //padding: 10px;
+            
+        }
+        .img_box {
+            padding-top: 100%;
+            position: relative;
+            overflow: hidden;
+            //border-radius: 8px;
+            &_inner {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                //padding: 12px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                object-fit: contain;
+            }
+        }
+        .txt_box {
+            padding: 10px 12px;
+            border-top: 1px solid $c_line;
+            .tit {
+                @include text-hidden-single;
+                font-size: 12px;
+                color: $c_midGrey;
+                font-weight: 500;
+            }
+            .desc {
+                @include text-hidden(2, 1.5em, auto);
+                word-break: break-all;
+                margin-top: 6px;
+                font-size: 13px;
+                //font-weight: 500;
+            }
+            .price {
+                margin-top: 6px;
+                text-align: right;
+                font-size: 14px;
+                //font-weight: 500;
+                color: $c_key;
+            }
+        }
+    }
+    &_detail {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        &_cont {
+            flex: 1;
+        }
+        .img_box {
+           
+            border: 1px solid $c_line;
+            border-radius: 8px;
+            text-align: center;
+            img {
+                width: 260px;
+                height: 260px;
+                object-fit: contain;
+            }
+        }
+        .txt_box {  
+            margin-top: 10px;
+            .tit {
+                @include text-hidden-single;
+                font-size: 14px;
+                color: $c_midGrey;
+                font-weight: 500;
+            }
+            .desc {
+                @include text-hidden(2, 1.5em, auto);
+                word-break: break-all;
+                margin-top: 6px;
+                font-size: 15px;
+                //font-weight: 500;
+            }
+            .price {
+                margin-top: 6px;
+                text-align: right;
+                font-size: 17px;
+                //font-weight: 500;
+                color: $c_key;
+            }
+        }
+
+        .pay_info {
+            padding-top: 12px;
+            margin-top: 12px;
+            border-top: 1px solid $c_line;
+            font-size: 14px;
+            &_item {
+                display: flex;
+                justify-content: space-between;
+                & + .pay_info_item {
+                    margin-top: 4px;
+                }
+                dd {
+                    font-weight: 500;
+                }
+            }
+        }
+        .mobile_info {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: $c_bg_grey;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        .deal_noti {
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid $c_line;
+            &_tit {
+                font-size: 14px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 0 4px;
+                margin-bottom: 8px;
+                &::before {
+                    content:'!';
+                    text-align: center;
+                    width: 18px;
+                    height: 18px;
+                    line-height: 18px;
+                    font-size: 13px;
+                    border-radius: 50%;
+                    color: #fff;
+                    font-weight: bold;
+                    background-color: $c_key;
+                }
+            }
+            &_list {
+                li {
+                    list-style-type: decimal;
+                    list-style-position: outside;
+                    margin-left: 16px;
+                    font-size: 12px;
+                    & + li {
+                        margin-top: 4px;
+                    }
+                }
+            }
+            
+        }
+        .btn_set {
+            position: sticky;
+            left: 0;
+            bottom: 0;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-top: 1px solid $c_line;
+            background-color: $c_bg;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    }
+    &_confirm {
+        padding: 10px 0;
+        &_txt {
+            text-align: center;
+            line-height: 1.6;
+        }
+    }
+}
+
+
+.coupon_cate {
+    display: flex;
+    //flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 16px;
+    overflow-x: auto;
+    &_wrap {
+        
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+   
+    &_item {
+        flex-shrink: 0;
+    }
+    &_btn {
+        min-width: 60px;
+        padding: 0 12px;
+        height: 36px;
+        line-height: 34px;
+        border: 1px solid $c_line;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 13px;
+        color: $c_solidGrey;
+        &.on {
+            background-color: $c_key;
+            color: #fff;
+            border-color: $c_key;
+        }
+    }
+}
+
+.coupon {
+    // &_list {
+    //     display: flex;
+    //     //@include flex_col(4, 20px, 30px)
+    // }
+    &_item {
+        border: 2px solid $c_line;
+        border-radius: 8px;
+        min-width: 0;
+        overflow: hidden;
+        & + & {
+            margin-top: 16px;
+        }
+    }
+    &_deal {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 12px;
+        background-color: $c_bg;
+        .img_box {
+            width: 40%;
+            max-width: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid $c_line;
+            &_inner {
+                padding-top: 100%;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    object-fit: contain;
+                }
+            }
+
+        }
+        .txt_box {
+            flex: 1;
+            font-size: 13px;
+            .tit {
+                color: $c_midGrey;
+                @include text-hidden-single;
+                font-weight: 500;
+            }
+            .desc {
+                margin-top: 4px;
+                @include text-hidden(2, 1.5em);
+                font-size: 14px;
+            }
+            .price {
+                margin-top: 4px;
+                color: $c_key;
+                text-align: right;
+                font-size: 14px;
+            }
+        }
+    }
+    &_info {
+        padding: 12px;
+        border-top: 2px dashed $c_line;
+        font-size: 13px;
+        &_item {
+            display: flex;
+            
+            align-items: center;
+            gap: 0 10px;
+            line-height: 22px;
+            & + & {
+                margin-top: 4px;
+            }
+            dt {
+                color: $c_midGrey;
+            }
+            dd {
+                font-weight: 500;
+                flex: 1;
+                justify-content: flex-end;
+                display: flex;
+                align-items: center;
+                gap: 0 4px;
+                min-width: 0;
+                .coupon_number {
+                    @include text-hidden-single;   
+                }
+                .f_btn {
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+    &_btns {
+        padding: 12px;
+        border-top: 2px dashed $c_line;
+        display: flex;
+        justify-content: center;
+        gap: 0 8px;
+    }
+}

@@ -14,6 +14,10 @@
     &.on {
         display: block;
     }
+
+    &.deal_popup {
+        padding: 0;
+    }
     &_inner {
         display: flex;
         width: 100%;
@@ -62,11 +66,24 @@
                 margin-top: 20px;
             }
         }
+        &.ty_deal {
+            height: 100%;
+            width: 100%;
+            padding-bottom: 0;
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        &.ty_confirm {
+            padding-bottom: 0;
+            width: 400px;
+        }
     }
 
     .sec {
         &:first-of-type {
             margin-top: 0;
+            
         }
     }
 

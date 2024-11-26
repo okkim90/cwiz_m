@@ -40,6 +40,23 @@
         background-position: center center;
         background-size: 12px;
     }
+    .btn_mall {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        position: absolute;
+        left: 40px;
+        top: 50%;
+        margin-top: -15px;
+        background-color: $c_key;
+        border-radius: 4px;
+    }
+
     .h_util {
         position: absolute;
         right: 16px;
