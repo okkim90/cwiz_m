@@ -2271,7 +2271,7 @@
         text-indent: -1em;
         margin-left: 1em;
         & + & {
-            margin-top: 0.5em;
+            margin-top: 0.4em;
         }
     }
 }
@@ -2288,6 +2288,11 @@
 }
 
 .list_bar {
+    &.ty_gap {
+        .list_bar_item + .list_bar_item {
+            margin-top: 0.4em;
+        }    
+    }
     &_item {
         display: flex;
         align-items: flex-start;

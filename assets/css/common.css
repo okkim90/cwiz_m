@@ -8821,7 +8821,7 @@ tr:last-child .status_box_date {
   margin-left: 1em;
 }
 .ol_item + .ol_item {
-  margin-top: 0.5em;
+  margin-top: 0.4em;
 }
 
 .ol2_item {
@@ -8833,6 +8833,9 @@ tr:last-child .status_box_date {
   margin-top: 0.8em;
 }
 
+.list_bar.ty_gap .list_bar_item + .list_bar_item {
+  margin-top: 0.4em;
+}
 .list_bar_item {
   display: flex;
   align-items: flex-start;
