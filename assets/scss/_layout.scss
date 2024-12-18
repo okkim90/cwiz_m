@@ -2747,11 +2747,11 @@
                 font-weight: 500;
             }
             .desc {
-                @include text-hidden(2, 1.5em, auto);
+                //@include text-hidden(2, 1.5em, auto);
                 word-break: break-all;
                 margin-top: 6px;
                 font-size: 15px;
-                //font-weight: 500;
+                font-weight: 500;
             }
             .price {
                 margin-top: 6px;
